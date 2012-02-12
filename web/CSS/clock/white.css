@@ -1,0 +1,57 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.analog {
+    opacity: .99; filter:Alpha(Opacity=35);
+    position: relative;
+    width: 150px;
+    margin: auto;
+    background: url(../../images/clock/clockface/white.png);
+    background-size : 150px;
+    list-style: none;
+
+}
+
+.analog,.analog .hour,.analog .min,.analog .sec {
+    height: 150px;
+}
+
+.analog .hour,.analog .min,.analog .sec {
+    position: absolute;
+    width: 8px;
+    top: 0;
+    left: 70.5px;
+    padding: 0;
+}
+
+.analog .sec {
+    background: url(../../images/clock/clockface/sechand.png);
+    z-index: 3;
+}
+
+.analog .min {
+    background: url(../../images/clock/clockface/minhand.png);
+    z-index: 2;
+}
+
+.analog .hour {
+    background: url(../../images/clock/clockface/hourhand.png);
+    z-index: 1;
+}
+
+.title {
+    font-size: 11px;
+    font-weight: bold;
+    color: #333;
+}
+
+.analog .meridiem {
+    margin-left: 70px;
+    margin-top: 90px;
+    font-size: 11px;
+    font-weight: bold;
+    color: blue;
+    display: inline-block;
+}

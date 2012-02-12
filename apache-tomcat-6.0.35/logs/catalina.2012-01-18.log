@@ -1,0 +1,322 @@
+Jan 18, 2012 3:07:38 PM org.apache.catalina.core.AprLifecycleListener init
+INFO: The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: /usr/java/packages/lib/i386:/usr/lib/i386-linux-gnu/jni:/lib/i386-linux-gnu:/usr/lib/i386-linux-gnu:/usr/lib/jni:/lib:/usr/lib
+Jan 18, 2012 3:07:39 PM org.apache.coyote.http11.Http11Protocol init
+INFO: Initializing Coyote HTTP/1.1 on http-8080
+Jan 18, 2012 3:07:39 PM org.apache.catalina.startup.Catalina load
+INFO: Initialization processed in 3331 ms
+Jan 18, 2012 3:07:40 PM org.apache.catalina.core.StandardService start
+INFO: Starting service Catalina
+Jan 18, 2012 3:07:40 PM org.apache.catalina.core.StandardEngine start
+INFO: Starting Servlet Engine: Apache Tomcat/6.0.35
+Jan 18, 2012 3:07:40 PM org.apache.catalina.startup.HostConfig deployDescriptor
+INFO: Deploying configuration descriptor manager.xml
+Jan 18, 2012 3:07:41 PM org.apache.catalina.startup.HostConfig deployDescriptor
+INFO: Deploying configuration descriptor ROOT.xml
+Jan 18, 2012 3:07:41 PM org.apache.catalina.startup.HostConfig deployDescriptor
+WARNING: A docBase /home/vignesh/Dropbox/YAID/apache-tomcat-6.0.35/webapps/D:\Dropbox\YAID\build\web inside the host appBase has been specified, and will be ignored
+Jan 18, 2012 3:07:41 PM org.apache.catalina.core.StandardContext resourcesStart
+SEVERE: Error starting static Resources
+java.lang.IllegalArgumentException: Document base /home/vignesh/Dropbox/YAID/apache-tomcat-6.0.35/webapps/ROOT does not exist or is not a readable directory
+	at org.apache.naming.resources.FileDirContext.setDocBase(FileDirContext.java:142)
+	at org.apache.catalina.core.StandardContext.resourcesStart(StandardContext.java:4320)
+	at org.apache.catalina.core.StandardContext.start(StandardContext.java:4489)
+	at org.apache.catalina.core.ContainerBase.addChildInternal(ContainerBase.java:799)
+	at org.apache.catalina.core.ContainerBase.addChild(ContainerBase.java:779)
+	at org.apache.catalina.core.StandardHost.addChild(StandardHost.java:601)
+	at org.apache.catalina.startup.HostConfig.deployDescriptor(HostConfig.java:675)
+	at org.apache.catalina.startup.HostConfig.deployDescriptors(HostConfig.java:601)
+	at org.apache.catalina.startup.HostConfig.deployApps(HostConfig.java:502)
+	at org.apache.catalina.startup.HostConfig.start(HostConfig.java:1317)
+	at org.apache.catalina.startup.HostConfig.lifecycleEvent(HostConfig.java:324)
+	at org.apache.catalina.util.LifecycleSupport.fireLifecycleEvent(LifecycleSupport.java:142)
+	at org.apache.catalina.core.ContainerBase.start(ContainerBase.java:1065)
+	at org.apache.catalina.core.StandardHost.start(StandardHost.java:840)
+	at org.apache.catalina.core.ContainerBase.start(ContainerBase.java:1057)
+	at org.apache.catalina.core.StandardEngine.start(StandardEngine.java:463)
+	at org.apache.catalina.core.StandardService.start(StandardService.java:525)
+	at org.apache.catalina.core.StandardServer.start(StandardServer.java:754)
+	at org.apache.catalina.startup.Catalina.start(Catalina.java:595)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:601)
+	at org.apache.catalina.startup.Bootstrap.start(Bootstrap.java:289)
+	at org.apache.catalina.startup.Bootstrap.main(Bootstrap.java:414)
+
+Jan 18, 2012 3:07:41 PM org.apache.catalina.core.StandardContext start
+SEVERE: Error in resourceStart()
+Jan 18, 2012 3:07:41 PM org.apache.catalina.core.StandardContext start
+SEVERE: Error getConfigured
+Jan 18, 2012 3:07:41 PM org.apache.catalina.core.StandardContext start
+SEVERE: Context [] startup failed due to previous errors
+Jan 18, 2012 3:07:41 PM org.apache.catalina.core.StandardContext stop
+INFO: Container org.apache.catalina.core.ContainerBase.[Catalina].[localhost].[/] has not been started
+Jan 18, 2012 3:07:41 PM org.apache.catalina.startup.HostConfig deployDescriptor
+INFO: Deploying configuration descriptor host-manager.xml
+Jan 18, 2012 3:07:41 PM org.apache.catalina.startup.HostConfig deployDirectory
+INFO: Deploying web application directory examples
+Jan 18, 2012 3:07:42 PM org.apache.catalina.startup.HostConfig deployDirectory
+INFO: Deploying web application directory docs
+Jan 18, 2012 3:07:42 PM org.apache.coyote.http11.Http11Protocol start
+INFO: Starting Coyote HTTP/1.1 on http-8080
+Jan 18, 2012 3:07:42 PM org.apache.jk.common.ChannelSocket init
+INFO: JK: ajp13 listening on /0.0.0.0:8009
+Jan 18, 2012 3:07:42 PM org.apache.jk.server.JkMain start
+INFO: Jk running ID=0 time=0/110  config=null
+Jan 18, 2012 3:07:42 PM org.apache.catalina.startup.Catalina start
+INFO: Server startup in 2624 ms
+Jan 18, 2012 3:27:30 PM org.apache.catalina.core.AprLifecycleListener init
+INFO: The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: /usr/java/packages/lib/i386:/usr/lib/i386-linux-gnu/jni:/lib/i386-linux-gnu:/usr/lib/i386-linux-gnu:/usr/lib/jni:/lib:/usr/lib
+Jan 18, 2012 3:27:31 PM org.apache.coyote.http11.Http11Protocol init
+INFO: Initializing Coyote HTTP/1.1 on http-8080
+Jan 18, 2012 3:27:31 PM org.apache.catalina.startup.Catalina load
+INFO: Initialization processed in 1637 ms
+Jan 18, 2012 3:27:31 PM org.apache.catalina.core.StandardService start
+INFO: Starting service Catalina
+Jan 18, 2012 3:27:31 PM org.apache.catalina.core.StandardEngine start
+INFO: Starting Servlet Engine: Apache Tomcat/6.0.35
+Jan 18, 2012 3:27:31 PM org.apache.catalina.startup.HostConfig deployDescriptor
+INFO: Deploying configuration descriptor manager.xml
+Jan 18, 2012 3:27:32 PM org.apache.catalina.startup.HostConfig deployDescriptor
+INFO: Deploying configuration descriptor ROOT.xml
+Jan 18, 2012 3:27:32 PM org.apache.catalina.startup.HostConfig deployDescriptor
+WARNING: A docBase /home/vignesh/Dropbox/YAID/apache-tomcat-6.0.35/webapps/D:\Dropbox\YAID\build\web inside the host appBase has been specified, and will be ignored
+Jan 18, 2012 3:27:32 PM org.apache.catalina.core.StandardContext resourcesStart
+SEVERE: Error starting static Resources
+java.lang.IllegalArgumentException: Document base /home/vignesh/Dropbox/YAID/apache-tomcat-6.0.35/webapps/ROOT does not exist or is not a readable directory
+	at org.apache.naming.resources.FileDirContext.setDocBase(FileDirContext.java:142)
+	at org.apache.catalina.core.StandardContext.resourcesStart(StandardContext.java:4320)
+	at org.apache.catalina.core.StandardContext.start(StandardContext.java:4489)
+	at org.apache.catalina.core.ContainerBase.addChildInternal(ContainerBase.java:799)
+	at org.apache.catalina.core.ContainerBase.addChild(ContainerBase.java:779)
+	at org.apache.catalina.core.StandardHost.addChild(StandardHost.java:601)
+	at org.apache.catalina.startup.HostConfig.deployDescriptor(HostConfig.java:675)
+	at org.apache.catalina.startup.HostConfig.deployDescriptors(HostConfig.java:601)
+	at org.apache.catalina.startup.HostConfig.deployApps(HostConfig.java:502)
+	at org.apache.catalina.startup.HostConfig.start(HostConfig.java:1317)
+	at org.apache.catalina.startup.HostConfig.lifecycleEvent(HostConfig.java:324)
+	at org.apache.catalina.util.LifecycleSupport.fireLifecycleEvent(LifecycleSupport.java:142)
+	at org.apache.catalina.core.ContainerBase.start(ContainerBase.java:1065)
+	at org.apache.catalina.core.StandardHost.start(StandardHost.java:840)
+	at org.apache.catalina.core.ContainerBase.start(ContainerBase.java:1057)
+	at org.apache.catalina.core.StandardEngine.start(StandardEngine.java:463)
+	at org.apache.catalina.core.StandardService.start(StandardService.java:525)
+	at org.apache.catalina.core.StandardServer.start(StandardServer.java:754)
+	at org.apache.catalina.startup.Catalina.start(Catalina.java:595)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:601)
+	at org.apache.catalina.startup.Bootstrap.start(Bootstrap.java:289)
+	at org.apache.catalina.startup.Bootstrap.main(Bootstrap.java:414)
+
+Jan 18, 2012 3:27:32 PM org.apache.catalina.core.StandardContext start
+SEVERE: Error in resourceStart()
+Jan 18, 2012 3:27:32 PM org.apache.catalina.core.StandardContext start
+SEVERE: Error getConfigured
+Jan 18, 2012 3:27:32 PM org.apache.catalina.core.StandardContext start
+SEVERE: Context [] startup failed due to previous errors
+Jan 18, 2012 3:27:32 PM org.apache.catalina.core.StandardContext stop
+INFO: Container org.apache.catalina.core.ContainerBase.[Catalina].[localhost].[/] has not been started
+Jan 18, 2012 3:27:32 PM org.apache.catalina.startup.HostConfig deployDescriptor
+INFO: Deploying configuration descriptor host-manager.xml
+Jan 18, 2012 3:27:32 PM org.apache.catalina.startup.HostConfig deployDirectory
+INFO: Deploying web application directory examples
+Jan 18, 2012 3:27:33 PM org.apache.catalina.startup.HostConfig deployDirectory
+INFO: Deploying web application directory docs
+Jan 18, 2012 3:27:33 PM org.apache.coyote.http11.Http11Protocol start
+INFO: Starting Coyote HTTP/1.1 on http-8080
+Jan 18, 2012 3:27:33 PM org.apache.jk.common.ChannelSocket init
+INFO: JK: ajp13 listening on /0.0.0.0:8009
+Jan 18, 2012 3:27:33 PM org.apache.jk.server.JkMain start
+INFO: Jk running ID=0 time=0/110  config=null
+Jan 18, 2012 3:27:33 PM org.apache.catalina.startup.Catalina start
+INFO: Server startup in 2211 ms
+Jan 18, 2012 6:25:31 PM org.apache.catalina.core.StandardContext stop
+INFO: Container org.apache.catalina.core.ContainerBase.[Catalina].[localhost].[/] has not been started
+Jan 18, 2012 6:25:31 PM org.apache.catalina.startup.HostConfig checkResources
+INFO: Undeploying context []
+Jan 18, 2012 6:25:32 PM org.apache.catalina.startup.HostConfig deployDescriptor
+INFO: Deploying configuration descriptor ROOT.xml
+Jan 18, 2012 6:25:32 PM org.apache.catalina.core.StandardContext start
+INFO: Container org.apache.catalina.core.ContainerBase.[Catalina].[localhost].[/] has already been started
+Jan 18, 2012 6:26:58 PM org.apache.catalina.startup.HostConfig checkResources
+INFO: Undeploying context []
+Jan 18, 2012 6:26:58 PM org.apache.catalina.startup.HostConfig deployDescriptor
+INFO: Deploying configuration descriptor ROOT.xml
+Jan 18, 2012 6:26:59 PM org.apache.catalina.core.StandardContext start
+INFO: Container org.apache.catalina.core.ContainerBase.[Catalina].[localhost].[/] has already been started
+Jan 18, 2012 6:30:02 PM org.apache.catalina.startup.HostConfig checkResources
+INFO: Undeploying context []
+Jan 18, 2012 6:30:02 PM org.apache.catalina.startup.HostConfig deployDescriptor
+INFO: Deploying configuration descriptor ROOT.xml
+Jan 18, 2012 6:30:02 PM org.apache.catalina.core.StandardContext start
+INFO: Container org.apache.catalina.core.ContainerBase.[Catalina].[localhost].[/] has already been started
+Jan 18, 2012 6:35:49 PM org.apache.catalina.startup.HostConfig checkResources
+INFO: Undeploying context []
+Jan 18, 2012 6:35:49 PM org.apache.catalina.startup.HostConfig deployDescriptor
+INFO: Deploying configuration descriptor ROOT.xml
+Jan 18, 2012 6:35:49 PM org.apache.catalina.core.StandardContext start
+INFO: Container org.apache.catalina.core.ContainerBase.[Catalina].[localhost].[/] has already been started
+Jan 18, 2012 6:36:02 PM org.apache.catalina.startup.HostConfig checkResources
+INFO: Undeploying context []
+Jan 18, 2012 6:36:02 PM org.apache.catalina.startup.HostConfig deployDescriptor
+INFO: Deploying configuration descriptor ROOT.xml
+Jan 18, 2012 6:36:02 PM org.apache.catalina.core.StandardContext start
+INFO: Container org.apache.catalina.core.ContainerBase.[Catalina].[localhost].[/] has already been started
+Jan 18, 2012 6:40:22 PM org.apache.catalina.startup.HostConfig checkResources
+INFO: Undeploying context []
+Jan 18, 2012 6:40:22 PM org.apache.catalina.startup.HostConfig deployDescriptor
+INFO: Deploying configuration descriptor ROOT.xml
+Jan 18, 2012 6:40:22 PM org.apache.catalina.core.StandardContext start
+INFO: Container org.apache.catalina.core.ContainerBase.[Catalina].[localhost].[/] has already been started
+Jan 18, 2012 6:43:34 PM org.apache.catalina.startup.HostConfig checkResources
+INFO: Undeploying context []
+Jan 18, 2012 6:43:34 PM org.apache.catalina.startup.HostConfig deployDescriptor
+INFO: Deploying configuration descriptor ROOT.xml
+Jan 18, 2012 6:43:34 PM org.apache.catalina.core.StandardContext start
+INFO: Container org.apache.catalina.core.ContainerBase.[Catalina].[localhost].[/] has already been started
+Jan 18, 2012 7:12:56 PM org.apache.catalina.startup.HostConfig checkResources
+INFO: Undeploying context []
+Jan 18, 2012 7:12:56 PM org.apache.catalina.startup.HostConfig deployDescriptor
+INFO: Deploying configuration descriptor ROOT.xml
+Jan 18, 2012 7:12:56 PM org.apache.catalina.core.StandardContext start
+INFO: Container org.apache.catalina.core.ContainerBase.[Catalina].[localhost].[/] has already been started
+Jan 18, 2012 7:31:40 PM org.apache.catalina.startup.HostConfig checkResources
+INFO: Undeploying context []
+Jan 18, 2012 7:31:40 PM org.apache.catalina.startup.HostConfig deployDescriptor
+INFO: Deploying configuration descriptor ROOT.xml
+Jan 18, 2012 7:31:40 PM org.apache.catalina.core.StandardContext start
+INFO: Container org.apache.catalina.core.ContainerBase.[Catalina].[localhost].[/] has already been started
+Jan 18, 2012 7:32:27 PM org.apache.catalina.startup.HostConfig checkResources
+INFO: Undeploying context []
+Jan 18, 2012 7:32:27 PM org.apache.catalina.startup.HostConfig deployDescriptor
+INFO: Deploying configuration descriptor ROOT.xml
+Jan 18, 2012 7:32:27 PM org.apache.catalina.core.StandardContext start
+INFO: Container org.apache.catalina.core.ContainerBase.[Catalina].[localhost].[/] has already been started
+Jan 18, 2012 7:33:11 PM org.apache.catalina.startup.HostConfig checkResources
+INFO: Reloading context []
+Jan 18, 2012 7:33:21 PM org.apache.catalina.startup.HostConfig checkResources
+INFO: Undeploying context []
+Jan 18, 2012 7:33:21 PM org.apache.catalina.startup.HostConfig deployDescriptor
+INFO: Deploying configuration descriptor ROOT.xml
+Jan 18, 2012 7:33:21 PM org.apache.catalina.core.StandardContext start
+INFO: Container org.apache.catalina.core.ContainerBase.[Catalina].[localhost].[/] has already been started
+Jan 18, 2012 7:41:27 PM org.apache.catalina.startup.HostConfig checkResources
+INFO: Undeploying context []
+Jan 18, 2012 7:41:27 PM org.apache.catalina.startup.HostConfig deployDescriptor
+INFO: Deploying configuration descriptor ROOT.xml
+Jan 18, 2012 7:41:27 PM org.apache.catalina.core.StandardContext start
+INFO: Container org.apache.catalina.core.ContainerBase.[Catalina].[localhost].[/] has already been started
+Jan 18, 2012 7:42:01 PM org.apache.catalina.startup.HostConfig checkResources
+INFO: Reloading context []
+Jan 18, 2012 7:42:11 PM org.apache.catalina.startup.HostConfig checkResources
+INFO: Reloading context []
+Jan 18, 2012 7:44:01 PM org.apache.catalina.startup.HostConfig checkResources
+INFO: Reloading context []
+Jan 18, 2012 7:48:03 PM org.apache.coyote.http11.Http11Protocol pause
+INFO: Pausing Coyote HTTP/1.1 on http-8080
+Jan 18, 2012 7:48:04 PM org.apache.catalina.core.StandardService stop
+INFO: Stopping service Catalina
+Jan 18, 2012 7:48:04 PM org.apache.coyote.http11.Http11Protocol destroy
+INFO: Stopping Coyote HTTP/1.1 on http-8080
+Jan 18, 2012 7:48:09 PM org.apache.catalina.core.AprLifecycleListener init
+INFO: The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: /usr/java/packages/lib/i386:/usr/lib/i386-linux-gnu/jni:/lib/i386-linux-gnu:/usr/lib/i386-linux-gnu:/usr/lib/jni:/lib:/usr/lib
+Jan 18, 2012 7:48:11 PM org.apache.coyote.http11.Http11Protocol init
+INFO: Initializing Coyote HTTP/1.1 on http-8080
+Jan 18, 2012 7:48:11 PM org.apache.catalina.startup.Catalina load
+INFO: Initialization processed in 2858 ms
+Jan 18, 2012 7:48:11 PM org.apache.catalina.core.StandardService start
+INFO: Starting service Catalina
+Jan 18, 2012 7:48:11 PM org.apache.catalina.core.StandardEngine start
+INFO: Starting Servlet Engine: Apache Tomcat/6.0.35
+Jan 18, 2012 7:48:11 PM org.apache.catalina.startup.HostConfig deployDescriptor
+INFO: Deploying configuration descriptor manager.xml
+Jan 18, 2012 7:48:12 PM org.apache.catalina.startup.HostConfig deployDescriptor
+INFO: Deploying configuration descriptor ROOT.xml
+Jan 18, 2012 7:48:13 PM org.apache.catalina.startup.HostConfig deployDescriptor
+INFO: Deploying configuration descriptor host-manager.xml
+Jan 18, 2012 7:48:13 PM org.apache.catalina.startup.HostConfig deployDirectory
+INFO: Deploying web application directory examples
+Jan 18, 2012 7:48:13 PM org.apache.catalina.startup.HostConfig deployDirectory
+INFO: Deploying web application directory docs
+Jan 18, 2012 7:48:13 PM org.apache.coyote.http11.Http11Protocol start
+INFO: Starting Coyote HTTP/1.1 on http-8080
+Jan 18, 2012 7:48:14 PM org.apache.jk.common.ChannelSocket init
+INFO: JK: ajp13 listening on /0.0.0.0:8009
+Jan 18, 2012 7:48:14 PM org.apache.jk.server.JkMain start
+INFO: Jk running ID=0 time=0/167  config=null
+Jan 18, 2012 7:48:14 PM org.apache.catalina.startup.Catalina start
+INFO: Server startup in 2829 ms
+Jan 18, 2012 7:48:43 PM org.apache.catalina.core.StandardContext reload
+INFO: Reloading Context with name [] has started
+Jan 18, 2012 7:52:44 PM org.apache.catalina.core.StandardContext reload
+INFO: Reloading Context with name [] has started
+Jan 18, 2012 7:53:34 PM org.apache.catalina.core.StandardContext reload
+INFO: Reloading Context with name [] has started
+Jan 18, 2012 7:53:36 PM org.apache.catalina.startup.HostConfig checkResources
+INFO: Undeploying context []
+Jan 18, 2012 7:53:36 PM org.apache.catalina.startup.HostConfig deployDescriptor
+INFO: Deploying configuration descriptor ROOT.xml
+Jan 18, 2012 7:53:36 PM org.apache.catalina.core.StandardContext start
+INFO: Container org.apache.catalina.core.ContainerBase.[Catalina].[localhost].[/] has already been started
+Jan 18, 2012 8:05:05 PM org.apache.catalina.core.StandardContext reload
+INFO: Reloading Context with name [] has started
+Jan 18, 2012 8:06:55 PM org.apache.catalina.core.StandardContext reload
+INFO: Reloading Context with name [] has started
+Jan 18, 2012 8:09:16 PM org.apache.catalina.core.StandardContext reload
+INFO: Reloading Context with name [] has started
+Jan 18, 2012 8:34:26 PM org.apache.catalina.core.StandardContext reload
+INFO: Reloading Context with name [] has started
+Jan 18, 2012 8:34:56 PM org.apache.catalina.core.StandardContext reload
+INFO: Reloading Context with name [] has started
+Jan 18, 2012 8:35:46 PM org.apache.catalina.core.StandardContext reload
+INFO: Reloading Context with name [] has started
+Jan 18, 2012 8:43:07 PM org.apache.catalina.core.StandardContext reload
+INFO: Reloading Context with name [] has started
+Jan 18, 2012 9:31:08 PM org.apache.catalina.core.StandardContext reload
+INFO: Reloading Context with name [] has started
+Jan 18, 2012 9:33:28 PM org.apache.catalina.core.StandardContext reload
+INFO: Reloading Context with name [] has started
+Jan 18, 2012 9:33:38 PM org.apache.catalina.core.StandardContext reload
+INFO: Reloading Context with name [] has started
+Jan 18, 2012 9:34:38 PM org.apache.catalina.core.StandardContext reload
+INFO: Reloading Context with name [] has started
+Jan 18, 2012 9:34:48 PM org.apache.catalina.core.StandardContext reload
+INFO: Reloading Context with name [] has started
+Jan 18, 2012 9:35:29 PM org.apache.catalina.core.StandardContext reload
+INFO: Reloading Context with name [] has started
+Jan 18, 2012 9:40:39 PM org.apache.catalina.core.StandardContext reload
+INFO: Reloading Context with name [] has started
+Jan 18, 2012 9:42:49 PM org.apache.catalina.core.StandardContext reload
+INFO: Reloading Context with name [] has started
+Jan 18, 2012 9:45:39 PM org.apache.catalina.core.StandardContext reload
+INFO: Reloading Context with name [] has started
+Jan 18, 2012 9:46:59 PM org.apache.catalina.core.StandardContext reload
+INFO: Reloading Context with name [] has started
+Jan 18, 2012 9:49:19 PM org.apache.catalina.core.StandardContext reload
+INFO: Reloading Context with name [] has started
+Jan 18, 2012 9:51:39 PM org.apache.catalina.core.StandardContext reload
+INFO: Reloading Context with name [] has started
+Jan 18, 2012 9:54:10 PM org.apache.catalina.core.StandardContext reload
+INFO: Reloading Context with name [] has started
+Jan 18, 2012 9:54:20 PM org.apache.catalina.core.StandardContext reload
+INFO: Reloading Context with name [] has started
+Jan 18, 2012 9:55:20 PM org.apache.catalina.core.StandardContext reload
+INFO: Reloading Context with name [] has started
+Jan 18, 2012 9:55:50 PM org.apache.catalina.core.StandardContext reload
+INFO: Reloading Context with name [] has started
+Jan 18, 2012 9:56:40 PM org.apache.catalina.core.StandardContext reload
+INFO: Reloading Context with name [] has started
+Jan 18, 2012 9:57:40 PM org.apache.catalina.core.StandardContext reload
+INFO: Reloading Context with name [] has started
+Jan 18, 2012 9:58:00 PM org.apache.catalina.core.StandardContext reload
+INFO: Reloading Context with name [] has started
+Jan 18, 2012 9:58:20 PM org.apache.catalina.core.StandardContext reload
+INFO: Reloading Context with name [] has started
+Jan 18, 2012 10:08:21 PM org.apache.catalina.core.StandardContext reload
+INFO: Reloading Context with name [] has started
+Jan 18, 2012 10:11:31 PM org.apache.catalina.core.StandardContext reload
+INFO: Reloading Context with name [] has started
+Jan 18, 2012 11:48:17 PM org.apache.catalina.core.StandardContext reload
+INFO: Reloading Context with name [] has started

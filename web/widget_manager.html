@@ -1,0 +1,56 @@
+<html>
+    <head>
+        <title>Widgets</title>
+
+        <style type="text/css">
+            #WidgetView { position: absolute;list-style-type: none; margin: 0; padding: 0; left: 12px; top: 12px; }
+            #WidgetView li { margin: 5px 5px 5px 0; padding: 1px; float: left; width: 200px; height: 90px; font-size: 12px; text-align: center; }
+            #WidgetView img {height: 150px; width: 150px;}
+        </style>
+
+        <script type="text/javascript">
+
+            function onselectIcon(obj){
+                if( $(obj).attr('id') == "clock" ) 
+                    $('#analog-clock').show();
+                if( $(obj).attr('id') == "calendar" )
+                    $('#datepicker').show();
+            }
+
+        function makeIcon(){
+            str='';
+            for(dat in dirStr){
+                str+='<li id="'+dirStr[dat]['attr']['id']+'" ondblclick="'+dirStr[dat]['ondbclick']+'"><div><img src="'+dirStr[dat]['img']+'" /><div>'
+                    +dirStr[dat]["data"]+'</li>';
+            }
+            $('#WidgetView').html(str);
+        }
+
+        var dirStr=[
+            {
+                "data" : "Clock",
+                "attr" : { 'id' : "clock" },
+                "img" : "images/icons/clock_icon.png",
+                "ondbclick" : "onselectIcon(this)"
+            },
+            {
+                "data" : "Calendar",
+                "attr" : { "id" : "calendar" },
+                "img" : "images/icons/calendar_icon.png",
+                "ondbclick" : "onselectIcon(this)"
+            }
+        ];
+
+        $(document).ready(function() {
+            $('#WidgetView').sortable();
+            makeIcon();
+        });
+
+        </script>
+    </head>
+    <body>
+        <ul id="WidgetView">
+
+        </ul>
+    </body>
+</html>

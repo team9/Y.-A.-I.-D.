@@ -1,0 +1,50 @@
+3 Jan, 2012 11:27:50 AM org.apache.catalina.core.AprLifecycleListener init
+INFO: Loaded APR based Apache Tomcat Native library 1.1.22.
+3 Jan, 2012 11:27:50 AM org.apache.catalina.core.AprLifecycleListener init
+INFO: APR capabilities: IPv6 [false], sendfile [true], accept filters [false], random [true].
+3 Jan, 2012 11:27:52 AM org.apache.coyote.http11.Http11AprProtocol init
+INFO: Initializing Coyote HTTP/1.1 on http-8080
+3 Jan, 2012 11:27:52 AM org.apache.coyote.ajp.AjpAprProtocol init
+INFO: Initializing Coyote AJP/1.3 on ajp-8009
+3 Jan, 2012 11:27:52 AM org.apache.catalina.startup.Catalina load
+INFO: Initialization processed in 2026 ms
+3 Jan, 2012 11:27:52 AM org.apache.catalina.core.StandardService start
+INFO: Starting service Catalina
+3 Jan, 2012 11:27:52 AM org.apache.catalina.core.StandardEngine start
+INFO: Starting Servlet Engine: Apache Tomcat/6.0.35
+3 Jan, 2012 11:27:52 AM org.apache.catalina.startup.HostConfig deployDirectory
+INFO: Deploying web application directory docs
+3 Jan, 2012 11:27:52 AM org.apache.catalina.startup.HostConfig deployDirectory
+INFO: Deploying web application directory examples
+3 Jan, 2012 11:27:52 AM org.apache.catalina.startup.HostConfig deployDirectory
+INFO: Deploying web application directory host-manager
+3 Jan, 2012 11:27:52 AM org.apache.catalina.startup.HostConfig deployDirectory
+INFO: Deploying web application directory manager
+3 Jan, 2012 11:27:52 AM org.apache.catalina.startup.HostConfig deployDirectory
+INFO: Deploying web application directory ROOT
+3 Jan, 2012 11:27:52 AM org.apache.coyote.http11.Http11AprProtocol start
+INFO: Starting Coyote HTTP/1.1 on http-8080
+3 Jan, 2012 11:27:52 AM org.apache.coyote.ajp.AjpAprProtocol start
+INFO: Starting Coyote AJP/1.3 on ajp-8009
+3 Jan, 2012 11:27:52 AM org.apache.catalina.startup.Catalina start
+INFO: Server startup in 807 ms
+3 Jan, 2012 11:27:55 AM org.apache.catalina.startup.HostConfig deployDescriptor
+INFO: Deploying configuration descriptor YAID.xml
+3 Jan, 2012 11:27:55 AM org.apache.catalina.core.StandardContext start
+INFO: Container org.apache.catalina.core.ContainerBase.[Catalina].[localhost].[/YAID] has already been started
+3 Jan, 2012 11:41:09 AM org.apache.catalina.startup.HostConfig checkResources
+INFO: Undeploying context [/YAID]
+3 Jan, 2012 11:41:09 AM org.apache.catalina.startup.HostConfig deployDescriptor
+INFO: Deploying configuration descriptor YAID.xml
+3 Jan, 2012 11:41:09 AM org.apache.catalina.core.StandardContext start
+INFO: Container org.apache.catalina.core.ContainerBase.[Catalina].[localhost].[/YAID] has already been started
+3 Jan, 2012 12:41:55 PM org.apache.coyote.http11.Http11AprProtocol pause
+INFO: Pausing Coyote HTTP/1.1 on http-8080
+3 Jan, 2012 12:41:55 PM org.apache.coyote.ajp.AjpAprProtocol pause
+INFO: Pausing Coyote AJP/1.3 on ajp-8009
+3 Jan, 2012 12:41:56 PM org.apache.catalina.core.StandardService stop
+INFO: Stopping service Catalina
+3 Jan, 2012 12:41:56 PM org.apache.coyote.http11.Http11AprProtocol destroy
+INFO: Stopping Coyote HTTP/1.1 on http-8080
+3 Jan, 2012 12:41:56 PM org.apache.coyote.ajp.AjpAprProtocol destroy
+INFO: Stopping Coyote AJP/1.3 on ajp-8009

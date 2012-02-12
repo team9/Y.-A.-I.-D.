@@ -1,0 +1,14 @@
+1 Feb, 2012 11:39:40 PM org.apache.catalina.core.ApplicationContext log
+INFO: Manager: init: Associated with Deployer 'Catalina:type=Deployer,host=localhost'
+1 Feb, 2012 11:39:40 PM org.apache.catalina.core.ApplicationContext log
+INFO: Manager: init: Global resources are available
+1 Feb, 2012 11:39:40 PM org.apache.catalina.core.ApplicationContext log
+INFO: Manager: list: Listing contexts for virtual host 'localhost'
+1 Feb, 2012 11:39:40 PM org.apache.catalina.core.ApplicationContext log
+INFO: Manager: list: Listing contexts for virtual host 'localhost'
+1 Feb, 2012 11:39:40 PM org.apache.catalina.core.ApplicationContext log
+INFO: Manager: undeploy: Undeploying web application at '/'
+1 Feb, 2012 11:39:41 PM org.apache.catalina.core.ApplicationContext log
+INFO: Manager: install: Installing context configuration at 'file:/C:/Users/AMALJO~1/AppData/Local/Temp/context4713616745668624189.xml'
+1 Feb, 2012 11:39:41 PM org.apache.catalina.core.ApplicationContext log
+INFO: Manager: start: Starting web application at '/'

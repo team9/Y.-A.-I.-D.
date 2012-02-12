@@ -1,0 +1,41 @@
+#datetime {
+   float: left; 
+   position: absolute;
+}
+
+
+#minimizedtasks {
+   float: left; 
+   position: absolute;
+}
+
+#notifications {
+   float: left; 
+   position: absolute;
+}
+
+#startbuttondiv {
+   position: absolute;
+}
+
+#startbuttondiv {
+    position: absolute;
+    float:  left;
+}
+
+#minimizedtasks {
+    position: absolute;
+    float: left;
+}
+
+#notifications {
+    position: absolute;
+    float: left;
+}
+#datetime {
+    position: absolute;
+    float: left;
+}
+
+
+

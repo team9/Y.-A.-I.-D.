@@ -1,0 +1,32 @@
+Feb 11, 2012 3:28:48 PM org.apache.catalina.core.AprLifecycleListener init
+INFO: The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: /usr/java/packages/lib/i386:/usr/lib/i386-linux-gnu/jni:/lib/i386-linux-gnu:/usr/lib/i386-linux-gnu:/usr/lib/jni:/lib:/usr/lib
+Feb 11, 2012 3:28:48 PM org.apache.coyote.http11.Http11Protocol init
+INFO: Initializing Coyote HTTP/1.1 on http-8080
+Feb 11, 2012 3:28:48 PM org.apache.catalina.startup.Catalina load
+INFO: Initialization processed in 1755 ms
+Feb 11, 2012 3:28:49 PM org.apache.catalina.core.StandardService start
+INFO: Starting service Catalina
+Feb 11, 2012 3:28:49 PM org.apache.catalina.core.StandardEngine start
+INFO: Starting Servlet Engine: Apache Tomcat/6.0.35
+Feb 11, 2012 3:28:49 PM org.apache.catalina.startup.HostConfig deployDescriptor
+INFO: Deploying configuration descriptor manager.xml
+Feb 11, 2012 3:28:50 PM org.apache.catalina.startup.HostConfig deployDescriptor
+INFO: Deploying configuration descriptor ROOT.xml
+Feb 11, 2012 3:28:50 PM org.apache.catalina.startup.HostConfig deployDescriptor
+INFO: Deploying configuration descriptor host-manager.xml
+Feb 11, 2012 3:28:50 PM org.apache.catalina.startup.HostConfig deployDirectory
+INFO: Deploying web application directory examples
+Feb 11, 2012 3:28:51 PM org.apache.catalina.startup.HostConfig deployDirectory
+INFO: Deploying web application directory docs
+Feb 11, 2012 3:28:51 PM org.apache.coyote.http11.Http11Protocol start
+INFO: Starting Coyote HTTP/1.1 on http-8080
+Feb 11, 2012 3:28:51 PM org.apache.jk.common.ChannelSocket init
+INFO: JK: ajp13 listening on /0.0.0.0:8009
+Feb 11, 2012 3:28:51 PM org.apache.jk.server.JkMain start
+INFO: Jk running ID=0 time=0/240  config=null
+Feb 11, 2012 3:28:51 PM org.apache.catalina.startup.Catalina start
+INFO: Server startup in 2902 ms
+Feb 11, 2012 3:28:54 PM org.apache.catalina.startup.HostConfig checkResources
+INFO: Undeploying context []
+Feb 11, 2012 3:28:54 PM org.apache.catalina.startup.HostConfig deployDescriptor
+INFO: Deploying configuration descriptor ROOT.xml

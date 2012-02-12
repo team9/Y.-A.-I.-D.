@@ -1,0 +1,10 @@
+20 Jan, 2012 12:54:33 AM org.apache.coyote.http11.Http11AprProtocol pause
+INFO: Pausing Coyote HTTP/1.1 on http-8080
+20 Jan, 2012 12:54:33 AM org.apache.coyote.ajp.AjpAprProtocol pause
+INFO: Pausing Coyote AJP/1.3 on ajp-8009
+20 Jan, 2012 12:54:34 AM org.apache.catalina.core.StandardService stop
+INFO: Stopping service Catalina
+20 Jan, 2012 12:54:34 AM org.apache.coyote.http11.Http11AprProtocol destroy
+INFO: Stopping Coyote HTTP/1.1 on http-8080
+20 Jan, 2012 12:54:34 AM org.apache.coyote.ajp.AjpAprProtocol destroy
+INFO: Stopping Coyote AJP/1.3 on ajp-8009

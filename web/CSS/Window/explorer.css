@@ -1,0 +1,30 @@
+/* 
+    Document   : explorer
+    Created on : 4 Feb, 2012, 4:42:35 PM
+    Author     : vignesh
+    Description:
+        Purpose of the stylesheet follows.
+*/
+
+/* 
+   TODO customize this sample style
+   Syntax recommendation http://www.w3.org/TR/REC-CSS2/
+*/
+
+.TreeView{	width: 150px;	}
+.FolderView { position: absolute;list-style-type: none; margin: 0; padding: 0;left: 160px;top: 40px; }
+.FolderView li { margin: 3px 3px 3px 0; padding: 5px; float: left; width: 110px; height: 110px; font-size: 12px; text-align: center; }
+.FolderView li :hover { background-color: #c2dfeb; z-index: +200;}
+.FolderView img {max-height: 90px;min-height: 45px;max-width: 100px;min-width: 50px;}
+.toolbar { position: absolute;padding: 2px 2px;top: 0px;left: 160px;right: 0px;}
+.path_text{ min-width:260px;text-align: left;}
+.selectedElm {background-color: #ddb557;}
+.rename-form {
+    border: black thick;
+    width: 100px;
+    background: white;
+    text-align: center;
+}
+.to_be_cut {
+    opacity: 0.70;
+}

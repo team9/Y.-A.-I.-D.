@@ -1,0 +1,44 @@
+@charset "utf-8";
+#registrationPage {
+	
+	
+}
+
+#headerDiv {
+	 left:0pt;
+	 top:0pt;
+	 
+}
+
+#middleDiv {
+	left:0pt;
+	height : 300;
+	
+}
+
+#middleLeft {
+	height:300;
+	width:33%;
+	border-color:#666;
+	border-width:thin;
+	float:left;
+}
+#middleCenter {
+	height:300;
+	width:33%;
+	float:left;
+}
+
+#middleRight {
+	height:300;
+	width:33%;
+		float:right;
+		
+		
+}
+
+#footerrDiv {
+	
+	 
+	 
+}

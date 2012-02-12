@@ -1,0 +1,41 @@
+<style>
+    #demo1{	width: 150px;	}
+    #FolderView { position: absolute;list-style-type: none; margin: 0; padding: 0;top: 10px; }
+    #FolderView li { margin: 3px 3px 3px 0; padding: 1px; float: left; width: 130px; height: 120px; font-size: 12px; text-align: center; }
+    #FolderView img {max-height: 100px;min-height: 50px;max-width: 110px;min-width: 55px;}
+</style>
+
+<script>
+    function makeFolderElm(path){
+        str='';
+        console.log(path);
+        //get_files
+        $.ajax({
+            type: 'GET',
+            url: "FileOperationHandler",
+            data: "operation=get_files&id=" + path,
+            success: function(htmldir){
+                for(dat in htmldir){
+                    console.log(htmldir[dat]['attr']['id'].replace("file_",""));
+                    str+='<li id="'+htmldir[dat]['attr']['id']+'"><div><img '
+                        +'src="ImageBytes?id='+encodeURI(htmldir[dat]['attr']['id'].replace("file_",""))+'" /><div>'
+                        +htmldir[dat]["data"]+'</li>';
+                }
+                $('#FolderView').html(str);
+                $('#FolderView li').dblclick(function(){
+                    id=$(this).attr('id').replace("file_","");
+                    $('#workarea').css("background-image", "url(ImageBytes?id="+encodeURI(id)+")");
+                });
+            }
+        });
+    }
+
+    $(document).ready(function() {
+        makeFolderElm("/UserData/vig/My%20Files/WallPaper");
+    });
+
+</script>
+
+<ul id="FolderView">
+
+</ul>

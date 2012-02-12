@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+       <head>
+              <meta charset="utf-8">
+              <title>Notepad Window</title>
+
+        <link rel="stylesheet" href="CSS/ui-lightness/jquery-ui-1.8.16.custom.css" type="text/css" />
+        <link rel="stylesheet" type="text/css" href="CSS/Window/window.css"/>
+
+        <!-- Load jQuery first before jQuery UI! -->
+        <script src="JQUERY/jquery.js"></script>
+        <script src="JQUERY/jquery.ui.js"></script>
+        <script src="JS/Window/Window.js"></script>
+
+        <script>
+            $(document).ready(function() {
+                Window({'option':{'title':'Notepad',height:425,width:730},'content':'Notepad.html',"ajax":true});
+            });
+        </script>
+
+         </head>
+       <body>
+        <div id="dialog_window_minimized_container" class="ui-widget-header ui-corner-all"></div>
+          </body>
+</html>

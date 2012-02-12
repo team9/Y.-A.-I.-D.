@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+       <head>
+              <meta charset="utf-8">
+              <title>Window</title>
+
+        <link rel="stylesheet" href="CSS/ui-lightness/jquery-ui-1.8.16.custom.css" type="text/css" />
+        <link rel="stylesheet" type="text/css" href="CSS/Window/window.css"/>
+
+        <!-- Load jQuery first before jQuery UI! -->
+        <script src="JQUERY/jquery.js"></script>
+        <script src="JQUERY/jquery.ui.js"></script>
+        <script src="JS/Window/Window.js"></script>
+
+        <script>
+            $(document).ready(function() {
+                //$('#switcher').themeswitcher();
+                Window({'option':{'title':'Calculator',height:500,width:520},'content':'Calculator.htm',"ajax":true});
+                //Window({'title':'Explorer','content':'explorer.html',"ajax":true});
+
+                $("#start").button().click(function(){
+                    $('#start_menue').toggle();
+                });
+            });
+        </script>
+
+         </head>
+       <body>
+        <div id="start_menue"><ul>
+                <li>program 1</li>
+                <li>program 2</li>
+                <li>program 3</li>
+                <li>program 4</li>
+            </ul></div>
+
+        <div id="start">Start</div>
+        <div id="dialog_window_minimized_container" class="ui-widget-header ui-corner-all"></div>
+           </body>
+</html>
