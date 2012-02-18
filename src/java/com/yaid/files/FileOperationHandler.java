@@ -7,6 +7,8 @@ package com.yaid.files;
 import java.io.File;
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.util.Iterator;
+import java.util.Map;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.servlet.ServletException;
@@ -58,7 +60,7 @@ public class FileOperationHandler extends HttpServlet {
         } else {
             jsondata = "{\"status\":\"faild\"}";
         }
-        System.out.println(jsondata+" "+dir+" "+newfile);
+        System.out.println(jsondata + " " + dir + " " + newfile);
         return jsondata;
     }
 
@@ -129,6 +131,9 @@ public class FileOperationHandler extends HttpServlet {
                 type = "\"rel\":\"folder\",\"img\":\"images/icons/gnome-fs-directory.png\"";
             } else if (chld[i].getName().endsWith(".jpg")) {
                 type = "\"rel\":\"image\",\"img\":\"ImageBytes?id=" + path + chld[i].getName() + "\"";
+            } else if (chld[i].getName().endsWith(".ogg")||chld[i].getName().endsWith(".wmv") 
+                    ||chld[i].getName().endsWith(".avi")||chld[i].getName().endsWith(".mov")) {
+                type = "\"rel\":\"vedio\",\"img\":\"images/icons/video.png\"";
             } else {
                 type = "\"rel\":\"file\",\"img\":\"images/icons/ascii.png\"";
             }
@@ -196,6 +201,14 @@ public class FileOperationHandler extends HttpServlet {
             String fileName = request.getParameter("newname");
             String fileContent = request.getParameter("content");
             //filePath = (filePath.equals("1") ? "/" : filePath);
+            Map params = request.getParameterMap();
+            Iterator i = params.keySet().iterator();
+
+            while (i.hasNext()) {
+                String key = (String) i.next();
+                String value = ((String[]) params.get(key))[ 0];
+                System.out.println("Key: " + key + "Value: " + value);
+            }
             System.out.println(operation + " " + filePath + fileName);
             if (operation.equals("get_folder")) {
                 out.println(getFolders(filePath));

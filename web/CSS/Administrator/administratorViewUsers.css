@@ -1,0 +1,100 @@
+/* 
+    Document   : administratorViewUsers
+    Created on : 17 Feb, 2012, 11:59:16 PM
+    Author     : TTT
+    Description:
+        Purpose of the stylesheet follows.
+*/
+
+/* 
+   TODO customize this sample style
+   Syntax recommendation http://www.w3.org/TR/REC-CSS2/
+*/
+#viewList {
+    float: left;
+    
+}
+
+#headings {
+    padding: 20px;
+}
+
+#headingSerial {
+    width: 100px;
+    position: relative;
+    float: left;
+}
+
+#headingEmail {
+    width: 300px;
+    position: relative;
+    float: left;
+}
+#headingPassword {
+    width: 300px;
+    position: relative;
+    float: left;
+}
+
+#usersdetails {
+    position: relative;
+    height: 20px;
+    padding: 20px;
+
+
+}
+
+#userSerial { 
+    width: 100px;
+    position: relative;
+    float: left;
+}
+
+#userEmail { 
+    width: 300px;
+    position: relative;
+    float: left;
+}
+
+#userPassword { 
+    width: 300px;
+    position: relative;
+    float: left;
+}
+
+#pageNavigation {
+    position: absolute;
+    padding: 20px;
+    bottom: 20px;
+}
+
+#verticalSeperator {
+    position: relative;
+    float: left;
+    background: #999999;
+    background-repeat: repeat-y;
+    background-repeat: repeat-x;
+    width:2px;
+    height: 550px;
+}
+
+#banUser {
+
+    position: relative;
+    vertical-align: middle;
+    float: left;
+}
+
+#allDetails {
+    position: relative;
+    vertical-align: middle;
+}
+
+#horizontalSeperator {
+    position: relative;
+    background: #999999;
+    background-repeat: repeat-x;
+    bottom: 0px;
+    height: 2px;
+    top: 550px;
+}

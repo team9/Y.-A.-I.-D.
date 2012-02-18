@@ -59,19 +59,32 @@ public class Logout extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        processRequest(request, response);
-        HttpSession theSession = request.getSession(false);
 
-        // print out the session id
-        if (theSession != null) {
-            System.out.println("<BR>Session Id: " + theSession.getId());
-            synchronized (theSession) {
-                // invalidating a session destroys it
-                theSession.invalidate();
-                System.out.println("<BR>Session destroyed");
+        HttpSession theSession = null;
+        PrintWriter pw = null;
+        try {
+            theSession = request.getSession(false);
+            pw = response.getWriter();
+            // print out the session id
+            if (theSession != null) {
+                System.out.println("<BR>Session Id: " + theSession.getId());
+                synchronized (theSession) {
+                    // invalidating a session destroys it
+                    theSession.invalidate();
+                    System.out.println("<BR>Session destroyed");
+                }
+
             }
+            System.out.println("hai");
+            response.setContentType("text/html");
+            pw.println("<script type=\"text/javascript\">");
+            pw.println("window.location='index.jsp';");
+            pw.println("</script>");
+            System.out.println("haaaaaaaaaai");
+        } catch (Exception e) {
+            e.printStackTrace();
+            System.out.println("Login Error : " + e);
         }
-        response.sendRedirect("login.jsp");
     }
 
     /** 

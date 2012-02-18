@@ -12,6 +12,8 @@ body  a.style{
     height: 250px;
     bottom: 35px;
     background-image: url("../../images/startMenu/silver.jpg");
+    opacity:0.8;
+    filter:alpha(opacity=40);
     position: relative;
 }
 

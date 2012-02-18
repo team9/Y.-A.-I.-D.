@@ -20,6 +20,26 @@
         <servlet-name>ImageBytes</servlet-name>
         <servlet-class>com.yaid.files.ImageBytes</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>GetPath</servlet-name>
+        <servlet-class>com.yaid.ser.GetPath</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>upload</servlet-name>
+        <servlet-class>com.yaid.files.upload</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>ViewAllUsers</servlet-name>
+        <servlet-class>com.yaid.administrator.ViewAllUsers</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>ReadTextFile</servlet-name>
+        <servlet-class>com.yaid.readtxt.ReadTextFile</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>test</servlet-name>
+        <servlet-class>com.yaid.readtxt.test</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>Registration</servlet-name>
         <url-pattern>/Registration</url-pattern>
@@ -39,6 +59,26 @@
     <servlet-mapping>
         <servlet-name>ImageBytes</servlet-name>
         <url-pattern>/ImageBytes</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>GetPath</servlet-name>
+        <url-pattern>/GetPath</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>upload</servlet-name>
+        <url-pattern>/upload</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>ViewAllUsers</servlet-name>
+        <url-pattern>/ViewAllUsers</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>ReadTextFile</servlet-name>
+        <url-pattern>/ReadTextFile</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>test</servlet-name>
+        <url-pattern>/test</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>

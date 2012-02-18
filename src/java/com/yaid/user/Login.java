@@ -4,13 +4,13 @@
  */
 package com.yaid.user;
 
+import com.yaid.db.DbConnection;
 import java.io.IOException;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.sql.*;
-import com.yaid.db.DbConnection;
 import java.io.PrintWriter;
 import javax.servlet.http.HttpSession;
 
@@ -19,6 +19,10 @@ import javax.servlet.http.HttpSession;
  * @author TTT
  */
 public class Login extends HttpServlet {
+
+    public Login() {
+        super();
+    }
 
     /** 
      * Processes requests for both HTTP <code>GET</code> and <code>POST</code> methods.
@@ -63,37 +67,41 @@ public class Login extends HttpServlet {
         ResultSet resultSet = null;
         HttpSession session = request.getSession(true);
         Connection connect = null;
-        PrintWriter out;
+        PrintWriter pw = null;
+        response.setContentType("text/html;charset=UTF-8");
+        pw = response.getWriter();
+        response.setContentType("text/html");
         try {
             String email = request.getParameter("emailid");
             String psw = request.getParameter("password");
             String userid = email.substring(0, email.indexOf("@"));
             //udb.setUserPassword(psw);
-            response.setContentType("text/html;charset=UTF-8");
+
             //System.out.println("hello...." + email.substring(0, email.indexOf("@")));
             System.out.println("user id : " + userid);
 
             connect = DbConnection.getDbConnection();
             preparedStatement = connect.prepareStatement("select password,email from yaid.users where email=?");
             preparedStatement.setString(1, email);
-            //preparedStatement.setString(1,request.getParameter("emailid"));
+            preparedStatement.setString(1, request.getParameter("emailid"));
             resultSet = preparedStatement.executeQuery();
-            if (resultSet.next()) {
-
-                //setting up session
-
-                session.setAttribute("userID", userid);
-                String temp = (String) session.getAttribute("userID");
-                System.out.println("session : " + temp);
-                response.sendRedirect("desktop.jsp");
-            } else {
-                response.setContentType("text/javascript");
-                out = response.getWriter();
-                out.print("alert('Not a valid user !!!');");
-                response.sendRedirect("index.jsp");
-
+            System.out.println("\t Query : " + preparedStatement);
+            while (resultSet.next()) {
+                System.out.println("\t DB : " + resultSet.getString("password") + "\t Entered : " + psw);
+                if (resultSet.getString("password").equals(psw)) {
+                    //setting up session
+                    session.setAttribute("userID", userid);
+                    String temp = (String) session.getAttribute("userID");
+                    System.out.println("session : " + temp);
+                    response.sendRedirect("desktop.jsp");
+                } else {
+                    pw.println("<script type=\"text/javascript\">");
+                    pw.println("alert('Invalid user ID and password !!!');");
+                    pw.println("window.location='index.jsp';");
+                    pw.println("</script>");
+                }
+                break;
             }
-
         } catch (Exception e) {
             e.printStackTrace();
             System.out.println("Login Error : " + e);

@@ -1,0 +1,118 @@
+14 Feb, 2012 7:11:05 AM org.apache.catalina.core.ApplicationContext log
+INFO: ContextListener: contextInitialized()
+14 Feb, 2012 7:11:05 AM org.apache.catalina.core.ApplicationContext log
+INFO: SessionListener: contextInitialized()
+14 Feb, 2012 8:01:51 AM org.apache.catalina.core.ApplicationContext log
+INFO: SessionListener: contextDestroyed()
+14 Feb, 2012 8:01:51 AM org.apache.catalina.core.ApplicationContext log
+INFO: ContextListener: contextDestroyed()
+14 Feb, 2012 10:42:22 AM org.apache.catalina.core.ApplicationContext log
+INFO: ContextListener: contextInitialized()
+14 Feb, 2012 10:42:22 AM org.apache.catalina.core.ApplicationContext log
+INFO: SessionListener: contextInitialized()
+Feb 14, 2012 7:29:17 PM org.apache.catalina.core.ApplicationContext log
+INFO: ContextListener: contextInitialized()
+Feb 14, 2012 7:29:17 PM org.apache.catalina.core.ApplicationContext log
+INFO: SessionListener: contextInitialized()
+Feb 14, 2012 7:47:47 PM org.apache.catalina.core.ApplicationContext log
+INFO: SessionListener: contextDestroyed()
+Feb 14, 2012 7:47:47 PM org.apache.catalina.core.ApplicationContext log
+INFO: ContextListener: contextDestroyed()
+14 Feb, 2012 8:07:09 PM org.apache.catalina.core.ApplicationContext log
+INFO: ContextListener: contextInitialized()
+14 Feb, 2012 8:07:09 PM org.apache.catalina.core.ApplicationContext log
+INFO: SessionListener: contextInitialized()
+14 Feb, 2012 8:40:04 PM org.apache.catalina.core.ApplicationContext log
+INFO: Marking servlet ImageBytes as unavailable
+14 Feb, 2012 8:40:04 PM org.apache.catalina.core.StandardWrapperValve invoke
+SEVERE: Allocate exception for servlet ImageBytes
+java.lang.VerifyError: (class: com/yaid/files/ImageBytes, method: <init> signature: ()V) Constructor must call super() or this()
+	at java.lang.Class.getDeclaredConstructors0(Native Method)
+	at java.lang.Class.privateGetDeclaredConstructors(Class.java:2389)
+	at java.lang.Class.getConstructor0(Class.java:2699)
+	at java.lang.Class.newInstance0(Class.java:326)
+	at java.lang.Class.newInstance(Class.java:308)
+	at org.apache.catalina.core.StandardWrapper.loadServlet(StandardWrapper.java:1149)
+	at org.apache.catalina.core.StandardWrapper.allocate(StandardWrapper.java:827)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:129)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:191)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:127)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:102)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:109)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:293)
+	at org.apache.coyote.http11.Http11AprProcessor.process(Http11AprProcessor.java:877)
+	at org.apache.coyote.http11.Http11AprProtocol$Http11ConnectionHandler.process(Http11AprProtocol.java:594)
+	at org.apache.tomcat.util.net.AprEndpoint$Worker.run(AprEndpoint.java:1675)
+	at java.lang.Thread.run(Thread.java:619)
+14 Feb, 2012 8:40:34 PM org.apache.catalina.core.ApplicationContext log
+INFO: Marking servlet ImageBytes as unavailable
+14 Feb, 2012 8:40:34 PM org.apache.catalina.core.StandardWrapperValve invoke
+SEVERE: Allocate exception for servlet ImageBytes
+java.lang.VerifyError: (class: com/yaid/files/ImageBytes, method: <init> signature: ()V) Constructor must call super() or this()
+	at java.lang.Class.getDeclaredConstructors0(Native Method)
+	at java.lang.Class.privateGetDeclaredConstructors(Class.java:2389)
+	at java.lang.Class.getConstructor0(Class.java:2699)
+	at java.lang.Class.newInstance0(Class.java:326)
+	at java.lang.Class.newInstance(Class.java:308)
+	at org.apache.catalina.core.StandardWrapper.loadServlet(StandardWrapper.java:1149)
+	at org.apache.catalina.core.StandardWrapper.allocate(StandardWrapper.java:827)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:129)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:191)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:127)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:102)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:109)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:293)
+	at org.apache.coyote.http11.Http11AprProcessor.process(Http11AprProcessor.java:877)
+	at org.apache.coyote.http11.Http11AprProtocol$Http11ConnectionHandler.process(Http11AprProtocol.java:594)
+	at org.apache.tomcat.util.net.AprEndpoint$Worker.run(AprEndpoint.java:1675)
+	at java.lang.Thread.run(Thread.java:619)
+14 Feb, 2012 8:41:33 PM org.apache.catalina.core.StandardWrapperValve invoke
+INFO: Servlet ImageBytes is currently unavailable
+14 Feb, 2012 8:42:23 PM org.apache.catalina.core.StandardWrapperValve invoke
+INFO: Servlet ImageBytes is currently unavailable
+14 Feb, 2012 8:42:59 PM org.apache.catalina.core.StandardWrapperValve invoke
+INFO: Servlet ImageBytes is currently unavailable
+14 Feb, 2012 8:43:09 PM org.apache.catalina.core.StandardWrapperValve invoke
+INFO: Servlet ImageBytes is currently unavailable
+14 Feb, 2012 8:43:23 PM org.apache.catalina.core.StandardWrapperValve invoke
+INFO: Servlet ImageBytes is currently unavailable
+14 Feb, 2012 8:43:41 PM org.apache.catalina.core.StandardWrapperValve invoke
+INFO: Servlet ImageBytes is currently unavailable
+14 Feb, 2012 8:43:55 PM org.apache.catalina.core.StandardWrapperValve invoke
+INFO: Servlet ImageBytes is currently unavailable
+14 Feb, 2012 8:44:07 PM org.apache.catalina.core.StandardWrapperValve invoke
+INFO: Servlet ImageBytes is currently unavailable
+14 Feb, 2012 8:44:18 PM org.apache.catalina.core.StandardWrapperValve invoke
+INFO: Servlet ImageBytes is currently unavailable
+14 Feb, 2012 8:44:27 PM org.apache.catalina.core.StandardWrapperValve invoke
+INFO: Servlet ImageBytes is currently unavailable
+14 Feb, 2012 8:44:38 PM org.apache.catalina.core.StandardWrapperValve invoke
+INFO: Servlet ImageBytes is currently unavailable
+14 Feb, 2012 8:45:04 PM org.apache.catalina.core.StandardWrapperValve invoke
+INFO: Servlet ImageBytes is currently unavailable
+14 Feb, 2012 8:45:16 PM org.apache.catalina.core.StandardWrapperValve invoke
+INFO: Servlet ImageBytes is currently unavailable
+14 Feb, 2012 8:45:29 PM org.apache.catalina.core.StandardWrapperValve invoke
+INFO: Servlet ImageBytes is currently unavailable
+14 Feb, 2012 8:49:00 PM org.apache.catalina.core.StandardWrapperValve invoke
+INFO: Servlet ImageBytes is currently unavailable
+14 Feb, 2012 8:49:09 PM org.apache.catalina.core.StandardWrapperValve invoke
+INFO: Servlet ImageBytes is currently unavailable
+14 Feb, 2012 8:49:10 PM org.apache.catalina.core.StandardWrapperValve invoke
+INFO: Servlet ImageBytes is currently unavailable
+14 Feb, 2012 8:49:11 PM org.apache.catalina.core.StandardWrapperValve invoke
+INFO: Servlet ImageBytes is currently unavailable
+14 Feb, 2012 8:49:33 PM org.apache.catalina.core.StandardWrapperValve invoke
+INFO: Servlet ImageBytes is currently unavailable
+14 Feb, 2012 8:53:10 PM org.apache.catalina.core.StandardWrapperValve invoke
+INFO: Servlet ImageBytes is currently unavailable
+14 Feb, 2012 8:54:26 PM org.apache.catalina.core.StandardWrapperValve invoke
+INFO: Servlet ImageBytes is currently unavailable
+14 Feb, 2012 8:54:33 PM org.apache.catalina.core.StandardWrapperValve invoke
+INFO: Servlet ImageBytes is currently unavailable
+14 Feb, 2012 8:54:33 PM org.apache.catalina.core.StandardWrapperValve invoke
+INFO: Servlet ImageBytes is currently unavailable
+14 Feb, 2012 11:52:05 PM org.apache.catalina.core.ApplicationContext log
+INFO: ContextListener: contextInitialized()
+14 Feb, 2012 11:52:05 PM org.apache.catalina.core.ApplicationContext log
+INFO: SessionListener: contextInitialized()

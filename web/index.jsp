@@ -4,9 +4,19 @@
         <title>Virtual Desktop</title>
         <meta http-equiv="content-type" content="text/html; charset=utf-8" />
         <link href="CSS/RegistrationLogin/RegistrationLogin.css" rel="stylesheet" type="text/css" media="screen" />
+        <script src="JQUERY/jquery.js" type="text/javascript"></script>
 
         <script>
     
+            function validateLogin(address) {
+                validateEmailID(address);
+                if(document.LoginDetails.password.value == "") {
+                    alert("Please enter your password !!!");
+                    return false;
+                }
+                return true;
+            }
+            
             function validateEmailID(address) {
  
                 var reg = /^([A-Za-z0-9_\-\.])+\@([A-Za-z0-9_\-\.])+\.([A-Za-z]{2,4})$/;
@@ -33,8 +43,11 @@
             }
  
             function loadRegistrationForm() {
-                document.RegistrationDetails.style.display='block';
-                document.LoginDetails.style.display='none';
+                //document.RegistrationDetails.style.display='block';
+                //document.LoginDetails.style.display='none';
+                
+                $("#LoginDetails").hide();
+                $("#RegistrationDetails").show();
             }
         </script>
         <style>
@@ -52,7 +65,6 @@
             <div id="menu">
                 <ul>
                     <li><a href="#" class="active">Home</a></li>
-                    <li><a href="registration.html">Registration</a></li>
                     <li><a href="#">About US</a></li>
                 </ul>
             </div>
@@ -69,7 +81,7 @@
                 <div id="sidebar">
                     <h3>Unlock Your Webtop . . . </h3>
                     <br />
-                    <form name="LoginDetails" id="LoginDetails" action="Login" method="post" onsubmit="return validateEmailID(emailid.value)">
+                    <form name="LoginDetails" id="LoginDetails" action="Login" method="post" onsubmit="return validateLogin(emailid.value)">
                         <label>Email ID  : </label><input type="text" id="emailid" name="emailid" class="more" size="60" />
                         <label>Password  : </label><input type="password" id="password" name="password" class="more"/>
                         <br />

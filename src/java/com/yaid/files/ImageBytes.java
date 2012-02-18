@@ -16,8 +16,11 @@ import javax.servlet.http.HttpServletResponse;
 
 public class ImageBytes extends HttpServlet {
 
-    /** 
-     * Processes requests for both HTTP <code>GET</code> and <code>POST</code> methods.
+    /**
+     * Processes requests for both HTTP
+     * <code>GET</code> and
+     * <code>POST</code> methods.
+     *
      * @param request servlet request
      * @param response servlet response
      * @throws ServletException if a servlet-specific error occurs
@@ -25,8 +28,24 @@ public class ImageBytes extends HttpServlet {
      */
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        response.setContentType("image/jpeg");
-        String path = "."+request.getParameter("id");
+        
+        String path = "." + request.getParameter("id");
+        if (path.endsWith(".jpg")) {
+            response.setContentType("image/jpeg");
+        } else if (path.endsWith(".wmv")) {
+            response.setContentType("video/x-ms-wmv");
+            System.out.println("video/x-ms-wmv");
+        } else if (path.endsWith(".mov")) {
+            response.setContentType("video/quicktime");
+            System.out.println("video/x-ms-wmv");
+        } else if (path.endsWith(".avi")) {
+            response.setContentType("video/avi");
+            System.out.println("video/x-ms-wmv");
+        } else if (path.endsWith(".ogg") ) {
+            response.setContentType("application/ogg");
+        } else {
+            response.setContentType("image/jpeg");
+        }
         OutputStream out = response.getOutputStream();
         File file = new File(path);
         DataInputStream dis = new DataInputStream(new FileInputStream(file));
@@ -51,8 +70,10 @@ public class ImageBytes extends HttpServlet {
     }
 
     // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">
-    /** 
-     * Handles the HTTP <code>GET</code> method.
+    /**
+     * Handles the HTTP
+     * <code>GET</code> method.
+     *
      * @param request servlet request
      * @param response servlet response
      * @throws ServletException if a servlet-specific error occurs
@@ -64,8 +85,10 @@ public class ImageBytes extends HttpServlet {
         processRequest(request, response);
     }
 
-    /** 
-     * Handles the HTTP <code>POST</code> method.
+    /**
+     * Handles the HTTP
+     * <code>POST</code> method.
+     *
      * @param request servlet request
      * @param response servlet response
      * @throws ServletException if a servlet-specific error occurs
@@ -77,8 +100,9 @@ public class ImageBytes extends HttpServlet {
         processRequest(request, response);
     }
 
-    /** 
+    /**
      * Returns a short description of the servlet.
+     *
      * @return a String containing servlet description
      */
     @Override

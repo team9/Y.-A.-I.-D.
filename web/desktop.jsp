@@ -1,3 +1,13 @@
+<%@page import="com.yaid.ser.User" %>
+<%
+            String uid = (String) session.getAttribute("userID");
+            System.out.println("The Session user in jsp is : " + uid);
+            User u = new User();
+            User objreturn = null;
+            objreturn = u.loginTime(uid);
+            System.out.println("The wallpath is :"+objreturn.wallpaper_path);
+%>
+
 <html>
     <head>
         <title>YAID</title>
@@ -33,7 +43,8 @@
                 $('head').append('<link rel="stylesheet" href="CSS/clock/white.css" type="text/css" />');
                 $('#analog-clock').hide();
                 $('#datepicker').hide();
-                $('#workarea').css("background-image", "url(ImageBytes?id=/UserData/vig/My%20Files/WallPaper/dream.jpg)");
+                //$('#workarea').css("background-image", "url(ImageBytes?id=/UserData/vig/My%20Files/WallPaper/dream.jpg)");
+                $('#workarea').css("background-image", "url('<%= objreturn.wallpaper_path%>')");
             });
 
             $(function(){
@@ -49,6 +60,9 @@
                         else if(key == "wallpaper") {
                             Window({'option':{'title':'Wallpapers',height:320, width:450},'content':'wallpaper_manager.html',"ajax":true});
                         }
+                        else if(key=="upload") {
+                            Window({'option':{'title':'File Upload',height:320, width:450},'content':'JQUERY/fileUpload/fileUpload.html',"ajax":true});
+                        }
                         
                     },
                     items: {
@@ -60,7 +74,8 @@
                             }
                         },
                         "widget" : { "name" : "Widgets", "icon" : "widget"},
-                        "wallpaper": {"name": "Change Wallpaper", "icon": "wallpaper"}
+                        "wallpaper": {"name": "Change Wallpaper", "icon": "wallpaper"},
+                        "upload": {"name": "Upload Files", "icon": "upload"}
                     }
                 });
             });
@@ -71,11 +86,35 @@
                     $('#startmenu').toggle();
                 }
             }
+            
+            function openFileBrowser() {
+                Window({'option':{'title':'Widgets',height:250, width:430},'content':'window.html',"ajax":true});
+            }
+            
+            function openSettings() {
+                
+            }
+            
+            function openWidgetManager() {
+                Window({'option':{'title':'Widgets',height:250, width:430},'content':'widget_manager.html',"ajax":true});
+            }
+            
+            function openCalculator() {
+                Window({'option':{'title':'Calculator',height:470, width:500},'content':'Calculator.htm',"ajax":true}).draggable();
+            }
+            
+            
+            function openTextEditor() {
+                Window({'option':{'title':'Text Editor',height:470, width:500},'content':'Notepad.html',"ajax":true}).draggable();
+            }
+            
+            
         </script>
 
 
     </head>
     <body>
+
         <div id="workarea" style=" position: absolute;top: 0px; left: 0px; right: 0px; bottom: 0px;" onclick="return hideStartMenu()">
 
             <ul id="IconView">
@@ -99,19 +138,19 @@
                 <div class="wrapper">
 
                     <!-- start vertical menu -->
-                    <div class="vertMenu" style="float: left;">
+                    <div class="vertMenu" style="float: left;">  <!--Left half of start menu -->
                         <table class="rootVoices vertical" cellspacing='0' cellpadding='0' border='0'>
-                            <tr><td class="rootVoice {menu: 'Menu_0_1'}" >My Space</td></tr>
-                            <tr><td class="rootVoice {menu: 'Menu_0_2'}" >Settings</td></tr>
-                            <tr><td class="rootVoice {menu: 'Menu_0_3'}" >Widget Manager</td></tr>
+                            <tr><td class="rootVoice {menu: ''}"  onclick="openFileBrowser()">Home</td></tr>
+                            <tr><td class="rootVoice {menu: 'Menu_L_2'}" >Settings</td></tr>
+                            <tr><td class="rootVoice {menu: 'Menu_L_3'}"  onclick="openWidgetManager()">Widget Manager</td></tr>
                         </table>
                     </div>
                     <div id="divider_vertical" style="float: left;">
                     </div>
-                    <div class="vertMenu" style="float: left;">
+                    <div class="vertMenu" style="float: left;">  <!--Right half of start menu -->
                         <table class="rootVoices vertical" cellspacing='0' cellpadding='0' border='0'>
-                            <tr><td class="rootVoice {menu: 'Menu_0_1'}" >Applications</td></tr>
-                            <tr><td class="rootVoice {menu: 'Menu_0_2'}" >Wallpapers</td></tr>
+                            <tr><td class="rootVoice {menu: 'Menu_R_1'}" >Applications</td></tr>
+                            <tr><td class="rootVoice {menu: 'Menu_R_2'}" >Wallpapers</td></tr>
 
                         </table>
                     </div>
@@ -119,23 +158,28 @@
                         <a></a>
                     </div>
                     <div id="My_Start_Menu_Base">
-                        <div id="My_Start_Menu_Base_Left">
-                            <input type="button" value="Home Page" />
-                        </div>
+                        <!--                        <div id="My_Start_Menu_Base_Left">
+                                                    <input type="button" value="Home Page"/>
+                                                </div>-->
                         <div id="My_Start_Menu_Base_Right">
-                            <input type="button" value="Log Off"  size="80px"/>
+                            <form action="Logout" method="post">
+                                <input type="submit" value="Log Off" class="submit" size="70px;"/> 
+                            </form>
                         </div>
                     </div>
                     <!-- end vertical menu -->
 
                     <!-- menues -->
-                    <div id="Menu_0_1" class="mbmenu">
-                        <a rel="title" >titleA</a>
-                        <a>A1</a>
-                        <a>A2</a>
-                        <a rel="separator"> </a> <!-- menuvoice separator-->
-                        <a class="{menu:'Menu_6'}">A3</a>
-                        <a class="{menu:'Menu_5', img: '24-book-blue-check.png'}">A4</a>
+                    <div id="Menu_R_1" class="mbmenu">
+                        <a rel="title" >Applications</a>
+                        <a  onclick="openCalculator()">Calculator</a>
+                        <a onclick="openTextEditor()">Text Editor</a>
+                        <!--                        <a rel="separator"> </a>  menuvoice separator-->
+                        <!--                        <a class="{menu:'Menu_6'}">A3</a>
+                                                <a class="{menu:'Menu_5', img: '24-book-blue-check.png'}">A4</a>-->
+                        <a>Image Viewer</a>
+                        <a>Video Player</a>
+                        <a>Audio Player</a>
                     </div>
 
 
@@ -180,9 +224,9 @@
             <button id="startbutton" ><img src="images/startButton/start.png" width="50px" height="30px" ></button> 
         </div>
         <!--<div id="taskbar"  style=" position: absolute; border: 1px solid; height:20px; bottom: 0px; left: 1px; right: 1px; height: 5%;">
-            
 
-            
+
+
             <div  id="minimizedtasks" style="width: 950px; float: left; border: #000000;">minimized tasks</div>
             <div  id="notifications" style="width: 200px; float: left; border: #000000;">notifications</div>
             <div  id="datetime" style="width: 100px; float: left; border: #000000;">datetime</div> 

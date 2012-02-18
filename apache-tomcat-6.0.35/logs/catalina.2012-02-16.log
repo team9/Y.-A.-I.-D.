@@ -1,0 +1,1769 @@
+16 Feb, 2012 12:03:11 AM org.apache.catalina.core.StandardContext stop
+INFO: Container org.apache.catalina.core.ContainerBase.[Catalina].[localhost].[/] has not been started
+16 Feb, 2012 12:03:12 AM org.apache.catalina.startup.HostConfig checkResources
+INFO: Undeploying context []
+16 Feb, 2012 12:03:12 AM org.apache.catalina.startup.HostConfig deployDescriptor
+INFO: Deploying configuration descriptor ROOT.xml
+16 Feb, 2012 12:03:12 AM org.apache.catalina.core.StandardContext start
+INFO: Container org.apache.catalina.core.ContainerBase.[Catalina].[localhost].[/] has already been started
+16 Feb, 2012 12:03:13 AM org.apache.catalina.loader.WebappClassLoader loadClass
+INFO: Illegal access: this web application instance has been stopped already.  Could not load com.mysql.jdbc.SQLError.  The eventual following stack trace is caused by an error thrown for debugging purposes as well as to attempt to terminate the thread which caused the illegal access, and has no functional impact.
+java.lang.IllegalStateException
+	at org.apache.catalina.loader.WebappClassLoader.loadClass(WebappClassLoader.java:1566)
+	at org.apache.catalina.loader.WebappClassLoader.loadClass(WebappClassLoader.java:1526)
+	at java.lang.ClassLoader.loadClassInternal(ClassLoader.java:319)
+	at com.mysql.jdbc.MysqlIO.send(MysqlIO.java:3321)
+	at com.mysql.jdbc.MysqlIO.quit(MysqlIO.java:1667)
+	at com.mysql.jdbc.ConnectionImpl.realClose(ConnectionImpl.java:4322)
+	at com.mysql.jdbc.ConnectionImpl.cleanup(ConnectionImpl.java:1348)
+	at com.mysql.jdbc.ConnectionImpl.finalize(ConnectionImpl.java:2679)
+	at java.lang.ref.Finalizer.invokeFinalizeMethod(Native Method)
+	at java.lang.ref.Finalizer.runFinalizer(Finalizer.java:83)
+	at java.lang.ref.Finalizer.access$100(Finalizer.java:14)
+	at java.lang.ref.Finalizer$FinalizerThread.run(Finalizer.java:160)
+16 Feb, 2012 12:03:13 AM org.apache.catalina.loader.WebappClassLoader loadClass
+INFO: Illegal access: this web application instance has been stopped already.  Could not load com.mysql.jdbc.ProfilerEventHandlerFactory.  The eventual following stack trace is caused by an error thrown for debugging purposes as well as to attempt to terminate the thread which caused the illegal access, and has no functional impact.
+java.lang.IllegalStateException
+	at org.apache.catalina.loader.WebappClassLoader.loadClass(WebappClassLoader.java:1566)
+	at org.apache.catalina.loader.WebappClassLoader.loadClass(WebappClassLoader.java:1526)
+	at java.lang.ClassLoader.loadClassInternal(ClassLoader.java:319)
+	at com.mysql.jdbc.ConnectionImpl.realClose(ConnectionImpl.java:4346)
+	at com.mysql.jdbc.ConnectionImpl.cleanup(ConnectionImpl.java:1348)
+	at com.mysql.jdbc.ConnectionImpl.finalize(ConnectionImpl.java:2679)
+	at java.lang.ref.Finalizer.invokeFinalizeMethod(Native Method)
+	at java.lang.ref.Finalizer.runFinalizer(Finalizer.java:83)
+	at java.lang.ref.Finalizer.access$100(Finalizer.java:14)
+	at java.lang.ref.Finalizer$FinalizerThread.run(Finalizer.java:160)
+16 Feb, 2012 12:06:52 AM org.apache.catalina.loader.WebappClassLoader clearReferencesJdbc
+SEVERE: The web application [] registered the JDBC driver [com.mysql.jdbc.Driver] but failed to unregister it when the web application was stopped. To prevent a memory leak, the JDBC Driver has been forcibly unregistered.
+16 Feb, 2012 12:06:53 AM org.apache.catalina.startup.HostConfig checkResources
+INFO: Undeploying context []
+16 Feb, 2012 12:06:54 AM org.apache.catalina.startup.HostConfig checkResources
+INFO: Undeploying context []
+16 Feb, 2012 12:06:54 AM org.apache.catalina.startup.HostConfig deployDescriptor
+INFO: Deploying configuration descriptor ROOT.xml
+16 Feb, 2012 12:06:54 AM org.apache.catalina.core.StandardContext start
+INFO: Container org.apache.catalina.core.ContainerBase.[Catalina].[localhost].[/] has already been started
+16 Feb, 2012 12:07:24 AM org.apache.catalina.core.StandardContext reload
+INFO: Reloading Context with name [] has started
+16 Feb, 2012 12:07:24 AM org.apache.catalina.loader.WebappClassLoader clearReferencesJdbc
+SEVERE: The web application [] registered the JDBC driver [com.mysql.jdbc.Driver] but failed to unregister it when the web application was stopped. To prevent a memory leak, the JDBC Driver has been forcibly unregistered.
+16 Feb, 2012 12:07:45 AM org.apache.catalina.startup.HostConfig checkResources
+INFO: Undeploying context []
+16 Feb, 2012 12:07:46 AM org.apache.catalina.startup.HostConfig deployDescriptor
+INFO: Deploying configuration descriptor ROOT.xml
+16 Feb, 2012 12:07:46 AM org.apache.catalina.core.StandardContext start
+INFO: Container org.apache.catalina.core.ContainerBase.[Catalina].[localhost].[/] has already been started
+16 Feb, 2012 12:07:46 AM org.apache.catalina.loader.WebappClassLoader loadClass
+INFO: Illegal access: this web application instance has been stopped already.  Could not load com.mysql.jdbc.ProfilerEventHandlerFactory.  The eventual following stack trace is caused by an error thrown for debugging purposes as well as to attempt to terminate the thread which caused the illegal access, and has no functional impact.
+java.lang.IllegalStateException
+	at org.apache.catalina.loader.WebappClassLoader.loadClass(WebappClassLoader.java:1566)
+	at org.apache.catalina.loader.WebappClassLoader.loadClass(WebappClassLoader.java:1526)
+	at java.lang.ClassLoader.loadClassInternal(ClassLoader.java:319)
+	at com.mysql.jdbc.ConnectionImpl.realClose(ConnectionImpl.java:4346)
+	at com.mysql.jdbc.ConnectionImpl.cleanup(ConnectionImpl.java:1348)
+	at com.mysql.jdbc.ConnectionImpl.finalize(ConnectionImpl.java:2679)
+	at java.lang.ref.Finalizer.invokeFinalizeMethod(Native Method)
+	at java.lang.ref.Finalizer.runFinalizer(Finalizer.java:83)
+	at java.lang.ref.Finalizer.access$100(Finalizer.java:14)
+	at java.lang.ref.Finalizer$FinalizerThread.run(Finalizer.java:160)
+16 Feb, 2012 12:07:46 AM org.apache.catalina.loader.WebappClassLoader loadClass
+INFO: Illegal access: this web application instance has been stopped already.  Could not load com.mysql.jdbc.SQLError.  The eventual following stack trace is caused by an error thrown for debugging purposes as well as to attempt to terminate the thread which caused the illegal access, and has no functional impact.
+java.lang.IllegalStateException
+	at org.apache.catalina.loader.WebappClassLoader.loadClass(WebappClassLoader.java:1566)
+	at org.apache.catalina.loader.WebappClassLoader.loadClass(WebappClassLoader.java:1526)
+	at java.lang.ClassLoader.loadClassInternal(ClassLoader.java:319)
+	at com.mysql.jdbc.MysqlIO.send(MysqlIO.java:3321)
+	at com.mysql.jdbc.MysqlIO.quit(MysqlIO.java:1667)
+	at com.mysql.jdbc.ConnectionImpl.realClose(ConnectionImpl.java:4322)
+	at com.mysql.jdbc.ConnectionImpl.cleanup(ConnectionImpl.java:1348)
+	at com.mysql.jdbc.ConnectionImpl.finalize(ConnectionImpl.java:2679)
+	at java.lang.ref.Finalizer.invokeFinalizeMethod(Native Method)
+	at java.lang.ref.Finalizer.runFinalizer(Finalizer.java:83)
+	at java.lang.ref.Finalizer.access$100(Finalizer.java:14)
+	at java.lang.ref.Finalizer$FinalizerThread.run(Finalizer.java:160)
+16 Feb, 2012 12:07:48 AM org.apache.catalina.loader.WebappClassLoader loadClass
+INFO: Illegal access: this web application instance has been stopped already.  Could not load com.mysql.jdbc.ProfilerEventHandlerFactory.  The eventual following stack trace is caused by an error thrown for debugging purposes as well as to attempt to terminate the thread which caused the illegal access, and has no functional impact.
+java.lang.IllegalStateException
+	at org.apache.catalina.loader.WebappClassLoader.loadClass(WebappClassLoader.java:1566)
+	at org.apache.catalina.loader.WebappClassLoader.loadClass(WebappClassLoader.java:1526)
+	at java.lang.ClassLoader.loadClassInternal(ClassLoader.java:319)
+	at com.mysql.jdbc.ConnectionImpl.realClose(ConnectionImpl.java:4346)
+	at com.mysql.jdbc.ConnectionImpl.cleanup(ConnectionImpl.java:1348)
+	at com.mysql.jdbc.ConnectionImpl.finalize(ConnectionImpl.java:2679)
+	at java.lang.ref.Finalizer.invokeFinalizeMethod(Native Method)
+	at java.lang.ref.Finalizer.runFinalizer(Finalizer.java:83)
+	at java.lang.ref.Finalizer.access$100(Finalizer.java:14)
+	at java.lang.ref.Finalizer$FinalizerThread.run(Finalizer.java:160)
+16 Feb, 2012 12:09:38 AM org.apache.catalina.startup.HostConfig checkResources
+INFO: Undeploying context []
+16 Feb, 2012 12:09:38 AM org.apache.catalina.startup.ExpandWar deleteDir
+SEVERE: [D:\Dropbox\YAID\apache-tomcat-6.0.35\work\Catalina\localhost\_] could not be completely deleted. The presence of the remaining files may cause problems
+16 Feb, 2012 12:09:38 AM org.apache.catalina.startup.ExpandWar delete
+SEVERE: [D:\Dropbox\YAID\apache-tomcat-6.0.35\work\Catalina\localhost\_] could not be completely deleted. The presence of the remaining files may cause problems
+16 Feb, 2012 12:09:38 AM org.apache.catalina.startup.HostConfig deployDescriptor
+INFO: Deploying configuration descriptor ROOT.xml
+16 Feb, 2012 12:09:38 AM org.apache.catalina.core.StandardContext start
+INFO: Container org.apache.catalina.core.ContainerBase.[Catalina].[localhost].[/] has already been started
+16 Feb, 2012 12:14:43 AM org.apache.catalina.startup.HostConfig checkResources
+INFO: Undeploying context []
+16 Feb, 2012 12:14:43 AM org.apache.catalina.startup.HostConfig deployDescriptor
+INFO: Deploying configuration descriptor ROOT.xml
+16 Feb, 2012 12:14:43 AM org.apache.catalina.core.StandardContext start
+INFO: Container org.apache.catalina.core.ContainerBase.[Catalina].[localhost].[/] has already been started
+16 Feb, 2012 12:17:08 AM org.apache.catalina.startup.HostConfig checkResources
+INFO: Undeploying context []
+16 Feb, 2012 12:17:08 AM org.apache.catalina.startup.HostConfig deployDescriptor
+INFO: Deploying configuration descriptor ROOT.xml
+16 Feb, 2012 12:17:08 AM org.apache.catalina.core.StandardContext start
+INFO: Container org.apache.catalina.core.ContainerBase.[Catalina].[localhost].[/] has already been started
+16 Feb, 2012 12:18:04 AM org.apache.catalina.startup.HostConfig checkResources
+INFO: Undeploying context []
+16 Feb, 2012 12:18:04 AM org.apache.catalina.startup.HostConfig deployDescriptor
+INFO: Deploying configuration descriptor ROOT.xml
+16 Feb, 2012 12:18:04 AM org.apache.catalina.core.StandardContext start
+INFO: Container org.apache.catalina.core.ContainerBase.[Catalina].[localhost].[/] has already been started
+16 Feb, 2012 12:22:58 AM org.apache.catalina.startup.HostConfig checkResources
+INFO: Undeploying context []
+16 Feb, 2012 12:22:58 AM org.apache.catalina.startup.HostConfig deployDescriptor
+INFO: Deploying configuration descriptor ROOT.xml
+16 Feb, 2012 12:22:59 AM org.apache.catalina.core.StandardContext start
+INFO: Container org.apache.catalina.core.ContainerBase.[Catalina].[localhost].[/] has already been started
+16 Feb, 2012 12:23:47 AM org.apache.catalina.core.StandardContext reload
+INFO: Reloading Context with name [] has started
+16 Feb, 2012 12:23:52 AM org.apache.catalina.startup.HostConfig checkResources
+INFO: Undeploying context []
+16 Feb, 2012 12:23:52 AM org.apache.catalina.startup.HostConfig deployDescriptor
+INFO: Deploying configuration descriptor ROOT.xml
+16 Feb, 2012 12:23:52 AM org.apache.catalina.core.StandardContext start
+INFO: Container org.apache.catalina.core.ContainerBase.[Catalina].[localhost].[/] has already been started
+16 Feb, 2012 12:24:54 AM org.apache.catalina.loader.WebappClassLoader clearReferencesJdbc
+SEVERE: The web application [] registered the JDBC driver [com.mysql.jdbc.Driver] but failed to unregister it when the web application was stopped. To prevent a memory leak, the JDBC Driver has been forcibly unregistered.
+16 Feb, 2012 12:24:55 AM org.apache.catalina.startup.HostConfig checkResources
+INFO: Undeploying context []
+16 Feb, 2012 12:24:55 AM org.apache.catalina.startup.HostConfig deployDescriptor
+INFO: Deploying configuration descriptor ROOT.xml
+16 Feb, 2012 12:24:55 AM org.apache.catalina.core.StandardContext start
+INFO: Container org.apache.catalina.core.ContainerBase.[Catalina].[localhost].[/] has already been started
+16 Feb, 2012 12:25:02 AM org.apache.catalina.loader.WebappClassLoader loadClass
+INFO: Illegal access: this web application instance has been stopped already.  Could not load com.mysql.jdbc.ProfilerEventHandlerFactory.  The eventual following stack trace is caused by an error thrown for debugging purposes as well as to attempt to terminate the thread which caused the illegal access, and has no functional impact.
+java.lang.IllegalStateException
+	at org.apache.catalina.loader.WebappClassLoader.loadClass(WebappClassLoader.java:1566)
+	at org.apache.catalina.loader.WebappClassLoader.loadClass(WebappClassLoader.java:1526)
+	at java.lang.ClassLoader.loadClassInternal(ClassLoader.java:319)
+	at com.mysql.jdbc.ConnectionImpl.realClose(ConnectionImpl.java:4346)
+	at com.mysql.jdbc.ConnectionImpl.cleanup(ConnectionImpl.java:1348)
+	at com.mysql.jdbc.ConnectionImpl.finalize(ConnectionImpl.java:2679)
+	at java.lang.ref.Finalizer.invokeFinalizeMethod(Native Method)
+	at java.lang.ref.Finalizer.runFinalizer(Finalizer.java:83)
+	at java.lang.ref.Finalizer.access$100(Finalizer.java:14)
+	at java.lang.ref.Finalizer$FinalizerThread.run(Finalizer.java:160)
+16 Feb, 2012 12:25:48 AM org.apache.catalina.core.StandardContext reload
+INFO: Reloading Context with name [] has started
+16 Feb, 2012 12:25:48 AM org.apache.catalina.loader.WebappClassLoader clearReferencesJdbc
+SEVERE: The web application [] registered the JDBC driver [com.mysql.jdbc.Driver] but failed to unregister it when the web application was stopped. To prevent a memory leak, the JDBC Driver has been forcibly unregistered.
+16 Feb, 2012 12:25:58 AM org.apache.catalina.startup.HostConfig checkResources
+INFO: Undeploying context []
+16 Feb, 2012 12:25:58 AM org.apache.catalina.startup.ExpandWar deleteDir
+SEVERE: [D:\Dropbox\YAID\apache-tomcat-6.0.35\work\Catalina\localhost\_] could not be completely deleted. The presence of the remaining files may cause problems
+16 Feb, 2012 12:25:58 AM org.apache.catalina.startup.ExpandWar delete
+SEVERE: [D:\Dropbox\YAID\apache-tomcat-6.0.35\work\Catalina\localhost\_] could not be completely deleted. The presence of the remaining files may cause problems
+16 Feb, 2012 12:25:58 AM org.apache.catalina.startup.HostConfig deployDescriptor
+INFO: Deploying configuration descriptor ROOT.xml
+16 Feb, 2012 12:25:59 AM org.apache.catalina.core.StandardContext start
+INFO: Container org.apache.catalina.core.ContainerBase.[Catalina].[localhost].[/] has already been started
+16 Feb, 2012 12:26:49 AM org.apache.catalina.core.StandardContext reload
+INFO: Reloading Context with name [] has started
+16 Feb, 2012 12:26:52 AM org.apache.catalina.startup.HostConfig checkResources
+INFO: Undeploying context []
+16 Feb, 2012 12:26:52 AM org.apache.catalina.startup.HostConfig deployDescriptor
+INFO: Deploying configuration descriptor ROOT.xml
+16 Feb, 2012 12:26:52 AM org.apache.catalina.core.StandardContext start
+INFO: Container org.apache.catalina.core.ContainerBase.[Catalina].[localhost].[/] has already been started
+16 Feb, 2012 12:27:39 AM org.apache.catalina.core.StandardContext reload
+INFO: Reloading Context with name [] has started
+16 Feb, 2012 12:27:45 AM org.apache.catalina.startup.HostConfig checkResources
+INFO: Undeploying context []
+16 Feb, 2012 12:27:45 AM org.apache.catalina.startup.HostConfig deployDescriptor
+INFO: Deploying configuration descriptor ROOT.xml
+16 Feb, 2012 12:27:45 AM org.apache.catalina.core.StandardContext start
+INFO: Container org.apache.catalina.core.ContainerBase.[Catalina].[localhost].[/] has already been started
+16 Feb, 2012 12:28:10 AM org.apache.catalina.startup.HostConfig checkResources
+INFO: Undeploying context []
+16 Feb, 2012 12:28:10 AM org.apache.catalina.startup.HostConfig deployDescriptor
+INFO: Deploying configuration descriptor ROOT.xml
+16 Feb, 2012 12:28:10 AM org.apache.catalina.core.StandardContext start
+INFO: Container org.apache.catalina.core.ContainerBase.[Catalina].[localhost].[/] has already been started
+16 Feb, 2012 12:28:39 AM org.apache.catalina.core.StandardContext reload
+INFO: Reloading Context with name [] has started
+16 Feb, 2012 12:28:49 AM org.apache.catalina.startup.HostConfig checkResources
+INFO: Undeploying context []
+16 Feb, 2012 12:28:50 AM org.apache.catalina.startup.HostConfig checkResources
+INFO: Undeploying context []
+16 Feb, 2012 12:28:50 AM org.apache.catalina.startup.HostConfig deployDescriptor
+INFO: Deploying configuration descriptor ROOT.xml
+16 Feb, 2012 12:28:50 AM org.apache.catalina.loader.WebappClassLoader loadClass
+INFO: Illegal access: this web application instance has been stopped already.  Could not load com.mysql.jdbc.ProfilerEventHandlerFactory.  The eventual following stack trace is caused by an error thrown for debugging purposes as well as to attempt to terminate the thread which caused the illegal access, and has no functional impact.
+java.lang.IllegalStateException
+	at org.apache.catalina.loader.WebappClassLoader.loadClass(WebappClassLoader.java:1566)
+	at org.apache.catalina.loader.WebappClassLoader.loadClass(WebappClassLoader.java:1526)
+	at java.lang.ClassLoader.loadClassInternal(ClassLoader.java:319)
+	at com.mysql.jdbc.ConnectionImpl.realClose(ConnectionImpl.java:4346)
+	at com.mysql.jdbc.ConnectionImpl.cleanup(ConnectionImpl.java:1348)
+	at com.mysql.jdbc.ConnectionImpl.finalize(ConnectionImpl.java:2679)
+	at java.lang.ref.Finalizer.invokeFinalizeMethod(Native Method)
+	at java.lang.ref.Finalizer.runFinalizer(Finalizer.java:83)
+	at java.lang.ref.Finalizer.access$100(Finalizer.java:14)
+	at java.lang.ref.Finalizer$FinalizerThread.run(Finalizer.java:160)
+16 Feb, 2012 12:28:50 AM org.apache.catalina.core.StandardContext start
+INFO: Container org.apache.catalina.core.ContainerBase.[Catalina].[localhost].[/] has already been started
+16 Feb, 2012 12:30:10 AM org.apache.catalina.core.StandardContext reload
+INFO: Reloading Context with name [] has started
+16 Feb, 2012 12:30:22 AM org.apache.catalina.startup.HostConfig checkResources
+INFO: Undeploying context []
+16 Feb, 2012 12:30:22 AM org.apache.catalina.startup.HostConfig deployDescriptor
+INFO: Deploying configuration descriptor ROOT.xml
+16 Feb, 2012 12:30:22 AM org.apache.catalina.core.StandardContext start
+INFO: Container org.apache.catalina.core.ContainerBase.[Catalina].[localhost].[/] has already been started
+16 Feb, 2012 12:30:41 AM org.apache.coyote.http11.Http11AprProtocol pause
+INFO: Pausing Coyote HTTP/1.1 on http-8080
+16 Feb, 2012 12:30:41 AM org.apache.coyote.ajp.AjpAprProtocol pause
+INFO: Pausing Coyote AJP/1.3 on ajp-8009
+16 Feb, 2012 12:30:42 AM org.apache.catalina.core.StandardService stop
+INFO: Stopping service Catalina
+16 Feb, 2012 12:30:42 AM org.apache.coyote.http11.Http11AprProtocol destroy
+INFO: Stopping Coyote HTTP/1.1 on http-8080
+16 Feb, 2012 12:30:42 AM org.apache.coyote.ajp.AjpAprProtocol destroy
+INFO: Stopping Coyote AJP/1.3 on ajp-8009
+16 Feb, 2012 12:30:46 AM org.apache.catalina.core.AprLifecycleListener init
+INFO: Loaded APR based Apache Tomcat Native library 1.1.22.
+16 Feb, 2012 12:30:46 AM org.apache.catalina.core.AprLifecycleListener init
+INFO: APR capabilities: IPv6 [false], sendfile [true], accept filters [false], random [true].
+16 Feb, 2012 12:30:47 AM org.apache.coyote.http11.Http11AprProtocol init
+INFO: Initializing Coyote HTTP/1.1 on http-8080
+16 Feb, 2012 12:30:47 AM org.apache.coyote.ajp.AjpAprProtocol init
+INFO: Initializing Coyote AJP/1.3 on ajp-8009
+16 Feb, 2012 12:30:47 AM org.apache.catalina.startup.Catalina load
+INFO: Initialization processed in 888 ms
+16 Feb, 2012 12:30:47 AM org.apache.catalina.core.StandardService start
+INFO: Starting service Catalina
+16 Feb, 2012 12:30:47 AM org.apache.catalina.core.StandardEngine start
+INFO: Starting Servlet Engine: Apache Tomcat/6.0.35
+16 Feb, 2012 12:30:47 AM org.apache.catalina.startup.HostConfig deployDescriptor
+INFO: Deploying configuration descriptor fileupload.xml
+16 Feb, 2012 12:30:47 AM org.apache.catalina.startup.HostConfig deployDescriptor
+INFO: Deploying configuration descriptor host-manager.xml
+16 Feb, 2012 12:30:47 AM org.apache.catalina.startup.HostConfig deployDescriptor
+INFO: Deploying configuration descriptor manager.xml
+16 Feb, 2012 12:30:47 AM org.apache.catalina.startup.HostConfig deployDescriptor
+INFO: Deploying configuration descriptor ROOT.xml
+16 Feb, 2012 12:30:47 AM org.apache.catalina.startup.HostConfig deployDirectory
+INFO: Deploying web application directory docs
+16 Feb, 2012 12:30:47 AM org.apache.catalina.startup.HostConfig deployDirectory
+INFO: Deploying web application directory examples
+16 Feb, 2012 12:30:47 AM org.apache.coyote.http11.Http11AprProtocol start
+INFO: Starting Coyote HTTP/1.1 on http-8080
+16 Feb, 2012 12:30:47 AM org.apache.coyote.ajp.AjpAprProtocol start
+INFO: Starting Coyote AJP/1.3 on ajp-8009
+16 Feb, 2012 12:30:47 AM org.apache.catalina.startup.Catalina start
+INFO: Server startup in 786 ms
+16 Feb, 2012 12:31:48 AM org.apache.catalina.core.StandardContext reload
+INFO: Reloading Context with name [] has started
+16 Feb, 2012 12:31:49 AM org.apache.catalina.startup.HostConfig checkResources
+INFO: Undeploying context []
+16 Feb, 2012 12:31:49 AM org.apache.catalina.startup.HostConfig deployDescriptor
+INFO: Deploying configuration descriptor ROOT.xml
+16 Feb, 2012 12:31:49 AM org.apache.catalina.core.StandardContext start
+INFO: Container org.apache.catalina.core.ContainerBase.[Catalina].[localhost].[/] has already been started
+16 Feb, 2012 12:33:28 AM org.apache.catalina.core.StandardContext reload
+INFO: Reloading Context with name [] has started
+16 Feb, 2012 12:33:28 AM org.apache.catalina.loader.WebappClassLoader clearReferencesJdbc
+SEVERE: The web application [] registered the JDBC driver [com.mysql.jdbc.Driver] but failed to unregister it when the web application was stopped. To prevent a memory leak, the JDBC Driver has been forcibly unregistered.
+16 Feb, 2012 12:33:58 AM org.apache.catalina.core.StandardContext reload
+INFO: Reloading Context with name [] has started
+16 Feb, 2012 12:34:02 AM org.apache.catalina.loader.WebappClassLoader loadClass
+INFO: Illegal access: this web application instance has been stopped already.  Could not load com.mysql.jdbc.SQLError.  The eventual following stack trace is caused by an error thrown for debugging purposes as well as to attempt to terminate the thread which caused the illegal access, and has no functional impact.
+java.lang.IllegalStateException
+	at org.apache.catalina.loader.WebappClassLoader.loadClass(WebappClassLoader.java:1566)
+	at org.apache.catalina.loader.WebappClassLoader.loadClass(WebappClassLoader.java:1526)
+	at java.lang.ClassLoader.loadClassInternal(ClassLoader.java:319)
+	at com.mysql.jdbc.MysqlIO.send(MysqlIO.java:3321)
+	at com.mysql.jdbc.MysqlIO.quit(MysqlIO.java:1667)
+	at com.mysql.jdbc.ConnectionImpl.realClose(ConnectionImpl.java:4322)
+	at com.mysql.jdbc.ConnectionImpl.cleanup(ConnectionImpl.java:1348)
+	at com.mysql.jdbc.ConnectionImpl.finalize(ConnectionImpl.java:2679)
+	at java.lang.ref.Finalizer.invokeFinalizeMethod(Native Method)
+	at java.lang.ref.Finalizer.runFinalizer(Finalizer.java:83)
+	at java.lang.ref.Finalizer.access$100(Finalizer.java:14)
+	at java.lang.ref.Finalizer$FinalizerThread.run(Finalizer.java:160)
+16 Feb, 2012 12:34:02 AM org.apache.catalina.loader.WebappClassLoader loadClass
+INFO: Illegal access: this web application instance has been stopped already.  Could not load com.mysql.jdbc.ProfilerEventHandlerFactory.  The eventual following stack trace is caused by an error thrown for debugging purposes as well as to attempt to terminate the thread which caused the illegal access, and has no functional impact.
+java.lang.IllegalStateException
+	at org.apache.catalina.loader.WebappClassLoader.loadClass(WebappClassLoader.java:1566)
+	at org.apache.catalina.loader.WebappClassLoader.loadClass(WebappClassLoader.java:1526)
+	at java.lang.ClassLoader.loadClassInternal(ClassLoader.java:319)
+	at com.mysql.jdbc.ConnectionImpl.realClose(ConnectionImpl.java:4346)
+	at com.mysql.jdbc.ConnectionImpl.cleanup(ConnectionImpl.java:1348)
+	at com.mysql.jdbc.ConnectionImpl.finalize(ConnectionImpl.java:2679)
+	at java.lang.ref.Finalizer.invokeFinalizeMethod(Native Method)
+	at java.lang.ref.Finalizer.runFinalizer(Finalizer.java:83)
+	at java.lang.ref.Finalizer.access$100(Finalizer.java:14)
+	at java.lang.ref.Finalizer$FinalizerThread.run(Finalizer.java:160)
+16 Feb, 2012 12:34:29 AM org.apache.catalina.core.StandardContext reload
+INFO: Reloading Context with name [] has started
+16 Feb, 2012 12:34:46 AM org.apache.catalina.startup.HostConfig checkResources
+INFO: Undeploying context []
+16 Feb, 2012 12:34:46 AM org.apache.catalina.startup.HostConfig deployDescriptor
+INFO: Deploying configuration descriptor ROOT.xml
+16 Feb, 2012 12:34:46 AM org.apache.catalina.core.StandardContext start
+INFO: Container org.apache.catalina.core.ContainerBase.[Catalina].[localhost].[/] has already been started
+16 Feb, 2012 12:35:29 AM org.apache.catalina.core.StandardContext reload
+INFO: Reloading Context with name [] has started
+16 Feb, 2012 12:35:29 AM org.apache.catalina.loader.WebappClassLoader clearReferencesJdbc
+SEVERE: The web application [] registered the JDBC driver [com.mysql.jdbc.Driver] but failed to unregister it when the web application was stopped. To prevent a memory leak, the JDBC Driver has been forcibly unregistered.
+16 Feb, 2012 12:35:38 AM org.apache.catalina.startup.HostConfig checkResources
+INFO: Undeploying context []
+16 Feb, 2012 12:35:38 AM org.apache.catalina.startup.HostConfig deployDescriptor
+INFO: Deploying configuration descriptor ROOT.xml
+16 Feb, 2012 12:35:38 AM org.apache.catalina.core.StandardContext start
+INFO: Container org.apache.catalina.core.ContainerBase.[Catalina].[localhost].[/] has already been started
+16 Feb, 2012 12:35:47 AM org.apache.catalina.loader.WebappClassLoader loadClass
+INFO: Illegal access: this web application instance has been stopped already.  Could not load com.mysql.jdbc.SQLError.  The eventual following stack trace is caused by an error thrown for debugging purposes as well as to attempt to terminate the thread which caused the illegal access, and has no functional impact.
+java.lang.IllegalStateException
+	at org.apache.catalina.loader.WebappClassLoader.loadClass(WebappClassLoader.java:1566)
+	at org.apache.catalina.loader.WebappClassLoader.loadClass(WebappClassLoader.java:1526)
+	at java.lang.ClassLoader.loadClassInternal(ClassLoader.java:319)
+	at com.mysql.jdbc.MysqlIO.send(MysqlIO.java:3321)
+	at com.mysql.jdbc.MysqlIO.quit(MysqlIO.java:1667)
+	at com.mysql.jdbc.ConnectionImpl.realClose(ConnectionImpl.java:4322)
+	at com.mysql.jdbc.ConnectionImpl.cleanup(ConnectionImpl.java:1348)
+	at com.mysql.jdbc.ConnectionImpl.finalize(ConnectionImpl.java:2679)
+	at java.lang.ref.Finalizer.invokeFinalizeMethod(Native Method)
+	at java.lang.ref.Finalizer.runFinalizer(Finalizer.java:83)
+	at java.lang.ref.Finalizer.access$100(Finalizer.java:14)
+	at java.lang.ref.Finalizer$FinalizerThread.run(Finalizer.java:160)
+16 Feb, 2012 12:35:47 AM org.apache.catalina.loader.WebappClassLoader loadClass
+INFO: Illegal access: this web application instance has been stopped already.  Could not load com.mysql.jdbc.ProfilerEventHandlerFactory.  The eventual following stack trace is caused by an error thrown for debugging purposes as well as to attempt to terminate the thread which caused the illegal access, and has no functional impact.
+java.lang.IllegalStateException
+	at org.apache.catalina.loader.WebappClassLoader.loadClass(WebappClassLoader.java:1566)
+	at org.apache.catalina.loader.WebappClassLoader.loadClass(WebappClassLoader.java:1526)
+	at java.lang.ClassLoader.loadClassInternal(ClassLoader.java:319)
+	at com.mysql.jdbc.ConnectionImpl.realClose(ConnectionImpl.java:4346)
+	at com.mysql.jdbc.ConnectionImpl.cleanup(ConnectionImpl.java:1348)
+	at com.mysql.jdbc.ConnectionImpl.finalize(ConnectionImpl.java:2679)
+	at java.lang.ref.Finalizer.invokeFinalizeMethod(Native Method)
+	at java.lang.ref.Finalizer.runFinalizer(Finalizer.java:83)
+	at java.lang.ref.Finalizer.access$100(Finalizer.java:14)
+	at java.lang.ref.Finalizer$FinalizerThread.run(Finalizer.java:160)
+16 Feb, 2012 12:38:20 AM org.apache.catalina.core.StandardContext reload
+INFO: Reloading Context with name [] has started
+16 Feb, 2012 12:38:20 AM org.apache.catalina.loader.WebappClassLoader clearReferencesJdbc
+SEVERE: The web application [] registered the JDBC driver [com.mysql.jdbc.Driver] but failed to unregister it when the web application was stopped. To prevent a memory leak, the JDBC Driver has been forcibly unregistered.
+16 Feb, 2012 12:38:21 AM org.apache.catalina.startup.HostConfig checkResources
+INFO: Undeploying context []
+16 Feb, 2012 12:38:21 AM org.apache.catalina.startup.HostConfig deployDescriptor
+INFO: Deploying configuration descriptor ROOT.xml
+16 Feb, 2012 12:38:21 AM org.apache.catalina.core.StandardContext start
+INFO: Container org.apache.catalina.core.ContainerBase.[Catalina].[localhost].[/] has already been started
+16 Feb, 2012 12:38:28 AM org.apache.catalina.loader.WebappClassLoader loadClass
+INFO: Illegal access: this web application instance has been stopped already.  Could not load com.mysql.jdbc.SQLError.  The eventual following stack trace is caused by an error thrown for debugging purposes as well as to attempt to terminate the thread which caused the illegal access, and has no functional impact.
+java.lang.IllegalStateException
+	at org.apache.catalina.loader.WebappClassLoader.loadClass(WebappClassLoader.java:1566)
+	at org.apache.catalina.loader.WebappClassLoader.loadClass(WebappClassLoader.java:1526)
+	at java.lang.ClassLoader.loadClassInternal(ClassLoader.java:319)
+	at com.mysql.jdbc.MysqlIO.send(MysqlIO.java:3321)
+	at com.mysql.jdbc.MysqlIO.quit(MysqlIO.java:1667)
+	at com.mysql.jdbc.ConnectionImpl.realClose(ConnectionImpl.java:4322)
+	at com.mysql.jdbc.ConnectionImpl.cleanup(ConnectionImpl.java:1348)
+	at com.mysql.jdbc.ConnectionImpl.finalize(ConnectionImpl.java:2679)
+	at java.lang.ref.Finalizer.invokeFinalizeMethod(Native Method)
+	at java.lang.ref.Finalizer.runFinalizer(Finalizer.java:83)
+	at java.lang.ref.Finalizer.access$100(Finalizer.java:14)
+	at java.lang.ref.Finalizer$FinalizerThread.run(Finalizer.java:160)
+16 Feb, 2012 12:38:28 AM org.apache.catalina.loader.WebappClassLoader loadClass
+INFO: Illegal access: this web application instance has been stopped already.  Could not load com.mysql.jdbc.ProfilerEventHandlerFactory.  The eventual following stack trace is caused by an error thrown for debugging purposes as well as to attempt to terminate the thread which caused the illegal access, and has no functional impact.
+java.lang.IllegalStateException
+	at org.apache.catalina.loader.WebappClassLoader.loadClass(WebappClassLoader.java:1566)
+	at org.apache.catalina.loader.WebappClassLoader.loadClass(WebappClassLoader.java:1526)
+	at java.lang.ClassLoader.loadClassInternal(ClassLoader.java:319)
+	at com.mysql.jdbc.ConnectionImpl.realClose(ConnectionImpl.java:4346)
+	at com.mysql.jdbc.ConnectionImpl.cleanup(ConnectionImpl.java:1348)
+	at com.mysql.jdbc.ConnectionImpl.finalize(ConnectionImpl.java:2679)
+	at java.lang.ref.Finalizer.invokeFinalizeMethod(Native Method)
+	at java.lang.ref.Finalizer.runFinalizer(Finalizer.java:83)
+	at java.lang.ref.Finalizer.access$100(Finalizer.java:14)
+	at java.lang.ref.Finalizer$FinalizerThread.run(Finalizer.java:160)
+16 Feb, 2012 12:38:50 AM org.apache.catalina.core.StandardContext reload
+INFO: Reloading Context with name [] has started
+16 Feb, 2012 12:38:50 AM org.apache.catalina.loader.WebappClassLoader clearReferencesJdbc
+SEVERE: The web application [] registered the JDBC driver [com.mysql.jdbc.Driver] but failed to unregister it when the web application was stopped. To prevent a memory leak, the JDBC Driver has been forcibly unregistered.
+16 Feb, 2012 12:38:54 AM org.apache.catalina.startup.HostConfig checkResources
+INFO: Undeploying context []
+16 Feb, 2012 12:38:54 AM org.apache.catalina.startup.HostConfig deployDescriptor
+INFO: Deploying configuration descriptor ROOT.xml
+16 Feb, 2012 12:38:54 AM org.apache.catalina.core.StandardContext start
+INFO: Container org.apache.catalina.core.ContainerBase.[Catalina].[localhost].[/] has already been started
+16 Feb, 2012 12:40:11 AM org.apache.catalina.core.StandardContext reload
+INFO: Reloading Context with name [] has started
+16 Feb, 2012 12:40:11 AM org.apache.catalina.loader.WebappClassLoader clearReferencesJdbc
+SEVERE: The web application [] registered the JDBC driver [com.mysql.jdbc.Driver] but failed to unregister it when the web application was stopped. To prevent a memory leak, the JDBC Driver has been forcibly unregistered.
+16 Feb, 2012 12:41:01 AM org.apache.catalina.core.StandardContext reload
+INFO: Reloading Context with name [] has started
+16 Feb, 2012 12:41:01 AM org.apache.catalina.loader.WebappClassLoader loadClass
+INFO: Illegal access: this web application instance has been stopped already.  Could not load com.mysql.jdbc.ProfilerEventHandlerFactory.  The eventual following stack trace is caused by an error thrown for debugging purposes as well as to attempt to terminate the thread which caused the illegal access, and has no functional impact.
+java.lang.IllegalStateException
+	at org.apache.catalina.loader.WebappClassLoader.loadClass(WebappClassLoader.java:1566)
+	at org.apache.catalina.loader.WebappClassLoader.loadClass(WebappClassLoader.java:1526)
+	at java.lang.ClassLoader.loadClassInternal(ClassLoader.java:319)
+	at com.mysql.jdbc.ConnectionImpl.realClose(ConnectionImpl.java:4346)
+	at com.mysql.jdbc.ConnectionImpl.cleanup(ConnectionImpl.java:1348)
+	at com.mysql.jdbc.ConnectionImpl.finalize(ConnectionImpl.java:2679)
+	at java.lang.ref.Finalizer.invokeFinalizeMethod(Native Method)
+	at java.lang.ref.Finalizer.runFinalizer(Finalizer.java:83)
+	at java.lang.ref.Finalizer.access$100(Finalizer.java:14)
+	at java.lang.ref.Finalizer$FinalizerThread.run(Finalizer.java:160)
+16 Feb, 2012 12:41:01 AM org.apache.catalina.loader.WebappClassLoader loadClass
+INFO: Illegal access: this web application instance has been stopped already.  Could not load com.mysql.jdbc.SQLError.  The eventual following stack trace is caused by an error thrown for debugging purposes as well as to attempt to terminate the thread which caused the illegal access, and has no functional impact.
+java.lang.IllegalStateException
+	at org.apache.catalina.loader.WebappClassLoader.loadClass(WebappClassLoader.java:1566)
+	at org.apache.catalina.loader.WebappClassLoader.loadClass(WebappClassLoader.java:1526)
+	at java.lang.ClassLoader.loadClassInternal(ClassLoader.java:319)
+	at com.mysql.jdbc.MysqlIO.send(MysqlIO.java:3321)
+	at com.mysql.jdbc.MysqlIO.quit(MysqlIO.java:1667)
+	at com.mysql.jdbc.ConnectionImpl.realClose(ConnectionImpl.java:4322)
+	at com.mysql.jdbc.ConnectionImpl.cleanup(ConnectionImpl.java:1348)
+	at com.mysql.jdbc.ConnectionImpl.finalize(ConnectionImpl.java:2679)
+	at java.lang.ref.Finalizer.invokeFinalizeMethod(Native Method)
+	at java.lang.ref.Finalizer.runFinalizer(Finalizer.java:83)
+	at java.lang.ref.Finalizer.access$100(Finalizer.java:14)
+	at java.lang.ref.Finalizer$FinalizerThread.run(Finalizer.java:160)
+16 Feb, 2012 12:41:01 AM org.apache.catalina.loader.WebappClassLoader loadClass
+INFO: Illegal access: this web application instance has been stopped already.  Could not load com.mysql.jdbc.ProfilerEventHandlerFactory.  The eventual following stack trace is caused by an error thrown for debugging purposes as well as to attempt to terminate the thread which caused the illegal access, and has no functional impact.
+java.lang.IllegalStateException
+	at org.apache.catalina.loader.WebappClassLoader.loadClass(WebappClassLoader.java:1566)
+	at org.apache.catalina.loader.WebappClassLoader.loadClass(WebappClassLoader.java:1526)
+	at java.lang.ClassLoader.loadClassInternal(ClassLoader.java:319)
+	at com.mysql.jdbc.ConnectionImpl.realClose(ConnectionImpl.java:4346)
+	at com.mysql.jdbc.ConnectionImpl.cleanup(ConnectionImpl.java:1348)
+	at com.mysql.jdbc.ConnectionImpl.finalize(ConnectionImpl.java:2679)
+	at java.lang.ref.Finalizer.invokeFinalizeMethod(Native Method)
+	at java.lang.ref.Finalizer.runFinalizer(Finalizer.java:83)
+	at java.lang.ref.Finalizer.access$100(Finalizer.java:14)
+	at java.lang.ref.Finalizer$FinalizerThread.run(Finalizer.java:160)
+16 Feb, 2012 12:41:16 AM org.apache.catalina.startup.HostConfig checkResources
+INFO: Undeploying context []
+16 Feb, 2012 12:41:16 AM org.apache.catalina.startup.HostConfig deployDescriptor
+INFO: Deploying configuration descriptor ROOT.xml
+16 Feb, 2012 12:41:17 AM org.apache.catalina.core.StandardContext start
+INFO: Container org.apache.catalina.core.ContainerBase.[Catalina].[localhost].[/] has already been started
+16 Feb, 2012 12:44:32 AM org.apache.catalina.core.StandardContext reload
+INFO: Reloading Context with name [] has started
+16 Feb, 2012 12:44:32 AM org.apache.catalina.loader.WebappClassLoader clearReferencesJdbc
+SEVERE: The web application [] registered the JDBC driver [com.mysql.jdbc.Driver] but failed to unregister it when the web application was stopped. To prevent a memory leak, the JDBC Driver has been forcibly unregistered.
+16 Feb, 2012 12:45:12 AM org.apache.catalina.core.StandardContext reload
+INFO: Reloading Context with name [] has started
+16 Feb, 2012 12:45:18 AM org.apache.catalina.startup.HostConfig checkResources
+INFO: Undeploying context []
+16 Feb, 2012 12:45:18 AM org.apache.catalina.startup.HostConfig deployDescriptor
+INFO: Deploying configuration descriptor ROOT.xml
+16 Feb, 2012 12:45:18 AM org.apache.catalina.core.StandardContext start
+INFO: Container org.apache.catalina.core.ContainerBase.[Catalina].[localhost].[/] has already been started
+16 Feb, 2012 12:45:26 AM org.apache.catalina.loader.WebappClassLoader loadClass
+INFO: Illegal access: this web application instance has been stopped already.  Could not load com.mysql.jdbc.ProfilerEventHandlerFactory.  The eventual following stack trace is caused by an error thrown for debugging purposes as well as to attempt to terminate the thread which caused the illegal access, and has no functional impact.
+java.lang.IllegalStateException
+	at org.apache.catalina.loader.WebappClassLoader.loadClass(WebappClassLoader.java:1566)
+	at org.apache.catalina.loader.WebappClassLoader.loadClass(WebappClassLoader.java:1526)
+	at java.lang.ClassLoader.loadClassInternal(ClassLoader.java:319)
+	at com.mysql.jdbc.ConnectionImpl.realClose(ConnectionImpl.java:4346)
+	at com.mysql.jdbc.ConnectionImpl.cleanup(ConnectionImpl.java:1348)
+	at com.mysql.jdbc.ConnectionImpl.finalize(ConnectionImpl.java:2679)
+	at java.lang.ref.Finalizer.invokeFinalizeMethod(Native Method)
+	at java.lang.ref.Finalizer.runFinalizer(Finalizer.java:83)
+	at java.lang.ref.Finalizer.access$100(Finalizer.java:14)
+	at java.lang.ref.Finalizer$FinalizerThread.run(Finalizer.java:160)
+16 Feb, 2012 12:45:43 AM org.apache.catalina.loader.WebappClassLoader clearReferencesJdbc
+SEVERE: The web application [] registered the JDBC driver [com.mysql.jdbc.Driver] but failed to unregister it when the web application was stopped. To prevent a memory leak, the JDBC Driver has been forcibly unregistered.
+16 Feb, 2012 12:45:44 AM org.apache.catalina.startup.HostConfig checkResources
+INFO: Undeploying context []
+16 Feb, 2012 12:45:44 AM org.apache.catalina.startup.HostConfig deployDescriptor
+INFO: Deploying configuration descriptor ROOT.xml
+16 Feb, 2012 12:45:44 AM org.apache.catalina.core.StandardContext start
+INFO: Container org.apache.catalina.core.ContainerBase.[Catalina].[localhost].[/] has already been started
+16 Feb, 2012 12:47:33 AM org.apache.catalina.core.StandardContext reload
+INFO: Reloading Context with name [] has started
+16 Feb, 2012 12:47:33 AM org.apache.catalina.loader.WebappClassLoader clearReferencesJdbc
+SEVERE: The web application [] registered the JDBC driver [com.mysql.jdbc.Driver] but failed to unregister it when the web application was stopped. To prevent a memory leak, the JDBC Driver has been forcibly unregistered.
+16 Feb, 2012 12:47:43 AM org.apache.catalina.core.StandardContext reload
+INFO: Reloading Context with name [] has started
+16 Feb, 2012 12:47:51 AM org.apache.catalina.startup.HostConfig checkResources
+INFO: Undeploying context []
+16 Feb, 2012 12:47:51 AM org.apache.catalina.startup.HostConfig deployDescriptor
+INFO: Deploying configuration descriptor ROOT.xml
+16 Feb, 2012 12:47:51 AM org.apache.catalina.core.StandardContext start
+INFO: Container org.apache.catalina.core.ContainerBase.[Catalina].[localhost].[/] has already been started
+16 Feb, 2012 12:47:52 AM org.apache.catalina.loader.WebappClassLoader loadClass
+INFO: Illegal access: this web application instance has been stopped already.  Could not load com.mysql.jdbc.ProfilerEventHandlerFactory.  The eventual following stack trace is caused by an error thrown for debugging purposes as well as to attempt to terminate the thread which caused the illegal access, and has no functional impact.
+java.lang.IllegalStateException
+	at org.apache.catalina.loader.WebappClassLoader.loadClass(WebappClassLoader.java:1566)
+	at org.apache.catalina.loader.WebappClassLoader.loadClass(WebappClassLoader.java:1526)
+	at java.lang.ClassLoader.loadClassInternal(ClassLoader.java:319)
+	at com.mysql.jdbc.ConnectionImpl.realClose(ConnectionImpl.java:4346)
+	at com.mysql.jdbc.ConnectionImpl.cleanup(ConnectionImpl.java:1348)
+	at com.mysql.jdbc.ConnectionImpl.finalize(ConnectionImpl.java:2679)
+	at java.lang.ref.Finalizer.invokeFinalizeMethod(Native Method)
+	at java.lang.ref.Finalizer.runFinalizer(Finalizer.java:83)
+	at java.lang.ref.Finalizer.access$100(Finalizer.java:14)
+	at java.lang.ref.Finalizer$FinalizerThread.run(Finalizer.java:160)
+16 Feb, 2012 12:47:52 AM org.apache.catalina.loader.WebappClassLoader loadClass
+INFO: Illegal access: this web application instance has been stopped already.  Could not load com.mysql.jdbc.SQLError.  The eventual following stack trace is caused by an error thrown for debugging purposes as well as to attempt to terminate the thread which caused the illegal access, and has no functional impact.
+java.lang.IllegalStateException
+	at org.apache.catalina.loader.WebappClassLoader.loadClass(WebappClassLoader.java:1566)
+	at org.apache.catalina.loader.WebappClassLoader.loadClass(WebappClassLoader.java:1526)
+	at java.lang.ClassLoader.loadClassInternal(ClassLoader.java:319)
+	at com.mysql.jdbc.MysqlIO.send(MysqlIO.java:3321)
+	at com.mysql.jdbc.MysqlIO.quit(MysqlIO.java:1667)
+	at com.mysql.jdbc.ConnectionImpl.realClose(ConnectionImpl.java:4322)
+	at com.mysql.jdbc.ConnectionImpl.cleanup(ConnectionImpl.java:1348)
+	at com.mysql.jdbc.ConnectionImpl.finalize(ConnectionImpl.java:2679)
+	at java.lang.ref.Finalizer.invokeFinalizeMethod(Native Method)
+	at java.lang.ref.Finalizer.runFinalizer(Finalizer.java:83)
+	at java.lang.ref.Finalizer.access$100(Finalizer.java:14)
+	at java.lang.ref.Finalizer$FinalizerThread.run(Finalizer.java:160)
+16 Feb, 2012 12:47:52 AM org.apache.catalina.loader.WebappClassLoader loadClass
+INFO: Illegal access: this web application instance has been stopped already.  Could not load com.mysql.jdbc.ProfilerEventHandlerFactory.  The eventual following stack trace is caused by an error thrown for debugging purposes as well as to attempt to terminate the thread which caused the illegal access, and has no functional impact.
+java.lang.IllegalStateException
+	at org.apache.catalina.loader.WebappClassLoader.loadClass(WebappClassLoader.java:1566)
+	at org.apache.catalina.loader.WebappClassLoader.loadClass(WebappClassLoader.java:1526)
+	at java.lang.ClassLoader.loadClassInternal(ClassLoader.java:319)
+	at com.mysql.jdbc.ConnectionImpl.realClose(ConnectionImpl.java:4346)
+	at com.mysql.jdbc.ConnectionImpl.cleanup(ConnectionImpl.java:1348)
+	at com.mysql.jdbc.ConnectionImpl.finalize(ConnectionImpl.java:2679)
+	at java.lang.ref.Finalizer.invokeFinalizeMethod(Native Method)
+	at java.lang.ref.Finalizer.runFinalizer(Finalizer.java:83)
+	at java.lang.ref.Finalizer.access$100(Finalizer.java:14)
+	at java.lang.ref.Finalizer$FinalizerThread.run(Finalizer.java:160)
+16 Feb, 2012 12:50:34 AM org.apache.catalina.loader.WebappClassLoader clearReferencesJdbc
+SEVERE: The web application [] registered the JDBC driver [com.mysql.jdbc.Driver] but failed to unregister it when the web application was stopped. To prevent a memory leak, the JDBC Driver has been forcibly unregistered.
+16 Feb, 2012 12:50:34 AM org.apache.catalina.startup.HostConfig checkResources
+INFO: Undeploying context []
+16 Feb, 2012 12:50:35 AM org.apache.catalina.startup.HostConfig checkResources
+INFO: Undeploying context []
+16 Feb, 2012 12:50:35 AM org.apache.catalina.startup.HostConfig deployDescriptor
+INFO: Deploying configuration descriptor ROOT.xml
+16 Feb, 2012 12:50:35 AM org.apache.catalina.core.StandardContext start
+INFO: Container org.apache.catalina.core.ContainerBase.[Catalina].[localhost].[/] has already been started
+16 Feb, 2012 12:51:25 AM org.apache.catalina.startup.HostConfig checkResources
+INFO: Undeploying context []
+16 Feb, 2012 12:51:26 AM org.apache.catalina.startup.HostConfig checkResources
+INFO: Undeploying context []
+16 Feb, 2012 12:51:26 AM org.apache.catalina.startup.HostConfig deployDescriptor
+INFO: Deploying configuration descriptor ROOT.xml
+16 Feb, 2012 12:51:26 AM org.apache.catalina.core.StandardContext start
+INFO: Container org.apache.catalina.core.ContainerBase.[Catalina].[localhost].[/] has already been started
+16 Feb, 2012 12:53:24 AM org.apache.catalina.startup.HostConfig checkResources
+INFO: Undeploying context []
+16 Feb, 2012 12:53:24 AM org.apache.catalina.startup.HostConfig deployDescriptor
+INFO: Deploying configuration descriptor ROOT.xml
+16 Feb, 2012 12:53:24 AM org.apache.catalina.core.StandardContext start
+INFO: Container org.apache.catalina.core.ContainerBase.[Catalina].[localhost].[/] has already been started
+16 Feb, 2012 12:56:07 AM org.apache.catalina.core.StandardContext reload
+INFO: Reloading Context with name [] has started
+16 Feb, 2012 12:56:07 AM org.apache.catalina.loader.WebappClassLoader clearReferencesJdbc
+SEVERE: The web application [] registered the JDBC driver [com.mysql.jdbc.Driver] but failed to unregister it when the web application was stopped. To prevent a memory leak, the JDBC Driver has been forcibly unregistered.
+16 Feb, 2012 12:56:27 AM org.apache.catalina.core.StandardContext reload
+INFO: Reloading Context with name [] has started
+16 Feb, 2012 12:57:32 AM org.apache.catalina.loader.WebappClassLoader loadClass
+INFO: Illegal access: this web application instance has been stopped already.  Could not load com.mysql.jdbc.SQLError.  The eventual following stack trace is caused by an error thrown for debugging purposes as well as to attempt to terminate the thread which caused the illegal access, and has no functional impact.
+java.lang.IllegalStateException
+	at org.apache.catalina.loader.WebappClassLoader.loadClass(WebappClassLoader.java:1566)
+	at org.apache.catalina.loader.WebappClassLoader.loadClass(WebappClassLoader.java:1526)
+	at java.lang.ClassLoader.loadClassInternal(ClassLoader.java:319)
+	at com.mysql.jdbc.MysqlIO.send(MysqlIO.java:3321)
+	at com.mysql.jdbc.MysqlIO.quit(MysqlIO.java:1667)
+	at com.mysql.jdbc.ConnectionImpl.realClose(ConnectionImpl.java:4322)
+	at com.mysql.jdbc.ConnectionImpl.cleanup(ConnectionImpl.java:1348)
+	at com.mysql.jdbc.ConnectionImpl.finalize(ConnectionImpl.java:2679)
+	at java.lang.ref.Finalizer.invokeFinalizeMethod(Native Method)
+	at java.lang.ref.Finalizer.runFinalizer(Finalizer.java:83)
+	at java.lang.ref.Finalizer.access$100(Finalizer.java:14)
+	at java.lang.ref.Finalizer$FinalizerThread.run(Finalizer.java:160)
+16 Feb, 2012 12:57:32 AM org.apache.catalina.loader.WebappClassLoader loadClass
+INFO: Illegal access: this web application instance has been stopped already.  Could not load com.mysql.jdbc.ProfilerEventHandlerFactory.  The eventual following stack trace is caused by an error thrown for debugging purposes as well as to attempt to terminate the thread which caused the illegal access, and has no functional impact.
+java.lang.IllegalStateException
+	at org.apache.catalina.loader.WebappClassLoader.loadClass(WebappClassLoader.java:1566)
+	at org.apache.catalina.loader.WebappClassLoader.loadClass(WebappClassLoader.java:1526)
+	at java.lang.ClassLoader.loadClassInternal(ClassLoader.java:319)
+	at com.mysql.jdbc.ConnectionImpl.realClose(ConnectionImpl.java:4346)
+	at com.mysql.jdbc.ConnectionImpl.cleanup(ConnectionImpl.java:1348)
+	at com.mysql.jdbc.ConnectionImpl.finalize(ConnectionImpl.java:2679)
+	at java.lang.ref.Finalizer.invokeFinalizeMethod(Native Method)
+	at java.lang.ref.Finalizer.runFinalizer(Finalizer.java:83)
+	at java.lang.ref.Finalizer.access$100(Finalizer.java:14)
+	at java.lang.ref.Finalizer$FinalizerThread.run(Finalizer.java:160)
+16 Feb, 2012 12:57:32 AM org.apache.catalina.loader.WebappClassLoader loadClass
+INFO: Illegal access: this web application instance has been stopped already.  Could not load com.mysql.jdbc.SQLError.  The eventual following stack trace is caused by an error thrown for debugging purposes as well as to attempt to terminate the thread which caused the illegal access, and has no functional impact.
+java.lang.IllegalStateException
+	at org.apache.catalina.loader.WebappClassLoader.loadClass(WebappClassLoader.java:1566)
+	at org.apache.catalina.loader.WebappClassLoader.loadClass(WebappClassLoader.java:1526)
+	at java.lang.ClassLoader.loadClassInternal(ClassLoader.java:319)
+	at com.mysql.jdbc.MysqlIO.send(MysqlIO.java:3321)
+	at com.mysql.jdbc.MysqlIO.quit(MysqlIO.java:1667)
+	at com.mysql.jdbc.ConnectionImpl.realClose(ConnectionImpl.java:4322)
+	at com.mysql.jdbc.ConnectionImpl.cleanup(ConnectionImpl.java:1348)
+	at com.mysql.jdbc.ConnectionImpl.finalize(ConnectionImpl.java:2679)
+	at java.lang.ref.Finalizer.invokeFinalizeMethod(Native Method)
+	at java.lang.ref.Finalizer.runFinalizer(Finalizer.java:83)
+	at java.lang.ref.Finalizer.access$100(Finalizer.java:14)
+	at java.lang.ref.Finalizer$FinalizerThread.run(Finalizer.java:160)
+16 Feb, 2012 12:57:32 AM org.apache.catalina.loader.WebappClassLoader loadClass
+INFO: Illegal access: this web application instance has been stopped already.  Could not load com.mysql.jdbc.ProfilerEventHandlerFactory.  The eventual following stack trace is caused by an error thrown for debugging purposes as well as to attempt to terminate the thread which caused the illegal access, and has no functional impact.
+java.lang.IllegalStateException
+	at org.apache.catalina.loader.WebappClassLoader.loadClass(WebappClassLoader.java:1566)
+	at org.apache.catalina.loader.WebappClassLoader.loadClass(WebappClassLoader.java:1526)
+	at java.lang.ClassLoader.loadClassInternal(ClassLoader.java:319)
+	at com.mysql.jdbc.ConnectionImpl.realClose(ConnectionImpl.java:4346)
+	at com.mysql.jdbc.ConnectionImpl.cleanup(ConnectionImpl.java:1348)
+	at com.mysql.jdbc.ConnectionImpl.finalize(ConnectionImpl.java:2679)
+	at java.lang.ref.Finalizer.invokeFinalizeMethod(Native Method)
+	at java.lang.ref.Finalizer.runFinalizer(Finalizer.java:83)
+	at java.lang.ref.Finalizer.access$100(Finalizer.java:14)
+	at java.lang.ref.Finalizer$FinalizerThread.run(Finalizer.java:160)
+16 Feb, 2012 1:03:49 AM org.apache.catalina.core.StandardContext reload
+INFO: Reloading Context with name [] has started
+16 Feb, 2012 1:03:49 AM org.apache.catalina.loader.WebappClassLoader clearReferencesJdbc
+SEVERE: The web application [] registered the JDBC driver [com.mysql.jdbc.Driver] but failed to unregister it when the web application was stopped. To prevent a memory leak, the JDBC Driver has been forcibly unregistered.
+16 Feb, 2012 1:04:19 AM org.apache.catalina.core.StandardContext reload
+INFO: Reloading Context with name [] has started
+16 Feb, 2012 1:04:26 AM org.apache.catalina.startup.HostConfig checkResources
+INFO: Undeploying context []
+16 Feb, 2012 1:04:26 AM org.apache.catalina.startup.HostConfig deployDescriptor
+INFO: Deploying configuration descriptor ROOT.xml
+16 Feb, 2012 1:04:26 AM org.apache.catalina.core.StandardContext start
+INFO: Container org.apache.catalina.core.ContainerBase.[Catalina].[localhost].[/] has already been started
+16 Feb, 2012 1:05:08 AM org.apache.catalina.loader.WebappClassLoader clearReferencesJdbc
+SEVERE: The web application [] registered the JDBC driver [com.mysql.jdbc.Driver] but failed to unregister it when the web application was stopped. To prevent a memory leak, the JDBC Driver has been forcibly unregistered.
+16 Feb, 2012 1:05:09 AM org.apache.catalina.startup.HostConfig checkResources
+INFO: Undeploying context []
+16 Feb, 2012 1:05:09 AM org.apache.catalina.startup.HostConfig deployDescriptor
+INFO: Deploying configuration descriptor ROOT.xml
+16 Feb, 2012 1:05:09 AM org.apache.catalina.core.StandardContext start
+INFO: Container org.apache.catalina.core.ContainerBase.[Catalina].[localhost].[/] has already been started
+16 Feb, 2012 1:05:18 AM org.apache.catalina.loader.WebappClassLoader loadClass
+INFO: Illegal access: this web application instance has been stopped already.  Could not load com.mysql.jdbc.SQLError.  The eventual following stack trace is caused by an error thrown for debugging purposes as well as to attempt to terminate the thread which caused the illegal access, and has no functional impact.
+java.lang.IllegalStateException
+	at org.apache.catalina.loader.WebappClassLoader.loadClass(WebappClassLoader.java:1566)
+	at org.apache.catalina.loader.WebappClassLoader.loadClass(WebappClassLoader.java:1526)
+	at java.lang.ClassLoader.loadClassInternal(ClassLoader.java:319)
+	at com.mysql.jdbc.MysqlIO.send(MysqlIO.java:3321)
+	at com.mysql.jdbc.MysqlIO.quit(MysqlIO.java:1667)
+	at com.mysql.jdbc.ConnectionImpl.realClose(ConnectionImpl.java:4322)
+	at com.mysql.jdbc.ConnectionImpl.cleanup(ConnectionImpl.java:1348)
+	at com.mysql.jdbc.ConnectionImpl.finalize(ConnectionImpl.java:2679)
+	at java.lang.ref.Finalizer.invokeFinalizeMethod(Native Method)
+	at java.lang.ref.Finalizer.runFinalizer(Finalizer.java:83)
+	at java.lang.ref.Finalizer.access$100(Finalizer.java:14)
+	at java.lang.ref.Finalizer$FinalizerThread.run(Finalizer.java:160)
+16 Feb, 2012 1:05:18 AM org.apache.catalina.loader.WebappClassLoader loadClass
+INFO: Illegal access: this web application instance has been stopped already.  Could not load com.mysql.jdbc.ProfilerEventHandlerFactory.  The eventual following stack trace is caused by an error thrown for debugging purposes as well as to attempt to terminate the thread which caused the illegal access, and has no functional impact.
+java.lang.IllegalStateException
+	at org.apache.catalina.loader.WebappClassLoader.loadClass(WebappClassLoader.java:1566)
+	at org.apache.catalina.loader.WebappClassLoader.loadClass(WebappClassLoader.java:1526)
+	at java.lang.ClassLoader.loadClassInternal(ClassLoader.java:319)
+	at com.mysql.jdbc.ConnectionImpl.realClose(ConnectionImpl.java:4346)
+	at com.mysql.jdbc.ConnectionImpl.cleanup(ConnectionImpl.java:1348)
+	at com.mysql.jdbc.ConnectionImpl.finalize(ConnectionImpl.java:2679)
+	at java.lang.ref.Finalizer.invokeFinalizeMethod(Native Method)
+	at java.lang.ref.Finalizer.runFinalizer(Finalizer.java:83)
+	at java.lang.ref.Finalizer.access$100(Finalizer.java:14)
+	at java.lang.ref.Finalizer$FinalizerThread.run(Finalizer.java:160)
+16 Feb, 2012 1:05:18 AM org.apache.catalina.loader.WebappClassLoader loadClass
+INFO: Illegal access: this web application instance has been stopped already.  Could not load com.mysql.jdbc.SQLError.  The eventual following stack trace is caused by an error thrown for debugging purposes as well as to attempt to terminate the thread which caused the illegal access, and has no functional impact.
+java.lang.IllegalStateException
+	at org.apache.catalina.loader.WebappClassLoader.loadClass(WebappClassLoader.java:1566)
+	at org.apache.catalina.loader.WebappClassLoader.loadClass(WebappClassLoader.java:1526)
+	at java.lang.ClassLoader.loadClassInternal(ClassLoader.java:319)
+	at com.mysql.jdbc.MysqlIO.send(MysqlIO.java:3321)
+	at com.mysql.jdbc.MysqlIO.quit(MysqlIO.java:1667)
+	at com.mysql.jdbc.ConnectionImpl.realClose(ConnectionImpl.java:4322)
+	at com.mysql.jdbc.ConnectionImpl.cleanup(ConnectionImpl.java:1348)
+	at com.mysql.jdbc.ConnectionImpl.finalize(ConnectionImpl.java:2679)
+	at java.lang.ref.Finalizer.invokeFinalizeMethod(Native Method)
+	at java.lang.ref.Finalizer.runFinalizer(Finalizer.java:83)
+	at java.lang.ref.Finalizer.access$100(Finalizer.java:14)
+	at java.lang.ref.Finalizer$FinalizerThread.run(Finalizer.java:160)
+16 Feb, 2012 1:05:18 AM org.apache.catalina.loader.WebappClassLoader loadClass
+INFO: Illegal access: this web application instance has been stopped already.  Could not load com.mysql.jdbc.ProfilerEventHandlerFactory.  The eventual following stack trace is caused by an error thrown for debugging purposes as well as to attempt to terminate the thread which caused the illegal access, and has no functional impact.
+java.lang.IllegalStateException
+	at org.apache.catalina.loader.WebappClassLoader.loadClass(WebappClassLoader.java:1566)
+	at org.apache.catalina.loader.WebappClassLoader.loadClass(WebappClassLoader.java:1526)
+	at java.lang.ClassLoader.loadClassInternal(ClassLoader.java:319)
+	at com.mysql.jdbc.ConnectionImpl.realClose(ConnectionImpl.java:4346)
+	at com.mysql.jdbc.ConnectionImpl.cleanup(ConnectionImpl.java:1348)
+	at com.mysql.jdbc.ConnectionImpl.finalize(ConnectionImpl.java:2679)
+	at java.lang.ref.Finalizer.invokeFinalizeMethod(Native Method)
+	at java.lang.ref.Finalizer.runFinalizer(Finalizer.java:83)
+	at java.lang.ref.Finalizer.access$100(Finalizer.java:14)
+	at java.lang.ref.Finalizer$FinalizerThread.run(Finalizer.java:160)
+16 Feb, 2012 1:07:50 AM org.apache.catalina.core.StandardContext reload
+INFO: Reloading Context with name [] has started
+16 Feb, 2012 1:07:50 AM org.apache.catalina.loader.WebappClassLoader clearReferencesJdbc
+SEVERE: The web application [] registered the JDBC driver [com.mysql.jdbc.Driver] but failed to unregister it when the web application was stopped. To prevent a memory leak, the JDBC Driver has been forcibly unregistered.
+16 Feb, 2012 1:08:20 AM org.apache.catalina.startup.HostConfig checkResources
+INFO: Undeploying context []
+16 Feb, 2012 1:08:21 AM org.apache.catalina.startup.HostConfig checkResources
+INFO: Undeploying context []
+16 Feb, 2012 1:08:21 AM org.apache.catalina.startup.HostConfig deployDescriptor
+INFO: Deploying configuration descriptor ROOT.xml
+16 Feb, 2012 1:08:21 AM org.apache.catalina.core.StandardContext start
+INFO: Container org.apache.catalina.core.ContainerBase.[Catalina].[localhost].[/] has already been started
+16 Feb, 2012 1:15:35 AM org.apache.catalina.loader.WebappClassLoader loadClass
+INFO: Illegal access: this web application instance has been stopped already.  Could not load com.mysql.jdbc.SQLError.  The eventual following stack trace is caused by an error thrown for debugging purposes as well as to attempt to terminate the thread which caused the illegal access, and has no functional impact.
+java.lang.IllegalStateException
+	at org.apache.catalina.loader.WebappClassLoader.loadClass(WebappClassLoader.java:1566)
+	at org.apache.catalina.loader.WebappClassLoader.loadClass(WebappClassLoader.java:1526)
+	at java.lang.ClassLoader.loadClassInternal(ClassLoader.java:319)
+	at com.mysql.jdbc.MysqlIO.send(MysqlIO.java:3321)
+	at com.mysql.jdbc.MysqlIO.quit(MysqlIO.java:1667)
+	at com.mysql.jdbc.ConnectionImpl.realClose(ConnectionImpl.java:4322)
+	at com.mysql.jdbc.ConnectionImpl.cleanup(ConnectionImpl.java:1348)
+	at com.mysql.jdbc.ConnectionImpl.finalize(ConnectionImpl.java:2679)
+	at java.lang.ref.Finalizer.invokeFinalizeMethod(Native Method)
+	at java.lang.ref.Finalizer.runFinalizer(Finalizer.java:83)
+	at java.lang.ref.Finalizer.access$100(Finalizer.java:14)
+	at java.lang.ref.Finalizer$FinalizerThread.run(Finalizer.java:160)
+16 Feb, 2012 1:15:35 AM org.apache.catalina.loader.WebappClassLoader loadClass
+INFO: Illegal access: this web application instance has been stopped already.  Could not load com.mysql.jdbc.ProfilerEventHandlerFactory.  The eventual following stack trace is caused by an error thrown for debugging purposes as well as to attempt to terminate the thread which caused the illegal access, and has no functional impact.
+java.lang.IllegalStateException
+	at org.apache.catalina.loader.WebappClassLoader.loadClass(WebappClassLoader.java:1566)
+	at org.apache.catalina.loader.WebappClassLoader.loadClass(WebappClassLoader.java:1526)
+	at java.lang.ClassLoader.loadClassInternal(ClassLoader.java:319)
+	at com.mysql.jdbc.ConnectionImpl.realClose(ConnectionImpl.java:4346)
+	at com.mysql.jdbc.ConnectionImpl.cleanup(ConnectionImpl.java:1348)
+	at com.mysql.jdbc.ConnectionImpl.finalize(ConnectionImpl.java:2679)
+	at java.lang.ref.Finalizer.invokeFinalizeMethod(Native Method)
+	at java.lang.ref.Finalizer.runFinalizer(Finalizer.java:83)
+	at java.lang.ref.Finalizer.access$100(Finalizer.java:14)
+	at java.lang.ref.Finalizer$FinalizerThread.run(Finalizer.java:160)
+16 Feb, 2012 1:17:17 AM org.apache.coyote.http11.Http11AprProtocol pause
+INFO: Pausing Coyote HTTP/1.1 on http-8080
+16 Feb, 2012 1:17:17 AM org.apache.coyote.ajp.AjpAprProtocol pause
+INFO: Pausing Coyote AJP/1.3 on ajp-8009
+16 Feb, 2012 1:17:18 AM org.apache.catalina.core.StandardService stop
+INFO: Stopping service Catalina
+16 Feb, 2012 1:17:18 AM org.apache.catalina.loader.WebappClassLoader clearReferencesJdbc
+SEVERE: The web application [] registered the JDBC driver [com.mysql.jdbc.Driver] but failed to unregister it when the web application was stopped. To prevent a memory leak, the JDBC Driver has been forcibly unregistered.
+16 Feb, 2012 1:17:18 AM org.apache.coyote.http11.Http11AprProtocol destroy
+INFO: Stopping Coyote HTTP/1.1 on http-8080
+16 Feb, 2012 1:17:18 AM org.apache.coyote.ajp.AjpAprProtocol destroy
+INFO: Stopping Coyote AJP/1.3 on ajp-8009
+16 Feb, 2012 7:44:10 AM org.apache.catalina.core.AprLifecycleListener init
+INFO: The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: D:\Java\jdk1.6.0_26\bin;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;C:\Program Files\Common Files\Microsoft Shared\Windows Live;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Program Files\Broadcom\Broadcom 802.11 Network Adapter\Driver;C:\Program Files (x86)\Toshiba\Bluetooth Toshiba Stack\sys\;C:\Program Files (x86)\Toshiba\Bluetooth Toshiba Stack\sys\x64\;D:\Heroku;C:\Program Files (x86)\git\bin;C:\Program Files (x86)\git\cmd;D:\Java\jdk1.6.0_26\bin;D:\Mercurial;.
+16 Feb, 2012 7:44:12 AM org.apache.coyote.http11.Http11Protocol init
+INFO: Initializing Coyote HTTP/1.1 on http-8080
+16 Feb, 2012 7:44:12 AM org.apache.catalina.startup.Catalina load
+INFO: Initialization processed in 4648 ms
+16 Feb, 2012 7:44:12 AM org.apache.catalina.core.StandardService start
+INFO: Starting service Catalina
+16 Feb, 2012 7:44:12 AM org.apache.catalina.core.StandardEngine start
+INFO: Starting Servlet Engine: Apache Tomcat/6.0.35
+16 Feb, 2012 7:44:12 AM org.apache.catalina.startup.HostConfig deployDescriptor
+INFO: Deploying configuration descriptor fileupload.xml
+16 Feb, 2012 7:44:13 AM org.apache.catalina.core.StandardContext resourcesStart
+SEVERE: Error starting static Resources
+java.lang.IllegalArgumentException: Document base D:\Dropbox\201103-file-upload-jquery\build\web does not exist or is not a readable directory
+	at org.apache.naming.resources.FileDirContext.setDocBase(FileDirContext.java:142)
+	at org.apache.catalina.core.StandardContext.resourcesStart(StandardContext.java:4320)
+	at org.apache.catalina.core.StandardContext.start(StandardContext.java:4489)
+	at org.apache.catalina.core.ContainerBase.addChildInternal(ContainerBase.java:799)
+	at org.apache.catalina.core.ContainerBase.addChild(ContainerBase.java:779)
+	at org.apache.catalina.core.StandardHost.addChild(StandardHost.java:601)
+	at org.apache.catalina.startup.HostConfig.deployDescriptor(HostConfig.java:675)
+	at org.apache.catalina.startup.HostConfig.deployDescriptors(HostConfig.java:601)
+	at org.apache.catalina.startup.HostConfig.deployApps(HostConfig.java:502)
+	at org.apache.catalina.startup.HostConfig.start(HostConfig.java:1317)
+	at org.apache.catalina.startup.HostConfig.lifecycleEvent(HostConfig.java:324)
+	at org.apache.catalina.util.LifecycleSupport.fireLifecycleEvent(LifecycleSupport.java:142)
+	at org.apache.catalina.core.ContainerBase.start(ContainerBase.java:1065)
+	at org.apache.catalina.core.StandardHost.start(StandardHost.java:840)
+	at org.apache.catalina.core.ContainerBase.start(ContainerBase.java:1057)
+	at org.apache.catalina.core.StandardEngine.start(StandardEngine.java:463)
+	at org.apache.catalina.core.StandardService.start(StandardService.java:525)
+	at org.apache.catalina.core.StandardServer.start(StandardServer.java:754)
+	at org.apache.catalina.startup.Catalina.start(Catalina.java:595)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+	at java.lang.reflect.Method.invoke(Method.java:597)
+	at org.apache.catalina.startup.Bootstrap.start(Bootstrap.java:289)
+	at org.apache.catalina.startup.Bootstrap.main(Bootstrap.java:414)
+16 Feb, 2012 7:44:13 AM org.apache.catalina.core.StandardContext start
+SEVERE: Error in resourceStart()
+16 Feb, 2012 7:44:13 AM org.apache.catalina.core.StandardContext start
+SEVERE: Error getConfigured
+16 Feb, 2012 7:44:13 AM org.apache.catalina.core.StandardContext start
+SEVERE: Context [/fileupload] startup failed due to previous errors
+16 Feb, 2012 7:44:13 AM org.apache.catalina.core.StandardContext stop
+INFO: Container org.apache.catalina.core.ContainerBase.[Catalina].[localhost].[/fileupload] has not been started
+16 Feb, 2012 7:44:13 AM org.apache.catalina.startup.HostConfig deployDescriptor
+INFO: Deploying configuration descriptor host-manager.xml
+16 Feb, 2012 7:44:14 AM org.apache.catalina.startup.HostConfig deployDescriptor
+INFO: Deploying configuration descriptor manager.xml
+16 Feb, 2012 7:44:14 AM org.apache.catalina.startup.HostConfig deployDescriptor
+INFO: Deploying configuration descriptor ROOT.xml
+16 Feb, 2012 7:44:14 AM org.apache.catalina.startup.HostConfig deployDescriptor
+WARNING: A docBase E:\Dropbox\YAID\apache-tomcat-6.0.35\webapps\home\vignesh\Dropbox\YAID\build\web inside the host appBase has been specified, and will be ignored
+16 Feb, 2012 7:44:14 AM org.apache.catalina.core.StandardContext resourcesStart
+SEVERE: Error starting static Resources
+java.lang.IllegalArgumentException: Document base E:\Dropbox\YAID\apache-tomcat-6.0.35\webapps\ROOT does not exist or is not a readable directory
+	at org.apache.naming.resources.FileDirContext.setDocBase(FileDirContext.java:142)
+	at org.apache.catalina.core.StandardContext.resourcesStart(StandardContext.java:4320)
+	at org.apache.catalina.core.StandardContext.start(StandardContext.java:4489)
+	at org.apache.catalina.core.ContainerBase.addChildInternal(ContainerBase.java:799)
+	at org.apache.catalina.core.ContainerBase.addChild(ContainerBase.java:779)
+	at org.apache.catalina.core.StandardHost.addChild(StandardHost.java:601)
+	at org.apache.catalina.startup.HostConfig.deployDescriptor(HostConfig.java:675)
+	at org.apache.catalina.startup.HostConfig.deployDescriptors(HostConfig.java:601)
+	at org.apache.catalina.startup.HostConfig.deployApps(HostConfig.java:502)
+	at org.apache.catalina.startup.HostConfig.start(HostConfig.java:1317)
+	at org.apache.catalina.startup.HostConfig.lifecycleEvent(HostConfig.java:324)
+	at org.apache.catalina.util.LifecycleSupport.fireLifecycleEvent(LifecycleSupport.java:142)
+	at org.apache.catalina.core.ContainerBase.start(ContainerBase.java:1065)
+	at org.apache.catalina.core.StandardHost.start(StandardHost.java:840)
+	at org.apache.catalina.core.ContainerBase.start(ContainerBase.java:1057)
+	at org.apache.catalina.core.StandardEngine.start(StandardEngine.java:463)
+	at org.apache.catalina.core.StandardService.start(StandardService.java:525)
+	at org.apache.catalina.core.StandardServer.start(StandardServer.java:754)
+	at org.apache.catalina.startup.Catalina.start(Catalina.java:595)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+	at java.lang.reflect.Method.invoke(Method.java:597)
+	at org.apache.catalina.startup.Bootstrap.start(Bootstrap.java:289)
+	at org.apache.catalina.startup.Bootstrap.main(Bootstrap.java:414)
+16 Feb, 2012 7:44:14 AM org.apache.catalina.core.StandardContext start
+SEVERE: Error in resourceStart()
+16 Feb, 2012 7:44:14 AM org.apache.catalina.core.StandardContext start
+SEVERE: Error getConfigured
+16 Feb, 2012 7:44:14 AM org.apache.catalina.core.StandardContext start
+SEVERE: Context [] startup failed due to previous errors
+16 Feb, 2012 7:44:14 AM org.apache.catalina.core.StandardContext stop
+INFO: Container org.apache.catalina.core.ContainerBase.[Catalina].[localhost].[/] has not been started
+16 Feb, 2012 7:44:14 AM org.apache.catalina.startup.HostConfig deployDirectory
+INFO: Deploying web application directory docs
+16 Feb, 2012 7:44:14 AM org.apache.catalina.startup.HostConfig deployDirectory
+INFO: Deploying web application directory examples
+16 Feb, 2012 7:44:16 AM org.apache.coyote.http11.Http11Protocol start
+INFO: Starting Coyote HTTP/1.1 on http-8080
+16 Feb, 2012 7:44:16 AM org.apache.jk.common.ChannelSocket init
+INFO: JK: ajp13 listening on /0.0.0.0:8009
+16 Feb, 2012 7:44:16 AM org.apache.jk.server.JkMain start
+INFO: Jk running ID=0 time=0/152  config=null
+16 Feb, 2012 7:44:16 AM org.apache.catalina.startup.Catalina start
+INFO: Server startup in 4546 ms
+16 Feb, 2012 7:44:17 AM org.apache.catalina.core.StandardContext stop
+INFO: Container org.apache.catalina.core.ContainerBase.[Catalina].[localhost].[/] has not been started
+16 Feb, 2012 7:44:18 AM org.apache.catalina.startup.HostConfig checkResources
+INFO: Undeploying context []
+16 Feb, 2012 7:44:18 AM org.apache.catalina.startup.HostConfig deployDescriptor
+INFO: Deploying configuration descriptor ROOT.xml
+16 Feb, 2012 7:44:18 AM org.apache.catalina.core.StandardContext start
+INFO: Container org.apache.catalina.core.ContainerBase.[Catalina].[localhost].[/] has already been started
+16 Feb, 2012 7:44:59 AM org.apache.coyote.http11.Http11Protocol pause
+INFO: Pausing Coyote HTTP/1.1 on http-8080
+16 Feb, 2012 7:45:00 AM org.apache.catalina.core.StandardService stop
+INFO: Stopping service Catalina
+16 Feb, 2012 7:45:00 AM org.apache.coyote.http11.Http11Protocol destroy
+INFO: Stopping Coyote HTTP/1.1 on http-8080
+16 Feb, 2012 7:45:58 AM org.apache.catalina.core.AprLifecycleListener init
+INFO: The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: D:\Java\jdk1.6.0_26\bin;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;C:\Program Files\Common Files\Microsoft Shared\Windows Live;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Program Files\Broadcom\Broadcom 802.11 Network Adapter\Driver;C:\Program Files (x86)\Toshiba\Bluetooth Toshiba Stack\sys\;C:\Program Files (x86)\Toshiba\Bluetooth Toshiba Stack\sys\x64\;D:\Heroku;C:\Program Files (x86)\git\bin;C:\Program Files (x86)\git\cmd;D:\Java\jdk1.6.0_26\bin;D:\Mercurial;.
+16 Feb, 2012 7:45:58 AM org.apache.coyote.http11.Http11Protocol init
+INFO: Initializing Coyote HTTP/1.1 on http-8080
+16 Feb, 2012 7:45:58 AM org.apache.catalina.startup.Catalina load
+INFO: Initialization processed in 2194 ms
+16 Feb, 2012 7:45:59 AM org.apache.catalina.core.StandardService start
+INFO: Starting service Catalina
+16 Feb, 2012 7:45:59 AM org.apache.catalina.core.StandardEngine start
+INFO: Starting Servlet Engine: Apache Tomcat/6.0.35
+16 Feb, 2012 7:45:59 AM org.apache.catalina.startup.HostConfig deployDescriptor
+INFO: Deploying configuration descriptor fileupload.xml
+16 Feb, 2012 7:45:59 AM org.apache.catalina.core.StandardContext resourcesStart
+SEVERE: Error starting static Resources
+java.lang.IllegalArgumentException: Document base D:\Dropbox\201103-file-upload-jquery\build\web does not exist or is not a readable directory
+	at org.apache.naming.resources.FileDirContext.setDocBase(FileDirContext.java:142)
+	at org.apache.catalina.core.StandardContext.resourcesStart(StandardContext.java:4320)
+	at org.apache.catalina.core.StandardContext.start(StandardContext.java:4489)
+	at org.apache.catalina.core.ContainerBase.addChildInternal(ContainerBase.java:799)
+	at org.apache.catalina.core.ContainerBase.addChild(ContainerBase.java:779)
+	at org.apache.catalina.core.StandardHost.addChild(StandardHost.java:601)
+	at org.apache.catalina.startup.HostConfig.deployDescriptor(HostConfig.java:675)
+	at org.apache.catalina.startup.HostConfig.deployDescriptors(HostConfig.java:601)
+	at org.apache.catalina.startup.HostConfig.deployApps(HostConfig.java:502)
+	at org.apache.catalina.startup.HostConfig.start(HostConfig.java:1317)
+	at org.apache.catalina.startup.HostConfig.lifecycleEvent(HostConfig.java:324)
+	at org.apache.catalina.util.LifecycleSupport.fireLifecycleEvent(LifecycleSupport.java:142)
+	at org.apache.catalina.core.ContainerBase.start(ContainerBase.java:1065)
+	at org.apache.catalina.core.StandardHost.start(StandardHost.java:840)
+	at org.apache.catalina.core.ContainerBase.start(ContainerBase.java:1057)
+	at org.apache.catalina.core.StandardEngine.start(StandardEngine.java:463)
+	at org.apache.catalina.core.StandardService.start(StandardService.java:525)
+	at org.apache.catalina.core.StandardServer.start(StandardServer.java:754)
+	at org.apache.catalina.startup.Catalina.start(Catalina.java:595)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+	at java.lang.reflect.Method.invoke(Method.java:597)
+	at org.apache.catalina.startup.Bootstrap.start(Bootstrap.java:289)
+	at org.apache.catalina.startup.Bootstrap.main(Bootstrap.java:414)
+16 Feb, 2012 7:45:59 AM org.apache.catalina.core.StandardContext start
+SEVERE: Error in resourceStart()
+16 Feb, 2012 7:45:59 AM org.apache.catalina.core.StandardContext start
+SEVERE: Error getConfigured
+16 Feb, 2012 7:45:59 AM org.apache.catalina.core.StandardContext start
+SEVERE: Context [/fileupload] startup failed due to previous errors
+16 Feb, 2012 7:45:59 AM org.apache.catalina.core.StandardContext stop
+INFO: Container org.apache.catalina.core.ContainerBase.[Catalina].[localhost].[/fileupload] has not been started
+16 Feb, 2012 7:45:59 AM org.apache.catalina.startup.HostConfig deployDescriptor
+INFO: Deploying configuration descriptor host-manager.xml
+16 Feb, 2012 7:46:00 AM org.apache.catalina.startup.HostConfig deployDescriptor
+INFO: Deploying configuration descriptor manager.xml
+16 Feb, 2012 7:46:00 AM org.apache.catalina.startup.HostConfig deployDescriptor
+INFO: Deploying configuration descriptor ROOT.xml
+16 Feb, 2012 7:46:00 AM org.apache.catalina.startup.HostConfig deployDirectory
+INFO: Deploying web application directory docs
+16 Feb, 2012 7:46:00 AM org.apache.catalina.startup.HostConfig deployDirectory
+INFO: Deploying web application directory examples
+16 Feb, 2012 7:46:01 AM org.apache.coyote.http11.Http11Protocol start
+INFO: Starting Coyote HTTP/1.1 on http-8080
+16 Feb, 2012 7:46:01 AM org.apache.jk.common.ChannelSocket init
+INFO: JK: ajp13 listening on /0.0.0.0:8009
+16 Feb, 2012 7:46:01 AM org.apache.jk.server.JkMain start
+INFO: Jk running ID=0 time=0/75  config=null
+16 Feb, 2012 7:46:01 AM org.apache.catalina.startup.Catalina start
+INFO: Server startup in 2605 ms
+16 Feb, 2012 7:46:03 AM org.apache.catalina.startup.HostConfig checkResources
+INFO: Undeploying context []
+16 Feb, 2012 7:46:03 AM org.apache.catalina.startup.HostConfig deployDescriptor
+INFO: Deploying configuration descriptor ROOT.xml
+16 Feb, 2012 7:46:03 AM org.apache.catalina.core.StandardContext start
+INFO: Container org.apache.catalina.core.ContainerBase.[Catalina].[localhost].[/] has already been started
+16 Feb, 2012 7:59:42 AM org.apache.catalina.core.StandardContext reload
+INFO: Reloading Context with name [] has started
+16 Feb, 2012 7:59:42 AM org.apache.catalina.loader.WebappClassLoader clearReferencesJdbc
+SEVERE: The web application [] registered the JDBC driver [com.mysql.jdbc.Driver] but failed to unregister it when the web application was stopped. To prevent a memory leak, the JDBC Driver has been forcibly unregistered.
+16 Feb, 2012 7:59:45 AM org.apache.catalina.startup.HostConfig checkResources
+INFO: Undeploying context []
+16 Feb, 2012 7:59:45 AM org.apache.catalina.startup.HostConfig deployDescriptor
+INFO: Deploying configuration descriptor ROOT.xml
+16 Feb, 2012 7:59:45 AM org.apache.catalina.core.StandardContext start
+INFO: Container org.apache.catalina.core.ContainerBase.[Catalina].[localhost].[/] has already been started
+16 Feb, 2012 8:01:06 AM org.apache.catalina.core.StandardContext reload
+INFO: Reloading Context with name [] has started
+16 Feb, 2012 8:01:06 AM org.apache.catalina.loader.WebappClassLoader clearReferencesJdbc
+SEVERE: The web application [] registered the JDBC driver [com.mysql.jdbc.Driver] but failed to unregister it when the web application was stopped. To prevent a memory leak, the JDBC Driver has been forcibly unregistered.
+16 Feb, 2012 8:03:13 AM org.apache.catalina.core.StandardContext reload
+INFO: Reloading Context with name [] has started
+16 Feb, 2012 8:03:16 AM org.apache.catalina.startup.HostConfig checkResources
+INFO: Undeploying context []
+16 Feb, 2012 8:03:16 AM org.apache.catalina.startup.HostConfig deployDescriptor
+INFO: Deploying configuration descriptor ROOT.xml
+16 Feb, 2012 8:03:17 AM org.apache.catalina.loader.WebappClassLoader loadClass
+INFO: Illegal access: this web application instance has been stopped already.  Could not load com.mysql.jdbc.SQLError.  The eventual following stack trace is caused by an error thrown for debugging purposes as well as to attempt to terminate the thread which caused the illegal access, and has no functional impact.
+java.lang.IllegalStateException
+	at org.apache.catalina.loader.WebappClassLoader.loadClass(WebappClassLoader.java:1566)
+	at org.apache.catalina.loader.WebappClassLoader.loadClass(WebappClassLoader.java:1526)
+	at com.mysql.jdbc.MysqlIO.send(MysqlIO.java:3321)
+	at com.mysql.jdbc.MysqlIO.quit(MysqlIO.java:1667)
+	at com.mysql.jdbc.ConnectionImpl.realClose(ConnectionImpl.java:4322)
+	at com.mysql.jdbc.ConnectionImpl.cleanup(ConnectionImpl.java:1348)
+	at com.mysql.jdbc.ConnectionImpl.finalize(ConnectionImpl.java:2679)
+	at java.lang.ref.Finalizer.invokeFinalizeMethod(Native Method)
+	at java.lang.ref.Finalizer.runFinalizer(Finalizer.java:83)
+	at java.lang.ref.Finalizer.access$100(Finalizer.java:14)
+	at java.lang.ref.Finalizer$FinalizerThread.run(Finalizer.java:160)
+16 Feb, 2012 8:03:17 AM org.apache.catalina.loader.WebappClassLoader loadClass
+INFO: Illegal access: this web application instance has been stopped already.  Could not load com.mysql.jdbc.ProfilerEventHandlerFactory.  The eventual following stack trace is caused by an error thrown for debugging purposes as well as to attempt to terminate the thread which caused the illegal access, and has no functional impact.
+java.lang.IllegalStateException
+	at org.apache.catalina.loader.WebappClassLoader.loadClass(WebappClassLoader.java:1566)
+	at org.apache.catalina.loader.WebappClassLoader.loadClass(WebappClassLoader.java:1526)
+	at com.mysql.jdbc.ConnectionImpl.realClose(ConnectionImpl.java:4346)
+	at com.mysql.jdbc.ConnectionImpl.cleanup(ConnectionImpl.java:1348)
+	at com.mysql.jdbc.ConnectionImpl.finalize(ConnectionImpl.java:2679)
+	at java.lang.ref.Finalizer.invokeFinalizeMethod(Native Method)
+	at java.lang.ref.Finalizer.runFinalizer(Finalizer.java:83)
+	at java.lang.ref.Finalizer.access$100(Finalizer.java:14)
+	at java.lang.ref.Finalizer$FinalizerThread.run(Finalizer.java:160)
+16 Feb, 2012 8:03:17 AM org.apache.catalina.core.StandardContext start
+INFO: Container org.apache.catalina.core.ContainerBase.[Catalina].[localhost].[/] has already been started
+16 Feb, 2012 8:03:56 AM org.apache.catalina.core.StandardContext reload
+INFO: Reloading Context with name [] has started
+16 Feb, 2012 8:03:56 AM org.apache.catalina.loader.WebappClassLoader clearReferencesJdbc
+SEVERE: The web application [] registered the JDBC driver [com.mysql.jdbc.Driver] but failed to unregister it when the web application was stopped. To prevent a memory leak, the JDBC Driver has been forcibly unregistered.
+16 Feb, 2012 8:05:10 AM org.apache.catalina.core.StandardContext reload
+INFO: Reloading Context with name [] has started
+16 Feb, 2012 8:05:42 AM org.apache.catalina.core.StandardContext reload
+INFO: Reloading Context with name [] has started
+16 Feb, 2012 8:05:51 AM org.apache.coyote.http11.Http11Protocol pause
+INFO: Pausing Coyote HTTP/1.1 on http-8080
+16 Feb, 2012 8:05:52 AM org.apache.catalina.core.StandardService stop
+INFO: Stopping service Catalina
+16 Feb, 2012 8:05:52 AM org.apache.coyote.http11.Http11Protocol destroy
+INFO: Stopping Coyote HTTP/1.1 on http-8080
+16 Feb, 2012 5:53:00 PM org.apache.catalina.core.AprLifecycleListener init
+INFO: The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: D:\Java\jdk1.6.0_26\bin;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;C:\Program Files\Common Files\Microsoft Shared\Windows Live;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Program Files\Broadcom\Broadcom 802.11 Network Adapter\Driver;C:\Program Files (x86)\Toshiba\Bluetooth Toshiba Stack\sys\;C:\Program Files (x86)\Toshiba\Bluetooth Toshiba Stack\sys\x64\;D:\Heroku;C:\Program Files (x86)\git\bin;C:\Program Files (x86)\git\cmd;D:\Java\jdk1.6.0_26\bin;D:\Mercurial;.
+16 Feb, 2012 5:53:02 PM org.apache.coyote.http11.Http11Protocol init
+INFO: Initializing Coyote HTTP/1.1 on http-8080
+16 Feb, 2012 5:53:02 PM org.apache.catalina.startup.Catalina load
+INFO: Initialization processed in 2767 ms
+16 Feb, 2012 5:53:02 PM org.apache.catalina.core.StandardService start
+INFO: Starting service Catalina
+16 Feb, 2012 5:53:02 PM org.apache.catalina.core.StandardEngine start
+INFO: Starting Servlet Engine: Apache Tomcat/6.0.35
+16 Feb, 2012 5:53:02 PM org.apache.catalina.startup.HostConfig deployDescriptor
+INFO: Deploying configuration descriptor fileupload.xml
+16 Feb, 2012 5:53:02 PM org.apache.catalina.core.StandardContext resourcesStart
+SEVERE: Error starting static Resources
+java.lang.IllegalArgumentException: Document base D:\Dropbox\201103-file-upload-jquery\build\web does not exist or is not a readable directory
+	at org.apache.naming.resources.FileDirContext.setDocBase(FileDirContext.java:142)
+	at org.apache.catalina.core.StandardContext.resourcesStart(StandardContext.java:4320)
+	at org.apache.catalina.core.StandardContext.start(StandardContext.java:4489)
+	at org.apache.catalina.core.ContainerBase.addChildInternal(ContainerBase.java:799)
+	at org.apache.catalina.core.ContainerBase.addChild(ContainerBase.java:779)
+	at org.apache.catalina.core.StandardHost.addChild(StandardHost.java:601)
+	at org.apache.catalina.startup.HostConfig.deployDescriptor(HostConfig.java:675)
+	at org.apache.catalina.startup.HostConfig.deployDescriptors(HostConfig.java:601)
+	at org.apache.catalina.startup.HostConfig.deployApps(HostConfig.java:502)
+	at org.apache.catalina.startup.HostConfig.start(HostConfig.java:1317)
+	at org.apache.catalina.startup.HostConfig.lifecycleEvent(HostConfig.java:324)
+	at org.apache.catalina.util.LifecycleSupport.fireLifecycleEvent(LifecycleSupport.java:142)
+	at org.apache.catalina.core.ContainerBase.start(ContainerBase.java:1065)
+	at org.apache.catalina.core.StandardHost.start(StandardHost.java:840)
+	at org.apache.catalina.core.ContainerBase.start(ContainerBase.java:1057)
+	at org.apache.catalina.core.StandardEngine.start(StandardEngine.java:463)
+	at org.apache.catalina.core.StandardService.start(StandardService.java:525)
+	at org.apache.catalina.core.StandardServer.start(StandardServer.java:754)
+	at org.apache.catalina.startup.Catalina.start(Catalina.java:595)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+	at java.lang.reflect.Method.invoke(Method.java:597)
+	at org.apache.catalina.startup.Bootstrap.start(Bootstrap.java:289)
+	at org.apache.catalina.startup.Bootstrap.main(Bootstrap.java:414)
+16 Feb, 2012 5:53:02 PM org.apache.catalina.core.StandardContext start
+SEVERE: Error in resourceStart()
+16 Feb, 2012 5:53:02 PM org.apache.catalina.core.StandardContext start
+SEVERE: Error getConfigured
+16 Feb, 2012 5:53:02 PM org.apache.catalina.core.StandardContext start
+SEVERE: Context [/fileupload] startup failed due to previous errors
+16 Feb, 2012 5:53:02 PM org.apache.catalina.core.StandardContext stop
+INFO: Container org.apache.catalina.core.ContainerBase.[Catalina].[localhost].[/fileupload] has not been started
+16 Feb, 2012 5:53:02 PM org.apache.catalina.startup.HostConfig deployDescriptor
+INFO: Deploying configuration descriptor host-manager.xml
+16 Feb, 2012 5:53:03 PM org.apache.catalina.startup.HostConfig deployDescriptor
+INFO: Deploying configuration descriptor manager.xml
+16 Feb, 2012 5:53:03 PM org.apache.catalina.startup.HostConfig deployDescriptor
+INFO: Deploying configuration descriptor ROOT.xml
+16 Feb, 2012 5:53:03 PM org.apache.catalina.startup.HostConfig deployDirectory
+INFO: Deploying web application directory docs
+16 Feb, 2012 5:53:03 PM org.apache.catalina.startup.HostConfig deployDirectory
+INFO: Deploying web application directory examples
+16 Feb, 2012 5:53:04 PM org.apache.coyote.http11.Http11Protocol start
+INFO: Starting Coyote HTTP/1.1 on http-8080
+16 Feb, 2012 5:53:04 PM org.apache.jk.common.ChannelSocket init
+INFO: JK: ajp13 listening on /0.0.0.0:8009
+16 Feb, 2012 5:53:04 PM org.apache.jk.server.JkMain start
+INFO: Jk running ID=0 time=0/70  config=null
+16 Feb, 2012 5:53:04 PM org.apache.catalina.startup.Catalina start
+INFO: Server startup in 2597 ms
+16 Feb, 2012 5:53:06 PM org.apache.catalina.startup.HostConfig checkResources
+INFO: Undeploying context []
+16 Feb, 2012 5:53:06 PM org.apache.catalina.startup.HostConfig deployDescriptor
+INFO: Deploying configuration descriptor ROOT.xml
+16 Feb, 2012 5:53:06 PM org.apache.catalina.core.StandardContext start
+INFO: Container org.apache.catalina.core.ContainerBase.[Catalina].[localhost].[/] has already been started
+16 Feb, 2012 5:55:52 PM org.apache.catalina.core.StandardContext reload
+INFO: Reloading Context with name [] has started
+16 Feb, 2012 5:55:53 PM org.apache.catalina.loader.WebappClassLoader clearReferencesJdbc
+SEVERE: The web application [] registered the JDBC driver [com.mysql.jdbc.Driver] but failed to unregister it when the web application was stopped. To prevent a memory leak, the JDBC Driver has been forcibly unregistered.
+16 Feb, 2012 5:59:44 PM org.apache.catalina.startup.HostConfig checkResources
+INFO: Reloading context []
+16 Feb, 2012 5:59:55 PM org.apache.catalina.startup.HostConfig checkResources
+INFO: Reloading context []
+16 Feb, 2012 6:00:03 PM org.apache.catalina.startup.HostConfig checkResources
+INFO: Undeploying context []
+16 Feb, 2012 6:00:03 PM org.apache.catalina.startup.HostConfig deployDescriptor
+INFO: Deploying configuration descriptor ROOT.xml
+16 Feb, 2012 6:00:03 PM org.apache.catalina.core.StandardContext start
+INFO: Container org.apache.catalina.core.ContainerBase.[Catalina].[localhost].[/] has already been started
+16 Feb, 2012 6:09:45 PM org.apache.catalina.core.StandardContext reload
+INFO: Reloading Context with name [] has started
+16 Feb, 2012 6:09:45 PM org.apache.catalina.loader.WebappClassLoader clearReferencesJdbc
+SEVERE: The web application [] registered the JDBC driver [com.mysql.jdbc.Driver] but failed to unregister it when the web application was stopped. To prevent a memory leak, the JDBC Driver has been forcibly unregistered.
+16 Feb, 2012 6:09:55 PM org.apache.catalina.startup.HostConfig checkResources
+INFO: Reloading context []
+16 Feb, 2012 6:10:18 PM org.apache.catalina.startup.HostConfig checkResources
+INFO: Undeploying context []
+16 Feb, 2012 6:10:18 PM org.apache.catalina.startup.HostConfig deployDescriptor
+INFO: Deploying configuration descriptor ROOT.xml
+16 Feb, 2012 6:10:18 PM org.apache.catalina.core.StandardContext start
+INFO: Container org.apache.catalina.core.ContainerBase.[Catalina].[localhost].[/] has already been started
+16 Feb, 2012 6:10:19 PM org.apache.catalina.loader.WebappClassLoader loadClass
+INFO: Illegal access: this web application instance has been stopped already.  Could not load com.mysql.jdbc.SQLError.  The eventual following stack trace is caused by an error thrown for debugging purposes as well as to attempt to terminate the thread which caused the illegal access, and has no functional impact.
+java.lang.IllegalStateException
+	at org.apache.catalina.loader.WebappClassLoader.loadClass(WebappClassLoader.java:1566)
+	at org.apache.catalina.loader.WebappClassLoader.loadClass(WebappClassLoader.java:1526)
+	at com.mysql.jdbc.MysqlIO.send(MysqlIO.java:3321)
+	at com.mysql.jdbc.MysqlIO.quit(MysqlIO.java:1667)
+	at com.mysql.jdbc.ConnectionImpl.realClose(ConnectionImpl.java:4322)
+	at com.mysql.jdbc.ConnectionImpl.cleanup(ConnectionImpl.java:1348)
+	at com.mysql.jdbc.ConnectionImpl.finalize(ConnectionImpl.java:2679)
+	at java.lang.ref.Finalizer.invokeFinalizeMethod(Native Method)
+	at java.lang.ref.Finalizer.runFinalizer(Finalizer.java:83)
+	at java.lang.ref.Finalizer.access$100(Finalizer.java:14)
+	at java.lang.ref.Finalizer$FinalizerThread.run(Finalizer.java:160)
+16 Feb, 2012 6:10:20 PM org.apache.catalina.loader.WebappClassLoader loadClass
+INFO: Illegal access: this web application instance has been stopped already.  Could not load com.mysql.jdbc.ProfilerEventHandlerFactory.  The eventual following stack trace is caused by an error thrown for debugging purposes as well as to attempt to terminate the thread which caused the illegal access, and has no functional impact.
+java.lang.IllegalStateException
+	at org.apache.catalina.loader.WebappClassLoader.loadClass(WebappClassLoader.java:1566)
+	at org.apache.catalina.loader.WebappClassLoader.loadClass(WebappClassLoader.java:1526)
+	at com.mysql.jdbc.ConnectionImpl.realClose(ConnectionImpl.java:4346)
+	at com.mysql.jdbc.ConnectionImpl.cleanup(ConnectionImpl.java:1348)
+	at com.mysql.jdbc.ConnectionImpl.finalize(ConnectionImpl.java:2679)
+	at java.lang.ref.Finalizer.invokeFinalizeMethod(Native Method)
+	at java.lang.ref.Finalizer.runFinalizer(Finalizer.java:83)
+	at java.lang.ref.Finalizer.access$100(Finalizer.java:14)
+	at java.lang.ref.Finalizer$FinalizerThread.run(Finalizer.java:160)
+16 Feb, 2012 6:28:53 PM org.apache.catalina.core.StandardContext reload
+INFO: Reloading Context with name [] has started
+16 Feb, 2012 6:28:53 PM org.apache.catalina.loader.WebappClassLoader clearReferencesJdbc
+SEVERE: The web application [] registered the JDBC driver [com.mysql.jdbc.Driver] but failed to unregister it when the web application was stopped. To prevent a memory leak, the JDBC Driver has been forcibly unregistered.
+16 Feb, 2012 6:49:56 PM org.apache.catalina.startup.HostConfig checkResources
+INFO: Reloading context []
+16 Feb, 2012 6:50:13 PM org.apache.catalina.startup.HostConfig checkResources
+INFO: Undeploying context []
+16 Feb, 2012 6:50:13 PM org.apache.catalina.startup.HostConfig deployDescriptor
+INFO: Deploying configuration descriptor ROOT.xml
+16 Feb, 2012 6:50:13 PM org.apache.catalina.core.StandardContext start
+INFO: Container org.apache.catalina.core.ContainerBase.[Catalina].[localhost].[/] has already been started
+16 Feb, 2012 6:53:01 PM org.apache.catalina.loader.WebappClassLoader loadClass
+INFO: Illegal access: this web application instance has been stopped already.  Could not load com.mysql.jdbc.SQLError.  The eventual following stack trace is caused by an error thrown for debugging purposes as well as to attempt to terminate the thread which caused the illegal access, and has no functional impact.
+java.lang.IllegalStateException
+	at org.apache.catalina.loader.WebappClassLoader.loadClass(WebappClassLoader.java:1566)
+	at org.apache.catalina.loader.WebappClassLoader.loadClass(WebappClassLoader.java:1526)
+	at com.mysql.jdbc.MysqlIO.send(MysqlIO.java:3321)
+	at com.mysql.jdbc.MysqlIO.quit(MysqlIO.java:1667)
+	at com.mysql.jdbc.ConnectionImpl.realClose(ConnectionImpl.java:4322)
+	at com.mysql.jdbc.ConnectionImpl.cleanup(ConnectionImpl.java:1348)
+	at com.mysql.jdbc.ConnectionImpl.finalize(ConnectionImpl.java:2679)
+	at java.lang.ref.Finalizer.invokeFinalizeMethod(Native Method)
+	at java.lang.ref.Finalizer.runFinalizer(Finalizer.java:83)
+	at java.lang.ref.Finalizer.access$100(Finalizer.java:14)
+	at java.lang.ref.Finalizer$FinalizerThread.run(Finalizer.java:160)
+16 Feb, 2012 6:53:01 PM org.apache.catalina.loader.WebappClassLoader loadClass
+INFO: Illegal access: this web application instance has been stopped already.  Could not load com.mysql.jdbc.ProfilerEventHandlerFactory.  The eventual following stack trace is caused by an error thrown for debugging purposes as well as to attempt to terminate the thread which caused the illegal access, and has no functional impact.
+java.lang.IllegalStateException
+	at org.apache.catalina.loader.WebappClassLoader.loadClass(WebappClassLoader.java:1566)
+	at org.apache.catalina.loader.WebappClassLoader.loadClass(WebappClassLoader.java:1526)
+	at com.mysql.jdbc.ConnectionImpl.realClose(ConnectionImpl.java:4346)
+	at com.mysql.jdbc.ConnectionImpl.cleanup(ConnectionImpl.java:1348)
+	at com.mysql.jdbc.ConnectionImpl.finalize(ConnectionImpl.java:2679)
+	at java.lang.ref.Finalizer.invokeFinalizeMethod(Native Method)
+	at java.lang.ref.Finalizer.runFinalizer(Finalizer.java:83)
+	at java.lang.ref.Finalizer.access$100(Finalizer.java:14)
+	at java.lang.ref.Finalizer$FinalizerThread.run(Finalizer.java:160)
+16 Feb, 2012 6:53:02 PM org.apache.catalina.loader.WebappClassLoader loadClass
+INFO: Illegal access: this web application instance has been stopped already.  Could not load com.mysql.jdbc.SQLError.  The eventual following stack trace is caused by an error thrown for debugging purposes as well as to attempt to terminate the thread which caused the illegal access, and has no functional impact.
+java.lang.IllegalStateException
+	at org.apache.catalina.loader.WebappClassLoader.loadClass(WebappClassLoader.java:1566)
+	at org.apache.catalina.loader.WebappClassLoader.loadClass(WebappClassLoader.java:1526)
+	at com.mysql.jdbc.MysqlIO.send(MysqlIO.java:3321)
+	at com.mysql.jdbc.MysqlIO.quit(MysqlIO.java:1667)
+	at com.mysql.jdbc.ConnectionImpl.realClose(ConnectionImpl.java:4322)
+	at com.mysql.jdbc.ConnectionImpl.cleanup(ConnectionImpl.java:1348)
+	at com.mysql.jdbc.ConnectionImpl.finalize(ConnectionImpl.java:2679)
+	at java.lang.ref.Finalizer.invokeFinalizeMethod(Native Method)
+	at java.lang.ref.Finalizer.runFinalizer(Finalizer.java:83)
+	at java.lang.ref.Finalizer.access$100(Finalizer.java:14)
+	at java.lang.ref.Finalizer$FinalizerThread.run(Finalizer.java:160)
+16 Feb, 2012 6:53:02 PM org.apache.catalina.loader.WebappClassLoader loadClass
+INFO: Illegal access: this web application instance has been stopped already.  Could not load com.mysql.jdbc.ProfilerEventHandlerFactory.  The eventual following stack trace is caused by an error thrown for debugging purposes as well as to attempt to terminate the thread which caused the illegal access, and has no functional impact.
+java.lang.IllegalStateException
+	at org.apache.catalina.loader.WebappClassLoader.loadClass(WebappClassLoader.java:1566)
+	at org.apache.catalina.loader.WebappClassLoader.loadClass(WebappClassLoader.java:1526)
+	at com.mysql.jdbc.ConnectionImpl.realClose(ConnectionImpl.java:4346)
+	at com.mysql.jdbc.ConnectionImpl.cleanup(ConnectionImpl.java:1348)
+	at com.mysql.jdbc.ConnectionImpl.finalize(ConnectionImpl.java:2679)
+	at java.lang.ref.Finalizer.invokeFinalizeMethod(Native Method)
+	at java.lang.ref.Finalizer.runFinalizer(Finalizer.java:83)
+	at java.lang.ref.Finalizer.access$100(Finalizer.java:14)
+	at java.lang.ref.Finalizer$FinalizerThread.run(Finalizer.java:160)
+16 Feb, 2012 6:53:05 PM org.apache.catalina.startup.HostConfig checkResources
+INFO: Reloading context []
+16 Feb, 2012 6:53:05 PM org.apache.catalina.loader.WebappClassLoader clearReferencesJdbc
+SEVERE: The web application [] registered the JDBC driver [com.mysql.jdbc.Driver] but failed to unregister it when the web application was stopped. To prevent a memory leak, the JDBC Driver has been forcibly unregistered.
+16 Feb, 2012 6:53:10 PM org.apache.catalina.startup.HostConfig checkResources
+INFO: Undeploying context []
+16 Feb, 2012 6:53:10 PM org.apache.catalina.startup.HostConfig deployDescriptor
+INFO: Deploying configuration descriptor ROOT.xml
+16 Feb, 2012 6:53:10 PM org.apache.catalina.core.StandardContext start
+INFO: Container org.apache.catalina.core.ContainerBase.[Catalina].[localhost].[/] has already been started
+16 Feb, 2012 6:54:51 PM org.apache.catalina.loader.WebappClassLoader modified
+SEVERE:     Resource '/WEB-INF/classes/com/yaid/user/Login.class' is missing
+16 Feb, 2012 6:54:51 PM org.apache.catalina.core.StandardContext reload
+INFO: Reloading Context with name [] has started
+16 Feb, 2012 6:54:51 PM org.apache.catalina.loader.WebappClassLoader clearReferencesJdbc
+SEVERE: The web application [] registered the JDBC driver [com.mysql.jdbc.Driver] but failed to unregister it when the web application was stopped. To prevent a memory leak, the JDBC Driver has been forcibly unregistered.
+16 Feb, 2012 6:55:00 PM org.apache.catalina.startup.HostConfig checkResources
+INFO: Undeploying context []
+16 Feb, 2012 6:55:00 PM org.apache.catalina.startup.HostConfig deployDescriptor
+INFO: Deploying configuration descriptor ROOT.xml
+16 Feb, 2012 6:55:00 PM org.apache.catalina.core.StandardContext start
+INFO: Container org.apache.catalina.core.ContainerBase.[Catalina].[localhost].[/] has already been started
+16 Feb, 2012 6:57:50 PM org.apache.catalina.startup.HostConfig checkResources
+INFO: Reloading context []
+16 Feb, 2012 6:57:50 PM org.apache.catalina.loader.WebappClassLoader clearReferencesJdbc
+SEVERE: The web application [] registered the JDBC driver [com.mysql.jdbc.Driver] but failed to unregister it when the web application was stopped. To prevent a memory leak, the JDBC Driver has been forcibly unregistered.
+16 Feb, 2012 6:58:01 PM org.apache.catalina.startup.HostConfig checkResources
+INFO: Reloading context []
+16 Feb, 2012 6:58:04 PM org.apache.catalina.startup.HostConfig checkResources
+INFO: Undeploying context []
+16 Feb, 2012 6:58:04 PM org.apache.catalina.startup.HostConfig deployDescriptor
+INFO: Deploying configuration descriptor ROOT.xml
+16 Feb, 2012 6:58:04 PM org.apache.catalina.core.StandardContext start
+INFO: Container org.apache.catalina.core.ContainerBase.[Catalina].[localhost].[/] has already been started
+16 Feb, 2012 6:59:12 PM org.apache.catalina.loader.WebappClassLoader clearReferencesJdbc
+SEVERE: The web application [] registered the JDBC driver [com.mysql.jdbc.Driver] but failed to unregister it when the web application was stopped. To prevent a memory leak, the JDBC Driver has been forcibly unregistered.
+16 Feb, 2012 6:59:13 PM org.apache.catalina.startup.HostConfig checkResources
+INFO: Undeploying context []
+16 Feb, 2012 6:59:13 PM org.apache.catalina.startup.HostConfig deployDescriptor
+INFO: Deploying configuration descriptor ROOT.xml
+16 Feb, 2012 6:59:13 PM org.apache.catalina.core.StandardContext start
+INFO: Container org.apache.catalina.core.ContainerBase.[Catalina].[localhost].[/] has already been started
+16 Feb, 2012 7:01:10 PM org.apache.catalina.loader.WebappClassLoader clearReferencesJdbc
+SEVERE: The web application [] registered the JDBC driver [com.mysql.jdbc.Driver] but failed to unregister it when the web application was stopped. To prevent a memory leak, the JDBC Driver has been forcibly unregistered.
+16 Feb, 2012 7:01:10 PM org.apache.catalina.startup.HostConfig checkResources
+INFO: Undeploying context []
+16 Feb, 2012 7:01:10 PM org.apache.catalina.startup.HostConfig deployDescriptor
+INFO: Deploying configuration descriptor ROOT.xml
+16 Feb, 2012 7:01:11 PM org.apache.catalina.core.StandardContext start
+INFO: Container org.apache.catalina.core.ContainerBase.[Catalina].[localhost].[/] has already been started
+16 Feb, 2012 7:01:12 PM org.apache.catalina.loader.WebappClassLoader loadClass
+INFO: Illegal access: this web application instance has been stopped already.  Could not load com.mysql.jdbc.SQLError.  The eventual following stack trace is caused by an error thrown for debugging purposes as well as to attempt to terminate the thread which caused the illegal access, and has no functional impact.
+java.lang.IllegalStateException
+	at org.apache.catalina.loader.WebappClassLoader.loadClass(WebappClassLoader.java:1566)
+	at org.apache.catalina.loader.WebappClassLoader.loadClass(WebappClassLoader.java:1526)
+	at com.mysql.jdbc.MysqlIO.send(MysqlIO.java:3321)
+	at com.mysql.jdbc.MysqlIO.quit(MysqlIO.java:1667)
+	at com.mysql.jdbc.ConnectionImpl.realClose(ConnectionImpl.java:4322)
+	at com.mysql.jdbc.ConnectionImpl.cleanup(ConnectionImpl.java:1348)
+	at com.mysql.jdbc.ConnectionImpl.finalize(ConnectionImpl.java:2679)
+	at java.lang.ref.Finalizer.invokeFinalizeMethod(Native Method)
+	at java.lang.ref.Finalizer.runFinalizer(Finalizer.java:83)
+	at java.lang.ref.Finalizer.access$100(Finalizer.java:14)
+	at java.lang.ref.Finalizer$FinalizerThread.run(Finalizer.java:160)
+16 Feb, 2012 7:01:12 PM org.apache.catalina.loader.WebappClassLoader loadClass
+INFO: Illegal access: this web application instance has been stopped already.  Could not load com.mysql.jdbc.ProfilerEventHandlerFactory.  The eventual following stack trace is caused by an error thrown for debugging purposes as well as to attempt to terminate the thread which caused the illegal access, and has no functional impact.
+java.lang.IllegalStateException
+	at org.apache.catalina.loader.WebappClassLoader.loadClass(WebappClassLoader.java:1566)
+	at org.apache.catalina.loader.WebappClassLoader.loadClass(WebappClassLoader.java:1526)
+	at com.mysql.jdbc.ConnectionImpl.realClose(ConnectionImpl.java:4346)
+	at com.mysql.jdbc.ConnectionImpl.cleanup(ConnectionImpl.java:1348)
+	at com.mysql.jdbc.ConnectionImpl.finalize(ConnectionImpl.java:2679)
+	at java.lang.ref.Finalizer.invokeFinalizeMethod(Native Method)
+	at java.lang.ref.Finalizer.runFinalizer(Finalizer.java:83)
+	at java.lang.ref.Finalizer.access$100(Finalizer.java:14)
+	at java.lang.ref.Finalizer$FinalizerThread.run(Finalizer.java:160)
+16 Feb, 2012 7:04:10 PM org.apache.catalina.core.StandardContext reload
+INFO: Reloading Context with name [] has started
+16 Feb, 2012 7:04:10 PM org.apache.catalina.loader.WebappClassLoader clearReferencesJdbc
+SEVERE: The web application [] registered the JDBC driver [com.mysql.jdbc.Driver] but failed to unregister it when the web application was stopped. To prevent a memory leak, the JDBC Driver has been forcibly unregistered.
+16 Feb, 2012 7:06:06 PM org.apache.catalina.startup.HostConfig checkResources
+INFO: Reloading context []
+16 Feb, 2012 7:06:17 PM org.apache.catalina.startup.HostConfig checkResources
+INFO: Reloading context []
+16 Feb, 2012 7:06:38 PM org.apache.catalina.startup.HostConfig checkResources
+INFO: Reloading context []
+16 Feb, 2012 7:06:43 PM org.apache.catalina.startup.HostConfig checkResources
+INFO: Undeploying context []
+16 Feb, 2012 7:06:43 PM org.apache.catalina.startup.HostConfig deployDescriptor
+INFO: Deploying configuration descriptor ROOT.xml
+16 Feb, 2012 7:06:43 PM org.apache.catalina.core.StandardContext start
+INFO: Container org.apache.catalina.core.ContainerBase.[Catalina].[localhost].[/] has already been started
+16 Feb, 2012 7:07:41 PM org.apache.catalina.core.StandardContext reload
+INFO: Reloading Context with name [] has started
+16 Feb, 2012 7:07:42 PM org.apache.catalina.loader.WebappClassLoader clearReferencesJdbc
+SEVERE: The web application [] registered the JDBC driver [com.mysql.jdbc.Driver] but failed to unregister it when the web application was stopped. To prevent a memory leak, the JDBC Driver has been forcibly unregistered.
+16 Feb, 2012 7:11:20 PM org.apache.catalina.startup.HostConfig checkResources
+INFO: Undeploying context []
+16 Feb, 2012 7:11:20 PM org.apache.catalina.startup.HostConfig deployDescriptor
+INFO: Deploying configuration descriptor ROOT.xml
+16 Feb, 2012 7:11:20 PM org.apache.catalina.core.StandardContext start
+INFO: Container org.apache.catalina.core.ContainerBase.[Catalina].[localhost].[/] has already been started
+16 Feb, 2012 7:12:47 PM org.apache.catalina.loader.WebappClassLoader modified
+SEVERE:     Resource '/WEB-INF/classes/com/yaid/user/Login.class' is missing
+16 Feb, 2012 7:12:47 PM org.apache.catalina.core.StandardContext reload
+INFO: Reloading Context with name [] has started
+16 Feb, 2012 7:13:06 PM org.apache.catalina.startup.HostConfig checkResources
+INFO: Undeploying context []
+16 Feb, 2012 7:13:06 PM org.apache.catalina.startup.HostConfig deployDescriptor
+INFO: Deploying configuration descriptor ROOT.xml
+16 Feb, 2012 7:13:06 PM org.apache.catalina.core.StandardContext start
+INFO: Container org.apache.catalina.core.ContainerBase.[Catalina].[localhost].[/] has already been started
+16 Feb, 2012 7:22:04 PM org.apache.catalina.core.StandardContext reload
+INFO: Reloading Context with name [] has started
+16 Feb, 2012 7:22:04 PM org.apache.catalina.loader.WebappClassLoader clearReferencesJdbc
+SEVERE: The web application [] registered the JDBC driver [com.mysql.jdbc.Driver] but failed to unregister it when the web application was stopped. To prevent a memory leak, the JDBC Driver has been forcibly unregistered.
+16 Feb, 2012 7:28:33 PM org.apache.catalina.core.StandardContext reload
+INFO: Reloading Context with name [] has started
+16 Feb, 2012 7:45:11 PM org.apache.catalina.core.StandardContext reload
+INFO: Reloading Context with name [] has started
+16 Feb, 2012 7:48:30 PM org.apache.catalina.startup.HostConfig checkResources
+INFO: Reloading context []
+16 Feb, 2012 7:48:40 PM org.apache.catalina.startup.HostConfig checkResources
+INFO: Undeploying context []
+16 Feb, 2012 7:48:40 PM org.apache.catalina.startup.HostConfig deployDescriptor
+INFO: Deploying configuration descriptor ROOT.xml
+16 Feb, 2012 7:48:40 PM org.apache.catalina.core.StandardContext start
+INFO: Container org.apache.catalina.core.ContainerBase.[Catalina].[localhost].[/] has already been started
+16 Feb, 2012 7:50:16 PM org.apache.catalina.loader.WebappClassLoader modified
+SEVERE:     Resource '/WEB-INF/classes/com/yaid/user/Login.class' is missing
+16 Feb, 2012 7:50:16 PM org.apache.catalina.core.StandardContext reload
+INFO: Reloading Context with name [] has started
+16 Feb, 2012 7:50:16 PM org.apache.catalina.loader.WebappClassLoader clearReferencesJdbc
+SEVERE: The web application [] registered the JDBC driver [com.mysql.jdbc.Driver] but failed to unregister it when the web application was stopped. To prevent a memory leak, the JDBC Driver has been forcibly unregistered.
+16 Feb, 2012 7:50:16 PM org.apache.catalina.loader.WebappClassLoader loadClass
+INFO: Illegal access: this web application instance has been stopped already.  Could not load com.mysql.jdbc.ProfilerEventHandlerFactory.  The eventual following stack trace is caused by an error thrown for debugging purposes as well as to attempt to terminate the thread which caused the illegal access, and has no functional impact.
+java.lang.IllegalStateException
+	at org.apache.catalina.loader.WebappClassLoader.loadClass(WebappClassLoader.java:1566)
+	at org.apache.catalina.loader.WebappClassLoader.loadClass(WebappClassLoader.java:1526)
+	at com.mysql.jdbc.ConnectionImpl.realClose(ConnectionImpl.java:4346)
+	at com.mysql.jdbc.ConnectionImpl.cleanup(ConnectionImpl.java:1348)
+	at com.mysql.jdbc.ConnectionImpl.finalize(ConnectionImpl.java:2679)
+	at java.lang.ref.Finalizer.invokeFinalizeMethod(Native Method)
+	at java.lang.ref.Finalizer.runFinalizer(Finalizer.java:83)
+	at java.lang.ref.Finalizer.access$100(Finalizer.java:14)
+	at java.lang.ref.Finalizer$FinalizerThread.run(Finalizer.java:160)
+16 Feb, 2012 7:50:22 PM org.apache.catalina.startup.HostConfig checkResources
+INFO: Undeploying context []
+16 Feb, 2012 7:50:22 PM org.apache.catalina.startup.HostConfig deployDescriptor
+INFO: Deploying configuration descriptor ROOT.xml
+16 Feb, 2012 7:50:22 PM org.apache.catalina.core.StandardContext start
+INFO: Container org.apache.catalina.core.ContainerBase.[Catalina].[localhost].[/] has already been started
+16 Feb, 2012 7:53:01 PM org.apache.catalina.loader.WebappClassLoader loadClass
+INFO: Illegal access: this web application instance has been stopped already.  Could not load com.mysql.jdbc.ProfilerEventHandlerFactory.  The eventual following stack trace is caused by an error thrown for debugging purposes as well as to attempt to terminate the thread which caused the illegal access, and has no functional impact.
+java.lang.IllegalStateException
+	at org.apache.catalina.loader.WebappClassLoader.loadClass(WebappClassLoader.java:1566)
+	at org.apache.catalina.loader.WebappClassLoader.loadClass(WebappClassLoader.java:1526)
+	at com.mysql.jdbc.ConnectionImpl.realClose(ConnectionImpl.java:4346)
+	at com.mysql.jdbc.ConnectionImpl.cleanup(ConnectionImpl.java:1348)
+	at com.mysql.jdbc.ConnectionImpl.finalize(ConnectionImpl.java:2679)
+	at java.lang.ref.Finalizer.invokeFinalizeMethod(Native Method)
+	at java.lang.ref.Finalizer.runFinalizer(Finalizer.java:83)
+	at java.lang.ref.Finalizer.access$100(Finalizer.java:14)
+	at java.lang.ref.Finalizer$FinalizerThread.run(Finalizer.java:160)
+16 Feb, 2012 7:53:02 PM org.apache.catalina.loader.WebappClassLoader loadClass
+INFO: Illegal access: this web application instance has been stopped already.  Could not load com.mysql.jdbc.SQLError.  The eventual following stack trace is caused by an error thrown for debugging purposes as well as to attempt to terminate the thread which caused the illegal access, and has no functional impact.
+java.lang.IllegalStateException
+	at org.apache.catalina.loader.WebappClassLoader.loadClass(WebappClassLoader.java:1566)
+	at org.apache.catalina.loader.WebappClassLoader.loadClass(WebappClassLoader.java:1526)
+	at com.mysql.jdbc.MysqlIO.send(MysqlIO.java:3321)
+	at com.mysql.jdbc.MysqlIO.quit(MysqlIO.java:1667)
+	at com.mysql.jdbc.ConnectionImpl.realClose(ConnectionImpl.java:4322)
+	at com.mysql.jdbc.ConnectionImpl.cleanup(ConnectionImpl.java:1348)
+	at com.mysql.jdbc.ConnectionImpl.finalize(ConnectionImpl.java:2679)
+	at java.lang.ref.Finalizer.invokeFinalizeMethod(Native Method)
+	at java.lang.ref.Finalizer.runFinalizer(Finalizer.java:83)
+	at java.lang.ref.Finalizer.access$100(Finalizer.java:14)
+	at java.lang.ref.Finalizer$FinalizerThread.run(Finalizer.java:160)
+16 Feb, 2012 7:53:02 PM org.apache.catalina.loader.WebappClassLoader loadClass
+INFO: Illegal access: this web application instance has been stopped already.  Could not load com.mysql.jdbc.ProfilerEventHandlerFactory.  The eventual following stack trace is caused by an error thrown for debugging purposes as well as to attempt to terminate the thread which caused the illegal access, and has no functional impact.
+java.lang.IllegalStateException
+	at org.apache.catalina.loader.WebappClassLoader.loadClass(WebappClassLoader.java:1566)
+	at org.apache.catalina.loader.WebappClassLoader.loadClass(WebappClassLoader.java:1526)
+	at com.mysql.jdbc.ConnectionImpl.realClose(ConnectionImpl.java:4346)
+	at com.mysql.jdbc.ConnectionImpl.cleanup(ConnectionImpl.java:1348)
+	at com.mysql.jdbc.ConnectionImpl.finalize(ConnectionImpl.java:2679)
+	at java.lang.ref.Finalizer.invokeFinalizeMethod(Native Method)
+	at java.lang.ref.Finalizer.runFinalizer(Finalizer.java:83)
+	at java.lang.ref.Finalizer.access$100(Finalizer.java:14)
+	at java.lang.ref.Finalizer$FinalizerThread.run(Finalizer.java:160)
+16 Feb, 2012 7:53:02 PM org.apache.catalina.loader.WebappClassLoader loadClass
+INFO: Illegal access: this web application instance has been stopped already.  Could not load com.mysql.jdbc.SQLError.  The eventual following stack trace is caused by an error thrown for debugging purposes as well as to attempt to terminate the thread which caused the illegal access, and has no functional impact.
+java.lang.IllegalStateException
+	at org.apache.catalina.loader.WebappClassLoader.loadClass(WebappClassLoader.java:1566)
+	at org.apache.catalina.loader.WebappClassLoader.loadClass(WebappClassLoader.java:1526)
+	at com.mysql.jdbc.MysqlIO.send(MysqlIO.java:3321)
+	at com.mysql.jdbc.MysqlIO.quit(MysqlIO.java:1667)
+	at com.mysql.jdbc.ConnectionImpl.realClose(ConnectionImpl.java:4322)
+	at com.mysql.jdbc.ConnectionImpl.cleanup(ConnectionImpl.java:1348)
+	at com.mysql.jdbc.ConnectionImpl.finalize(ConnectionImpl.java:2679)
+	at java.lang.ref.Finalizer.invokeFinalizeMethod(Native Method)
+	at java.lang.ref.Finalizer.runFinalizer(Finalizer.java:83)
+	at java.lang.ref.Finalizer.access$100(Finalizer.java:14)
+	at java.lang.ref.Finalizer$FinalizerThread.run(Finalizer.java:160)
+16 Feb, 2012 7:53:02 PM org.apache.catalina.loader.WebappClassLoader loadClass
+INFO: Illegal access: this web application instance has been stopped already.  Could not load com.mysql.jdbc.ProfilerEventHandlerFactory.  The eventual following stack trace is caused by an error thrown for debugging purposes as well as to attempt to terminate the thread which caused the illegal access, and has no functional impact.
+java.lang.IllegalStateException
+	at org.apache.catalina.loader.WebappClassLoader.loadClass(WebappClassLoader.java:1566)
+	at org.apache.catalina.loader.WebappClassLoader.loadClass(WebappClassLoader.java:1526)
+	at com.mysql.jdbc.ConnectionImpl.realClose(ConnectionImpl.java:4346)
+	at com.mysql.jdbc.ConnectionImpl.cleanup(ConnectionImpl.java:1348)
+	at com.mysql.jdbc.ConnectionImpl.finalize(ConnectionImpl.java:2679)
+	at java.lang.ref.Finalizer.invokeFinalizeMethod(Native Method)
+	at java.lang.ref.Finalizer.runFinalizer(Finalizer.java:83)
+	at java.lang.ref.Finalizer.access$100(Finalizer.java:14)
+	at java.lang.ref.Finalizer$FinalizerThread.run(Finalizer.java:160)
+16 Feb, 2012 7:53:02 PM org.apache.catalina.loader.WebappClassLoader loadClass
+INFO: Illegal access: this web application instance has been stopped already.  Could not load com.mysql.jdbc.SQLError.  The eventual following stack trace is caused by an error thrown for debugging purposes as well as to attempt to terminate the thread which caused the illegal access, and has no functional impact.
+java.lang.IllegalStateException
+	at org.apache.catalina.loader.WebappClassLoader.loadClass(WebappClassLoader.java:1566)
+	at org.apache.catalina.loader.WebappClassLoader.loadClass(WebappClassLoader.java:1526)
+	at com.mysql.jdbc.MysqlIO.send(MysqlIO.java:3321)
+	at com.mysql.jdbc.MysqlIO.quit(MysqlIO.java:1667)
+	at com.mysql.jdbc.ConnectionImpl.realClose(ConnectionImpl.java:4322)
+	at com.mysql.jdbc.ConnectionImpl.cleanup(ConnectionImpl.java:1348)
+	at com.mysql.jdbc.ConnectionImpl.finalize(ConnectionImpl.java:2679)
+	at java.lang.ref.Finalizer.invokeFinalizeMethod(Native Method)
+	at java.lang.ref.Finalizer.runFinalizer(Finalizer.java:83)
+	at java.lang.ref.Finalizer.access$100(Finalizer.java:14)
+	at java.lang.ref.Finalizer$FinalizerThread.run(Finalizer.java:160)
+16 Feb, 2012 7:53:02 PM org.apache.catalina.loader.WebappClassLoader loadClass
+INFO: Illegal access: this web application instance has been stopped already.  Could not load com.mysql.jdbc.ProfilerEventHandlerFactory.  The eventual following stack trace is caused by an error thrown for debugging purposes as well as to attempt to terminate the thread which caused the illegal access, and has no functional impact.
+java.lang.IllegalStateException
+	at org.apache.catalina.loader.WebappClassLoader.loadClass(WebappClassLoader.java:1566)
+	at org.apache.catalina.loader.WebappClassLoader.loadClass(WebappClassLoader.java:1526)
+	at com.mysql.jdbc.ConnectionImpl.realClose(ConnectionImpl.java:4346)
+	at com.mysql.jdbc.ConnectionImpl.cleanup(ConnectionImpl.java:1348)
+	at com.mysql.jdbc.ConnectionImpl.finalize(ConnectionImpl.java:2679)
+	at java.lang.ref.Finalizer.invokeFinalizeMethod(Native Method)
+	at java.lang.ref.Finalizer.runFinalizer(Finalizer.java:83)
+	at java.lang.ref.Finalizer.access$100(Finalizer.java:14)
+	at java.lang.ref.Finalizer$FinalizerThread.run(Finalizer.java:160)
+16 Feb, 2012 7:53:02 PM org.apache.catalina.loader.WebappClassLoader loadClass
+INFO: Illegal access: this web application instance has been stopped already.  Could not load com.mysql.jdbc.SQLError.  The eventual following stack trace is caused by an error thrown for debugging purposes as well as to attempt to terminate the thread which caused the illegal access, and has no functional impact.
+java.lang.IllegalStateException
+	at org.apache.catalina.loader.WebappClassLoader.loadClass(WebappClassLoader.java:1566)
+	at org.apache.catalina.loader.WebappClassLoader.loadClass(WebappClassLoader.java:1526)
+	at com.mysql.jdbc.MysqlIO.send(MysqlIO.java:3321)
+	at com.mysql.jdbc.MysqlIO.quit(MysqlIO.java:1667)
+	at com.mysql.jdbc.ConnectionImpl.realClose(ConnectionImpl.java:4322)
+	at com.mysql.jdbc.ConnectionImpl.cleanup(ConnectionImpl.java:1348)
+	at com.mysql.jdbc.ConnectionImpl.finalize(ConnectionImpl.java:2679)
+	at java.lang.ref.Finalizer.invokeFinalizeMethod(Native Method)
+	at java.lang.ref.Finalizer.runFinalizer(Finalizer.java:83)
+	at java.lang.ref.Finalizer.access$100(Finalizer.java:14)
+	at java.lang.ref.Finalizer$FinalizerThread.run(Finalizer.java:160)
+16 Feb, 2012 7:53:02 PM org.apache.catalina.loader.WebappClassLoader loadClass
+INFO: Illegal access: this web application instance has been stopped already.  Could not load com.mysql.jdbc.ProfilerEventHandlerFactory.  The eventual following stack trace is caused by an error thrown for debugging purposes as well as to attempt to terminate the thread which caused the illegal access, and has no functional impact.
+java.lang.IllegalStateException
+	at org.apache.catalina.loader.WebappClassLoader.loadClass(WebappClassLoader.java:1566)
+	at org.apache.catalina.loader.WebappClassLoader.loadClass(WebappClassLoader.java:1526)
+	at com.mysql.jdbc.ConnectionImpl.realClose(ConnectionImpl.java:4346)
+	at com.mysql.jdbc.ConnectionImpl.cleanup(ConnectionImpl.java:1348)
+	at com.mysql.jdbc.ConnectionImpl.finalize(ConnectionImpl.java:2679)
+	at java.lang.ref.Finalizer.invokeFinalizeMethod(Native Method)
+	at java.lang.ref.Finalizer.runFinalizer(Finalizer.java:83)
+	at java.lang.ref.Finalizer.access$100(Finalizer.java:14)
+	at java.lang.ref.Finalizer$FinalizerThread.run(Finalizer.java:160)
+16 Feb, 2012 7:53:02 PM org.apache.catalina.loader.WebappClassLoader loadClass
+INFO: Illegal access: this web application instance has been stopped already.  Could not load com.mysql.jdbc.SQLError.  The eventual following stack trace is caused by an error thrown for debugging purposes as well as to attempt to terminate the thread which caused the illegal access, and has no functional impact.
+java.lang.IllegalStateException
+	at org.apache.catalina.loader.WebappClassLoader.loadClass(WebappClassLoader.java:1566)
+	at org.apache.catalina.loader.WebappClassLoader.loadClass(WebappClassLoader.java:1526)
+	at com.mysql.jdbc.MysqlIO.send(MysqlIO.java:3321)
+	at com.mysql.jdbc.MysqlIO.quit(MysqlIO.java:1667)
+	at com.mysql.jdbc.ConnectionImpl.realClose(ConnectionImpl.java:4322)
+	at com.mysql.jdbc.ConnectionImpl.cleanup(ConnectionImpl.java:1348)
+	at com.mysql.jdbc.ConnectionImpl.finalize(ConnectionImpl.java:2679)
+	at java.lang.ref.Finalizer.invokeFinalizeMethod(Native Method)
+	at java.lang.ref.Finalizer.runFinalizer(Finalizer.java:83)
+	at java.lang.ref.Finalizer.access$100(Finalizer.java:14)
+	at java.lang.ref.Finalizer$FinalizerThread.run(Finalizer.java:160)
+16 Feb, 2012 7:53:02 PM org.apache.catalina.loader.WebappClassLoader loadClass
+INFO: Illegal access: this web application instance has been stopped already.  Could not load com.mysql.jdbc.ProfilerEventHandlerFactory.  The eventual following stack trace is caused by an error thrown for debugging purposes as well as to attempt to terminate the thread which caused the illegal access, and has no functional impact.
+java.lang.IllegalStateException
+	at org.apache.catalina.loader.WebappClassLoader.loadClass(WebappClassLoader.java:1566)
+	at org.apache.catalina.loader.WebappClassLoader.loadClass(WebappClassLoader.java:1526)
+	at com.mysql.jdbc.ConnectionImpl.realClose(ConnectionImpl.java:4346)
+	at com.mysql.jdbc.ConnectionImpl.cleanup(ConnectionImpl.java:1348)
+	at com.mysql.jdbc.ConnectionImpl.finalize(ConnectionImpl.java:2679)
+	at java.lang.ref.Finalizer.invokeFinalizeMethod(Native Method)
+	at java.lang.ref.Finalizer.runFinalizer(Finalizer.java:83)
+	at java.lang.ref.Finalizer.access$100(Finalizer.java:14)
+	at java.lang.ref.Finalizer$FinalizerThread.run(Finalizer.java:160)
+16 Feb, 2012 7:53:02 PM org.apache.catalina.loader.WebappClassLoader loadClass
+INFO: Illegal access: this web application instance has been stopped already.  Could not load com.mysql.jdbc.SQLError.  The eventual following stack trace is caused by an error thrown for debugging purposes as well as to attempt to terminate the thread which caused the illegal access, and has no functional impact.
+java.lang.IllegalStateException
+	at org.apache.catalina.loader.WebappClassLoader.loadClass(WebappClassLoader.java:1566)
+	at org.apache.catalina.loader.WebappClassLoader.loadClass(WebappClassLoader.java:1526)
+	at com.mysql.jdbc.MysqlIO.send(MysqlIO.java:3321)
+	at com.mysql.jdbc.MysqlIO.quit(MysqlIO.java:1667)
+	at com.mysql.jdbc.ConnectionImpl.realClose(ConnectionImpl.java:4322)
+	at com.mysql.jdbc.ConnectionImpl.cleanup(ConnectionImpl.java:1348)
+	at com.mysql.jdbc.ConnectionImpl.finalize(ConnectionImpl.java:2679)
+	at java.lang.ref.Finalizer.invokeFinalizeMethod(Native Method)
+	at java.lang.ref.Finalizer.runFinalizer(Finalizer.java:83)
+	at java.lang.ref.Finalizer.access$100(Finalizer.java:14)
+	at java.lang.ref.Finalizer$FinalizerThread.run(Finalizer.java:160)
+16 Feb, 2012 7:53:02 PM org.apache.catalina.loader.WebappClassLoader loadClass
+INFO: Illegal access: this web application instance has been stopped already.  Could not load com.mysql.jdbc.ProfilerEventHandlerFactory.  The eventual following stack trace is caused by an error thrown for debugging purposes as well as to attempt to terminate the thread which caused the illegal access, and has no functional impact.
+java.lang.IllegalStateException
+	at org.apache.catalina.loader.WebappClassLoader.loadClass(WebappClassLoader.java:1566)
+	at org.apache.catalina.loader.WebappClassLoader.loadClass(WebappClassLoader.java:1526)
+	at com.mysql.jdbc.ConnectionImpl.realClose(ConnectionImpl.java:4346)
+	at com.mysql.jdbc.ConnectionImpl.cleanup(ConnectionImpl.java:1348)
+	at com.mysql.jdbc.ConnectionImpl.finalize(ConnectionImpl.java:2679)
+	at java.lang.ref.Finalizer.invokeFinalizeMethod(Native Method)
+	at java.lang.ref.Finalizer.runFinalizer(Finalizer.java:83)
+	at java.lang.ref.Finalizer.access$100(Finalizer.java:14)
+	at java.lang.ref.Finalizer$FinalizerThread.run(Finalizer.java:160)
+16 Feb, 2012 8:30:01 PM org.apache.catalina.startup.HostConfig checkResources
+INFO: Reloading context []
+16 Feb, 2012 8:30:01 PM org.apache.catalina.loader.WebappClassLoader clearReferencesJdbc
+SEVERE: The web application [] registered the JDBC driver [com.mysql.jdbc.Driver] but failed to unregister it when the web application was stopped. To prevent a memory leak, the JDBC Driver has been forcibly unregistered.
+16 Feb, 2012 8:30:01 PM org.apache.catalina.loader.WebappClassLoader modified
+INFO:     Additional JARs have been added
+16 Feb, 2012 8:30:01 PM org.apache.catalina.core.StandardContext reload
+INFO: Reloading Context with name [] has started
+16 Feb, 2012 8:30:09 PM org.apache.catalina.startup.HostConfig checkResources
+INFO: Undeploying context []
+16 Feb, 2012 8:30:09 PM org.apache.catalina.startup.HostConfig deployDescriptor
+INFO: Deploying configuration descriptor ROOT.xml
+16 Feb, 2012 8:30:09 PM org.apache.catalina.core.StandardContext start
+INFO: Container org.apache.catalina.core.ContainerBase.[Catalina].[localhost].[/] has already been started
+16 Feb, 2012 8:33:31 PM org.apache.catalina.startup.HostConfig checkResources
+INFO: Reloading context []
+16 Feb, 2012 8:33:31 PM org.apache.catalina.loader.WebappClassLoader clearReferencesJdbc
+SEVERE: The web application [] registered the JDBC driver [com.mysql.jdbc.Driver] but failed to unregister it when the web application was stopped. To prevent a memory leak, the JDBC Driver has been forcibly unregistered.
+16 Feb, 2012 8:33:32 PM org.apache.catalina.loader.WebappClassLoader modified
+INFO:     Additional JARs have been added
+16 Feb, 2012 8:33:32 PM org.apache.catalina.core.StandardContext reload
+INFO: Reloading Context with name [] has started
+16 Feb, 2012 8:33:37 PM org.apache.catalina.startup.HostConfig checkResources
+INFO: Undeploying context []
+16 Feb, 2012 8:33:37 PM org.apache.catalina.startup.HostConfig deployDescriptor
+INFO: Deploying configuration descriptor ROOT.xml
+16 Feb, 2012 8:33:37 PM org.apache.catalina.core.StandardContext start
+INFO: Container org.apache.catalina.core.ContainerBase.[Catalina].[localhost].[/] has already been started
+16 Feb, 2012 8:39:01 PM org.apache.coyote.http11.Http11Protocol pause
+INFO: Pausing Coyote HTTP/1.1 on http-8080
+16 Feb, 2012 8:39:02 PM org.apache.catalina.core.StandardService stop
+INFO: Stopping service Catalina
+16 Feb, 2012 8:39:02 PM org.apache.catalina.loader.WebappClassLoader clearReferencesJdbc
+SEVERE: The web application [] registered the JDBC driver [com.mysql.jdbc.Driver] but failed to unregister it when the web application was stopped. To prevent a memory leak, the JDBC Driver has been forcibly unregistered.
+16 Feb, 2012 8:39:02 PM org.apache.coyote.http11.Http11Protocol destroy
+INFO: Stopping Coyote HTTP/1.1 on http-8080
+Feb 16, 2012 9:08:33 PM org.apache.catalina.core.AprLifecycleListener init
+INFO: The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: /usr/java/packages/lib/i386:/usr/lib/i386-linux-gnu/jni:/lib/i386-linux-gnu:/usr/lib/i386-linux-gnu:/usr/lib/jni:/lib:/usr/lib
+Feb 16, 2012 9:08:34 PM org.apache.coyote.http11.Http11Protocol init
+INFO: Initializing Coyote HTTP/1.1 on http-8080
+Feb 16, 2012 9:08:34 PM org.apache.catalina.startup.Catalina load
+INFO: Initialization processed in 3173 ms
+Feb 16, 2012 9:08:35 PM org.apache.catalina.core.StandardService start
+INFO: Starting service Catalina
+Feb 16, 2012 9:08:35 PM org.apache.catalina.core.StandardEngine start
+INFO: Starting Servlet Engine: Apache Tomcat/6.0.35
+Feb 16, 2012 9:08:35 PM org.apache.catalina.startup.HostConfig deployDescriptor
+INFO: Deploying configuration descriptor manager.xml
+Feb 16, 2012 9:08:36 PM org.apache.catalina.startup.HostConfig deployDescriptor
+INFO: Deploying configuration descriptor fileupload.xml
+Feb 16, 2012 9:08:36 PM org.apache.catalina.startup.HostConfig deployDescriptor
+WARNING: A docBase /home/vignesh/Dropbox/YAID/apache-tomcat-6.0.35/webapps/D:\Dropbox\201103-file-upload-jquery\build\web inside the host appBase has been specified, and will be ignored
+Feb 16, 2012 9:08:36 PM org.apache.catalina.core.StandardContext resourcesStart
+SEVERE: Error starting static Resources
+java.lang.IllegalArgumentException: Document base /home/vignesh/Dropbox/YAID/apache-tomcat-6.0.35/webapps/fileupload does not exist or is not a readable directory
+	at org.apache.naming.resources.FileDirContext.setDocBase(FileDirContext.java:142)
+	at org.apache.catalina.core.StandardContext.resourcesStart(StandardContext.java:4320)
+	at org.apache.catalina.core.StandardContext.start(StandardContext.java:4489)
+	at org.apache.catalina.core.ContainerBase.addChildInternal(ContainerBase.java:799)
+	at org.apache.catalina.core.ContainerBase.addChild(ContainerBase.java:779)
+	at org.apache.catalina.core.StandardHost.addChild(StandardHost.java:601)
+	at org.apache.catalina.startup.HostConfig.deployDescriptor(HostConfig.java:675)
+	at org.apache.catalina.startup.HostConfig.deployDescriptors(HostConfig.java:601)
+	at org.apache.catalina.startup.HostConfig.deployApps(HostConfig.java:502)
+	at org.apache.catalina.startup.HostConfig.start(HostConfig.java:1317)
+	at org.apache.catalina.startup.HostConfig.lifecycleEvent(HostConfig.java:324)
+	at org.apache.catalina.util.LifecycleSupport.fireLifecycleEvent(LifecycleSupport.java:142)
+	at org.apache.catalina.core.ContainerBase.start(ContainerBase.java:1065)
+	at org.apache.catalina.core.StandardHost.start(StandardHost.java:840)
+	at org.apache.catalina.core.ContainerBase.start(ContainerBase.java:1057)
+	at org.apache.catalina.core.StandardEngine.start(StandardEngine.java:463)
+	at org.apache.catalina.core.StandardService.start(StandardService.java:525)
+	at org.apache.catalina.core.StandardServer.start(StandardServer.java:754)
+	at org.apache.catalina.startup.Catalina.start(Catalina.java:595)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:601)
+	at org.apache.catalina.startup.Bootstrap.start(Bootstrap.java:289)
+	at org.apache.catalina.startup.Bootstrap.main(Bootstrap.java:414)
+
+Feb 16, 2012 9:08:36 PM org.apache.catalina.core.StandardContext start
+SEVERE: Error in resourceStart()
+Feb 16, 2012 9:08:36 PM org.apache.catalina.core.StandardContext start
+SEVERE: Error getConfigured
+Feb 16, 2012 9:08:36 PM org.apache.catalina.core.StandardContext start
+SEVERE: Context [/fileupload] startup failed due to previous errors
+Feb 16, 2012 9:08:36 PM org.apache.catalina.core.StandardContext stop
+INFO: Container org.apache.catalina.core.ContainerBase.[Catalina].[localhost].[/fileupload] has not been started
+Feb 16, 2012 9:08:36 PM org.apache.catalina.startup.HostConfig deployDescriptor
+INFO: Deploying configuration descriptor ROOT.xml
+Feb 16, 2012 9:08:36 PM org.apache.catalina.startup.HostConfig deployDescriptor
+WARNING: A docBase /home/vignesh/Dropbox/YAID/apache-tomcat-6.0.35/webapps/E:\Dropbox\YAID\build\web inside the host appBase has been specified, and will be ignored
+Feb 16, 2012 9:08:36 PM org.apache.catalina.core.StandardContext resourcesStart
+SEVERE: Error starting static Resources
+java.lang.IllegalArgumentException: Document base /home/vignesh/Dropbox/YAID/apache-tomcat-6.0.35/webapps/ROOT does not exist or is not a readable directory
+	at org.apache.naming.resources.FileDirContext.setDocBase(FileDirContext.java:142)
+	at org.apache.catalina.core.StandardContext.resourcesStart(StandardContext.java:4320)
+	at org.apache.catalina.core.StandardContext.start(StandardContext.java:4489)
+	at org.apache.catalina.core.ContainerBase.addChildInternal(ContainerBase.java:799)
+	at org.apache.catalina.core.ContainerBase.addChild(ContainerBase.java:779)
+	at org.apache.catalina.core.StandardHost.addChild(StandardHost.java:601)
+	at org.apache.catalina.startup.HostConfig.deployDescriptor(HostConfig.java:675)
+	at org.apache.catalina.startup.HostConfig.deployDescriptors(HostConfig.java:601)
+	at org.apache.catalina.startup.HostConfig.deployApps(HostConfig.java:502)
+	at org.apache.catalina.startup.HostConfig.start(HostConfig.java:1317)
+	at org.apache.catalina.startup.HostConfig.lifecycleEvent(HostConfig.java:324)
+	at org.apache.catalina.util.LifecycleSupport.fireLifecycleEvent(LifecycleSupport.java:142)
+	at org.apache.catalina.core.ContainerBase.start(ContainerBase.java:1065)
+	at org.apache.catalina.core.StandardHost.start(StandardHost.java:840)
+	at org.apache.catalina.core.ContainerBase.start(ContainerBase.java:1057)
+	at org.apache.catalina.core.StandardEngine.start(StandardEngine.java:463)
+	at org.apache.catalina.core.StandardService.start(StandardService.java:525)
+	at org.apache.catalina.core.StandardServer.start(StandardServer.java:754)
+	at org.apache.catalina.startup.Catalina.start(Catalina.java:595)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:601)
+	at org.apache.catalina.startup.Bootstrap.start(Bootstrap.java:289)
+	at org.apache.catalina.startup.Bootstrap.main(Bootstrap.java:414)
+
+Feb 16, 2012 9:08:36 PM org.apache.catalina.core.StandardContext start
+SEVERE: Error in resourceStart()
+Feb 16, 2012 9:08:36 PM org.apache.catalina.core.StandardContext start
+SEVERE: Error getConfigured
+Feb 16, 2012 9:08:36 PM org.apache.catalina.core.StandardContext start
+SEVERE: Context [] startup failed due to previous errors
+Feb 16, 2012 9:08:36 PM org.apache.catalina.core.StandardContext stop
+INFO: Container org.apache.catalina.core.ContainerBase.[Catalina].[localhost].[/] has not been started
+Feb 16, 2012 9:08:36 PM org.apache.catalina.startup.HostConfig deployDescriptor
+INFO: Deploying configuration descriptor host-manager.xml
+Feb 16, 2012 9:08:36 PM org.apache.catalina.startup.HostConfig deployDirectory
+INFO: Deploying web application directory examples
+Feb 16, 2012 9:08:37 PM org.apache.catalina.startup.HostConfig deployDirectory
+INFO: Deploying web application directory docs
+Feb 16, 2012 9:08:37 PM org.apache.coyote.http11.Http11Protocol start
+INFO: Starting Coyote HTTP/1.1 on http-8080
+Feb 16, 2012 9:08:37 PM org.apache.jk.common.ChannelSocket init
+INFO: JK: ajp13 listening on /0.0.0.0:8009
+Feb 16, 2012 9:08:37 PM org.apache.jk.server.JkMain start
+INFO: Jk running ID=0 time=1/107  config=null
+Feb 16, 2012 9:08:37 PM org.apache.catalina.startup.Catalina start
+INFO: Server startup in 2527 ms
+Feb 16, 2012 9:08:39 PM org.apache.catalina.core.StandardContext stop
+INFO: Container org.apache.catalina.core.ContainerBase.[Catalina].[localhost].[/] has not been started
+Feb 16, 2012 9:08:40 PM org.apache.catalina.startup.HostConfig checkResources
+INFO: Undeploying context []
+Feb 16, 2012 9:08:40 PM org.apache.catalina.startup.HostConfig deployDescriptor
+INFO: Deploying configuration descriptor ROOT.xml
+Feb 16, 2012 9:08:40 PM org.apache.catalina.core.StandardContext start
+INFO: Container org.apache.catalina.core.ContainerBase.[Catalina].[localhost].[/] has already been started
+Feb 16, 2012 9:12:01 PM org.apache.catalina.startup.HostConfig checkResources
+INFO: Undeploying context []
+Feb 16, 2012 9:12:18 PM org.apache.catalina.startup.HostConfig deployDescriptor
+INFO: Deploying configuration descriptor ROOT.xml
+Feb 16, 2012 9:12:18 PM org.apache.catalina.core.StandardContext start
+INFO: Container org.apache.catalina.core.ContainerBase.[Catalina].[localhost].[/] has already been started
+Feb 16, 2012 9:19:30 PM org.apache.catalina.startup.HostConfig checkResources
+INFO: Undeploying context []
+Feb 16, 2012 9:21:26 PM org.apache.catalina.startup.HostConfig deployDescriptor
+INFO: Deploying configuration descriptor ROOT.xml
+Feb 16, 2012 9:21:27 PM org.apache.catalina.core.StandardContext start
+INFO: Container org.apache.catalina.core.ContainerBase.[Catalina].[localhost].[/] has already been started
+Feb 16, 2012 9:30:03 PM org.apache.coyote.http11.Http11Protocol pause
+INFO: Pausing Coyote HTTP/1.1 on http-8080
+Feb 16, 2012 9:30:04 PM org.apache.catalina.core.StandardService stop
+INFO: Stopping service Catalina
+Feb 16, 2012 9:30:04 PM org.apache.coyote.http11.Http11Protocol destroy
+INFO: Stopping Coyote HTTP/1.1 on http-8080
+Feb 16, 2012 9:33:49 PM org.apache.catalina.core.AprLifecycleListener init
+INFO: The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: /usr/java/packages/lib/i386:/usr/lib/i386-linux-gnu/jni:/lib/i386-linux-gnu:/usr/lib/i386-linux-gnu:/usr/lib/jni:/lib:/usr/lib
+Feb 16, 2012 9:33:51 PM org.apache.coyote.http11.Http11Protocol init
+INFO: Initializing Coyote HTTP/1.1 on http-8080
+Feb 16, 2012 9:33:51 PM org.apache.catalina.startup.Catalina load
+INFO: Initialization processed in 4848 ms
+Feb 16, 2012 9:33:52 PM org.apache.catalina.core.StandardService start
+INFO: Starting service Catalina
+Feb 16, 2012 9:33:52 PM org.apache.catalina.core.StandardEngine start
+INFO: Starting Servlet Engine: Apache Tomcat/6.0.35
+Feb 16, 2012 9:33:52 PM org.apache.catalina.startup.HostConfig deployDescriptor
+INFO: Deploying configuration descriptor manager.xml
+Feb 16, 2012 9:33:53 PM org.apache.catalina.startup.HostConfig deployDescriptor
+INFO: Deploying configuration descriptor fileupload.xml
+Feb 16, 2012 9:33:53 PM org.apache.catalina.startup.HostConfig deployDescriptor
+WARNING: A docBase /home/vignesh/Dropbox/YAID/apache-tomcat-6.0.35/webapps/D:\Dropbox\201103-file-upload-jquery\build\web inside the host appBase has been specified, and will be ignored
+Feb 16, 2012 9:33:53 PM org.apache.catalina.core.StandardContext resourcesStart
+SEVERE: Error starting static Resources
+java.lang.IllegalArgumentException: Document base /home/vignesh/Dropbox/YAID/apache-tomcat-6.0.35/webapps/fileupload does not exist or is not a readable directory
+	at org.apache.naming.resources.FileDirContext.setDocBase(FileDirContext.java:142)
+	at org.apache.catalina.core.StandardContext.resourcesStart(StandardContext.java:4320)
+	at org.apache.catalina.core.StandardContext.start(StandardContext.java:4489)
+	at org.apache.catalina.core.ContainerBase.addChildInternal(ContainerBase.java:799)
+	at org.apache.catalina.core.ContainerBase.addChild(ContainerBase.java:779)
+	at org.apache.catalina.core.StandardHost.addChild(StandardHost.java:601)
+	at org.apache.catalina.startup.HostConfig.deployDescriptor(HostConfig.java:675)
+	at org.apache.catalina.startup.HostConfig.deployDescriptors(HostConfig.java:601)
+	at org.apache.catalina.startup.HostConfig.deployApps(HostConfig.java:502)
+	at org.apache.catalina.startup.HostConfig.start(HostConfig.java:1317)
+	at org.apache.catalina.startup.HostConfig.lifecycleEvent(HostConfig.java:324)
+	at org.apache.catalina.util.LifecycleSupport.fireLifecycleEvent(LifecycleSupport.java:142)
+	at org.apache.catalina.core.ContainerBase.start(ContainerBase.java:1065)
+	at org.apache.catalina.core.StandardHost.start(StandardHost.java:840)
+	at org.apache.catalina.core.ContainerBase.start(ContainerBase.java:1057)
+	at org.apache.catalina.core.StandardEngine.start(StandardEngine.java:463)
+	at org.apache.catalina.core.StandardService.start(StandardService.java:525)
+	at org.apache.catalina.core.StandardServer.start(StandardServer.java:754)
+	at org.apache.catalina.startup.Catalina.start(Catalina.java:595)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:601)
+	at org.apache.catalina.startup.Bootstrap.start(Bootstrap.java:289)
+	at org.apache.catalina.startup.Bootstrap.main(Bootstrap.java:414)
+
+Feb 16, 2012 9:33:53 PM org.apache.catalina.core.StandardContext start
+SEVERE: Error in resourceStart()
+Feb 16, 2012 9:33:53 PM org.apache.catalina.core.StandardContext start
+SEVERE: Error getConfigured
+Feb 16, 2012 9:33:53 PM org.apache.catalina.core.StandardContext start
+SEVERE: Context [/fileupload] startup failed due to previous errors
+Feb 16, 2012 9:33:53 PM org.apache.catalina.core.StandardContext stop
+INFO: Container org.apache.catalina.core.ContainerBase.[Catalina].[localhost].[/fileupload] has not been started
+Feb 16, 2012 9:33:53 PM org.apache.catalina.startup.HostConfig deployDescriptor
+INFO: Deploying configuration descriptor ROOT.xml
+Feb 16, 2012 9:33:53 PM org.apache.catalina.startup.HostConfig deployDescriptor
+INFO: Deploying configuration descriptor host-manager.xml
+Feb 16, 2012 9:33:53 PM org.apache.catalina.startup.HostConfig deployDirectory
+INFO: Deploying web application directory examples
+Feb 16, 2012 9:33:54 PM org.apache.catalina.startup.HostConfig deployDirectory
+INFO: Deploying web application directory docs
+Feb 16, 2012 9:33:54 PM org.apache.coyote.http11.Http11Protocol start
+INFO: Starting Coyote HTTP/1.1 on http-8080
+Feb 16, 2012 9:33:54 PM org.apache.jk.common.ChannelSocket init
+INFO: JK: ajp13 listening on /0.0.0.0:8009
+Feb 16, 2012 9:33:54 PM org.apache.jk.server.JkMain start
+INFO: Jk running ID=0 time=0/224  config=null
+Feb 16, 2012 9:33:54 PM org.apache.catalina.startup.Catalina start
+INFO: Server startup in 2962 ms
+Feb 16, 2012 9:33:57 PM org.apache.catalina.startup.HostConfig checkResources
+INFO: Undeploying context []
+Feb 16, 2012 9:33:57 PM org.apache.catalina.startup.HostConfig deployDescriptor
+INFO: Deploying configuration descriptor ROOT.xml
+Feb 16, 2012 9:33:57 PM org.apache.catalina.core.StandardContext start
+INFO: Container org.apache.catalina.core.ContainerBase.[Catalina].[localhost].[/] has already been started
+Feb 16, 2012 9:37:08 PM org.apache.coyote.http11.Http11Protocol pause
+INFO: Pausing Coyote HTTP/1.1 on http-8080
+Feb 16, 2012 9:37:09 PM org.apache.catalina.core.StandardService stop
+INFO: Stopping service Catalina
+Feb 16, 2012 9:37:09 PM org.apache.coyote.http11.Http11Protocol destroy
+INFO: Stopping Coyote HTTP/1.1 on http-8080

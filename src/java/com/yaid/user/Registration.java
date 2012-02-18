@@ -1,5 +1,7 @@
 package com.yaid.user;
 
+import com.yaid.ser.*;
+
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
@@ -44,8 +46,13 @@ public class Registration extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        processRequest(request, response);
+        PreparedStatement preparedStatement = null;
+        Connection connect = null;
+        PrintWriter pw = null;
+        ResultSet resultSet = null;
+        Boolean accountExists = false;
         try {
+            connect = DbConnection.getDbConnection();
             //UserDetailsBean udb = new UserDetailsBean();
             //String uid = request.getParameter("userid");
             //udb.setUserID(uid);
@@ -53,14 +60,43 @@ public class Registration extends HttpServlet {
             //udb.setUserPassword(psw);
             String email = request.getParameter("regEmailid");
             //udb.setUserEmail(email);
-            PreparedStatement preparedStatement = null;
-            Connection connect = DbConnection.getDbConnection();
-            preparedStatement = connect.prepareStatement("insert into YAID.USERS values(NULL,?,?)");
-            preparedStatement.setString(1, psw);
-            preparedStatement.setString(2, email);
-            preparedStatement.executeUpdate();
-            initializeDirectory(email);
-            response.sendRedirect("index.jsp");
+            pw = response.getWriter();
+            preparedStatement = connect.prepareStatement("select * from YAID.USERS where email = ?");
+            preparedStatement.setString(1, email);
+            resultSet = preparedStatement.executeQuery();
+
+            while (resultSet.next()) {
+                if (resultSet.getString("email").equals(email)) {
+                    System.out.println("\t email in DB : " + resultSet.getString("email"));
+                    response.setContentType("text/html");
+                    pw.println("<script type=\"text/javascript\">");
+                    pw.println("alert('Another user with same user ID exists... Please redo registration with another ID!!!');");
+                    pw.println("</script>");
+                    response.sendRedirect("index.jsp");
+                    accountExists = true;
+                    break;
+                }
+
+            }
+
+            if (accountExists == false) {
+
+                preparedStatement = connect.prepareStatement("insert into YAID.USERS values(NULL,?,?)");
+                preparedStatement.setString(1, psw);
+                preparedStatement.setString(2, email);
+                preparedStatement.executeUpdate();
+                String uid = email.substring(0, email.indexOf("@"));
+                initializeDirectory(uid);
+                initialSerialization(uid);
+
+                response.setContentType("text/html");
+                pw.println("<script type=\"text/javascript\">");
+                pw.println("alert('Registratoin successful... You may login now...');");
+                //pw.println("window.location='index.jsp';");
+                pw.println("</script>");
+                response.sendRedirect("index.jsp");
+
+            }
         } catch (Exception e) {
             e.printStackTrace();
         } finally {
@@ -75,6 +111,13 @@ public class Registration extends HttpServlet {
     public String getServletInfo() {
         return "Short description";
     }// </editor-fold>
+
+    public void initialSerialization(String uid) {
+        System.out.println("The user id is: " + uid);
+        User u = new User();
+        u.wallpaper_path = "ImageBytes?id=/UserData/vig/My Files/WallPaper/feathers.jpg";
+        u.defaultValues(u, uid);
+    }
 
     public void initializeDirectory(String userid) {
         try {

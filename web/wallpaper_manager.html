@@ -25,6 +25,17 @@
                 $('#FolderView li').dblclick(function(){
                     id=$(this).attr('id').replace("file_","");
                     $('#workarea').css("background-image", "url(ImageBytes?id="+encodeURI(id)+")");
+                    var dataRequestObject= "value=ImageBytes?id="+encodeURI(id)+"&key=wallpaper";
+                    $.ajax({
+                        type:'POST',
+                        url:"GetPath", //calling servlet
+                        cache:false,
+                        data:dataRequestObject,
+                        success:function(htmldat){ alert(htmldat);},
+                        error:function(xhr,ajaxOptions){
+                            alert(xhr.status + " :: " + xhr.statusText);
+                        }
+                    });
                 });
             }
         });

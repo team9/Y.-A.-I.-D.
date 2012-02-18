@@ -8,11 +8,10 @@ function Explorer(div_id,path){
     this.div_id=div_id;
     this.window=$('#windowe_content'+ div_id);
     
-    this.explorerData={};
     this.path=path;
     this.selected=[];
     this.clipBoard={};
-
+    //console.log(Explorer.explorerData,Explorer);
     
     htmlStr="<div class=\"TreeView\" id=\"TreeView"+ div_id +"\"></div>"+
     "<div>"+
@@ -103,18 +102,6 @@ function Explorer(div_id,path){
                         
             },
             items: {
-                "create": {
-                    "name": "Create", 
-                    "icon": "theme",
-                    "items": {
-                        "folder": {
-                            "name": "Folder"
-                        },
-                        "document": {
-                            "name": "Document"
-                        }
-                    }
-                },
                 "rename" : {
                     "name" : "Rename", 
                     "icon" : "widget"
@@ -130,6 +117,64 @@ function Explorer(div_id,path){
                 "delete" : {
                     "name" : "Delete", 
                     "icon" : "widget"
+                },
+                "paste" : {
+                    "name" : "Paste", 
+                    "icon" : "widget"
+                },
+                "properties" : {
+                    "name" : "Properties", 
+                    "icon" : "widget"
+                }
+            }
+        });
+        
+        
+        //context menue the are not covered by folder's and files.
+        $.contextMenu({
+            selector: '#FolderView'+ div_id,
+            callback: function(key, options) {
+                //explore.selectFile(this,null);
+                console.log(key,options,this);
+                if(key == "rename") {
+                    explore.fileRename(this);
+                }
+                else if(key == "widget") {
+                    Window({
+                        'option':{
+                            'title':'Widgets',
+                            height:250, 
+                            width:430
+                        },
+                        'content':'widget_manager.html',
+                        "ajax":true
+                    });
+                }
+                else if(key == "wallpaper") {
+                    Window({
+                        'option':{
+                            'title':'Wallpapers',
+                            height:320, 
+                            width:450
+                        },
+                        'content':'wallpaper_manager.html',
+                        "ajax":true
+                    });
+                }
+                        
+            },
+            items: {
+                "create": {
+                    "name": "Create", 
+                    "icon": "theme",
+                    "items": {
+                        "folder": {
+                            "name": "Folder"
+                        },
+                        "document": {
+                            "name": "Document"
+                        }
+                    }
                 },
                 "paste" : {
                     "name" : "Paste", 
@@ -162,7 +207,7 @@ function Explorer(div_id,path){
                 primary: "ui-icon-arrowthick-1-w"
             }
         }).click(function(){
-            explore.makeFolderElm(explore.explorerData[explore.path]["parrentfolder"]);
+            explore.makeFolderElm(Explorer.explorerData[explore.path]["parrentfolder"]);
         });
         $( "#new_file" + div_id ).button({
             text: false,
@@ -188,7 +233,7 @@ function Explorer(div_id,path){
                 primary: "ui-icon-copy"
             }
         }).click(function(){
-            explore.copyFiles();
+            explore.editFiles("copy");
         });
 
         $( "#delete" + div_id).button({
@@ -203,32 +248,39 @@ function Explorer(div_id,path){
                 primary: "ui-icon-scissors"
             }
         }).click(function(){
-            explore.cutFiles();
+            explore.editFiles("cut");
         });
         $( "#paste" + div_id).button({
             text: false,
             icons: {
                 primary: "ui-icon-clipboard"
             }
+        }).click(function(){
+            explore.pasteFiles(explore.path);
         });
         explore.makeFolderElm(path);
     });
 }
 
+Explorer.explorerData={};
+
 Explorer.prototype.makeFolderElm = function(path){
     str='';
     parrent=this.path;
-    console.log(path);
+    //console.log(path);
     var explore=this;
-    if(this.explorerData[path]==undefined){
+    if(Explorer.explorerData[path]==undefined){
         //get_files
         $.ajax({
             type: 'GET',
             url: "FileOperationHandler",								 
-            data: "operation=get_files&id=" +  encodeURI(path),
+            data: {
+                "operation":"get_files",
+                "id": encodeURI(path)
+            },//"operation=get_files&id=" +  encodeURI(path),
             success: function (htmldir){
                 explore.loadFolderElm(htmldir,path);
-                explore.explorerData[path]={
+                Explorer.explorerData[path]={
                     "contents":htmldir,
                     "parrentfolder":parrent
                 };
@@ -236,7 +288,7 @@ Explorer.prototype.makeFolderElm = function(path){
             }
         });
     }else if(path!=""){
-        explore.loadFolderElm(explore.explorerData[path]["contents"],path);
+        explore.loadFolderElm(Explorer.explorerData[path]["contents"],path);
     }
 };
 
@@ -258,6 +310,8 @@ Explorer.prototype.loadFolderElm=function(htmldir,path){
             explore.makeFolderElm(id.replace(explore.div_id+"file_",""));
         }else if($(this).attr('type')==='image'){
             imageViewer(id.replace(explore.div_id+"file_",""));
+        }else if($(this).attr('type')==='vedio'){
+            MediaPlayer(id.replace(explore.div_id+"file_",""));
         }else{
             console.log(id+' is a file');
         }
@@ -274,7 +328,7 @@ Explorer.prototype.loadFolderElm=function(htmldir,path){
 
 Explorer.prototype.selectName= function (fileName,extn){
     var i=-1,j=1,explorer=this;
-    filesInFolder=explorer.explorerData[explorer.path]["contents"];
+    filesInFolder=Explorer.explorerData[explorer.path]["contents"];
     do{
         for(i=0 ;i<filesInFolder.length;i++){
             if(filesInFolder[i]["data"]===fileName+j+extn){
@@ -299,9 +353,14 @@ Explorer.prototype.createNewFile=function (path,newName,content,operation){
         encodeURI(newName)+"&content="+encodeURI(content),
         success: function (htmldir){
             console.log("new file created.");
-            console.log(htmldir);
-            explorer.explorerData[path]["contents"].push(htmldir);
-            explorer.loadFolderElm(explorer.explorerData[path]["contents"],path);
+            //console.log(htmldir,$('#'+explorer.div_id+htmldir[dat]['attr']['id']));
+            Explorer.explorerData[path]["contents"].push(htmldir);
+            explorer.loadFolderElm(Explorer.explorerData[path]["contents"],path);
+            /*$(function(){
+                elm=$('#'+explorer.div_id+htmldir['attr']['id']);
+                console.log(htmldir,elm);
+                explorer.fileRename(elm);
+            });*/
         //FileExplorer.explorerData[path]={"contents":htmldir,"parrentfolder":parrent};
                         
         }
@@ -352,7 +411,6 @@ Explorer.prototype.fileRename = function (oldFile){
     });
 };
 
-
 Explorer.prototype.selectFile = function (fileElm,event){
     var explore =this;
     if (event.ctrlKey ){
@@ -360,50 +418,80 @@ Explorer.prototype.selectFile = function (fileElm,event){
         if(rmIndex!=-1 ){
             $(explore.selected.splice(rmIndex,1)).removeClass("selectedElm"); 
             console.log(rmIndex);
-        }else {
+        }else if($(explore.selected[0]).attr("id").replace(explore.div_id+"file_","")===explore.path){
+            console.log("this is the cur dir");
+            elm=explore.selected.pop();
+            $(fileElm).addClass("selectedElm");
+            explore.selected.push(fileElm);
+        }
+        else {
             $(fileElm).addClass("selectedElm");
             explore.selected.push(fileElm);
         }
 
-    } else if(!event.ctrlKey && explore.selected!=[]){
+    } else if(explore.selected!=[]){
         do{ 
             elm=explore.selected.pop();
             $(elm).removeClass("selectedElm");
         }while(elm);
         $(fileElm).addClass("selectedElm");
         explore.selected.push(fileElm);
+    }else {
+        $(fileElm).addClass("selectedElm");
+        explore.selected.push(fileElm);
     }
-    console.log(explore.selected);
+//console.log(explore.selected);
 };
 
-Explorer.prototype.copyFiles = function (){
+Explorer.prototype.editFiles = function (operation){
     
     if(this.selected!=[]){
-        this.clipBoard['files']=this.selected;
-        this.clipBoard['operation']='copy';
-    }
-    console.log(this.clipBoard);
-};
-
-Explorer.prototype.cutFiles = function (){
-    if(this.selected!=[]){
-        this.clipBoard['files']=this.selected;
-        this.clipBoard['operation']='cut';
-        $(".selectedElm").addClass("to_be_cut")
+        this.clipBoard['files']=$.extend(true,[],this.selected);
+        this.clipBoard['operation']=operation;
+        if (operation==="cut"){
+            $(".selectedElm").addClass("to_be_cut")
+        }
     }
     console.log(this.clipBoard);
 };
 
 Explorer.prototype.pasteFiles = function (toLoc){
-    var pastReq=function(){
-        
+    var copyPaste = function(htmldir){
+        console.log("copy",htmldir);
     };
+    var pasteReq=function(elm,operation){
+        var dataToSend={};
+        console.log(elm);
+        dataToSend["path"]=$(elm).attr("id").replace(explore.div_id+"file_","");
+        dataToSend["filename"]=$(elm).children( "div" ).children( "div" ).html();
+        dataToSend["toLoc"]=toLoc;
+        dataToSend["operation"]=operation;
+        console.log(dataToSend);
+        $.ajax({
+            type: 'GET',
+            url: "FileOperationHandler",								 
+            data: dataToSend,
+            success: function (htmldir){
+                console.log(htmldir);
+                if(operation==='copy'){copyPaste(htmldir);}
+                
+            },
+            error: function(jqXHR, textStatus, errorThrown){
+                console.log(jqXHR, textStatus, errorThrown)
+            }
+        });
+    },explore=this;
     if(this.clipBoard!={}){
+        this.clipBoard['toLoc']=toLoc;
         if(this.clipBoard['operation']==='cut'){
-            pastReq("cut",toLoc);
+            $.each(this.clipBoard['files'],function(index,value){
+                pasteReq(value,"cut");
+            });
         }else if(this.clipBoard['operation']==='copy'){
-            pastReq("copy",toLoc);
+            $.each(this.clipBoard['files'],function(index,value){
+                pasteReq(value,"copy");
+            });
         }
     }
-    console.log(this.clipBoard);
+//console.log(this.clipBoard);
 };

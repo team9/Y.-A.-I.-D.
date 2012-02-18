@@ -1,13 +1,14 @@
 <!DOCTYPE html>
 <html>
-       <head>
-              <meta charset="utf-8">
-              <title>Creating a windows-like interface with jQuery UI</title>
+    <head>
+        <meta charset="utf-8">
+        <title>Creating a windows-like interface with jQuery UI</title>
 
         <link rel="stylesheet" href="CSS/ui-lightness/jquery-ui-1.8.16.custom.css" type="text/css" />
         <link rel="stylesheet" type="text/css" href="CSS/Window/window.css"/>
         <link rel="stylesheet" type="text/css" href="CSS/qunit.css"/>
         <link rel="stylesheet" type="text/css" href="CSS/Window/explorer.css"/>
+        <link rel="stylesheet" href="CSS/jquery.contextMenu.css" type="text/css" />
 
         <!-- Load jQuery first before jQuery UI! -->
         <script src="JQUERY/jquery.js"></script>
@@ -19,7 +20,10 @@
         <script src="JS/Window/Explorer.js"></script>
         <script src="JS/jquery.jstree.js"></script>
         <script src="JS/ImageViewer/ImageViewer.js"></script>      
-        <link rel="stylesheet" href="CSS/jquery.contextMenu.css" type="text/css" />
+        <script src="JS/MediaPlayer.js"></script>      
+        <script src="JS/jquery.metadata.js"></script>  
+        <script src="JQUERY/jquery.media.js"></script>      
+        
         <style>
             body{ 
                 font: 70.5% "Trebuchet MS", sans-serif; 			
@@ -38,7 +42,7 @@
                 
                 new Explorer($(window1).attr("id"),"/");
                 new Explorer($(window2).attr("id"),"/");
-//                console.log($(window1).attr("id"));
+                //                console.log($(window1).attr("id"));
                 //Window({'option':{'title':'Explorer',height:300,width:750},'content':'explorer.jsp',"ajax":true});
                 /*test("sample",function(){
                     same({},{},"the objects are same.");
@@ -47,13 +51,13 @@
             });
         </script>
 
-         </head>
-       <body>
+    </head>
+    <body>
         <div id="dialog_window_minimized_container" class="ui-widget-header ui-corner-all"></div>
         <!--<h1 id="qunit-header">QUnit Test Suite</h1>  
         <h2 id="qunit-banner"></h2>  
         <div id="qunit-testrunner-toolbar"></div>  
         <h2 id="qunit-userAgent"></h2>  
         <ol id="qunit-tests"></ol> --> 
-           </body>
+    </body>
 </html>

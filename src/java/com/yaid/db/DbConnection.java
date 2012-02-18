@@ -4,7 +4,6 @@
  */
 package com.yaid.db;
 
-import com.yaid.user.UserDetailsBean;
 import java.sql.*;
 
 /**
@@ -14,8 +13,8 @@ import java.sql.*;
 public class DbConnection {
 
     private static Connection connection = null;
-    private static final String PASS="root";
-    private static final String USER="root";
+    private static final String PASS="vd";
+    private static final String USER="vd";
     private static final String DBNAME="yaid";
     
 
