@@ -16,8 +16,8 @@ function Explorer(div_id,path){
     htmlStr="<div class=\"TreeView\" id=\"TreeView"+ div_id +"\"></div>"+
     "<div>"+
     "<span class=\"ui-widget-header ui-corner-all toolbar\" id=\"toolBar"+ div_id +"\">"+
-    "<input type=\"text\" class=\"path_text\" id=\"path_text"+ div_id +"\" />"+
     "<button id=\"home"+ div_id +"\">Home</button>"+
+    "<input type=\"text\" class=\"path_text\" id=\"path_text"+ div_id +"\" />"+
     "<button id=\"back"+ div_id +"\">Back</button>"+
     "<button id=\"new_file"+ div_id +"\">New File</button>"+
     "<button id=\"new_folder"+ div_id +"\">New Folder</button>"+
@@ -25,6 +25,7 @@ function Explorer(div_id,path){
     "<button id=\"cut"+ div_id +"\">Cut</button>"+
     "<button id=\"copy"+ div_id +"\">Copy</button>"+
     "<button id=\"paste"+ div_id +"\">Paste</button>"+
+    "<button id=\"upload"+ div_id +"\">Upload</button>"+
 
     "</span></div>"+
     "<ul class=\"FolderView\" id=\"FolderView"+ div_id +"\">"+
@@ -257,6 +258,14 @@ function Explorer(div_id,path){
             }
         }).click(function(){
             explore.pasteFiles(explore.path);
+        });
+        $( "#upload" + div_id).button({
+            text: false,
+            icons: {
+                primary: "ui-icon-carat-1-n"
+            }
+        }).click(function(){
+            explore.uploadFilesTo(explore.path);
         });
         explore.makeFolderElm(path);
     });
@@ -493,5 +502,10 @@ Explorer.prototype.pasteFiles = function (toLoc){
             });
         }
     }
+//console.log(this.clipBoard);
+};
+
+Explorer.prototype.uploadFilesTo = function (toLoc){
+    var upload=new YAIDUpload(toLoc);
 //console.log(this.clipBoard);
 };

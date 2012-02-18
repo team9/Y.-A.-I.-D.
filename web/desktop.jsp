@@ -5,7 +5,7 @@
             User u = new User();
             User objreturn = null;
             objreturn = u.loginTime(uid);
-            System.out.println("The wallpath is :"+objreturn.wallpaper_path);
+            //System.out.println("The wallpath is :"+objreturn.wallpaper_path);
 %>
 
 <html>

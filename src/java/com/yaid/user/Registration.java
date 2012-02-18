@@ -86,6 +86,7 @@ public class Registration extends HttpServlet {
                 preparedStatement.setString(2, email);
                 preparedStatement.executeUpdate();
                 String uid = email.substring(0, email.indexOf("@"));
+                System.out.println("Hello : " + uid);
                 initializeDirectory(uid);
                 initialSerialization(uid);
 

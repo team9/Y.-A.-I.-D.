@@ -22,7 +22,7 @@ import javax.servlet.http.HttpServletResponse;
  */
 public class FileOperationHandler extends HttpServlet {
 
-    private String startPath = ".";
+    private String startPath = "./UserData";
 
     public String getFolders(String path) {
 

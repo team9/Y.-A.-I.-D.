@@ -25,8 +25,8 @@
         <servlet-class>com.yaid.ser.GetPath</servlet-class>
     </servlet>
     <servlet>
-        <servlet-name>upload</servlet-name>
-        <servlet-class>com.yaid.files.upload</servlet-class>
+        <servlet-name>Upload</servlet-name>
+        <servlet-class>com.yaid.files.Upload</servlet-class>
     </servlet>
     <servlet>
         <servlet-name>ViewAllUsers</servlet-name>
@@ -65,10 +65,6 @@
         <url-pattern>/GetPath</url-pattern>
     </servlet-mapping>
     <servlet-mapping>
-        <servlet-name>upload</servlet-name>
-        <url-pattern>/upload</url-pattern>
-    </servlet-mapping>
-    <servlet-mapping>
         <servlet-name>ViewAllUsers</servlet-name>
         <url-pattern>/ViewAllUsers</url-pattern>
     </servlet-mapping>
@@ -79,6 +75,10 @@
     <servlet-mapping>
         <servlet-name>test</servlet-name>
         <url-pattern>/test</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>Upload</servlet-name>
+        <url-pattern>/Upload</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>
