@@ -5159,3 +5159,17 @@ Feb 18, 2012 10:29:35 PM org.apache.catalina.core.StandardContext reload
 INFO: Reloading Context with name [] has started
 Feb 18, 2012 10:49:53 PM org.apache.catalina.core.StandardContext reload
 INFO: Reloading Context with name [] has started
+Feb 18, 2012 10:50:58 PM org.apache.catalina.startup.HostConfig checkResources
+INFO: Undeploying context []
+Feb 18, 2012 11:20:29 PM org.apache.catalina.startup.HostConfig deployDescriptor
+INFO: Deploying configuration descriptor ROOT.xml
+Feb 18, 2012 11:20:29 PM org.apache.catalina.core.StandardContext start
+INFO: Container org.apache.catalina.core.ContainerBase.[Catalina].[localhost].[/] has already been started
+Feb 18, 2012 11:22:16 PM org.apache.catalina.core.StandardContext reload
+INFO: Reloading Context with name [] has started
+Feb 18, 2012 11:22:59 PM org.apache.catalina.core.StandardContext reload
+INFO: Reloading Context with name [] has started
+Feb 18, 2012 11:23:49 PM org.apache.catalina.core.StandardContext reload
+INFO: Reloading Context with name [] has started
+Feb 18, 2012 11:24:57 PM org.apache.catalina.core.StandardContext reload
+INFO: Reloading Context with name [] has started

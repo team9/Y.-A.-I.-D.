@@ -40,6 +40,10 @@
         <servlet-name>test</servlet-name>
         <servlet-class>com.yaid.readtxt.test</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>DownloadFile</servlet-name>
+        <servlet-class>com.yaid.files.DownloadFile</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>Registration</servlet-name>
         <url-pattern>/Registration</url-pattern>
@@ -79,6 +83,10 @@
     <servlet-mapping>
         <servlet-name>Upload</servlet-name>
         <url-pattern>/Upload</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>DownloadFile</servlet-name>
+        <url-pattern>/DownloadFile</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>

@@ -4,17 +4,19 @@
  */
 package com.yaid.files;
 
-import java.io.DataInputStream;
-import java.io.File;
-import java.io.FileInputStream;
-import java.io.IOException;
-import java.io.OutputStream;
+import java.io.*;
+import javax.servlet.ServletContext;
 import javax.servlet.ServletException;
+import javax.servlet.ServletOutputStream;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-public class ImageBytes extends HttpServlet {
+/**
+ *
+ * @author vignesh
+ */
+public class DownloadFile extends HttpServlet {
 
     /**
      * Processes requests for both HTTP
@@ -28,47 +30,42 @@ public class ImageBytes extends HttpServlet {
      */
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        
-        String path = "./UserData" + request.getParameter("id");
-        if (path.endsWith(".jpg")) {
-            response.setContentType("image/jpeg");
-        } else if (path.endsWith(".wmv")) {
-            response.setContentType("video/x-ms-wmv");
-            System.out.println("video/x-ms-wmv");
-        } else if (path.endsWith(".png")) {
-            response.setContentType("image/png");
-            System.out.println("image/png");
-        } else if (path.endsWith(".mov")) {
-            response.setContentType("video/quicktime");
-            System.out.println("video/x-ms-wmv");
-        } else if (path.endsWith(".avi")) {
-            response.setContentType("video/avi");
-            System.out.println("video/x-ms-wmv");
-        } else if (path.endsWith(".ogg") ) {
-            response.setContentType("application/ogg");
-        } else {
-            response.setContentType("image/jpeg");
-        }
-        OutputStream out = response.getOutputStream();
-        File file = new File(path);
-        DataInputStream dis = new DataInputStream(new FileInputStream(file));
+        response.setContentType("text/html;charset=UTF-8");
+        ServletOutputStream op = response.getOutputStream();
         try {
-            //File length
-            int size = (int) file.length();
-            if (size > Integer.MAX_VALUE) {
-                System.out.println("File is to larger");
+            /*
+             * TODO output your page here. You may use following sample code.
+             */
+            String filename = "./UserData" + request.getParameter("id");
+            File f = new File(filename);
+            int length = 0;
+
+            ServletContext context = getServletConfig().getServletContext();
+            String mimetype = context.getMimeType(filename);
+
+            //
+            //  Set the response and go!
+            //
+            //
+            response.setContentType((mimetype != null) ? mimetype : "application/octet-stream");
+            response.setContentLength((int) f.length());
+            response.setHeader("Content-Disposition", "attachment; filename=\"" + f.getName() + "\"");
+
+            //
+            //  Stream to the requester.
+            //
+            byte[] bbuf = new byte[1024];
+            DataInputStream in = new DataInputStream(new FileInputStream(f));
+
+            while ((in != null) && ((length = in.read(bbuf)) != -1)) {
+                op.write(bbuf, 0, length);
             }
-            byte[] bytes = new byte[size];
-            dis.read(bytes);
-            out.write(bytes);
-            // Ensure all the bytes have been read in
-            if (size < bytes.length) {
-                System.out.println("Could not completely read: " + file.getName());
-            }
-        } catch (Exception e) {
-            e.getMessage();
+
+            in.close();
         } finally {
-            out.close();
+
+            op.flush();
+            op.close();
         }
     }
 

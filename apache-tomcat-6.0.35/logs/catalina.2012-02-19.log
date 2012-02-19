@@ -278,3 +278,35 @@ SEVERE: The web application [] registered the JDBC driver [com.mysql.jdbc.Driver
 INFO: Stopping Coyote HTTP/1.1 on http-8080
 19 Feb, 2012 12:56:08 AM org.apache.coyote.ajp.AjpAprProtocol destroy
 INFO: Stopping Coyote AJP/1.3 on ajp-8009
+Feb 19, 2012 12:03:52 AM org.apache.catalina.startup.HostConfig checkResources
+INFO: Undeploying context []
+Feb 19, 2012 12:03:52 AM org.apache.catalina.startup.HostConfig deployDescriptor
+INFO: Deploying configuration descriptor ROOT.xml
+Feb 19, 2012 12:03:52 AM org.apache.catalina.core.StandardContext start
+INFO: Container org.apache.catalina.core.ContainerBase.[Catalina].[localhost].[/] has already been started
+Feb 19, 2012 12:06:19 AM org.apache.catalina.startup.HostConfig checkResources
+INFO: Undeploying context []
+Feb 19, 2012 12:06:19 AM org.apache.catalina.startup.HostConfig deployDescriptor
+INFO: Deploying configuration descriptor ROOT.xml
+Feb 19, 2012 12:06:20 AM org.apache.catalina.core.StandardContext start
+INFO: Container org.apache.catalina.core.ContainerBase.[Catalina].[localhost].[/] has already been started
+Feb 19, 2012 11:26:03 AM org.apache.catalina.core.StandardContext reload
+INFO: Reloading Context with name [] has started
+Feb 19, 2012 11:26:12 AM org.apache.catalina.startup.HostConfig checkResources
+INFO: Reloading context []
+Feb 19, 2012 11:27:49 AM org.apache.catalina.core.StandardContext reload
+INFO: Reloading Context with name [] has started
+Feb 19, 2012 11:28:28 AM org.apache.catalina.core.StandardContext reload
+INFO: Reloading Context with name [] has started
+Feb 19, 2012 11:30:03 AM org.apache.catalina.core.StandardContext reload
+INFO: Reloading Context with name [] has started
+Feb 19, 2012 11:30:37 AM org.apache.catalina.core.StandardContext reload
+INFO: Reloading Context with name [] has started
+Feb 19, 2012 11:31:14 AM org.apache.catalina.core.StandardContext reload
+INFO: Reloading Context with name [] has started
+Feb 19, 2012 11:31:27 AM org.apache.catalina.core.StandardContext reload
+INFO: Reloading Context with name [] has started
+Feb 19, 2012 11:32:07 AM org.apache.catalina.core.StandardContext reload
+INFO: Reloading Context with name [] has started
+Feb 19, 2012 11:32:19 AM org.apache.catalina.core.StandardContext reload
+INFO: Reloading Context with name [] has started

@@ -30,7 +30,7 @@ function Explorer(div_id,path){
     "</span></div>"+
     "<ul class=\"FolderView\" id=\"FolderView"+ div_id +"\">"+
 
-    "</ul>"
+    "</ul><div id=\"server_comm"+ div_id +"\" class=\"server_comm\">helo</div>"
     this.window.append(htmlStr);
     var explore=this;
     
@@ -77,8 +77,9 @@ function Explorer(div_id,path){
                 console.log(key,options,this);
                 if(key == "rename") {
                     explore.fileRename(this);
-                }
-                else if(key == "widget") {
+                } else if(key == "download") {
+                    explore.downloadFile($(this).attr("id").replace(explore.div_id+"file_",""));
+                } else if(key == "widget") {
                     Window({
                         'option':{
                             'title':'Widgets',
@@ -103,6 +104,10 @@ function Explorer(div_id,path){
                         
             },
             items: {
+                "download" : {
+                    "name" : "download", 
+                    "icon" : "widget"
+                },
                 "rename" : {
                     "name" : "Rename", 
                     "icon" : "widget"
@@ -365,11 +370,6 @@ Explorer.prototype.createNewFile=function (path,newName,content,operation){
             //console.log(htmldir,$('#'+explorer.div_id+htmldir[dat]['attr']['id']));
             Explorer.explorerData[path]["contents"].push(htmldir);
             explorer.loadFolderElm(Explorer.explorerData[path]["contents"],path);
-            /*$(function(){
-                elm=$('#'+explorer.div_id+htmldir['attr']['id']);
-                console.log(htmldir,elm);
-                explorer.fileRename(elm);
-            });*/
         //FileExplorer.explorerData[path]={"contents":htmldir,"parrentfolder":parrent};
                         
         }
@@ -482,7 +482,9 @@ Explorer.prototype.pasteFiles = function (toLoc){
             data: dataToSend,
             success: function (htmldir){
                 console.log(htmldir);
-                if(operation==='copy'){copyPaste(htmldir);}
+                if(operation==='copy'){
+                    copyPaste(htmldir);
+                }
                 
             },
             error: function(jqXHR, textStatus, errorThrown){
@@ -506,6 +508,14 @@ Explorer.prototype.pasteFiles = function (toLoc){
 };
 
 Explorer.prototype.uploadFilesTo = function (toLoc){
-    var upload=new YAIDUpload(toLoc);
+    var upload=new YAIDUpload(toLoc,this);
+//console.log(this.clipBoard);
+};
+
+Explorer.prototype.downloadFile = function (fileName){
+    content="<form action='DownloadFile' method='post'>"+
+    "<input type='text' name='id' value='"+fileName+"'/></form>" ;
+    $("#server_comm"+this.div_id).html(content);
+    $("#server_comm"+this.div_id+" form").submit();
 //console.log(this.clipBoard);
 };

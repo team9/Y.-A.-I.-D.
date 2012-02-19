@@ -129,7 +129,7 @@ public class FileOperationHandler extends HttpServlet {
         for (int i = 0; i < chld.length; i++) {
             if (chld[i].isDirectory()) {
                 type = "\"rel\":\"folder\",\"img\":\"images/icons/gnome-fs-directory.png\"";
-            } else if (chld[i].getName().endsWith(".jpg")) {
+            } else if (chld[i].getName().endsWith(".jpg")||chld[i].getName().endsWith(".png")) {
                 type = "\"rel\":\"image\",\"img\":\"ImageBytes?id=" + path + chld[i].getName() + "\"";
             } else if (chld[i].getName().endsWith(".ogg")||chld[i].getName().endsWith(".wmv") 
                     ||chld[i].getName().endsWith(".avi")||chld[i].getName().endsWith(".mov")) {

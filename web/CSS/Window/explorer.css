@@ -21,3 +21,6 @@
 .selectedElm {background-color: #ddb557;}
 .rename-form {border: black thick;width: 100px;background: white;text-align: center;}
 .to_be_cut {opacity: 0.70;}
+.server_comm {
+    display: none;
+}

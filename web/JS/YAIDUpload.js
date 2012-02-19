@@ -3,8 +3,9 @@
  * and open the template in the editor.
  */
 
-function YAIDUpload(toLoc){
-    
+function YAIDUpload(toLoc,explore){
+    this.explore=explore;
+    this.toLoc=toLoc;
     var htmlcont="<form id=\"file_upload\" action=\"Upload\" method=\"POST\" enctype=\"multipart/form-data\">"+
     "<div id=\"drop_zone_1\">"+
     "<input id=\"file_1\" type=\"file\" name=\"file_1\" multiple/>"+
@@ -68,20 +69,48 @@ YAIDUpload.prototype.initFileUpload = function (suffix) {
 };
 
 YAIDUpload.prototype.setUploadLocation = function (toLoc) {
-    dataToSend={"toloc":encodeURI(toLoc)};
+    dataToSend={
+        "toloc":encodeURI(toLoc)
+    };
     $.ajax({
-            type: 'GET',
-            url: "Upload",								 
-            data: dataToSend,
-            success: function (){
-                console.log("Upload Path set!!!");                
-            },
-            error: function(jqXHR, textStatus, errorThrown){
-                console.log(jqXHR, textStatus, errorThrown)
-            }
-        });
+        type: 'GET',
+        url: "Upload",								 
+        data: dataToSend,
+        success: function (){
+            console.log("Upload Path set!!!");                
+        },
+        error: function(jqXHR, textStatus, errorThrown){
+            console.log(jqXHR, textStatus, errorThrown)
+        }
+    });
 };
 
 YAIDUpload.prototype.updateFolder = function (file) {
     console.log(file);
+    
+    if (file.name.match(/.jpg$/)||file.name.match(/.png$/)) {
+        rel = "image";
+        img="ImageBytes?id=" +this.toLoc +  "/"+ file.name ;
+    } else if (file.name.match(/.wmv$/)||file.name.match(/.flv$/) 
+        ||file.name.match(/.avi$/)||file.name.match(/.mov$/)) {
+        rel="vedio";
+        img="images/icons/video.png";
+    } else {
+        rel="file";
+        img="images/icons/ascii.png";
+    }
+    
+    jsonFile={
+        "attr":{
+            "id":"file_" + this.toLoc +  "/"+file.name ,
+            "rel":rel,
+            "img":img
+        },
+        "data":file.name ,
+        "state":""
+    };
+    Explorer.explorerData[this.toLoc]["contents"].push(jsonFile);
+    if(this.explore.path===this.toLoc){
+        this.explore.loadFolderElm(Explorer.explorerData[this.toLoc]["contents"],this.toLoc);
+    }
 };
