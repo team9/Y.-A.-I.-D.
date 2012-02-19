@@ -4,9 +4,7 @@
  */
 package com.yaid.files;
 
-import java.io.File;
-import java.io.IOException;
-import java.io.PrintWriter;
+import java.io.*;
 import java.util.Iterator;
 import java.util.Map;
 import java.util.logging.Level;
@@ -129,10 +127,10 @@ public class FileOperationHandler extends HttpServlet {
         for (int i = 0; i < chld.length; i++) {
             if (chld[i].isDirectory()) {
                 type = "\"rel\":\"folder\",\"img\":\"images/icons/gnome-fs-directory.png\"";
-            } else if (chld[i].getName().endsWith(".jpg")||chld[i].getName().endsWith(".png")) {
+            } else if (chld[i].getName().endsWith(".jpg") || chld[i].getName().endsWith(".png")) {
                 type = "\"rel\":\"image\",\"img\":\"ImageBytes?id=" + path + chld[i].getName() + "\"";
-            } else if (chld[i].getName().endsWith(".ogg")||chld[i].getName().endsWith(".wmv") 
-                    ||chld[i].getName().endsWith(".avi")||chld[i].getName().endsWith(".mov")) {
+            } else if (chld[i].getName().endsWith(".ogg") || chld[i].getName().endsWith(".wmv")
+                    || chld[i].getName().endsWith(".avi") || chld[i].getName().endsWith(".mov")) {
                 type = "\"rel\":\"vedio\",\"img\":\"images/icons/video.png\"";
             } else {
                 type = "\"rel\":\"file\",\"img\":\"images/icons/ascii.png\"";
@@ -181,6 +179,49 @@ public class FileOperationHandler extends HttpServlet {
         return jsondata;
     }
 
+    public void copyFolder(File src, File dest) throws IOException {
+
+        if (src.isDirectory()) {
+
+            //if directory not exists, create it
+            if (!dest.exists()) {
+                dest.mkdir();
+                System.out.println("Directory copied from "
+                        + src + "  to " + dest);
+            }
+
+            //list all the directory contents
+            String files[] = src.list();
+
+            for (String file : files) {
+                //construct the src and dest file structure
+                File srcFile = new File(src, file);
+                File destFile = new File(dest, file);
+                //recursive copy
+                copyFolder(srcFile, destFile);
+            }
+
+        } else {
+            //if file, then copy it
+            //Use bytes stream to support all file types
+            InputStream in = new FileInputStream(src);
+            OutputStream out = new FileOutputStream(dest);
+
+            byte[] buffer = new byte[1024];
+
+            int length;
+            //copy the file content in bytes 
+            while ((length = in.read(buffer)) > 0) {
+                out.write(buffer, 0, length);
+            }
+
+            in.close();
+            out.close();
+            System.out.println("File copied from " + src + " to " + dest);
+        }
+
+    }
+
     /**
      * Processes requests for both HTTP
      * <code>GET</code> and
@@ -197,8 +238,8 @@ public class FileOperationHandler extends HttpServlet {
         PrintWriter out = response.getWriter();
         try {
             String operation = request.getParameter("operation");
-            String filePath = request.getParameter("id");
-            String fileName = request.getParameter("newname");
+            String filePath = request.getParameter("id").replace("%20", " ");
+            String fileName = request.getParameter("newname").replace("%20", " ");
             String fileContent = request.getParameter("content");
             //filePath = (filePath.equals("1") ? "/" : filePath);
             Map params = request.getParameterMap();
@@ -207,7 +248,7 @@ public class FileOperationHandler extends HttpServlet {
             while (i.hasNext()) {
                 String key = (String) i.next();
                 String value = ((String[]) params.get(key))[ 0];
-                System.out.println("Key: " + key + "Value: " + value);
+                System.out.println("Key: " + key + " Value: " + value);
             }
             System.out.println(operation + " " + filePath + fileName);
             if (operation.equals("get_folder")) {
@@ -222,6 +263,11 @@ public class FileOperationHandler extends HttpServlet {
                 out.print(makeDirectory(filePath, fileName));
             } else if (operation.equals("rename_files") && fileName != null) {
                 out.print(renameFile(filePath, fileName));
+            } else if (operation.equals("copy") && fileName != null) {
+                File src = new File(startPath + filePath);
+                File dest = new File(startPath + fileName+"/"+src.getName());
+                copyFolder(src, dest);
+                out.print(getAllFiles(fileName));
             }
 
         } catch (Exception e) {

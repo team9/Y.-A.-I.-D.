@@ -1,1 +1,3 @@
 hello, this is a test file for notepad...
+this is the second line.
+this is the final line of this text file.

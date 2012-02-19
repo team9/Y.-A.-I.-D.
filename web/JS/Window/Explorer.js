@@ -70,128 +70,10 @@ function Explorer(div_id,path){
         });
 
         //Associate a context menue to the FolderView.
-        $.contextMenu({
-            selector: '#FolderView'+ div_id+' li',
-            callback: function(key, options) {
-                //explore.selectFile(this,null);
-                console.log(key,options,this);
-                if(key == "rename") {
-                    explore.fileRename(this);
-                } else if(key == "download") {
-                    explore.downloadFile($(this).attr("id").replace(explore.div_id+"file_",""));
-                } else if(key == "widget") {
-                    Window({
-                        'option':{
-                            'title':'Widgets',
-                            height:250, 
-                            width:430
-                        },
-                        'content':'widget_manager.html',
-                        "ajax":true
-                    });
-                }
-                else if(key == "wallpaper") {
-                    Window({
-                        'option':{
-                            'title':'Wallpapers',
-                            height:320, 
-                            width:450
-                        },
-                        'content':'wallpaper_manager.html',
-                        "ajax":true
-                    });
-                }
-                        
-            },
-            items: {
-                "download" : {
-                    "name" : "download", 
-                    "icon" : "widget"
-                },
-                "rename" : {
-                    "name" : "Rename", 
-                    "icon" : "widget"
-                },
-                "copy" : {
-                    "name" : "Copy", 
-                    "icon" : "widget"
-                },
-                "cut": {
-                    "name": "Cut", 
-                    "icon": "wallpaper"
-                },
-                "delete" : {
-                    "name" : "Delete", 
-                    "icon" : "widget"
-                },
-                "paste" : {
-                    "name" : "Paste", 
-                    "icon" : "widget"
-                },
-                "properties" : {
-                    "name" : "Properties", 
-                    "icon" : "widget"
-                }
-            }
-        });
-        
+        YAIDContext.forFileElm(div_id,explore);
         
         //context menue the are not covered by folder's and files.
-        $.contextMenu({
-            selector: '#FolderView'+ div_id,
-            callback: function(key, options) {
-                //explore.selectFile(this,null);
-                console.log(key,options,this);
-                if(key == "rename") {
-                    explore.fileRename(this);
-                }
-                else if(key == "widget") {
-                    Window({
-                        'option':{
-                            'title':'Widgets',
-                            height:250, 
-                            width:430
-                        },
-                        'content':'widget_manager.html',
-                        "ajax":true
-                    });
-                }
-                else if(key == "wallpaper") {
-                    Window({
-                        'option':{
-                            'title':'Wallpapers',
-                            height:320, 
-                            width:450
-                        },
-                        'content':'wallpaper_manager.html',
-                        "ajax":true
-                    });
-                }
-                        
-            },
-            items: {
-                "create": {
-                    "name": "Create", 
-                    "icon": "theme",
-                    "items": {
-                        "folder": {
-                            "name": "Folder"
-                        },
-                        "document": {
-                            "name": "Document"
-                        }
-                    }
-                },
-                "paste" : {
-                    "name" : "Paste", 
-                    "icon" : "widget"
-                },
-                "properties" : {
-                    "name" : "Properties", 
-                    "icon" : "widget"
-                }
-            }
-        });
+        YAIDContext.forFileView(div_id,explore);
         
         //toolbar related stuff.
         $("#toolBar"+ div_id ).jScroll({
@@ -466,14 +348,19 @@ Explorer.prototype.editFiles = function (operation){
 
 Explorer.prototype.pasteFiles = function (toLoc){
     var copyPaste = function(htmldir){
-        console.log("copy",htmldir);
+        //console.log("copy",htmldir);
+        Explorer.explorerData[toLoc]["contents"]=htmldir;
+        explore.loadFolderElm(Explorer.explorerData[toLoc]["contents"],toLoc);
+    };
+    var cutPaste = function(htmldir){
+        console.log("cut",htmldir);
     };
     var pasteReq=function(elm,operation){
         var dataToSend={};
         console.log(elm);
-        dataToSend["path"]=$(elm).attr("id").replace(explore.div_id+"file_","");
-        dataToSend["filename"]=$(elm).children( "div" ).children( "div" ).html();
-        dataToSend["toLoc"]=toLoc;
+        dataToSend["id"]=$(elm).attr("id").replace(explore.div_id+"file_","");
+        //dataToSend["newname"]=$(elm).children( "div" ).children( "div" ).html();
+        dataToSend["newname"]=toLoc;
         dataToSend["operation"]=operation;
         console.log(dataToSend);
         $.ajax({
@@ -481,9 +368,12 @@ Explorer.prototype.pasteFiles = function (toLoc){
             url: "FileOperationHandler",								 
             data: dataToSend,
             success: function (htmldir){
-                console.log(htmldir);
+                //console.log(htmldir);
                 if(operation==='copy'){
                     copyPaste(htmldir);
+                }
+                if(operation==='cut'){
+                    cutPaste(htmldir);
                 }
                 
             },

@@ -6,6 +6,7 @@ package com.yaid.readtxt;
 
 import java.io.IOException;
 import java.io.PrintWriter;
+import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
@@ -28,16 +29,19 @@ public class ReadTextFile extends HttpServlet {
             throws ServletException, IOException {
         response.setContentType("text/html;charset=UTF-8");
         PrintWriter out = response.getWriter();
+        String textdata = "";
         try {
-            ReadFile.read();
+            textdata = ReadFile.read();
             out.println("<html>");
             out.println("<head>");
             out.println("<title>Servlet ReadTextFile</title>");
             out.println("</head>");
             out.println("<body>");
-            out.println("<h1>Servlet ReadTextFile is reading a text file...</h1>");
+            out.println("<h1>Servlet ReadTextFile is reading a text file...</h1><br>");
+            out.println(textdata);
             out.println("</body>");
             out.println("</html>");
+            request.setAttribute("TextData", textdata);
         } finally {
             out.close();
         }

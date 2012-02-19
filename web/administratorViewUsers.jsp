@@ -3,15 +3,31 @@
 <%@ page import="java.sql.ResultSet" %>
 <%@ page import="java.sql.Connection" %>
 <%@ page import="java.sql.DriverManager" %>
+ <script src="JQUERY/jquery.js" type="text/javascript"></script>
 <link rel="stylesheet" type="text/css" href="CSS/Administrator/administratorViewUsers.css" />
 <script type="text/javascript">
+    
     $(document).ready(function() {
-        document.getElementById('allDetails').append = 'HAi';
+        
+             $("#SelectUser").click(function(){
+                        $.ajax({
+                    
+                            type: 'POST',
+                            url: "ViewAllUsers",								 
+                            data: "operation=showSingleUser&userid=40",
+                            success: function (){
+                                
+                            }
+                        });
+                    })
     });
                 
     function showDetails() {
-        //alert("HAi" + serial);
-        alert("hai");
+        var serial = document.getElementById('userSerialValue').value;
+        var email =  document.getElementById('userEmailValue').value;
+        var password =  document.getElementById('userPasswordValue').value;
+        alert("HAi : " + serial + "   " +email +"   "+ password);
+        //alert("hai");
     }
 </script>
 
@@ -36,7 +52,7 @@
 
     Connection conn = null;
     Class.forName("com.mysql.jdbc.Driver").newInstance();
-    conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/yaid", "root", "root");
+    conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/yaid", "vd", "vd");
 
     ResultSet rsPagination = null;
     ResultSet rsRowCnt = null;
@@ -99,10 +115,17 @@
                     while (rsPagination.next()) {
                 %>
                 <br/>
-                <div id="usersdetails" onclick="return showDetails()">
-                    <div id="userSerial"><%=rsPagination.getInt("userid")%></div>
-                    <div id="userEmail"><%=rsPagination.getString("email")%></div>
-                    <div id="userPassword"><%=rsPagination.getString("password")%></div>
+
+                <div id="usersdetails" onclick="return showDetails()">    
+                    <div id="userSerial"><%=rsPagination.getInt("userid")%>
+                        <input type="hidden" id="userSerialValue" value="<%=rsPagination.getInt("userid")%>"  /> 
+                    </div>
+                    <div id="userEmail"><%=rsPagination.getString("email")%>
+                        <input type="hidden" id="userEmailValue" value="<%=rsPagination.getString("email")%>"  /> 
+                    </div>
+                    <div id="userPassword"><%=rsPagination.getString("password")%>
+                        <input type="hidden" id="userPasswordValue" value="<%=rsPagination.getString("password")%>"  /> 
+                    </div>
                 </div>
                 <%
                     }
@@ -200,8 +223,9 @@
     <div id="verticalSeperator"></div>
     <div id="banUser">
         <div id="allDetails">
-            Hello
-
+            View a user
+            <%  
+            %>
         </div>
     </div>
     <div id="horizontalSeperator"></div>

@@ -224,3 +224,161 @@ Feb 19, 2012 1:18:49 PM org.apache.catalina.core.ApplicationContext log
 INFO: Manager: list: Listing contexts for virtual host 'localhost'
 Feb 19, 2012 1:18:49 PM org.apache.catalina.core.ApplicationContext log
 INFO: Manager: restart: Reloading web application at '/'
+Feb 19, 2012 8:58:39 PM org.apache.catalina.core.ApplicationContext log
+INFO: Manager: init: Associated with Deployer 'Catalina:type=Deployer,host=localhost'
+Feb 19, 2012 8:58:39 PM org.apache.catalina.core.ApplicationContext log
+INFO: Manager: init: Global resources are available
+Feb 19, 2012 8:58:39 PM org.apache.catalina.core.ApplicationContext log
+INFO: Manager: list: Listing contexts for virtual host 'localhost'
+Feb 19, 2012 8:58:39 PM org.apache.catalina.core.ApplicationContext log
+INFO: Manager: list: Listing contexts for virtual host 'localhost'
+Feb 19, 2012 8:58:40 PM org.apache.catalina.core.ApplicationContext log
+INFO: Manager: undeploy: Undeploying web application at '/'
+Feb 19, 2012 8:58:41 PM org.apache.catalina.core.ApplicationContext log
+INFO: Manager: install: Installing context configuration at 'file:/tmp/context2105864541285008500.xml'
+Feb 19, 2012 8:58:41 PM org.apache.catalina.core.ApplicationContext log
+INFO: Manager: start: Starting web application at '/'
+Feb 19, 2012 8:59:07 PM org.apache.catalina.core.ApplicationContext log
+INFO: Manager: list: Listing contexts for virtual host 'localhost'
+Feb 19, 2012 8:59:07 PM org.apache.catalina.core.ApplicationContext log
+INFO: Manager: undeploy: Undeploying web application at '/'
+Feb 19, 2012 9:00:20 PM org.apache.catalina.core.ApplicationContext log
+INFO: Manager: list: Listing contexts for virtual host 'localhost'
+Feb 19, 2012 9:00:20 PM org.apache.catalina.core.ApplicationContext log
+INFO: Manager: list: Listing contexts for virtual host 'localhost'
+Feb 19, 2012 9:00:20 PM org.apache.catalina.core.ApplicationContext log
+INFO: Manager: install: Installing context configuration at 'file:/tmp/context1133916895796103282.xml'
+Feb 19, 2012 9:00:21 PM org.apache.catalina.core.ApplicationContext log
+INFO: Manager: start: Starting web application at '/'
+Feb 19, 2012 9:00:29 PM org.apache.catalina.core.ApplicationContext log
+INFO: Manager: list: Listing contexts for virtual host 'localhost'
+Feb 19, 2012 9:00:29 PM org.apache.catalina.core.ApplicationContext log
+INFO: Manager: restart: Reloading web application at '/'
+Feb 19, 2012 9:00:39 PM org.apache.catalina.core.ApplicationContext log
+INFO: Manager: list: Listing contexts for virtual host 'localhost'
+Feb 19, 2012 9:00:39 PM org.apache.catalina.core.ApplicationContext log
+INFO: Manager: restart: Reloading web application at '/'
+Feb 19, 2012 9:01:11 PM org.apache.catalina.core.ApplicationContext log
+INFO: Manager: list: Listing contexts for virtual host 'localhost'
+Feb 19, 2012 9:02:53 PM org.apache.catalina.core.ApplicationContext log
+INFO: Manager: list: Listing contexts for virtual host 'localhost'
+Feb 19, 2012 9:03:13 PM org.apache.catalina.core.ApplicationContext log
+INFO: Manager: list: Listing contexts for virtual host 'localhost'
+Feb 19, 2012 9:03:21 PM org.apache.catalina.core.ApplicationContext log
+INFO: Manager: list: Listing contexts for virtual host 'localhost'
+Feb 19, 2012 9:05:25 PM org.apache.catalina.core.ApplicationContext log
+INFO: Manager: list: Listing contexts for virtual host 'localhost'
+Feb 19, 2012 9:05:25 PM org.apache.catalina.core.ApplicationContext log
+INFO: Manager: restart: Reloading web application at '/'
+Feb 19, 2012 9:05:59 PM org.apache.catalina.core.ApplicationContext log
+INFO: Manager: list: Listing contexts for virtual host 'localhost'
+Feb 19, 2012 9:05:59 PM org.apache.catalina.core.ApplicationContext log
+INFO: Manager: restart: Reloading web application at '/'
+Feb 19, 2012 9:06:37 PM org.apache.catalina.core.ApplicationContext log
+INFO: Manager: list: Listing contexts for virtual host 'localhost'
+Feb 19, 2012 9:06:37 PM org.apache.catalina.core.ApplicationContext log
+INFO: Manager: restart: Reloading web application at '/'
+Feb 19, 2012 9:07:07 PM org.apache.catalina.core.ApplicationContext log
+INFO: Manager: list: Listing contexts for virtual host 'localhost'
+Feb 19, 2012 9:07:07 PM org.apache.catalina.core.ApplicationContext log
+INFO: Manager: restart: Reloading web application at '/'
+Feb 19, 2012 9:10:46 PM org.apache.catalina.core.ApplicationContext log
+INFO: Manager: list: Listing contexts for virtual host 'localhost'
+Feb 19, 2012 9:10:46 PM org.apache.catalina.core.ApplicationContext log
+INFO: Manager: restart: Reloading web application at '/'
+Feb 19, 2012 9:12:05 PM org.apache.catalina.core.ApplicationContext log
+INFO: Manager: list: Listing contexts for virtual host 'localhost'
+Feb 19, 2012 9:12:05 PM org.apache.catalina.core.ApplicationContext log
+INFO: Manager: restart: Reloading web application at '/'
+Feb 19, 2012 9:12:37 PM org.apache.catalina.core.ApplicationContext log
+INFO: Manager: list: Listing contexts for virtual host 'localhost'
+Feb 19, 2012 9:12:37 PM org.apache.catalina.core.ApplicationContext log
+INFO: Manager: restart: Reloading web application at '/'
+Feb 19, 2012 9:12:51 PM org.apache.catalina.core.ApplicationContext log
+INFO: Manager: list: Listing contexts for virtual host 'localhost'
+Feb 19, 2012 9:12:51 PM org.apache.catalina.core.ApplicationContext log
+INFO: Manager: restart: Reloading web application at '/'
+Feb 19, 2012 9:12:59 PM org.apache.catalina.core.ApplicationContext log
+INFO: Manager: list: Listing contexts for virtual host 'localhost'
+Feb 19, 2012 9:12:59 PM org.apache.catalina.core.ApplicationContext log
+INFO: Manager: restart: Reloading web application at '/'
+Feb 19, 2012 9:29:00 PM org.apache.catalina.core.ApplicationContext log
+INFO: Manager: list: Listing contexts for virtual host 'localhost'
+Feb 19, 2012 9:29:00 PM org.apache.catalina.core.ApplicationContext log
+INFO: Manager: restart: Reloading web application at '/'
+Feb 19, 2012 9:30:39 PM org.apache.catalina.core.ApplicationContext log
+INFO: Manager: list: Listing contexts for virtual host 'localhost'
+Feb 19, 2012 9:30:39 PM org.apache.catalina.core.ApplicationContext log
+INFO: Manager: restart: Reloading web application at '/'
+Feb 19, 2012 9:31:17 PM org.apache.catalina.core.ApplicationContext log
+INFO: Manager: list: Listing contexts for virtual host 'localhost'
+Feb 19, 2012 9:31:17 PM org.apache.catalina.core.ApplicationContext log
+INFO: Manager: restart: Reloading web application at '/'
+Feb 19, 2012 9:31:55 PM org.apache.catalina.core.ApplicationContext log
+INFO: Manager: list: Listing contexts for virtual host 'localhost'
+Feb 19, 2012 9:31:56 PM org.apache.catalina.core.ApplicationContext log
+INFO: Manager: restart: Reloading web application at '/'
+Feb 19, 2012 9:32:14 PM org.apache.catalina.core.ApplicationContext log
+INFO: Manager: list: Listing contexts for virtual host 'localhost'
+Feb 19, 2012 9:32:15 PM org.apache.catalina.core.ApplicationContext log
+INFO: Manager: restart: Reloading web application at '/'
+Feb 19, 2012 9:32:30 PM org.apache.catalina.core.ApplicationContext log
+INFO: Manager: list: Listing contexts for virtual host 'localhost'
+Feb 19, 2012 9:32:30 PM org.apache.catalina.core.ApplicationContext log
+INFO: Manager: restart: Reloading web application at '/'
+Feb 19, 2012 9:33:58 PM org.apache.catalina.core.ApplicationContext log
+INFO: Manager: list: Listing contexts for virtual host 'localhost'
+Feb 19, 2012 9:36:00 PM org.apache.catalina.core.ApplicationContext log
+INFO: Manager: list: Listing contexts for virtual host 'localhost'
+Feb 19, 2012 9:37:21 PM org.apache.catalina.core.ApplicationContext log
+INFO: Manager: list: Listing contexts for virtual host 'localhost'
+Feb 19, 2012 9:37:21 PM org.apache.catalina.core.ApplicationContext log
+INFO: Manager: restart: Reloading web application at '/'
+Feb 19, 2012 9:38:26 PM org.apache.catalina.core.ApplicationContext log
+INFO: Manager: list: Listing contexts for virtual host 'localhost'
+Feb 19, 2012 9:38:26 PM org.apache.catalina.core.ApplicationContext log
+INFO: Manager: restart: Reloading web application at '/'
+Feb 19, 2012 9:38:58 PM org.apache.catalina.core.ApplicationContext log
+INFO: Manager: list: Listing contexts for virtual host 'localhost'
+Feb 19, 2012 9:38:59 PM org.apache.catalina.core.ApplicationContext log
+INFO: Manager: restart: Reloading web application at '/'
+Feb 19, 2012 9:40:15 PM org.apache.catalina.core.ApplicationContext log
+INFO: Manager: list: Listing contexts for virtual host 'localhost'
+Feb 19, 2012 9:40:15 PM org.apache.catalina.core.ApplicationContext log
+INFO: Manager: restart: Reloading web application at '/'
+Feb 19, 2012 9:40:32 PM org.apache.catalina.core.ApplicationContext log
+INFO: Manager: list: Listing contexts for virtual host 'localhost'
+Feb 19, 2012 9:40:32 PM org.apache.catalina.core.ApplicationContext log
+INFO: Manager: restart: Reloading web application at '/'
+Feb 19, 2012 9:44:48 PM org.apache.catalina.core.ApplicationContext log
+INFO: Manager: list: Listing contexts for virtual host 'localhost'
+Feb 19, 2012 9:44:48 PM org.apache.catalina.core.ApplicationContext log
+INFO: Manager: restart: Reloading web application at '/'
+Feb 19, 2012 9:44:56 PM org.apache.catalina.core.ApplicationContext log
+INFO: Manager: list: Listing contexts for virtual host 'localhost'
+Feb 19, 2012 9:44:56 PM org.apache.catalina.core.ApplicationContext log
+INFO: Manager: restart: Reloading web application at '/'
+Feb 19, 2012 9:48:31 PM org.apache.catalina.core.ApplicationContext log
+INFO: Manager: list: Listing contexts for virtual host 'localhost'
+Feb 19, 2012 9:48:42 PM org.apache.catalina.core.ApplicationContext log
+INFO: Manager: list: Listing contexts for virtual host 'localhost'
+Feb 19, 2012 9:49:29 PM org.apache.catalina.core.ApplicationContext log
+INFO: Manager: list: Listing contexts for virtual host 'localhost'
+Feb 19, 2012 10:00:30 PM org.apache.catalina.core.ApplicationContext log
+INFO: Manager: list: Listing contexts for virtual host 'localhost'
+Feb 19, 2012 10:06:37 PM org.apache.catalina.core.ApplicationContext log
+INFO: Manager: list: Listing contexts for virtual host 'localhost'
+Feb 19, 2012 10:06:37 PM org.apache.catalina.core.ApplicationContext log
+INFO: Manager: restart: Reloading web application at '/'
+Feb 19, 2012 10:06:53 PM org.apache.catalina.core.ApplicationContext log
+INFO: Manager: list: Listing contexts for virtual host 'localhost'
+Feb 19, 2012 10:06:53 PM org.apache.catalina.core.ApplicationContext log
+INFO: Manager: restart: Reloading web application at '/'
+Feb 19, 2012 10:07:06 PM org.apache.catalina.core.ApplicationContext log
+INFO: Manager: list: Listing contexts for virtual host 'localhost'
+Feb 19, 2012 10:07:06 PM org.apache.catalina.core.ApplicationContext log
+INFO: Manager: restart: Reloading web application at '/'
+Feb 19, 2012 10:07:31 PM org.apache.catalina.core.ApplicationContext log
+INFO: Manager: list: Listing contexts for virtual host 'localhost'
+Feb 19, 2012 10:07:32 PM org.apache.catalina.core.ApplicationContext log
+INFO: Manager: restart: Reloading web application at '/'

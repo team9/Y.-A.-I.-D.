@@ -12,6 +12,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.sql.*;
 import java.io.PrintWriter;
+
 /**
  *
  * @author TTT
@@ -40,7 +41,7 @@ public class ViewAllUsers extends HttpServlet {
             out.println("</body>");
             out.println("</html>");
              */
-        } finally {            
+        } finally {
             out.close();
         }
     }
@@ -69,24 +70,23 @@ public class ViewAllUsers extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        PreparedStatement preparedStatement = null;
-        ResultSet resultSet = null;
-        Connection connect = null;
-        PrintWriter pw = null;
-        response.setContentType("text/html;charset=UTF-8");
-        pw = response.getWriter();
+
         response.setContentType("text/html");
         try {
-            connect = DbConnection.getDbConnection();
-            preparedStatement = connect.prepareStatement("select * from yaid.users");        
-            resultSet = preparedStatement.executeQuery();
-            System.out.println("\t Query : " + preparedStatement);
-            pw.println("<table>");
-            while (resultSet.next()) {
-                pw.println("<tr><td>" + resultSet.getString("userid") + "</td><td>" + resultSet.getString("email") + "</td>");
-               
+            System.out.println("qwert");
+            String operation = request.getParameter("operation");
+            String userid = request.getParameter("userid");
+             System.out.println("Operation : " + operation);
+             System.out.println("UserID : " + userid);
+            if (operation.equals("showSingleUser")) {
+                System.out.println("qwerty");
+                selectSingleUser(userid);
+
             }
-              pw.println("</table>");
+
+
+//            System.out.println("\t Query : " + preparedStatement);
+
         } catch (Exception e) {
             e.printStackTrace();
             System.out.println("ViewAllUsers Error : " + e);
@@ -103,5 +103,40 @@ public class ViewAllUsers extends HttpServlet {
      * Returns a short description of the servlet.
      * @return a String containing servlet description
      */
-  
+    public void selectSingleUser(String userid) {
+       
+ResultSet resultSet = null;
+
+        PreparedStatement preparedStatement = null;
+        Connection connect = null;
+         System.out.println("UserID2 : " + Integer.parseInt(userid));
+        try { 
+            connect = DbConnection.getDbConnection();
+            preparedStatement = connect.prepareStatement("select * from yaid.users where userid=?");
+            preparedStatement.setInt(1, Integer.parseInt(userid));
+            resultSet = preparedStatement.executeQuery();
+            //System.out.println("UserID3 : " + user.getInt("userid"));
+            showUserDetails(resultSet);
+        } catch (Exception e) {
+            System.out.println("View Single User Error : " + e);
+        } finally {
+            
+        }
+    }
+
+    public void showUserDetails(ResultSet user) {
+        try {
+           
+            PrintWriter pw = null;
+            pw.println("<div>");
+            pw.println("<label> User ID : </label>" + user.getInt("userid"));
+            pw.println("</br>");
+            pw.println("<label> Email : </label>" + user.getString("email"));
+            pw.println("</br>");
+            pw.println("<label> Password : </label>" + user.getString("password"));
+            pw.println("</br>");
+        } catch (Exception e) {
+            System.out.println("Show User Details Error : " + e);
+        }
+    }
 }

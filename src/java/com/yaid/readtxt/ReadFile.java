@@ -12,7 +12,9 @@ import java.io.*;
  */
 public class ReadFile {
 
-    public static void read() {
+    public static String text = "";
+
+    public static String read() {
         try {
             // Open the file that is the first
             // command line parameter
@@ -25,11 +27,14 @@ public class ReadFile {
             while ((strLine = br.readLine()) != null) {
                 // Print the content on the console
                 System.out.println(strLine);
+                text = text.concat(strLine);
+                text = text.concat("<br>");
             }
             //Close the input stream
             in.close();
         } catch (Exception e) {//Catch exception if any
             System.err.println("Error: " + e.getMessage());
         }
+        return text;
     }
 }
