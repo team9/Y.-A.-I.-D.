@@ -5,6 +5,8 @@
 package com.yaid.files;
 
 import java.io.*;
+import java.util.zip.ZipEntry;
+import java.util.zip.ZipOutputStream;
 import javax.servlet.ServletContext;
 import javax.servlet.ServletException;
 import javax.servlet.ServletOutputStream;
@@ -30,42 +32,19 @@ public class DownloadFile extends HttpServlet {
      */
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        response.setContentType("text/html;charset=UTF-8");
-        ServletOutputStream op = response.getOutputStream();
-        try {
-            /*
-             * TODO output your page here. You may use following sample code.
-             */
-            String filename = "./UserData" + request.getParameter("id");
-            File f = new File(filename);
-            int length = 0;
 
-            ServletContext context = getServletConfig().getServletContext();
-            String mimetype = context.getMimeType(filename);
+        /*
+         * TODO output your page here. You may use following sample code.
+         */
+        String filename = "./UserData" + request.getParameter("id");
+        File f = new File(filename);
 
-            //
-            //  Set the response and go!
-            //
-            //
-            response.setContentType((mimetype != null) ? mimetype : "application/octet-stream");
-            response.setContentLength((int) f.length());
-            response.setHeader("Content-Disposition", "attachment; filename=\"" + f.getName() + "\"");
-
-            //
-            //  Stream to the requester.
-            //
-            byte[] bbuf = new byte[1024];
-            DataInputStream in = new DataInputStream(new FileInputStream(f));
-
-            while ((in != null) && ((length = in.read(bbuf)) != -1)) {
-                op.write(bbuf, 0, length);
-            }
-
-            in.close();
-        } finally {
-
-            op.flush();
-            op.close();
+        if (f.isDirectory()) {
+            f = zipFile(f);
+            downloadFile(f, request, response);
+            f.delete();
+        } else {
+            downloadFile(f, request, response);
         }
     }
 
@@ -109,4 +88,61 @@ public class DownloadFile extends HttpServlet {
     public String getServletInfo() {
         return "Short description";
     }// </editor-fold>
+
+    private File zipFile(File f) {
+        File outFolder = new File(f.getName() + ".zip");
+        try {
+            ZipOutputStream out = new ZipOutputStream(new BufferedOutputStream(new FileOutputStream(outFolder)));
+            BufferedInputStream in = null;
+            byte[] data = new byte[1000];
+            String files[] = f.list();
+            for (int i = 0; i < files.length; i++) {
+                in = new BufferedInputStream(new FileInputStream(f.getPath() + "/" + files[i]), 1000);
+                out.putNextEntry(new ZipEntry(files[i]));
+                int count;
+                while ((count = in.read(data, 0, 1000)) != -1) {
+                    out.write(data, 0, count);
+                }
+                out.closeEntry();
+            }
+            out.flush();
+            out.close();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        return outFolder;
+    }
+
+    private void downloadFile(File f, HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        response.setContentType("text/html;charset=UTF-8");
+        ServletOutputStream op = response.getOutputStream();
+        try {
+            int length = 0;
+
+            ServletContext context = getServletConfig().getServletContext();
+            String mimetype = context.getMimeType(f.getAbsolutePath());
+
+            //
+            //  Set the response and go!
+            response.setContentType((mimetype != null) ? mimetype : "application/octet-stream");
+            response.setContentLength((int) f.length());
+            response.setHeader("Content-Disposition", "attachment; filename=\"" + f.getName() + "\"");
+
+            //  Stream to the requester.
+            byte[] bbuf = new byte[1024];
+            DataInputStream in = new DataInputStream(new FileInputStream(f));
+
+            while ((in != null) && ((length = in.read(bbuf)) != -1)) {
+                op.write(bbuf, 0, length);
+            }
+
+            in.close();
+        } finally {
+
+            op.flush();
+            op.close();
+
+        }
+
+    }
 }

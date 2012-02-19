@@ -310,3 +310,21 @@ Feb 19, 2012 11:32:07 AM org.apache.catalina.core.StandardContext reload
 INFO: Reloading Context with name [] has started
 Feb 19, 2012 11:32:19 AM org.apache.catalina.core.StandardContext reload
 INFO: Reloading Context with name [] has started
+Feb 19, 2012 1:06:01 PM org.apache.catalina.core.StandardContext reload
+INFO: Reloading Context with name [] has started
+Feb 19, 2012 1:06:10 PM org.apache.catalina.core.StandardContext reload
+INFO: Reloading Context with name [] has started
+Feb 19, 2012 1:06:53 PM org.apache.catalina.core.StandardContext reload
+INFO: Reloading Context with name [] has started
+Feb 19, 2012 1:11:05 PM org.apache.catalina.core.StandardContext reload
+INFO: Reloading Context with name [] has started
+Feb 19, 2012 1:13:24 PM org.apache.catalina.core.StandardContext reload
+INFO: Reloading Context with name [] has started
+Feb 19, 2012 1:14:12 PM org.apache.catalina.core.StandardContext reload
+INFO: Reloading Context with name [] has started
+Feb 19, 2012 1:15:22 PM org.apache.catalina.core.StandardContext reload
+INFO: Reloading Context with name [] has started
+Feb 19, 2012 1:16:23 PM org.apache.catalina.core.StandardContext reload
+INFO: Reloading Context with name [] has started
+Feb 19, 2012 1:18:49 PM org.apache.catalina.core.StandardContext reload
+INFO: Reloading Context with name [] has started
