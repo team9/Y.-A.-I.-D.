@@ -44,6 +44,10 @@
         <servlet-name>DownloadFile</servlet-name>
         <servlet-class>com.yaid.files.DownloadFile</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>DeleteUser</servlet-name>
+        <servlet-class>com.yaid.administrator.DeleteUser</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>Registration</servlet-name>
         <url-pattern>/Registration</url-pattern>
@@ -87,6 +91,10 @@
     <servlet-mapping>
         <servlet-name>DownloadFile</servlet-name>
         <url-pattern>/DownloadFile</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>DeleteUser</servlet-name>
+        <url-pattern>/DeleteUser</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>

@@ -3,32 +3,41 @@
 <%@ page import="java.sql.ResultSet" %>
 <%@ page import="java.sql.Connection" %>
 <%@ page import="java.sql.DriverManager" %>
- <script src="JQUERY/jquery.js" type="text/javascript"></script>
+<script src="JQUERY/jquery.js" type="text/javascript"></script>
 <link rel="stylesheet" type="text/css" href="CSS/Administrator/administratorViewUsers.css" />
 <script type="text/javascript">
     
-    $(document).ready(function() {
-        
-             $("#SelectUser").click(function(){
-                        $.ajax({
-                    
-                            type: 'POST',
-                            url: "ViewAllUsers",								 
-                            data: "operation=showSingleUser&userid=40",
-                            success: function (){
-                                
-                            }
-                        });
-                    })
-    });
+    //    $(document).ready(function() {
+    //        
+    //        $("#SelectUser").click(function(){
+    //            $.ajax({
+    //                    
+    //                type: 'POST',
+    //                url: "ViewAllUsers",								 
+    //                data: "operation=showSingleUser&userid=40",
+    //                success: function (){
+    //                                
+    //                }
+    //            });
+    //        })
+    //    });
                 
-    function showDetails() {
-        var serial = document.getElementById('userSerialValue').value;
-        var email =  document.getElementById('userEmailValue').value;
-        var password =  document.getElementById('userPasswordValue').value;
-        alert("HAi : " + serial + "   " +email +"   "+ password);
-        //alert("hai");
+    //    function showDetails() {
+    //        var serial = document.getElementById('userSerialValue').value;
+    //        var email =  document.getElementById('userEmailValue').value;
+    //        var password =  document.getElementById('userPasswordValue').value;
+    //        alert("HAi : " + serial + "   " +email +"   "+ password);
+    //        //alert("hai");
+    //    }
+    
+    
+    function validateTarget() {
+        if($(document).getElementById('targetid').value=="0") {
+            alert("qw");
+            return false;
+        }
     }
+        
 </script>
 
 <%!
@@ -99,7 +108,7 @@
 </head>
 <body>
     <div><jsp:include page="administratorPanel.jsp" /></div>
-
+    <div id="viewUsersLeft">
     <div id="viewList">
         <form name="frm">
             <input type="hidden" name="iPageNo" value="<%=iPageNo%>">
@@ -195,6 +204,38 @@
 
         </div>
     </div>
+</div>
+
+
+    <div id="verticalSeperator"></div>
+    <div id="banUser">
+    
+            <div id="allDetails">
+                Select a user
+                <%  psPagination = conn.prepareStatement("SELECT * FROM YAID.USERS");
+                    rsPagination = psPagination.executeQuery();
+                %>
+                <form action="DeleteUser" method="post" id="deleteUser"  onsubmit="return validateTarget()">
+                    <select name="targetid">
+                        <option selected="selected" value="0">Please pick a user</option>
+                        <% while (rsPagination.next()) {%>
+                        <option value="<%=rsPagination.getInt("userid")%>"><%=rsPagination.getInt("userid")%>) <%=rsPagination.getString("email")%></option>
+                        <%
+                            }
+                        %>
+                    </select>
+               
+                    <input type="submit" value="Bar this user" />
+                </form>
+
+
+
+
+            </div>
+       
+    </div>
+    <div id="horizontalSeperator"></div>
+
 
 
     <%
@@ -220,12 +261,3 @@
             e.printStackTrace();
         }
     %>
-    <div id="verticalSeperator"></div>
-    <div id="banUser">
-        <div id="allDetails">
-            View a user
-            <%  
-            %>
-        </div>
-    </div>
-    <div id="horizontalSeperator"></div>

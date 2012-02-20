@@ -10,8 +10,14 @@
    TODO customize this sample style
    Syntax recommendation http://www.w3.org/TR/REC-CSS2/
 */
+#viewUsersLeft {
+    float: left;
+    height: 600px;
+}
 #viewList {
     float: left;
+ height: 500px;
+ background-color: #006666;
     
 }
 
@@ -31,7 +37,7 @@
     float: left;
 }
 #headingPassword {
-    width: 300px;
+    width: 200px;
     position: relative;
     float: left;
 }
@@ -57,15 +63,17 @@
 }
 
 #userPassword { 
-    width: 300px;
+    width: 200px;
     position: relative;
     float: left;
 }
 
 #pageNavigation {
-    position: absolute;
+    position: relative;
     padding: 20px;
-    bottom: 20px;
+    bottom: 0px;
+    height: 50px;
+  
 }
 
 #verticalSeperator {
@@ -83,11 +91,17 @@
     position: relative;
     vertical-align: middle;
     float: left;
+    height: 600px;
+    
 }
 
 #allDetails {
     position: relative;
     vertical-align: middle;
+    height: 550px;
+    width: 500px;
+ 
+    background-color: #9999ff;
 }
 
 #horizontalSeperator {

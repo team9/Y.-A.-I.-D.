@@ -53,10 +53,20 @@ public class FileOperationHandler extends HttpServlet {
         String state = null;
         File dir = new File(startPath + path);
         File newfile = new File(startPath + newName);
+        String type;
         if (dir.renameTo(newfile)) {
-            jsondata = "{\"status\":\"success\"}";
-        } else {
-            jsondata = "{\"status\":\"faild\"}";
+            if (newfile.isDirectory()) {
+                type = "\"rel\":\"folder\",\"img\":\"images/icons/gnome-fs-directory.png\"";
+            } else if (newfile.getName().endsWith(".jpg") || newfile.getName().endsWith(".png")) {
+                type = "\"rel\":\"image\",\"img\":\"ImageBytes?id=" + path + newfile.getName() + "\"";
+            } else if (newfile.getName().endsWith(".ogg") || newfile.getName().endsWith(".wmv")
+                    || newfile.getName().endsWith(".avi") || newfile.getName().endsWith(".mov")) {
+                type = "\"rel\":\"vedio\",\"img\":\"images/icons/video.png\"";
+            } else {
+                type = "\"rel\":\"file\",\"img\":\"images/icons/ascii.png\"";
+            }
+            jsondata = "{\"attr\":{\"id\":\"file_" + path + newfile.getName() + "\"," + type + "},\"data\":\"" + newfile.getName() + "\",\"state\":\"" + state + "\"}";
+            //chld[i].isDirectory();
         }
         System.out.println(jsondata + " " + dir + " " + newfile);
         return jsondata;
@@ -222,6 +232,18 @@ public class FileOperationHandler extends HttpServlet {
 
     }
 
+    public boolean deleteFolder(File resource) throws IOException {
+
+        if (resource.isDirectory()) {
+            File[] childFiles = resource.listFiles();
+            for (File child : childFiles) {
+                deleteFolder(child);
+            }
+
+        }
+        return resource.delete();
+    }
+
     /**
      * Processes requests for both HTTP
      * <code>GET</code> and
@@ -238,13 +260,18 @@ public class FileOperationHandler extends HttpServlet {
         PrintWriter out = response.getWriter();
         try {
             String operation = request.getParameter("operation");
-            String filePath = request.getParameter("id").replace("%20", " ");
-            String fileName = request.getParameter("newname").replace("%20", " ");
+            String filePath = request.getParameter("id");
+            String fileName = request.getParameter("newname");
             String fileContent = request.getParameter("content");
             //filePath = (filePath.equals("1") ? "/" : filePath);
             Map params = request.getParameterMap();
             Iterator i = params.keySet().iterator();
-
+            if (filePath != null) {
+                filePath = filePath.replace("%20", " ");
+            }
+            if (fileName != null) {
+                fileName = fileName.replace("%20", " ");
+            }
             while (i.hasNext()) {
                 String key = (String) i.next();
                 String value = ((String[]) params.get(key))[ 0];
@@ -265,8 +292,14 @@ public class FileOperationHandler extends HttpServlet {
                 out.print(renameFile(filePath, fileName));
             } else if (operation.equals("copy") && fileName != null) {
                 File src = new File(startPath + filePath);
-                File dest = new File(startPath + fileName+"/"+src.getName());
+                File dest = new File(startPath + fileName + "/" + src.getName());
                 copyFolder(src, dest);
+                out.print(getAllFiles(fileName));
+            } else if (operation.equals("cut") && fileName != null) {
+                File src = new File(startPath + filePath);
+                File dest = new File(startPath + fileName + "/" + src.getName());
+                copyFolder(src, dest);
+                deleteFolder(src);
                 out.print(getAllFiles(fileName));
             }
 

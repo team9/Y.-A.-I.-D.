@@ -491,3 +491,9 @@ Feb 19, 2012 10:07:06 PM org.apache.catalina.core.StandardContext reload
 INFO: Reloading Context with name [] has started
 Feb 19, 2012 10:07:32 PM org.apache.catalina.core.StandardContext reload
 INFO: Reloading Context with name [] has started
+Feb 19, 2012 10:17:15 PM org.apache.coyote.http11.Http11Protocol pause
+INFO: Pausing Coyote HTTP/1.1 on http-8080
+Feb 19, 2012 10:17:16 PM org.apache.catalina.core.StandardService stop
+INFO: Stopping service Catalina
+Feb 19, 2012 10:17:17 PM org.apache.coyote.http11.Http11Protocol destroy
+INFO: Stopping Coyote HTTP/1.1 on http-8080

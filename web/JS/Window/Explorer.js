@@ -159,7 +159,26 @@ function Explorer(div_id,path){
 }
 
 Explorer.explorerData={};
+//(/^He/).test('Hello world')
 
+Explorer.prototype.recursivelyRem = function(path){
+    //name=$(path).children( "div" ).children( "div" ).html();
+    //console.log(path.substring(0,path.lastIndexOf("/")))
+    //console.log(path.lastIndexOf("/"),path);
+    parnt=path.substring(0,path.lastIndexOf("/"));
+    //delete
+    dat=Explorer.explorerData[parnt]["contents"];
+    console.log("file_"+path);
+    for(i=0;i<dat.length;i++){
+        console.log(dat[i]["attr"]["id"]);
+        if(dat[i]["attr"]["id"]=="file_"+path){
+            dat.splice(i,1);
+            break;
+        }        
+    }
+    return parnt;
+
+}
 Explorer.prototype.makeFolderElm = function(path){
     str='';
     parrent=this.path;
@@ -271,8 +290,11 @@ Explorer.prototype.fileRename = function (oldFile){
                 data: "operation=rename_files&id=" +  encodeURI(path)+"&newname="+encodeURI(newNamePath),
                 success: function (htmldir){
                     console.log(htmldir);
-                    if(htmldir['status']=="success"){
+                    if(htmldir!=null){
                         id.html(newName);
+                        parnt=explore.recursivelyRem(path);
+                        Explorer.explorerData[parnt]["contents"].push(htmldir);
+                        
                     }else {
                         id.html(val);
                     }
@@ -353,7 +375,9 @@ Explorer.prototype.pasteFiles = function (toLoc){
         explore.loadFolderElm(Explorer.explorerData[toLoc]["contents"],toLoc);
     };
     var cutPaste = function(htmldir){
-        console.log("cut",htmldir);
+        //console.log("cut",htmldir);
+        Explorer.explorerData[toLoc]["contents"]=htmldir;
+        explore.loadFolderElm(Explorer.explorerData[toLoc]["contents"],toLoc);
     };
     var pasteReq=function(elm,operation){
         var dataToSend={};
@@ -374,6 +398,7 @@ Explorer.prototype.pasteFiles = function (toLoc){
                 }
                 if(operation==='cut'){
                     cutPaste(htmldir);
+                    explore.recursivelyRem(dataToSend["id"])
                 }
                 
             },
