@@ -12,7 +12,7 @@ import java.io.*;
  */
 public class DeserializeUser {
 
-    public User deserialize(String uid) {
+    public static User deserialize(String uid) {
         User uu = null;
         try {
             FileInputStream fileIn = new FileInputStream("./UserData/" + uid + "/Settings/" + uid + ".ser");

@@ -12,14 +12,11 @@ import java.io.*;
  */
 public class WriteFile {
 
-    public String writetext = "";
-
-    public void write() throws IOException {
+    public void write(String path, String text) throws IOException {
         Writer output = null;
-        File file = new File("./UserData/manu/Home/hello.txt");
+        File file = new File(path);
         output = new BufferedWriter(new FileWriter(file));
-        output.write(writetext);
+        output.write(text);
         output.close();
-        System.out.println("Your file has been written");
     }
 }

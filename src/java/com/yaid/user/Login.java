@@ -95,7 +95,11 @@ public class Login extends HttpServlet {
                     session.setAttribute("userID", userid);
                     String temp = (String) session.getAttribute("userID");
                     System.out.println("session : " + temp);
-                    response.sendRedirect("desktop.jsp");
+                    //if (temp == "admin") {
+                    //    response.sendRedirect("administratorViewUsers.jsp");
+                    //} else {
+                        response.sendRedirect("desktop.jsp");
+                    //}
                 } else {
                     pw.println("<script type=\"text/javascript\">");
                     pw.println("alert('Invalid user ID and password !!!');");

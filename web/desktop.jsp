@@ -1,11 +1,11 @@
+<%@page import="com.yaid.ser.DeserializeUser"%>
 <%@page import="com.yaid.ser.User" %>
 <%
             String uid = (String) session.getAttribute("userID");
             System.out.println("The Session user in jsp is : " + uid);
-            User u = new User();
             User objreturn = null;
-            objreturn = u.loginTime(uid);
-            //System.out.println("The wallpath is :"+objreturn.wallpaper_path);
+            objreturn = DeserializeUser.deserialize(uid);
+            System.out.println("The wallpath is :" + objreturn.wallpaper_path);
 %>
 
 <html>
@@ -15,16 +15,25 @@
         <script src="JQUERY/jquery.js" type="text/javascript"></script>
         <script src="JQUERY/jquery.ui.js" type="text/javascript"></script>
         <script src="JQUERY/jquery.contextMenu.js" type="text/javascript"></script>
+        <script src="JQUERY/jquery.jscroll.min.js"></script>
 
         <script type="text/javascript" src="JS/startMenu/jquery.metadata.js"></script>
         <script type="text/javascript" src="JS/startMenu/jquery.hoverIntent.js"></script>
         <script type="text/javascript" src="JS/startMenu/mbMenu.js"></script>
         <script type="text/javascript" src="JS/startMenu/startmenu.js"></script>
         <script type="text/javascript" src="JS/Window/Window.js"></script>
+        <script type="text/javascript" src="JS/Window/YAIDContext.js"></script>
+        <script type="text/javascript" src="JS/Window/Explorer.js"></script>
+        <script type="text/javascript" src="JS/jquery.jstree.js"></script>
+        <script type="text/javascript" src="JS/ImageViewer/ImageViewer.js"></script>
+        <script type="text/javascript" src="JS/MediaPlayer.js"></script>
+        <!--        <script type="text/javascript" src="JS/jquery.metadata.js"></script> -->
+        <script type="text/javascript" src="JS/YAIDUpload.js"></script>
+        <script type="text/javascript" src="JS/YAIDNotpad.js"></script>
         <script type="text/javascript" src="JS/Clock/jquery.clock.js" ></script>
         <script type="text/javascript" src="JS/Clock/clock.js" ></script>
         <script type="text/javascript" src="JS/Calendar/calendar.js" ></script>
-        <script type="text/javascript" src="JS/Desktop Icons/icons.js" ></script>
+        <script type="text/javascript" src="JS/DesktopIcons/icons.js" ></script>
 
         <link rel="stylesheet" href="CSS/jquery.contextMenu.css" type="text/css" />
         <link rel="stylesheet" href="CSS/ui-lightness/jquery-ui-1.8.16.custom.css" type="text/css" />
@@ -32,7 +41,13 @@
         <link rel="stylesheet" type="text/css" href="CSS/startmenu/startmenu.css" media="screen" />
         <link rel="stylesheet" type="text/css" href="CSS/Window/window.css"/>
         <link rel="stylesheet" type="text/css" href="CSS/Desktop Icons/icons.css"/>
-
+        <link rel="stylesheet" type="text/css" href="CSS/Window/explorer.css"/>
+        <link rel="stylesheet" href="CSS/jquery.fileupload-ui.css">
+        <style>
+            body{ 
+                font: 70.5% "Trebuchet MS", sans-serif; 			
+            }
+        </style>
         <script type="text/javascript">
 
             $(document).ready(function() {

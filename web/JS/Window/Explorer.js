@@ -3,55 +3,56 @@
  * and open the template in the editor.
  */
 
-function Explorer(div_id,path){
+function Explorer(path){
     //$(document).ready(function() {
-    this.div_id=div_id;
-    this.window=$('#windowe_content'+ div_id);
+    var window1=Window({'option':{'title':'Explorer Test',height:300,width:750},'content':"","ajax":false});
+    this.div_id=$(window1).attr("id");
+    this.window=$('#windowe_content'+ this.div_id);
     
     this.path=path;
     this.selected=[];
     this.clipBoard={};
     //console.log(Explorer.explorerData,Explorer);
     
-    htmlStr="<div class=\"TreeView\" id=\"TreeView"+ div_id +"\"></div>"+
+    htmlStr="<div class=\"TreeView\" id=\"TreeView"+ this.div_id +"\"></div>"+
     "<div>"+
-    "<span class=\"ui-widget-header ui-corner-all toolbar\" id=\"toolBar"+ div_id +"\">"+
-    "<button id=\"home"+ div_id +"\">Home</button>"+
-    "<input type=\"text\" class=\"path_text\" id=\"path_text"+ div_id +"\" />"+
-    "<button id=\"back"+ div_id +"\">Back</button>"+
-    "<button id=\"new_file"+ div_id +"\">New File</button>"+
-    "<button id=\"new_folder"+ div_id +"\">New Folder</button>"+
-    "<button id=\"delete"+ div_id +"\">Delete</button>"+
-    "<button id=\"cut"+ div_id +"\">Cut</button>"+
-    "<button id=\"copy"+ div_id +"\">Copy</button>"+
-    "<button id=\"paste"+ div_id +"\">Paste</button>"+
-    "<button id=\"upload"+ div_id +"\">Upload</button>"+
+    "<span class=\"ui-widget-header ui-corner-all toolbar\" id=\"toolBar"+ this.div_id +"\">"+
+    "<button id=\"home"+ this.div_id +"\">Home</button>"+
+    "<input type=\"text\" class=\"path_text\" id=\"path_text"+ this.div_id +"\" />"+
+    "<button id=\"back"+ this.div_id +"\">Back</button>"+
+    "<button id=\"new_file"+ this.div_id +"\">New File</button>"+
+    "<button id=\"new_folder"+ this.div_id +"\">New Folder</button>"+
+    "<button id=\"delete"+ this.div_id +"\">Delete</button>"+
+    "<button id=\"cut"+ this.div_id +"\">Cut</button>"+
+    "<button id=\"copy"+ this.div_id +"\">Copy</button>"+
+    "<button id=\"paste"+ this.div_id +"\">Paste</button>"+
+    "<button id=\"upload"+ this.div_id +"\">Upload</button>"+
 
     "</span></div>"+
-    "<ul class=\"FolderView\" id=\"FolderView"+ div_id +"\">"+
+    "<ul class=\"FolderView\" id=\"FolderView"+ this.div_id +"\">"+
 
-    "</ul><div id=\"server_comm"+ div_id +"\" class=\"server_comm\">helo</div>"
+    "</ul><div id=\"server_comm"+ this.div_id +"\" class=\"server_comm\">helo</div>"
     this.window.append(htmlStr);
     var explore=this;
     
     
     $(function(){
-        $('#FolderView'+ div_id ).sortable();
+        $('#FolderView'+ explore.div_id ).sortable();
         
-        $("#TreeView"+ div_id ).jstree({ 
+        $("#TreeView"+ explore.div_id ).jstree({ 
             "json_data" : {
                 "ajax" : {
                     "url" : "FileOperationHandler",
                     "success" : function (data) {
                         for(dat in data){
-                            data[dat]['attr']['id']=div_id+data[dat]['attr']['id'];
+                            data[dat]['attr']['id']=explore.div_id+data[dat]['attr']['id'];
                         }
                         return data;
                     },
                     "data":function (n){
                         return {
                             "operation" : "get_folder",
-                            "id" : n.attr ? n.attr("id").replace(div_id +"node_","") : "/"
+                            "id" : n.attr ? n.attr("id").replace(explore.div_id +"node_","") : "/"
                         };
                     }
                 }
@@ -65,23 +66,23 @@ function Explorer(div_id,path){
         }).bind("select_node.jstree", function (e, data) { //alert();
             //console.log(data.rslt.obj.attr("id").replace(div_id+"node_",""));
             console.log(explore);
-            explore.makeFolderElm(data.rslt.obj.attr("id").replace(div_id+"node_",""));
+            explore.makeFolderElm(data.rslt.obj.attr("id").replace(explore.div_id+"node_",""));
                         
         });
 
         //Associate a context menue to the FolderView.
-        YAIDContext.forFileElm(div_id,explore);
+        YAIDContext.forFileElm(explore);
         
         //context menue the are not covered by folder's and files.
-        YAIDContext.forFileView(div_id,explore);
+        YAIDContext.forFileView(explore);
         
         //toolbar related stuff.
-        $("#toolBar"+ div_id ).jScroll({
+        $("#toolBar"+ this.div_id ).jScroll({
             speed : "fast"
         });
         //console.log($("#toolBar"+ div_id));
-        $("#path_text"+ div_id).button();
-        $( "#home" + div_id).button({
+        $("#path_text"+ explore.div_id).button();
+        $( "#home" + explore.div_id).button({
             text: false,
             icons: {
                 primary: "ui-icon-home"
@@ -89,7 +90,7 @@ function Explorer(div_id,path){
         }).click(function(){
             explore.makeFolderElm("/");
         });
-        $( "#back" + div_id).button({
+        $( "#back" + explore.div_id).button({
             text: false,
             icons: {
                 primary: "ui-icon-arrowthick-1-w"
@@ -97,7 +98,7 @@ function Explorer(div_id,path){
         }).click(function(){
             explore.makeFolderElm(Explorer.explorerData[explore.path]["parrentfolder"]);
         });
-        $( "#new_file" + div_id ).button({
+        $( "#new_file" + explore.div_id ).button({
             text: false,
             icons: {
                 primary: "ui-icon-document"
@@ -106,7 +107,7 @@ function Explorer(div_id,path){
             FileName=explore.selectName("NewDocument",".txt");        
             explore.createNewFile(explore.path,FileName,"","make_files");
         });
-        $( "#new_folder" + div_id).button({
+        $( "#new_folder" + explore.div_id).button({
             text: false,
             icons: {
                 primary: "ui-icon-folder-open"
@@ -115,7 +116,7 @@ function Explorer(div_id,path){
             //
             explore.createNewFile(explore.path,"NewDirectory","","make_dir");
         });
-        $( "#copy" + div_id).button({
+        $( "#copy" + explore.div_id).button({
             text: false,
             icons: {
                 primary: "ui-icon-copy"
@@ -124,13 +125,13 @@ function Explorer(div_id,path){
             explore.editFiles("copy");
         });
 
-        $( "#delete" + div_id).button({
+        $( "#delete" + explore.div_id).button({
             text: false,
             icons: {
                 primary: "ui-icon-trash"
             }
         });
-        $( "#cut" + div_id).button({
+        $( "#cut" + explore.div_id).button({
             text: false,
             icons: {
                 primary: "ui-icon-scissors"
@@ -138,7 +139,7 @@ function Explorer(div_id,path){
         }).click(function(){
             explore.editFiles("cut");
         });
-        $( "#paste" + div_id).button({
+        $( "#paste" + explore.div_id).button({
             text: false,
             icons: {
                 primary: "ui-icon-clipboard"
@@ -146,7 +147,7 @@ function Explorer(div_id,path){
         }).click(function(){
             explore.pasteFiles(explore.path);
         });
-        $( "#upload" + div_id).button({
+        $( "#upload" + explore.div_id).button({
             text: false,
             icons: {
                 primary: "ui-icon-carat-1-n"
@@ -181,7 +182,12 @@ Explorer.prototype.recursivelyRem = function(path){
 }
 Explorer.prototype.makeFolderElm = function(path){
     str='';
-    parrent=this.path;
+    if(this.path!=path){
+        parrent=this.path;
+    }else{
+        parrent=path.substring(0,path.lastIndexOf("/"));
+    }
+    
     //console.log(path);
     var explore=this;
     if(Explorer.explorerData[path]==undefined){
@@ -227,6 +233,8 @@ Explorer.prototype.loadFolderElm=function(htmldir,path){
             imageViewer(id.replace(explore.div_id+"file_",""));
         }else if($(this).attr('type')==='vedio'){
             MediaPlayer(id.replace(explore.div_id+"file_",""));
+        }else if($(this).attr('type')==='doc'){
+            new YAIDNotepad(id.replace(explore.div_id+"file_",""));
         }else{
             console.log(id+' is a file');
         }
@@ -238,7 +246,7 @@ Explorer.prototype.loadFolderElm=function(htmldir,path){
     });
 
     this.path=path;
-    $("#path_text"+ this.div_id).val(path);
+    $("#path_text"+ explore.div_id).val(path);
 };
 
 Explorer.prototype.selectName= function (fileName,extn){

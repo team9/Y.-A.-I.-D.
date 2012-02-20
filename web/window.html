@@ -19,7 +19,8 @@
         <script src="JQUERY/jquery.jscroll.min.js"></script>
 <!--        <script src="http://github.com/malsup/media/raw/master/jquery.media.js?v0.92"></script>-->
         <script src="JQUERY/fileupload/jquery.fileupload.js"></script>  
-        <script src="JQUERY/fileupload/jquery.fileupload-ui.js"></script>  
+        <script src="JQUERY/fileupload/jquery.fileupload-ui.js"></script>
+        <script type="text/javascript" src="JS/TextEditor/nicEdit.js"></script>
         <script src="JS/Window/Window.js"></script>
         <script src="JS/Window/YAIDContext.js"></script>
         <script src="JS/Window/Explorer.js"></script>
@@ -28,6 +29,7 @@
         <script src="JS/MediaPlayer.js"></script>      
         <script src="JS/jquery.metadata.js"></script> 
         <script src="JS/YAIDUpload.js"></script> 
+        <script src="JS/YAIDNotpad.js"></script> 
         <style>
             body{ 
                 font: 70.5% "Trebuchet MS", sans-serif; 			
@@ -41,11 +43,11 @@
                 
                 //var window=Window({'option':{'title':'Explorer',height:300,width:750},'content':'explorer.jsp',"ajax":true});
                 //console.log($(window).attr("id"));
-                var window1=Window({'option':{'title':'Explorer Test',height:300,width:750},'content':"","ajax":false});
-                var window2=Window({'option':{'title':'Explorer Another',height:300,width:750},'content':"","ajax":false});
+//                var window1=Window({'option':{'title':'Explorer Test',height:300,width:750},'content':"","ajax":false});
+//                var window2=Window({'option':{'title':'Explorer Another',height:300,width:750},'content':"","ajax":false});
                 
-                new Explorer($(window1).attr("id"),"/");
-                new Explorer($(window2).attr("id"),"/");
+                new Explorer("/");
+                new Explorer("/manu");
                 //                console.log($(window1).attr("id"));
                 //Window({'option':{'title':'Explorer',height:300,width:750},'content':'explorer.jsp',"ajax":true});
                 /*test("sample",function(){

@@ -31,7 +31,7 @@
                         url:"GetPath", //calling servlet
                         cache:false,
                         data:dataRequestObject,
-                        success:function(htmldat){ alert(htmldat);},
+                        success:function(htmldat){},
                         error:function(xhr,ajaxOptions){
                             alert(xhr.status + " :: " + xhr.statusText);
                         }
@@ -42,7 +42,7 @@
     }
 
     $(document).ready(function() {
-        makeFolderElm("/UserData/vig/My%20Files/WallPaper");
+        makeFolderElm("/vig/My%20Files/WallPaper");
     });
 
 </script>

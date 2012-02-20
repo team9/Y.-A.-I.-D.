@@ -5,8 +5,8 @@
 
 var YAIDContext = new Object();
 
-YAIDContext.forFileElm=function(div_id,explore){
-    
+YAIDContext.forFileElm=function(explore){
+    div_id=explore.div_id;
     $.contextMenu({
         selector: '#FolderView'+ div_id+' li',
         callback: function(key, options) {
@@ -74,7 +74,8 @@ YAIDContext.forFileElm=function(div_id,explore){
         
 }
 
-YAIDContext.forFileView=function(div_id,explore){
+YAIDContext.forFileView=function(explore){
+    div_id=explore.div_id;
     $.contextMenu({
         selector: '#FolderView'+ div_id,
         callback: function(key, options) {

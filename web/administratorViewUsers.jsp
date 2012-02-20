@@ -31,12 +31,14 @@
     //    }
     
     
-    function validateTarget() {
-        if($(document).getElementById('targetid').value=="0") {
-            alert("qw");
-            return false;
-        }
-    }
+   function validateTarget() {
+                if( document.getElementById("targetid").value == 0) {
+                    alert("Please choose a user!");
+                    return false;
+                }
+                return true;
+            }
+            
         
 </script>
 
@@ -216,7 +218,7 @@
                     rsPagination = psPagination.executeQuery();
                 %>
                 <form action="DeleteUser" method="post" id="deleteUser"  onsubmit="return validateTarget()">
-                    <select name="targetid">
+                    <select name="targetid" id="targetid">
                         <option selected="selected" value="0">Please pick a user</option>
                         <% while (rsPagination.next()) {%>
                         <option value="<%=rsPagination.getInt("userid")%>"><%=rsPagination.getInt("userid")%>) <%=rsPagination.getString("email")%></option>

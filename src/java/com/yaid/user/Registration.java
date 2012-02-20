@@ -116,8 +116,8 @@ public class Registration extends HttpServlet {
     public void initialSerialization(String uid) {
         System.out.println("The user id is: " + uid);
         User u = new User();
-        u.wallpaper_path = "ImageBytes?id=/UserData/vig/My Files/WallPaper/feathers.jpg";
-        u.defaultValues(u, uid);
+        u.wallpaper_path = "ImageBytes?id=/vig/My Files/WallPaper/feathers.jpg";
+        SerializeUser.serialize(u, uid);
     }
 
     public void initializeDirectory(String userid) {

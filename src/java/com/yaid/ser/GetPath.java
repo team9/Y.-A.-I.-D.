@@ -10,6 +10,7 @@ import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
 /**
  *
@@ -31,14 +32,17 @@ public class GetPath extends HttpServlet {
             throws ServletException, IOException {
         response.setContentType("text/html;charset=UTF-8");
         PrintWriter out = response.getWriter();
+        HttpSession session = request.getSession(true);
         try {
             wallpaper_path = request.getParameter("value");
             key = request.getParameter("key");
             if (key.equals("wallpaper")) {
                 out.println("SUCCESS: path = " + wallpaper_path + " and key = " + key);
-                User u = new User();
+                String uid = (String) session.getAttribute("userID");
+                System.out.println("The Session user in Getpath Servlet is : " + uid);
+                User u = DeserializeUser.deserialize(uid);
                 u.wallpaper_path = wallpaper_path;
-                //u.print(u);
+                SerializeUser.serialize(u, uid);
             }
         } finally {
             out.close();

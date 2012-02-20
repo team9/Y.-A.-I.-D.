@@ -1,6 +1,9 @@
 @CHARSET "ISO-8859-1";
-#tabs {
 
+
+#tabs {
+        
+    
 	border-bottom: .5em solid #0033CC;
 
 	margin: 0;
@@ -29,6 +32,16 @@
 
 	color: #000;
 
+}
+
+#tabs li  a:hover
+{ 
+background-color:yellow;
+}
+
+#tabs li a:select
+{ 
+    background-color:#0033ff;
 }
 
 #page1 #tabs li#tab1 a, #page2 #tabs li#tab2 a, #page3 #tabs li#tab3 a, #page4 #tabs li#tab4 a {

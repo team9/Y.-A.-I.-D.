@@ -139,6 +139,8 @@ public class FileOperationHandler extends HttpServlet {
                 type = "\"rel\":\"folder\",\"img\":\"images/icons/gnome-fs-directory.png\"";
             } else if (chld[i].getName().endsWith(".jpg") || chld[i].getName().endsWith(".png")) {
                 type = "\"rel\":\"image\",\"img\":\"ImageBytes?id=" + path + chld[i].getName() + "\"";
+            }  else if (chld[i].getName().endsWith(".txt") || chld[i].getName().endsWith(".rtf")) {
+                type = "\"rel\":\"doc\",\"img\":\"images/icons/ascii.png\"";
             } else if (chld[i].getName().endsWith(".ogg") || chld[i].getName().endsWith(".wmv")
                     || chld[i].getName().endsWith(".avi") || chld[i].getName().endsWith(".mov")) {
                 type = "\"rel\":\"vedio\",\"img\":\"images/icons/video.png\"";
