@@ -13,6 +13,7 @@ import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
 /**
  *
@@ -21,16 +22,17 @@ import javax.servlet.http.HttpServletResponse;
 public class FileOperationHandler extends HttpServlet {
 
     private String startPath = "./UserData";
+    private String uid = null;
 
     public String getFolders(String path) {
 
         String jsondata = null;//"[{\"attr\":{\"id\":\"node_395\",\"rel\":\"folder\"},\"data\":\"New node\",\"state\":\"\"},{\"attr\":{\"id\":\"node_397\",\"rel\":\"folder\"},\"data\":\"New node\",\"state\":\"closed\"},{\"attr\":{\"id\":\"node_399\",\"rel\":\"default\"},\"data\":\"New node\",\"state\":\"\"},{\"attr\":{\"id\":\"node_398\",\"rel\":\"default\"},\"data\":\"New node\",\"state\":\"\"}]";
 
         String state = null;
-        File dir = new File(startPath + path);
+        File dir = new File(startPath + uid + path);
         File[] chld = dir.listFiles();
         jsondata = "[";
-        System.out.println("helo " + startPath + path);
+        System.out.println("helo " + startPath + uid + path);
         path = (path.endsWith("/")) ? path : path + "/";
         for (int i = 0; i < chld.length; i++) {
             if (chld[i].isDirectory()) {
@@ -51,8 +53,8 @@ public class FileOperationHandler extends HttpServlet {
         String jsondata = null;//"[{\"attr\":{\"id\":\"node_395\",\"rel\":\"folder\"},\"data\":\"New node\",\"state\":\"\"},{\"attr\":{\"id\":\"node_397\",\"rel\":\"folder\"},\"data\":\"New node\",\"state\":\"closed\"},{\"attr\":{\"id\":\"node_399\",\"rel\":\"default\"},\"data\":\"New node\",\"state\":\"\"},{\"attr\":{\"id\":\"node_398\",\"rel\":\"default\"},\"data\":\"New node\",\"state\":\"\"}]";
 
         String state = null;
-        File dir = new File(startPath + path);
-        File newfile = new File(startPath + newName);
+        File dir = new File(startPath + uid + path);
+        File newfile = new File(startPath + uid + newName);
         String type;
         if (dir.renameTo(newfile)) {
             if (newfile.isDirectory()) {
@@ -78,10 +80,10 @@ public class FileOperationHandler extends HttpServlet {
             String state = null;
             String type = null;
             path = (path.endsWith("/")) ? path : path + "/";
-            File dir = new File(startPath + path + newName);//createNewFile() 
+            File dir = new File(startPath + uid + path + newName);//createNewFile() 
             //[] chld = dir.listFiles();
             jsondata = "{";
-            System.out.println("helo " + startPath + path + newName);
+            System.out.println("helo " + startPath + uid + path + newName);
             if (dir.createNewFile() == true) {
                 type = "\"rel\":\"file\",\"img\":\"images/icons/ascii.png\"";
 
@@ -105,10 +107,10 @@ public class FileOperationHandler extends HttpServlet {
             String state = null;
             String type = null;
             path = (path.endsWith("/")) ? path : path + "/";
-            File dir = new File(startPath + path + newName);//createNewFile() 
+            File dir = new File(startPath + uid + path + newName);//createNewFile() 
             //[] chld = dir.listFiles();
             jsondata = "{";
-            System.out.println("helo " + startPath + path + newName);
+            System.out.println("helo " + startPath + uid + path + newName);
             if (dir.mkdir() == true) {
                 type = "\"rel\":\"folder\",\"img\":\"images/icons/gnome-fs-directory.png\"";
 
@@ -128,18 +130,22 @@ public class FileOperationHandler extends HttpServlet {
         String jsondata = null;//"[{\"attr\":{\"id\":\"node_395\",\"rel\":\"folder\"},\"data\":\"New node\",\"state\":\"\"},{\"attr\":{\"id\":\"node_397\",\"rel\":\"folder\"},\"data\":\"New node\",\"state\":\"closed\"},{\"attr\":{\"id\":\"node_399\",\"rel\":\"default\"},\"data\":\"New node\",\"state\":\"\"},{\"attr\":{\"id\":\"node_398\",\"rel\":\"default\"},\"data\":\"New node\",\"state\":\"\"}]";
 
         String state = null;
-        File dir = new File(startPath + path);
+        File dir = new File(startPath + uid + path);
+        System.out.println(startPath + uid + path);
         File[] chld = dir.listFiles();
         String type;
+        if (!dir.exists()) {
+            return "faild";
+        }
         jsondata = "[";
-        System.out.println("helo " + startPath + path);
+        System.out.println("helo " + startPath + uid + path);
         path = (path.endsWith("/")) ? path : path + "/";
         for (int i = 0; i < chld.length; i++) {
             if (chld[i].isDirectory()) {
                 type = "\"rel\":\"folder\",\"img\":\"images/icons/gnome-fs-directory.png\"";
             } else if (chld[i].getName().endsWith(".jpg") || chld[i].getName().endsWith(".png")) {
                 type = "\"rel\":\"image\",\"img\":\"ImageBytes?id=" + path + chld[i].getName() + "\"";
-            }  else if (chld[i].getName().endsWith(".txt") || chld[i].getName().endsWith(".rtf")) {
+            } else if (chld[i].getName().endsWith(".txt") || chld[i].getName().endsWith(".rtf")) {
                 type = "\"rel\":\"doc\",\"img\":\"images/icons/ascii.png\"";
             } else if (chld[i].getName().endsWith(".ogg") || chld[i].getName().endsWith(".wmv")
                     || chld[i].getName().endsWith(".avi") || chld[i].getName().endsWith(".mov")) {
@@ -163,11 +169,11 @@ public class FileOperationHandler extends HttpServlet {
         String jsondata = null;//"[{\"attr\":{\"id\":\"node_395\",\"rel\":\"folder\"},\"data\":\"New node\",\"state\":\"\"},{\"attr\":{\"id\":\"node_397\",\"rel\":\"folder\"},\"data\":\"New node\",\"state\":\"closed\"},{\"attr\":{\"id\":\"node_399\",\"rel\":\"default\"},\"data\":\"New node\",\"state\":\"\"},{\"attr\":{\"id\":\"node_398\",\"rel\":\"default\"},\"data\":\"New node\",\"state\":\"\"}]";
 
         String state = null;
-        File dir = new File(startPath + path);
+        File dir = new File(startPath + uid + path);
         File[] chld = dir.listFiles();
         String type;
         jsondata = "[";
-        System.out.println("helo " + startPath + path);
+        System.out.println("helo " + startPath + uid + path);
         path = (path.endsWith("/")) ? path : path + "/";
         for (int i = 0; i < chld.length; i++) {
             if (chld[i].isDirectory()) {
@@ -243,6 +249,7 @@ public class FileOperationHandler extends HttpServlet {
             }
 
         }
+        //System.out.println(resource.getAbsolutePath());
         return resource.delete();
     }
 
@@ -261,50 +268,58 @@ public class FileOperationHandler extends HttpServlet {
         response.setContentType("application/json");
         PrintWriter out = response.getWriter();
         try {
-            String operation = request.getParameter("operation");
-            String filePath = request.getParameter("id");
-            String fileName = request.getParameter("newname");
-            String fileContent = request.getParameter("content");
-            //filePath = (filePath.equals("1") ? "/" : filePath);
-            Map params = request.getParameterMap();
-            Iterator i = params.keySet().iterator();
-            if (filePath != null) {
-                filePath = filePath.replace("%20", " ");
+            HttpSession session = request.getSession(true);
+            uid = "/" + (String) session.getAttribute("userID");
+            if (uid != null) {
+                String operation = request.getParameter("operation");
+                String filePath = request.getParameter("id");
+                String fileName = request.getParameter("newname");
+                String fileContent = request.getParameter("content");
+                //filePath = (filePath.equals("1") ? "/" : filePath);
+                Map params = request.getParameterMap();
+                Iterator i = params.keySet().iterator();
+                if (filePath != null) {
+                    filePath = //"/" + uid +
+                            filePath.replace("%20", " ");
+                }
+                if (fileName != null) {
+                    fileName = //"/" + uid +
+                            fileName.replace("%20", " ");
+                }
+                while (i.hasNext()) {
+                    String key = (String) i.next();
+                    String value = ((String[]) params.get(key))[ 0];
+                    System.out.println("Key: " + key + " Value: " + value);
+                }
+                System.out.println(operation + " " + uid+ filePath +" "+uid+ fileName);
+                if (operation.equals("get_folder")) {
+                    out.println(getFolders(filePath));
+                } else if (operation.equals("get_files")) {
+                    out.print(getAllFiles(filePath));
+                } else if (operation.equals("get_images")) {
+                    out.print(getAllImages(filePath));
+                } else if (operation.equals("make_files") && fileName != null) {
+                    out.print(makeFile(filePath, fileName));
+                } else if (operation.equals("make_dir") && fileName != null) {
+                    out.print(makeDirectory(filePath, fileName));
+                } else if (operation.equals("rename_files") && fileName != null) {
+                    out.print(renameFile(filePath, fileName));
+                } else if (operation.equals("copy") && fileName != null) {
+                    File src = new File(startPath + uid + filePath);
+                    File dest = new File(startPath + uid + fileName + "/" + src.getName());
+                    copyFolder(src, dest);
+                    out.print(getAllFiles(fileName));
+                } else if (operation.equals("cut") && fileName != null) {
+                    File src = new File(startPath + uid + filePath);
+                    File dest = new File(startPath + uid + fileName + "/" + src.getName());
+                    copyFolder(src, dest);
+                    deleteFolder(src);
+                    out.print(getAllFiles(fileName));
+                } else if (operation.equals("delete_files")) {
+                    File src = new File(startPath + uid + filePath);
+                    deleteFolder(src);
+                }
             }
-            if (fileName != null) {
-                fileName = fileName.replace("%20", " ");
-            }
-            while (i.hasNext()) {
-                String key = (String) i.next();
-                String value = ((String[]) params.get(key))[ 0];
-                System.out.println("Key: " + key + " Value: " + value);
-            }
-            System.out.println(operation + " " + filePath + fileName);
-            if (operation.equals("get_folder")) {
-                out.println(getFolders(filePath));
-            } else if (operation.equals("get_files")) {
-                out.print(getAllFiles(filePath));
-            } else if (operation.equals("get_images")) {
-                out.print(getAllImages(filePath));
-            } else if (operation.equals("make_files") && fileName != null) {
-                out.print(makeFile(filePath, fileName));
-            } else if (operation.equals("make_dir") && fileName != null) {
-                out.print(makeDirectory(filePath, fileName));
-            } else if (operation.equals("rename_files") && fileName != null) {
-                out.print(renameFile(filePath, fileName));
-            } else if (operation.equals("copy") && fileName != null) {
-                File src = new File(startPath + filePath);
-                File dest = new File(startPath + fileName + "/" + src.getName());
-                copyFolder(src, dest);
-                out.print(getAllFiles(fileName));
-            } else if (operation.equals("cut") && fileName != null) {
-                File src = new File(startPath + filePath);
-                File dest = new File(startPath + fileName + "/" + src.getName());
-                copyFolder(src, dest);
-                deleteFolder(src);
-                out.print(getAllFiles(fileName));
-            }
-
         } catch (Exception e) {
             e.printStackTrace();
         } finally {

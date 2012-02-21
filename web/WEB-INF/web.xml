@@ -56,6 +56,10 @@
         <servlet-name>SpaceUsage</servlet-name>
         <servlet-class>com.yaid.administrator.SpaceUsage</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>ChangeAdministratorProfile</servlet-name>
+        <servlet-class>com.yaid.administrator.ChangeAdministratorProfile</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>Registration</servlet-name>
         <url-pattern>/Registration</url-pattern>
@@ -111,6 +115,10 @@
     <servlet-mapping>
         <servlet-name>SpaceUsage</servlet-name>
         <url-pattern>/SpaceUsage</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>ChangeAdministratorProfile</servlet-name>
+        <url-pattern>/ChangeAdministratorProfile</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>

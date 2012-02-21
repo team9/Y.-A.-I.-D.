@@ -42,33 +42,36 @@ public class Upload extends HttpServlet {
 
         ServletFileUpload uploadHandler = new ServletFileUpload(new DiskFileItemFactory());
         HttpSession session = request.getSession(true);
-        
+
         response.setContentType("text/html;charset=UTF-8");
         PrintWriter out = response.getWriter();
         try {
             String location = request.getParameter("toloc");
 
             if (location != null) {
-                session.setAttribute("uploadPath",location);
-                System.out.println("Upload location:  ./UserData" + uploadPath +"/"+ "file");
-            } else {
-                if (!ServletFileUpload.isMultipartContent(request)) {
-                    throw new IllegalArgumentException("Request is not multipart, please 'multipart/form-data' enctype for your form.");
+                String uid = "/" + (String) session.getAttribute("userID");
+                if (uid != null) {
+                    session.setAttribute("uploadPath", uid+location);
+                    System.out.println("Upload location set:  ./UserData" + uid+uploadPath + "/" + "file");
                 }
-                uploadPath=(String) session.getAttribute("uploadPath");
-                List<FileItem> items = uploadHandler.parseRequest(request);
-                for (FileItem item : items) {
-                    if (!item.isFormField()) {
-                        System.out.println("Upload location:  ./UserData" + uploadPath + "/"+ item.getName());
-                        File file = new File("./UserData" + uploadPath + "/"+item.getName());
-                        item.write(file);
-                        out.write("{\"name\":\"" + item.getName() + "\",\"type\":\""
-                                + item.getContentType() + "\",\"size\":\"" + item.getSize() + "\"}");
-                        break; // assume we only get one file at a time
+            } else {
+                    if (!ServletFileUpload.isMultipartContent(request)) {
+                        throw new IllegalArgumentException("Request is not multipart, please 'multipart/form-data' enctype for your form.");
+                    }
+                    uploadPath = (String) session.getAttribute("uploadPath");
+                    List<FileItem> items = uploadHandler.parseRequest(request);
+                    for (FileItem item : items) {
+                        if (!item.isFormField()) {
+                            System.out.println("Upload location:  ./UserData" + uploadPath + "/" + item.getName());
+                            File file = new File("./UserData" + uploadPath + "/" + item.getName());
+                            item.write(file);
+                            out.write("{\"name\":\"" + item.getName() + "\",\"type\":\""
+                                    + item.getContentType() + "\",\"size\":\"" + item.getSize() + "\"}");
+                            break; // assume we only get one file at a time
+                        }
                     }
                 }
-            }
-        } catch (FileUploadException e) {
+            }  catch (FileUploadException e) {
             throw new RuntimeException(e);
         } catch (Exception e) {
             throw new RuntimeException(e);

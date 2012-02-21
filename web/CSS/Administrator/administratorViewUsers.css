@@ -10,15 +10,25 @@
    TODO customize this sample style
    Syntax recommendation http://www.w3.org/TR/REC-CSS2/
 */
+body {
+    background-image: url('../../images/administrator/ball1.jpg'); 
+
+
+}
 #viewUsersLeft {
     float: left;
     height: 600px;
+
 }
 #viewList {
     float: left;
- height: 500px;
- background-color: #006666;
-    
+    height: 450px;
+    background-color: #fdfefc;
+
+    opacity:0.4;
+    filter:alpha(opacity=40);
+
+
 }
 
 #headings {
@@ -69,11 +79,15 @@
 }
 
 #pageNavigation {
-    position: relative;
+    left: 150px;
+    position: absolute;
     padding: 20px;
-    bottom: 0px;
-    height: 50px;
-  
+    bottom: 50px;
+    height: 20px;
+    background-color:#f4b925;
+    opacity:0.9;
+    filter:alpha(opacity=40);
+
 }
 
 #verticalSeperator {
@@ -92,16 +106,18 @@
     vertical-align: middle;
     float: left;
     height: 600px;
-    
+
 }
 
 #allDetails {
     position: relative;
     vertical-align: middle;
-    height: 550px;
+    height: 200px;
     width: 500px;
- 
+
     background-color: #9999ff;
+    opacity:0.8;
+    filter:alpha(opacity=40);
 }
 
 #horizontalSeperator {

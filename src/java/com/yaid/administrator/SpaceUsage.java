@@ -81,6 +81,7 @@ public class SpaceUsage extends HttpServlet {
         ResultSet resultSet = null;
         Connection connect = null;
         String mail = null;
+        String operation = null;
         String targetID = null;
         String userDirectory = null;
         String serverSpace = null;
@@ -89,10 +90,10 @@ public class SpaceUsage extends HttpServlet {
         pw = response.getWriter();
         try {
             connect = DbConnection.getDbConnection();
+            operation = request.getParameter("operation");
+            if(operation.equals("getUsersSpaceUsage")) {
             targetID = request.getParameter("targetid");
             //System.out.println(">>>>>>>>>>>>>>>>>>>>>>>>>>>>> Target ID : " + mail);
-
-            serverSpace = "./UserData";
             preparedStatement = connect.prepareStatement("select * from yaid.users where userid=?");
             preparedStatement.setInt(1, Integer.parseInt(targetID));
             System.out.println("Statement : " + preparedStatement);
@@ -107,13 +108,19 @@ public class SpaceUsage extends HttpServlet {
             userDirectory = "./UserData/" + mail;
             System.out.println("Target ID : " + mail);
             displaySizeOfDir(userDirectory);
-            displaySizeOfDir(serverSpace);
+            
             //response.sendRedirect("administratorSpaceUsage.jsp");
+          
             pw.print(sizeOfDir(new File(userDirectory)));
 //            response.sendRedirect("administratorSpaceUsage.jsp");
 //            response.setContentType("text/html");
 //            pw.print("<<<<<<<<<<<<<<<<<<<<<<hai>>>>>>>>>>>>>>>>>>>>");
-response.setContentType(mail);
+
+            } else if(operation.equals("getServerSpaceUsage")) {
+                serverSpace = "./UserData";
+                displaySizeOfDir(serverSpace);
+                pw.print(sizeOfDir(new File(serverSpace)));
+            }
         } catch (Exception e) {
             e.printStackTrace();
             System.out.println("Space Usage Error : " + e);

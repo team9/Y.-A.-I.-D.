@@ -3,6 +3,8 @@
 <%@ page import="java.sql.ResultSet" %>
 <%@ page import="java.sql.Connection" %>
 <%@ page import="java.sql.DriverManager" %>
+<html>
+    <head>
 <script src="JQUERY/jquery.js" type="text/javascript"></script>
 <link rel="stylesheet" type="text/css" href="CSS/Administrator/administratorViewUsers.css" />
 <script type="text/javascript">
@@ -109,6 +111,7 @@
 
 </head>
 <body>
+    <div id="page" >
     <div><jsp:include page="administratorPanel.jsp" /></div>
     <div id="viewUsersLeft">
     <div id="viewList">
@@ -237,7 +240,9 @@
        
     </div>
     <div id="horizontalSeperator"></div>
-
+    </div>
+</body>
+</html>
 
 
     <%

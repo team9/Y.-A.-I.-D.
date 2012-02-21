@@ -17,6 +17,8 @@
 .FolderView li :hover { background-color: #c2dfeb; z-index: +200;}
 .FolderView img {max-height: 90px;min-height: 45px;max-width: 100px;min-width: 50px;}
 .toolbar { position: absolute;padding: 2px 2px;top: 0px;left: 160px;right: 0px;}
+.toolbar button{ float: left;}
+.path_form{    float: left;}
 .path_text{ min-width:260px;text-align: left;}
 .selectedElm {background-color: #ddb557;}
 .rename-form {border: black thick;width: 100px;background: white;text-align: center;}
@@ -24,3 +26,12 @@
 .server_comm {
     display: none;
 }
+.WallpaperView { position: absolute;list-style-type: none; margin: 0px; padding: 0;left: 10px;top: 10px;bottom: 0px; right: 0px; }
+.WallpaperView li { margin: 10px 10px 10px 10px; padding: 5px; float: left; width: 110px; height: 110px; font-size: 12px; text-align: center; }
+.WallpaperView li :hover {margin: 2px 2px 2px 2px; background-color: #c2dfeb; z-index: +200;width: 210px; height: 210px;}
+.WallpaperView img {max-height: 90px;min-height: 45px;max-width: 100px;min-width: 50px;}
+.WallpaperView img :hover {max-height: 190px;min-height: 95px;max-width: 200px;min-width: 100px;}
+
+#WidgetView { position: absolute;list-style-type: none; margin: 0; padding: 0; left: 12px; top: 12px; }
+#WidgetView li { margin: 5px 5px 5px 0; padding: 1px; float: left; width: 200px; height: 90px; font-size: 12px; text-align: center; }
+#WidgetView img {height: 150px; width: 150px;}

@@ -1,0 +1,162 @@
+21 Feb, 2012 12:00:14 AM org.apache.catalina.core.ApplicationContext log
+INFO: Manager: list: Listing contexts for virtual host 'localhost'
+21 Feb, 2012 12:16:43 AM org.apache.catalina.core.ApplicationContext log
+INFO: Manager: init: Associated with Deployer 'Catalina:type=Deployer,host=localhost'
+21 Feb, 2012 12:16:43 AM org.apache.catalina.core.ApplicationContext log
+INFO: Manager: init: Global resources are available
+21 Feb, 2012 12:16:43 AM org.apache.catalina.core.ApplicationContext log
+INFO: Manager: list: Listing contexts for virtual host 'localhost'
+21 Feb, 2012 12:16:43 AM org.apache.catalina.core.ApplicationContext log
+INFO: Manager: list: Listing contexts for virtual host 'localhost'
+21 Feb, 2012 12:16:43 AM org.apache.catalina.core.ApplicationContext log
+INFO: Manager: undeploy: Undeploying web application at '/'
+21 Feb, 2012 12:16:44 AM org.apache.catalina.core.ApplicationContext log
+INFO: Manager: install: Installing context configuration at 'file:/C:/Users/AMALJO~1/AppData/Local/Temp/context307662840560495365.xml'
+21 Feb, 2012 12:16:44 AM org.apache.catalina.core.ApplicationContext log
+INFO: Manager: start: Starting web application at '/'
+Feb 21, 2012 6:44:09 AM org.apache.catalina.core.ApplicationContext log
+INFO: Manager: init: Associated with Deployer 'Catalina:type=Deployer,host=localhost'
+Feb 21, 2012 6:44:09 AM org.apache.catalina.core.ApplicationContext log
+INFO: Manager: init: Global resources are available
+Feb 21, 2012 6:44:09 AM org.apache.catalina.core.ApplicationContext log
+INFO: Manager: list: Listing contexts for virtual host 'localhost'
+Feb 21, 2012 6:44:09 AM org.apache.catalina.core.ApplicationContext log
+INFO: Manager: list: Listing contexts for virtual host 'localhost'
+Feb 21, 2012 6:44:09 AM org.apache.catalina.core.ApplicationContext log
+INFO: Manager: undeploy: Undeploying web application at '/'
+Feb 21, 2012 6:44:10 AM org.apache.catalina.core.ApplicationContext log
+INFO: Manager: install: Installing context configuration at 'file:/tmp/context6603220649118488361.xml'
+Feb 21, 2012 6:44:11 AM org.apache.catalina.core.ApplicationContext log
+INFO: Manager: start: Starting web application at '/'
+21 Feb, 2012 9:40:00 AM org.apache.catalina.core.ApplicationContext log
+INFO: Manager: init: Associated with Deployer 'Catalina:type=Deployer,host=localhost'
+21 Feb, 2012 9:40:00 AM org.apache.catalina.core.ApplicationContext log
+INFO: Manager: init: Global resources are available
+21 Feb, 2012 9:40:00 AM org.apache.catalina.core.ApplicationContext log
+INFO: Manager: list: Listing contexts for virtual host 'localhost'
+21 Feb, 2012 9:40:00 AM org.apache.catalina.core.ApplicationContext log
+INFO: Manager: list: Listing contexts for virtual host 'localhost'
+21 Feb, 2012 9:40:00 AM org.apache.catalina.core.ApplicationContext log
+INFO: Manager: undeploy: Undeploying web application at '/'
+21 Feb, 2012 9:40:01 AM org.apache.catalina.core.ApplicationContext log
+INFO: Manager: install: Installing context configuration at 'file:/C:/Users/TTT/AppData/Local/Temp/context33563.xml'
+21 Feb, 2012 9:40:01 AM org.apache.catalina.core.ApplicationContext log
+INFO: Manager: start: Starting web application at '/'
+21 Feb, 2012 9:40:16 AM org.apache.catalina.core.ApplicationContext log
+INFO: Manager: list: Listing contexts for virtual host 'localhost'
+21 Feb, 2012 9:40:16 AM org.apache.catalina.core.ApplicationContext log
+INFO: Manager: list: Listing contexts for virtual host 'localhost'
+21 Feb, 2012 9:40:16 AM org.apache.catalina.core.ApplicationContext log
+INFO: Manager: undeploy: Undeploying web application at '/'
+21 Feb, 2012 9:40:17 AM org.apache.catalina.core.ApplicationContext log
+INFO: Manager: install: Installing context configuration at 'file:/C:/Users/TTT/AppData/Local/Temp/context33564.xml'
+21 Feb, 2012 9:40:17 AM org.apache.catalina.core.ApplicationContext log
+INFO: Manager: start: Starting web application at '/'
+21 Feb, 2012 9:40:28 AM org.apache.catalina.core.ApplicationContext log
+INFO: Manager: list: Listing contexts for virtual host 'localhost'
+21 Feb, 2012 9:40:28 AM org.apache.catalina.core.ApplicationContext log
+INFO: Manager: list: Listing contexts for virtual host 'localhost'
+21 Feb, 2012 9:40:28 AM org.apache.catalina.core.ApplicationContext log
+INFO: Manager: undeploy: Undeploying web application at '/'
+21 Feb, 2012 9:40:29 AM org.apache.catalina.core.ApplicationContext log
+INFO: Manager: install: Installing context configuration at 'file:/C:/Users/TTT/AppData/Local/Temp/context33565.xml'
+21 Feb, 2012 9:40:29 AM org.apache.catalina.core.ApplicationContext log
+INFO: Manager: start: Starting web application at '/'
+21 Feb, 2012 9:42:31 AM org.apache.catalina.core.ApplicationContext log
+INFO: Manager: list: Listing contexts for virtual host 'localhost'
+21 Feb, 2012 9:48:31 AM org.apache.catalina.core.ApplicationContext log
+INFO: Manager: list: Listing contexts for virtual host 'localhost'
+21 Feb, 2012 9:52:50 AM org.apache.catalina.core.ApplicationContext log
+INFO: Manager: list: Listing contexts for virtual host 'localhost'
+21 Feb, 2012 9:53:11 AM org.apache.catalina.core.ApplicationContext log
+INFO: Manager: list: Listing contexts for virtual host 'localhost'
+21 Feb, 2012 9:53:11 AM org.apache.catalina.core.ApplicationContext log
+INFO: Manager: list: Listing contexts for virtual host 'localhost'
+21 Feb, 2012 9:53:11 AM org.apache.catalina.core.ApplicationContext log
+INFO: Manager: undeploy: Undeploying web application at '/'
+21 Feb, 2012 9:53:12 AM org.apache.catalina.core.ApplicationContext log
+INFO: Manager: install: Installing context configuration at 'file:/C:/Users/TTT/AppData/Local/Temp/context33566.xml'
+21 Feb, 2012 9:53:12 AM org.apache.catalina.core.ApplicationContext log
+INFO: Manager: start: Starting web application at '/'
+21 Feb, 2012 9:56:09 AM org.apache.catalina.core.ApplicationContext log
+INFO: Manager: list: Listing contexts for virtual host 'localhost'
+21 Feb, 2012 9:56:54 AM org.apache.catalina.core.ApplicationContext log
+INFO: Manager: list: Listing contexts for virtual host 'localhost'
+21 Feb, 2012 10:00:30 AM org.apache.catalina.core.ApplicationContext log
+INFO: Manager: list: Listing contexts for virtual host 'localhost'
+21 Feb, 2012 10:00:54 AM org.apache.catalina.core.ApplicationContext log
+INFO: Manager: list: Listing contexts for virtual host 'localhost'
+21 Feb, 2012 10:01:19 AM org.apache.catalina.core.ApplicationContext log
+INFO: Manager: list: Listing contexts for virtual host 'localhost'
+21 Feb, 2012 10:02:38 AM org.apache.catalina.core.ApplicationContext log
+INFO: Manager: list: Listing contexts for virtual host 'localhost'
+21 Feb, 2012 10:02:45 AM org.apache.catalina.core.ApplicationContext log
+INFO: Manager: list: Listing contexts for virtual host 'localhost'
+21 Feb, 2012 10:02:45 AM org.apache.catalina.core.ApplicationContext log
+INFO: Manager: list: Listing contexts for virtual host 'localhost'
+21 Feb, 2012 10:02:45 AM org.apache.catalina.core.ApplicationContext log
+INFO: Manager: undeploy: Undeploying web application at '/'
+21 Feb, 2012 10:02:46 AM org.apache.catalina.core.ApplicationContext log
+INFO: Manager: install: Installing context configuration at 'file:/C:/Users/TTT/AppData/Local/Temp/context33567.xml'
+21 Feb, 2012 10:02:47 AM org.apache.catalina.core.ApplicationContext log
+INFO: Manager: start: Starting web application at '/'
+21 Feb, 2012 10:03:23 AM org.apache.catalina.core.ApplicationContext log
+INFO: Manager: list: Listing contexts for virtual host 'localhost'
+21 Feb, 2012 10:04:58 AM org.apache.catalina.core.ApplicationContext log
+INFO: Manager: list: Listing contexts for virtual host 'localhost'
+21 Feb, 2012 10:05:49 AM org.apache.catalina.core.ApplicationContext log
+INFO: Manager: list: Listing contexts for virtual host 'localhost'
+21 Feb, 2012 10:06:10 AM org.apache.catalina.core.ApplicationContext log
+INFO: Manager: list: Listing contexts for virtual host 'localhost'
+21 Feb, 2012 10:11:06 AM org.apache.catalina.core.ApplicationContext log
+INFO: Manager: list: Listing contexts for virtual host 'localhost'
+21 Feb, 2012 10:11:49 AM org.apache.catalina.core.ApplicationContext log
+INFO: Manager: list: Listing contexts for virtual host 'localhost'
+21 Feb, 2012 10:12:15 AM org.apache.catalina.core.ApplicationContext log
+INFO: Manager: list: Listing contexts for virtual host 'localhost'
+21 Feb, 2012 10:13:56 AM org.apache.catalina.core.ApplicationContext log
+INFO: Manager: list: Listing contexts for virtual host 'localhost'
+21 Feb, 2012 10:14:34 AM org.apache.catalina.core.ApplicationContext log
+INFO: Manager: list: Listing contexts for virtual host 'localhost'
+21 Feb, 2012 10:14:57 AM org.apache.catalina.core.ApplicationContext log
+INFO: Manager: list: Listing contexts for virtual host 'localhost'
+21 Feb, 2012 10:16:47 AM org.apache.catalina.core.ApplicationContext log
+INFO: Manager: list: Listing contexts for virtual host 'localhost'
+21 Feb, 2012 10:17:14 AM org.apache.catalina.core.ApplicationContext log
+INFO: Manager: list: Listing contexts for virtual host 'localhost'
+21 Feb, 2012 10:17:23 AM org.apache.catalina.core.ApplicationContext log
+INFO: Manager: list: Listing contexts for virtual host 'localhost'
+21 Feb, 2012 10:17:23 AM org.apache.catalina.core.ApplicationContext log
+INFO: Manager: list: Listing contexts for virtual host 'localhost'
+21 Feb, 2012 10:17:23 AM org.apache.catalina.core.ApplicationContext log
+INFO: Manager: undeploy: Undeploying web application at '/'
+21 Feb, 2012 10:17:24 AM org.apache.catalina.core.ApplicationContext log
+INFO: Manager: install: Installing context configuration at 'file:/C:/Users/TTT/AppData/Local/Temp/context33568.xml'
+21 Feb, 2012 10:17:24 AM org.apache.catalina.core.ApplicationContext log
+INFO: Manager: start: Starting web application at '/'
+21 Feb, 2012 10:17:50 AM org.apache.catalina.core.ApplicationContext log
+INFO: Manager: list: Listing contexts for virtual host 'localhost'
+21 Feb, 2012 10:18:09 AM org.apache.catalina.core.ApplicationContext log
+INFO: Manager: list: Listing contexts for virtual host 'localhost'
+21 Feb, 2012 10:18:19 AM org.apache.catalina.core.ApplicationContext log
+INFO: Manager: list: Listing contexts for virtual host 'localhost'
+21 Feb, 2012 10:18:54 AM org.apache.catalina.core.ApplicationContext log
+INFO: Manager: list: Listing contexts for virtual host 'localhost'
+21 Feb, 2012 10:19:42 AM org.apache.catalina.core.ApplicationContext log
+INFO: Manager: list: Listing contexts for virtual host 'localhost'
+21 Feb, 2012 10:20:28 AM org.apache.catalina.core.ApplicationContext log
+INFO: Manager: list: Listing contexts for virtual host 'localhost'
+21 Feb, 2012 10:21:19 AM org.apache.catalina.core.ApplicationContext log
+INFO: Manager: list: Listing contexts for virtual host 'localhost'
+21 Feb, 2012 10:22:14 AM org.apache.catalina.core.ApplicationContext log
+INFO: Manager: list: Listing contexts for virtual host 'localhost'
+21 Feb, 2012 10:22:31 AM org.apache.catalina.core.ApplicationContext log
+INFO: Manager: list: Listing contexts for virtual host 'localhost'
+21 Feb, 2012 10:22:46 AM org.apache.catalina.core.ApplicationContext log
+INFO: Manager: list: Listing contexts for virtual host 'localhost'
+21 Feb, 2012 10:22:53 AM org.apache.catalina.core.ApplicationContext log
+INFO: Manager: list: Listing contexts for virtual host 'localhost'
+21 Feb, 2012 10:22:55 AM org.apache.catalina.core.ApplicationContext log
+INFO: Manager: list: Listing contexts for virtual host 'localhost'
+21 Feb, 2012 10:23:02 AM org.apache.catalina.core.ApplicationContext log
+INFO: Manager: list: Listing contexts for virtual host 'localhost'

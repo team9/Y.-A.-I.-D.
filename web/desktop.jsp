@@ -1,11 +1,11 @@
 <%@page import="com.yaid.ser.DeserializeUser"%>
 <%@page import="com.yaid.ser.User" %>
 <%
-            String uid = (String) session.getAttribute("userID");
-            System.out.println("The Session user in jsp is : " + uid);
-            User objreturn = null;
-            objreturn = DeserializeUser.deserialize(uid);
-            System.out.println("The wallpath is :" + objreturn.wallpaper_path);
+    String uid = (String) session.getAttribute("userID");
+    System.out.println("The Session user in jsp is : " + uid);
+    User objreturn = null;
+    objreturn = DeserializeUser.deserialize(uid);
+    System.out.println("The wallpath is :" + objreturn.wallpaper_path);
 %>
 
 <html>
@@ -16,6 +16,8 @@
         <script src="JQUERY/jquery.ui.js" type="text/javascript"></script>
         <script src="JQUERY/jquery.contextMenu.js" type="text/javascript"></script>
         <script src="JQUERY/jquery.jscroll.min.js"></script>
+        <script src="JQUERY/fileupload/jquery.fileupload.js"></script>
+        <script src="JQUERY/fileupload/jquery.fileupload-ui.js"></script>
 
         <script type="text/javascript" src="JS/startMenu/jquery.metadata.js"></script>
         <script type="text/javascript" src="JS/startMenu/jquery.hoverIntent.js"></script>
@@ -34,7 +36,10 @@
         <script type="text/javascript" src="JS/Clock/clock.js" ></script>
         <script type="text/javascript" src="JS/Calendar/calendar.js" ></script>
         <script type="text/javascript" src="JS/DesktopIcons/icons.js" ></script>
-
+        <script type="text/javascript" src="JS/TextEditor/nicEdit.js"></script>
+        <script type="text/javascript" src="JS/wallpaperMan.js"></script>
+        <script type="text/javascript" src="JS/WidgetMan.js"></script>
+        
         <link rel="stylesheet" href="CSS/jquery.contextMenu.css" type="text/css" />
         <link rel="stylesheet" href="CSS/ui-lightness/jquery-ui-1.8.16.custom.css" type="text/css" />
         <link rel="stylesheet" type="text/css" href="CSS/startmenu/menu_black.css" media="screen" />  
@@ -43,6 +48,7 @@
         <link rel="stylesheet" type="text/css" href="CSS/Desktop Icons/icons.css"/>
         <link rel="stylesheet" type="text/css" href="CSS/Window/explorer.css"/>
         <link rel="stylesheet" href="CSS/jquery.fileupload-ui.css">
+
         <style>
             body{ 
                 font: 70.5% "Trebuchet MS", sans-serif; 			
@@ -70,10 +76,11 @@
                             ;   //alert('Folder created');
                         }
                         else if(key == "widget") {
-                            Window({'option':{'title':'Widgets',height:250, width:430},'content':'widget_manager.html',"ajax":true});
+                            WidgetMan();
                         }
                         else if(key == "wallpaper") {
-                            Window({'option':{'title':'Wallpapers',height:320, width:450},'content':'wallpaper_manager.html',"ajax":true});
+                            //                            Window({'option':{'title':'Wallpapers',height:320, width:450},'content':'wallpaper_manager.html',"ajax":true});
+                            WallpaperMan();
                         }
                         else if(key=="upload") {
                             Window({'option':{'title':'File Upload',height:320, width:450},'content':'JQUERY/fileUpload/fileUpload.html',"ajax":true});
@@ -111,7 +118,7 @@
             }
             
             function openWidgetManager() {
-                Window({'option':{'title':'Widgets',height:250, width:430},'content':'widget_manager.html',"ajax":true});
+               WidgetMan();
             }
             
             function openCalculator() {

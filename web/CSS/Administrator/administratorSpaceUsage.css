@@ -1,0 +1,48 @@
+/* 
+    Document   : administratorSpaceUsage
+    Created on : 20 Feb, 2012, 11:32:35 PM
+    Author     : TTT
+    Description:
+        Purpose of the stylesheet follows.
+*/
+
+/* 
+   TODO customize this sample style
+   Syntax recommendation http://www.w3.org/TR/REC-CSS2/
+*/
+
+
+
+#personalSpaceUsage {
+    margin: 10px;
+}
+#personalSpaceUsageValue {
+    height: 30px;
+
+}
+#personalSpaceUsageGraph {
+    height: 10px;
+    width:250px;
+}
+#serverSpaceUsage {
+    margin:  10px;
+}
+#serverSpaceUsageValue {
+    height: 30px;
+
+}
+#serverSpaceUsageGraph {
+    height: 10px;
+    width: 250px;
+
+}
+
+#seperator1 {
+    height: 100px;
+    
+}
+
+#seperator2 {
+    height: 100px;
+    
+}

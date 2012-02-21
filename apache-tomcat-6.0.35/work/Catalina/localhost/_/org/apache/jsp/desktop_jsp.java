@@ -55,11 +55,11 @@ public final class desktop_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("\r\n");
       out.write("\r\n");
 
-            String uid = (String) session.getAttribute("userID");
-            System.out.println("The Session user in jsp is : " + uid);
-            User objreturn = null;
-            objreturn = DeserializeUser.deserialize(uid);
-            System.out.println("The wallpath is :" + objreturn.wallpaper_path);
+    String uid = (String) session.getAttribute("userID");
+    System.out.println("The Session user in jsp is : " + uid);
+    User objreturn = null;
+    objreturn = DeserializeUser.deserialize(uid);
+    System.out.println("The wallpath is :" + objreturn.wallpaper_path);
 
       out.write("\r\n");
       out.write("\r\n");
@@ -71,6 +71,8 @@ public final class desktop_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("        <script src=\"JQUERY/jquery.ui.js\" type=\"text/javascript\"></script>\r\n");
       out.write("        <script src=\"JQUERY/jquery.contextMenu.js\" type=\"text/javascript\"></script>\r\n");
       out.write("        <script src=\"JQUERY/jquery.jscroll.min.js\"></script>\r\n");
+      out.write("        <script src=\"JQUERY/fileupload/jquery.fileupload.js\"></script>\r\n");
+      out.write("        <script src=\"JQUERY/fileupload/jquery.fileupload-ui.js\"></script>\r\n");
       out.write("\r\n");
       out.write("        <script type=\"text/javascript\" src=\"JS/startMenu/jquery.metadata.js\"></script>\r\n");
       out.write("        <script type=\"text/javascript\" src=\"JS/startMenu/jquery.hoverIntent.js\"></script>\r\n");
@@ -89,7 +91,10 @@ public final class desktop_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("        <script type=\"text/javascript\" src=\"JS/Clock/clock.js\" ></script>\r\n");
       out.write("        <script type=\"text/javascript\" src=\"JS/Calendar/calendar.js\" ></script>\r\n");
       out.write("        <script type=\"text/javascript\" src=\"JS/DesktopIcons/icons.js\" ></script>\r\n");
-      out.write("\r\n");
+      out.write("        <script type=\"text/javascript\" src=\"JS/TextEditor/nicEdit.js\"></script>\r\n");
+      out.write("        <script type=\"text/javascript\" src=\"JS/wallpaperMan.js\"></script>\r\n");
+      out.write("        <script type=\"text/javascript\" src=\"JS/WidgetMan.js\"></script>\r\n");
+      out.write("        \r\n");
       out.write("        <link rel=\"stylesheet\" href=\"CSS/jquery.contextMenu.css\" type=\"text/css\" />\r\n");
       out.write("        <link rel=\"stylesheet\" href=\"CSS/ui-lightness/jquery-ui-1.8.16.custom.css\" type=\"text/css\" />\r\n");
       out.write("        <link rel=\"stylesheet\" type=\"text/css\" href=\"CSS/startmenu/menu_black.css\" media=\"screen\" />  \r\n");
@@ -98,6 +103,7 @@ public final class desktop_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("        <link rel=\"stylesheet\" type=\"text/css\" href=\"CSS/Desktop Icons/icons.css\"/>\r\n");
       out.write("        <link rel=\"stylesheet\" type=\"text/css\" href=\"CSS/Window/explorer.css\"/>\r\n");
       out.write("        <link rel=\"stylesheet\" href=\"CSS/jquery.fileupload-ui.css\">\r\n");
+      out.write("\r\n");
       out.write("        <style>\r\n");
       out.write("            body{ \r\n");
       out.write("                font: 70.5% \"Trebuchet MS\", sans-serif; \t\t\t\r\n");
@@ -127,10 +133,11 @@ public final class desktop_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("                            ;   //alert('Folder created');\r\n");
       out.write("                        }\r\n");
       out.write("                        else if(key == \"widget\") {\r\n");
-      out.write("                            Window({'option':{'title':'Widgets',height:250, width:430},'content':'widget_manager.html',\"ajax\":true});\r\n");
+      out.write("                            WidgetMan();\r\n");
       out.write("                        }\r\n");
       out.write("                        else if(key == \"wallpaper\") {\r\n");
-      out.write("                            Window({'option':{'title':'Wallpapers',height:320, width:450},'content':'wallpaper_manager.html',\"ajax\":true});\r\n");
+      out.write("                            //                            Window({'option':{'title':'Wallpapers',height:320, width:450},'content':'wallpaper_manager.html',\"ajax\":true});\r\n");
+      out.write("                            WallpaperMan();\r\n");
       out.write("                        }\r\n");
       out.write("                        else if(key==\"upload\") {\r\n");
       out.write("                            Window({'option':{'title':'File Upload',height:320, width:450},'content':'JQUERY/fileUpload/fileUpload.html',\"ajax\":true});\r\n");
@@ -168,7 +175,7 @@ public final class desktop_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("            }\r\n");
       out.write("            \r\n");
       out.write("            function openWidgetManager() {\r\n");
-      out.write("                Window({'option':{'title':'Widgets',height:250, width:430},'content':'widget_manager.html',\"ajax\":true});\r\n");
+      out.write("               WidgetMan();\r\n");
       out.write("            }\r\n");
       out.write("            \r\n");
       out.write("            function openCalculator() {\r\n");

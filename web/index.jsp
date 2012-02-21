@@ -5,8 +5,32 @@
         <meta http-equiv="content-type" content="text/html; charset=utf-8" />
         <link href="CSS/RegistrationLogin/RegistrationLogin.css" rel="stylesheet" type="text/css" media="screen" />
         <script src="JQUERY/jquery.js" type="text/javascript"></script>
-
+        <script type="text/javascript"  src="JQUERY/jquery.js"></script>
         <script>
+      
+//            $(document).ready(function (){
+//              
+//                $.ajax({
+//                    type:'POST',
+//                    url:"Logout", //calling servlet
+//                    cache:false,
+//                    
+//                    success:function(htmldat){
+//                        alert("logged off");
+//                        console.log(htmldat);
+//                        
+//                    },
+//                    error:function(xhr,ajaxOptions){
+//                        alert(xhr.status + " :: " + xhr.statusText);
+//                    }
+//                });
+//    
+//            
+//            });
+            
+           
+     
+
     
             function validateLogin(address) {
                 validateEmailID(address);

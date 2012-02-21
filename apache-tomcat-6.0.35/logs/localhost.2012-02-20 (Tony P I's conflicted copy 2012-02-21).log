@@ -1,0 +1,879 @@
+20 Feb, 2012 2:00:01 AM org.apache.catalina.core.ApplicationContext log
+INFO: SessionListener: contextDestroyed()
+20 Feb, 2012 2:00:01 AM org.apache.catalina.core.ApplicationContext log
+INFO: ContextListener: contextDestroyed()
+20 Feb, 2012 9:03:59 AM org.apache.catalina.core.ApplicationContext log
+INFO: ContextListener: contextInitialized()
+20 Feb, 2012 9:03:59 AM org.apache.catalina.core.ApplicationContext log
+INFO: SessionListener: contextInitialized()
+Feb 20, 2012 10:03:54 AM org.apache.catalina.core.ApplicationContext log
+INFO: ContextListener: contextInitialized()
+Feb 20, 2012 10:03:54 AM org.apache.catalina.core.ApplicationContext log
+INFO: SessionListener: contextInitialized()
+20 Feb, 2012 1:04:47 PM org.apache.catalina.core.ApplicationContext log
+INFO: ContextListener: contextInitialized()
+20 Feb, 2012 1:04:47 PM org.apache.catalina.core.ApplicationContext log
+INFO: SessionListener: contextInitialized()
+20 Feb, 2012 1:44:00 PM org.apache.catalina.core.ApplicationContext log
+INFO: SessionListener: contextDestroyed()
+20 Feb, 2012 1:44:00 PM org.apache.catalina.core.ApplicationContext log
+INFO: ContextListener: contextDestroyed()
+Feb 20, 2012 5:08:32 PM org.apache.catalina.core.ApplicationContext log
+INFO: ContextListener: contextInitialized()
+Feb 20, 2012 5:08:32 PM org.apache.catalina.core.ApplicationContext log
+INFO: SessionListener: contextInitialized()
+20 Feb, 2012 5:45:10 PM org.apache.catalina.core.ApplicationContext log
+INFO: ContextListener: contextInitialized()
+20 Feb, 2012 5:45:10 PM org.apache.catalina.core.ApplicationContext log
+INFO: SessionListener: contextInitialized()
+20 Feb, 2012 6:04:45 PM org.apache.catalina.core.StandardWrapperValve invoke
+SEVERE: Servlet.service() for servlet ImageBytes threw exception
+java.io.FileNotFoundException: .\UserData\UserData\vig\My Files\WallPaper\feathers.jpg (The system cannot find the path specified)
+	at java.io.FileInputStream.open(Native Method)
+	at java.io.FileInputStream.<init>(FileInputStream.java:120)
+	at com.yaid.files.ImageBytes.processRequest(ImageBytes.java:54)
+	at com.yaid.files.ImageBytes.doGet(ImageBytes.java:88)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:617)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:717)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:290)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:233)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:191)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:127)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:102)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:109)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:293)
+	at org.apache.coyote.http11.Http11Processor.process(Http11Processor.java:859)
+	at org.apache.coyote.http11.Http11Protocol$Http11ConnectionHandler.process(Http11Protocol.java:602)
+	at org.apache.tomcat.util.net.JIoEndpoint$Worker.run(JIoEndpoint.java:489)
+	at java.lang.Thread.run(Thread.java:662)
+20 Feb, 2012 6:26:19 PM org.apache.catalina.core.StandardWrapperValve invoke
+SEVERE: Servlet.service() for servlet ImageBytes threw exception
+java.io.FileNotFoundException: .\UserData\UserData\vig\My Files\WallPaper\feathers.jpg (The system cannot find the path specified)
+	at java.io.FileInputStream.open(Native Method)
+	at java.io.FileInputStream.<init>(FileInputStream.java:120)
+	at com.yaid.files.ImageBytes.processRequest(ImageBytes.java:54)
+	at com.yaid.files.ImageBytes.doGet(ImageBytes.java:88)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:617)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:717)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:290)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:233)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:191)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:127)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:102)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:109)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:293)
+	at org.apache.coyote.http11.Http11Processor.process(Http11Processor.java:859)
+	at org.apache.coyote.http11.Http11Protocol$Http11ConnectionHandler.process(Http11Protocol.java:602)
+	at org.apache.tomcat.util.net.JIoEndpoint$Worker.run(JIoEndpoint.java:489)
+	at java.lang.Thread.run(Thread.java:662)
+20 Feb, 2012 6:29:33 PM org.apache.catalina.core.StandardWrapperValve invoke
+SEVERE: Servlet.service() for servlet jsp threw exception
+java.lang.NullPointerException
+	at org.apache.jsp.desktop_jsp._jspService(desktop_jsp.java:62)
+	at org.apache.jasper.runtime.HttpJspBase.service(HttpJspBase.java:70)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:717)
+	at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:388)
+	at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:313)
+	at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:260)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:717)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:290)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:233)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:191)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:127)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:102)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:109)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:293)
+	at org.apache.coyote.http11.Http11Processor.process(Http11Processor.java:859)
+	at org.apache.coyote.http11.Http11Protocol$Http11ConnectionHandler.process(Http11Protocol.java:602)
+	at org.apache.tomcat.util.net.JIoEndpoint$Worker.run(JIoEndpoint.java:489)
+	at java.lang.Thread.run(Thread.java:662)
+20 Feb, 2012 6:30:26 PM org.apache.catalina.core.StandardWrapperValve invoke
+SEVERE: Servlet.service() for servlet jsp threw exception
+java.lang.NullPointerException
+	at org.apache.jsp.desktop_jsp._jspService(desktop_jsp.java:62)
+	at org.apache.jasper.runtime.HttpJspBase.service(HttpJspBase.java:70)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:717)
+	at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:388)
+	at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:313)
+	at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:260)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:717)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:290)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:233)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:191)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:127)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:102)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:109)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:293)
+	at org.apache.coyote.http11.Http11Processor.process(Http11Processor.java:859)
+	at org.apache.coyote.http11.Http11Protocol$Http11ConnectionHandler.process(Http11Protocol.java:602)
+	at org.apache.tomcat.util.net.JIoEndpoint$Worker.run(JIoEndpoint.java:489)
+	at java.lang.Thread.run(Thread.java:662)
+20 Feb, 2012 6:31:54 PM org.apache.catalina.core.StandardWrapperValve invoke
+SEVERE: Servlet.service() for servlet jsp threw exception
+java.lang.NullPointerException
+	at org.apache.jsp.desktop_jsp._jspService(desktop_jsp.java:62)
+	at org.apache.jasper.runtime.HttpJspBase.service(HttpJspBase.java:70)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:717)
+	at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:388)
+	at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:313)
+	at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:260)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:717)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:290)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:233)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:191)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:127)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:102)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:109)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:293)
+	at org.apache.coyote.http11.Http11Processor.process(Http11Processor.java:859)
+	at org.apache.coyote.http11.Http11Protocol$Http11ConnectionHandler.process(Http11Protocol.java:602)
+	at org.apache.tomcat.util.net.JIoEndpoint$Worker.run(JIoEndpoint.java:489)
+	at java.lang.Thread.run(Thread.java:662)
+20 Feb, 2012 7:15:14 PM org.apache.catalina.core.ApplicationContext log
+INFO: SessionListener: contextDestroyed()
+20 Feb, 2012 7:15:14 PM org.apache.catalina.core.ApplicationContext log
+INFO: ContextListener: contextDestroyed()
+Feb 20, 2012 8:35:40 PM org.apache.catalina.core.ApplicationContext log
+INFO: ContextListener: contextInitialized()
+Feb 20, 2012 8:35:40 PM org.apache.catalina.core.ApplicationContext log
+INFO: SessionListener: contextInitialized()
+Feb 20, 2012 8:36:03 PM org.apache.catalina.core.StandardWrapperValve invoke
+SEVERE: Servlet.service() for servlet jsp threw exception
+com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException: SELECT command denied to user 'vd'@'localhost' for table 'USERS'
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:57)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:525)
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:409)
+	at com.mysql.jdbc.Util.getInstance(Util.java:384)
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:1054)
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3566)
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3498)
+	at com.mysql.jdbc.MysqlIO.sendCommand(MysqlIO.java:1959)
+	at com.mysql.jdbc.MysqlIO.sqlQueryDirect(MysqlIO.java:2113)
+	at com.mysql.jdbc.ConnectionImpl.execSQL(ConnectionImpl.java:2568)
+	at com.mysql.jdbc.PreparedStatement.executeInternal(PreparedStatement.java:2113)
+	at com.mysql.jdbc.PreparedStatement.executeQuery(PreparedStatement.java:2275)
+	at org.apache.jsp.administratorSpaceUsage_jsp._jspService(administratorSpaceUsage_jsp.java:105)
+	at org.apache.jasper.runtime.HttpJspBase.service(HttpJspBase.java:70)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:717)
+	at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:388)
+	at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:313)
+	at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:260)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:717)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:290)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:233)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:191)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:127)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:102)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:109)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:293)
+	at org.apache.coyote.http11.Http11Processor.process(Http11Processor.java:859)
+	at org.apache.coyote.http11.Http11Protocol$Http11ConnectionHandler.process(Http11Protocol.java:602)
+	at org.apache.tomcat.util.net.JIoEndpoint$Worker.run(JIoEndpoint.java:489)
+	at java.lang.Thread.run(Thread.java:722)
+
+Feb 20, 2012 8:42:30 PM org.apache.catalina.core.StandardWrapperValve invoke
+SEVERE: Servlet.service() for servlet jsp threw exception
+org.apache.jasper.JasperException: Unable to compile class for JSP: 
+
+An error occurred at line: 7 in the jsp file: /desktop.jsp
+The method loginTime(String) is undefined for the type User
+4:             System.out.println("The Session user in jsp is : " + uid);
+5:             User u = new User();
+6:             User objreturn = null;
+7:             objreturn = u.loginTime(uid);
+8:             //System.out.println("The wallpath is :"+objreturn.wallpaper_path);
+9: %>
+10: 
+
+
+Stacktrace:
+	at org.apache.jasper.compiler.DefaultErrorHandler.javacError(DefaultErrorHandler.java:92)
+	at org.apache.jasper.compiler.ErrorDispatcher.javacError(ErrorDispatcher.java:330)
+	at org.apache.jasper.compiler.JDTCompiler.generateClass(JDTCompiler.java:439)
+	at org.apache.jasper.compiler.Compiler.compile(Compiler.java:356)
+	at org.apache.jasper.compiler.Compiler.compile(Compiler.java:334)
+	at org.apache.jasper.compiler.Compiler.compile(Compiler.java:321)
+	at org.apache.jasper.JspCompilationContext.compile(JspCompilationContext.java:592)
+	at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:328)
+	at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:313)
+	at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:260)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:717)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:290)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:233)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:191)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:127)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:102)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:109)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:293)
+	at org.apache.coyote.http11.Http11Processor.process(Http11Processor.java:859)
+	at org.apache.coyote.http11.Http11Protocol$Http11ConnectionHandler.process(Http11Protocol.java:602)
+	at org.apache.tomcat.util.net.JIoEndpoint$Worker.run(JIoEndpoint.java:489)
+	at java.lang.Thread.run(Thread.java:722)
+
+20 Feb, 2012 8:43:01 PM org.apache.catalina.core.ApplicationContext log
+INFO: ContextListener: contextInitialized()
+20 Feb, 2012 8:43:01 PM org.apache.catalina.core.ApplicationContext log
+INFO: SessionListener: contextInitialized()
+20 Feb, 2012 8:43:13 PM org.apache.catalina.core.StandardWrapperValve invoke
+SEVERE: Servlet.service() for servlet jsp threw exception
+org.apache.jasper.JasperException: Unable to compile class for JSP: 
+
+An error occurred at line: 7 in the jsp file: /desktop.jsp
+The method loginTime(String) is undefined for the type User
+4:             System.out.println("The Session user in jsp is : " + uid);
+5:             User u = new User();
+6:             User objreturn = null;
+7:             objreturn = u.loginTime(uid);
+8:             //System.out.println("The wallpath is :"+objreturn.wallpaper_path);
+9: %>
+10: 
+
+
+Stacktrace:
+	at org.apache.jasper.compiler.DefaultErrorHandler.javacError(DefaultErrorHandler.java:92)
+	at org.apache.jasper.compiler.ErrorDispatcher.javacError(ErrorDispatcher.java:330)
+	at org.apache.jasper.compiler.JDTCompiler.generateClass(JDTCompiler.java:439)
+	at org.apache.jasper.compiler.Compiler.compile(Compiler.java:356)
+	at org.apache.jasper.compiler.Compiler.compile(Compiler.java:334)
+	at org.apache.jasper.compiler.Compiler.compile(Compiler.java:321)
+	at org.apache.jasper.JspCompilationContext.compile(JspCompilationContext.java:592)
+	at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:328)
+	at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:313)
+	at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:260)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:717)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:290)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:233)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:191)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:127)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:102)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:109)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:293)
+	at org.apache.coyote.http11.Http11AprProcessor.process(Http11AprProcessor.java:877)
+	at org.apache.coyote.http11.Http11AprProtocol$Http11ConnectionHandler.process(Http11AprProtocol.java:594)
+	at org.apache.tomcat.util.net.AprEndpoint$Worker.run(AprEndpoint.java:1675)
+	at java.lang.Thread.run(Thread.java:619)
+20 Feb, 2012 8:44:20 PM org.apache.catalina.core.StandardWrapperValve invoke
+SEVERE: Servlet.service() for servlet jsp threw exception
+org.apache.jasper.JasperException: Unable to compile class for JSP: 
+
+An error occurred at line: 7 in the jsp file: /desktop.jsp
+The method loginTime(String) is undefined for the type User
+4:             System.out.println("The Session user in jsp is : " + uid);
+5:             User u = new User();
+6:             User objreturn = null;
+7:             objreturn = u.loginTime(uid);
+8:             //System.out.println("The wallpath is :"+objreturn.wallpaper_path);
+9: %>
+10: 
+
+
+Stacktrace:
+	at org.apache.jasper.compiler.DefaultErrorHandler.javacError(DefaultErrorHandler.java:92)
+	at org.apache.jasper.compiler.ErrorDispatcher.javacError(ErrorDispatcher.java:330)
+	at org.apache.jasper.compiler.JDTCompiler.generateClass(JDTCompiler.java:439)
+	at org.apache.jasper.compiler.Compiler.compile(Compiler.java:356)
+	at org.apache.jasper.compiler.Compiler.compile(Compiler.java:334)
+	at org.apache.jasper.compiler.Compiler.compile(Compiler.java:321)
+	at org.apache.jasper.JspCompilationContext.compile(JspCompilationContext.java:592)
+	at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:328)
+	at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:313)
+	at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:260)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:717)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:290)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:233)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:191)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:127)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:102)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:109)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:293)
+	at org.apache.coyote.http11.Http11AprProcessor.process(Http11AprProcessor.java:877)
+	at org.apache.coyote.http11.Http11AprProtocol$Http11ConnectionHandler.process(Http11AprProtocol.java:594)
+	at org.apache.tomcat.util.net.AprEndpoint$Worker.run(AprEndpoint.java:1675)
+	at java.lang.Thread.run(Thread.java:619)
+20 Feb, 2012 9:01:23 PM org.apache.catalina.core.ApplicationContext log
+INFO: Marking servlet SpaceUsage as unavailable
+20 Feb, 2012 9:01:23 PM org.apache.catalina.core.StandardWrapperValve invoke
+SEVERE: Allocate exception for servlet SpaceUsage
+java.lang.VerifyError: (class: com/yaid/administrator/SpaceUsage, method: <init> signature: ()V) Constructor must call super() or this()
+	at java.lang.Class.getDeclaredConstructors0(Native Method)
+	at java.lang.Class.privateGetDeclaredConstructors(Class.java:2389)
+	at java.lang.Class.getConstructor0(Class.java:2699)
+	at java.lang.Class.newInstance0(Class.java:326)
+	at java.lang.Class.newInstance(Class.java:308)
+	at org.apache.catalina.core.StandardWrapper.loadServlet(StandardWrapper.java:1149)
+	at org.apache.catalina.core.StandardWrapper.allocate(StandardWrapper.java:827)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:129)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:191)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:127)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:102)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:109)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:293)
+	at org.apache.coyote.http11.Http11AprProcessor.process(Http11AprProcessor.java:877)
+	at org.apache.coyote.http11.Http11AprProtocol$Http11ConnectionHandler.process(Http11AprProtocol.java:594)
+	at org.apache.tomcat.util.net.AprEndpoint$Worker.run(AprEndpoint.java:1675)
+	at java.lang.Thread.run(Thread.java:619)
+20 Feb, 2012 9:03:26 PM org.apache.catalina.core.StandardWrapperValve invoke
+INFO: Servlet SpaceUsage is currently unavailable
+20 Feb, 2012 9:03:30 PM org.apache.catalina.core.StandardWrapperValve invoke
+INFO: Servlet SpaceUsage is currently unavailable
+20 Feb, 2012 9:03:38 PM org.apache.catalina.core.StandardWrapperValve invoke
+INFO: Servlet SpaceUsage is currently unavailable
+20 Feb, 2012 9:03:40 PM org.apache.catalina.core.StandardWrapperValve invoke
+INFO: Servlet SpaceUsage is currently unavailable
+20 Feb, 2012 9:04:01 PM org.apache.catalina.core.StandardWrapperValve invoke
+INFO: Servlet SpaceUsage is currently unavailable
+20 Feb, 2012 9:04:05 PM org.apache.catalina.core.StandardWrapperValve invoke
+INFO: Servlet SpaceUsage is currently unavailable
+20 Feb, 2012 9:06:49 PM org.apache.catalina.core.StandardWrapperValve invoke
+INFO: Servlet SpaceUsage is currently unavailable
+20 Feb, 2012 9:06:50 PM org.apache.catalina.core.StandardWrapperValve invoke
+INFO: Servlet SpaceUsage is currently unavailable
+20 Feb, 2012 9:06:54 PM org.apache.catalina.core.StandardWrapperValve invoke
+INFO: Servlet SpaceUsage is currently unavailable
+20 Feb, 2012 9:06:56 PM org.apache.catalina.core.StandardWrapperValve invoke
+INFO: Servlet SpaceUsage is currently unavailable
+20 Feb, 2012 9:07:08 PM org.apache.catalina.core.StandardWrapperValve invoke
+INFO: Servlet SpaceUsage is currently unavailable
+20 Feb, 2012 9:07:09 PM org.apache.catalina.core.StandardWrapperValve invoke
+INFO: Servlet SpaceUsage is currently unavailable
+20 Feb, 2012 9:07:25 PM org.apache.catalina.core.StandardWrapperValve invoke
+INFO: Servlet SpaceUsage is currently unavailable
+20 Feb, 2012 9:09:53 PM org.apache.catalina.core.ApplicationContext log
+INFO: Marking servlet Registration as unavailable
+20 Feb, 2012 9:09:53 PM org.apache.catalina.core.StandardWrapperValve invoke
+SEVERE: Allocate exception for servlet Registration
+java.lang.VerifyError: (class: com/yaid/user/Registration, method: <init> signature: ()V) Constructor must call super() or this()
+	at java.lang.Class.getDeclaredConstructors0(Native Method)
+	at java.lang.Class.privateGetDeclaredConstructors(Class.java:2389)
+	at java.lang.Class.getConstructor0(Class.java:2699)
+	at java.lang.Class.newInstance0(Class.java:326)
+	at java.lang.Class.newInstance(Class.java:308)
+	at org.apache.catalina.core.StandardWrapper.loadServlet(StandardWrapper.java:1149)
+	at org.apache.catalina.core.StandardWrapper.allocate(StandardWrapper.java:827)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:129)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:191)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:127)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:102)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:109)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:293)
+	at org.apache.coyote.http11.Http11AprProcessor.process(Http11AprProcessor.java:877)
+	at org.apache.coyote.http11.Http11AprProtocol$Http11ConnectionHandler.process(Http11AprProtocol.java:594)
+	at org.apache.tomcat.util.net.AprEndpoint$Worker.run(AprEndpoint.java:1675)
+	at java.lang.Thread.run(Thread.java:619)
+20 Feb, 2012 9:10:47 PM org.apache.catalina.core.ApplicationContext log
+INFO: Marking servlet Registration as unavailable
+20 Feb, 2012 9:10:47 PM org.apache.catalina.core.StandardWrapperValve invoke
+SEVERE: Allocate exception for servlet Registration
+java.lang.VerifyError: (class: com/yaid/user/Registration, method: <init> signature: ()V) Constructor must call super() or this()
+	at java.lang.Class.getDeclaredConstructors0(Native Method)
+	at java.lang.Class.privateGetDeclaredConstructors(Class.java:2389)
+	at java.lang.Class.getConstructor0(Class.java:2699)
+	at java.lang.Class.newInstance0(Class.java:326)
+	at java.lang.Class.newInstance(Class.java:308)
+	at org.apache.catalina.core.StandardWrapper.loadServlet(StandardWrapper.java:1149)
+	at org.apache.catalina.core.StandardWrapper.allocate(StandardWrapper.java:827)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:129)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:191)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:127)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:102)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:109)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:293)
+	at org.apache.coyote.http11.Http11AprProcessor.process(Http11AprProcessor.java:877)
+	at org.apache.coyote.http11.Http11AprProtocol$Http11ConnectionHandler.process(Http11AprProtocol.java:594)
+	at org.apache.tomcat.util.net.AprEndpoint$Worker.run(AprEndpoint.java:1675)
+	at java.lang.Thread.run(Thread.java:619)
+20 Feb, 2012 9:13:39 PM org.apache.catalina.core.StandardWrapperValve invoke
+SEVERE: Servlet.service() for servlet jsp threw exception
+org.apache.jasper.JasperException: Unable to compile class for JSP: 
+
+An error occurred at line: 7 in the jsp file: /desktop.jsp
+The method loginTime(String) is undefined for the type User
+4:             System.out.println("The Session user in jsp is : " + uid);
+5:             User u = new User();
+6:             User objreturn = null;
+7:             objreturn = u.loginTime(uid);
+8:             //System.out.println("The wallpath is :"+objreturn.wallpaper_path);
+9: %>
+10: 
+
+
+Stacktrace:
+	at org.apache.jasper.compiler.DefaultErrorHandler.javacError(DefaultErrorHandler.java:92)
+	at org.apache.jasper.compiler.ErrorDispatcher.javacError(ErrorDispatcher.java:330)
+	at org.apache.jasper.compiler.JDTCompiler.generateClass(JDTCompiler.java:439)
+	at org.apache.jasper.compiler.Compiler.compile(Compiler.java:356)
+	at org.apache.jasper.compiler.Compiler.compile(Compiler.java:334)
+	at org.apache.jasper.compiler.Compiler.compile(Compiler.java:321)
+	at org.apache.jasper.JspCompilationContext.compile(JspCompilationContext.java:592)
+	at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:328)
+	at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:313)
+	at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:260)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:717)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:290)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:233)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:191)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:127)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:102)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:109)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:293)
+	at org.apache.coyote.http11.Http11AprProcessor.process(Http11AprProcessor.java:877)
+	at org.apache.coyote.http11.Http11AprProtocol$Http11ConnectionHandler.process(Http11AprProtocol.java:594)
+	at org.apache.tomcat.util.net.AprEndpoint$Worker.run(AprEndpoint.java:1675)
+	at java.lang.Thread.run(Thread.java:619)
+20 Feb, 2012 9:27:57 PM org.apache.catalina.core.StandardWrapperValve invoke
+SEVERE: Servlet.service() for servlet jsp threw exception
+org.apache.jasper.JasperException: Unable to compile class for JSP: 
+
+An error occurred at line: 7 in the jsp file: /desktop.jsp
+The method loginTime(String) is undefined for the type User
+4:             System.out.println("The Session user in jsp is : " + uid);
+5:             User u = new User();
+6:             User objreturn = null;
+7:             objreturn = u.loginTime(uid);
+8:             //System.out.println("The wallpath is :"+objreturn.wallpaper_path);
+9: %>
+10: 
+
+
+Stacktrace:
+	at org.apache.jasper.compiler.DefaultErrorHandler.javacError(DefaultErrorHandler.java:92)
+	at org.apache.jasper.compiler.ErrorDispatcher.javacError(ErrorDispatcher.java:330)
+	at org.apache.jasper.compiler.JDTCompiler.generateClass(JDTCompiler.java:439)
+	at org.apache.jasper.compiler.Compiler.compile(Compiler.java:356)
+	at org.apache.jasper.compiler.Compiler.compile(Compiler.java:334)
+	at org.apache.jasper.compiler.Compiler.compile(Compiler.java:321)
+	at org.apache.jasper.JspCompilationContext.compile(JspCompilationContext.java:592)
+	at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:328)
+	at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:313)
+	at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:260)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:717)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:290)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:233)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:191)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:127)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:102)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:109)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:293)
+	at org.apache.coyote.http11.Http11AprProcessor.process(Http11AprProcessor.java:877)
+	at org.apache.coyote.http11.Http11AprProtocol$Http11ConnectionHandler.process(Http11AprProtocol.java:594)
+	at org.apache.tomcat.util.net.AprEndpoint$Worker.run(AprEndpoint.java:1675)
+	at java.lang.Thread.run(Thread.java:619)
+20 Feb, 2012 10:44:07 PM org.apache.catalina.core.StandardWrapperValve invoke
+SEVERE: Servlet.service() for servlet jsp threw exception
+java.lang.NullPointerException
+	at org.apache.jsp.desktop_jsp._jspService(desktop_jsp.java:62)
+	at org.apache.jasper.runtime.HttpJspBase.service(HttpJspBase.java:70)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:717)
+	at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:388)
+	at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:313)
+	at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:260)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:717)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:290)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:233)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:191)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:127)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:102)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:109)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:293)
+	at org.apache.coyote.http11.Http11AprProcessor.process(Http11AprProcessor.java:877)
+	at org.apache.coyote.http11.Http11AprProtocol$Http11ConnectionHandler.process(Http11AprProtocol.java:594)
+	at org.apache.tomcat.util.net.AprEndpoint$Worker.run(AprEndpoint.java:1675)
+	at java.lang.Thread.run(Thread.java:619)
+20 Feb, 2012 10:51:32 PM org.apache.catalina.core.ApplicationContext log
+INFO: Marking servlet SpaceUsage as unavailable
+20 Feb, 2012 10:51:32 PM org.apache.catalina.core.StandardWrapperValve invoke
+SEVERE: Allocate exception for servlet SpaceUsage
+java.lang.VerifyError: (class: com/yaid/administrator/SpaceUsage, method: <init> signature: ()V) Constructor must call super() or this()
+	at java.lang.Class.getDeclaredConstructors0(Native Method)
+	at java.lang.Class.privateGetDeclaredConstructors(Class.java:2389)
+	at java.lang.Class.getConstructor0(Class.java:2699)
+	at java.lang.Class.newInstance0(Class.java:326)
+	at java.lang.Class.newInstance(Class.java:308)
+	at org.apache.catalina.core.StandardWrapper.loadServlet(StandardWrapper.java:1149)
+	at org.apache.catalina.core.StandardWrapper.allocate(StandardWrapper.java:827)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:129)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:191)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:127)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:102)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:109)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:293)
+	at org.apache.coyote.http11.Http11AprProcessor.process(Http11AprProcessor.java:877)
+	at org.apache.coyote.http11.Http11AprProtocol$Http11ConnectionHandler.process(Http11AprProtocol.java:594)
+	at org.apache.tomcat.util.net.AprEndpoint$Worker.run(AprEndpoint.java:1675)
+	at java.lang.Thread.run(Thread.java:619)
+20 Feb, 2012 10:52:07 PM org.apache.catalina.core.StandardWrapperValve invoke
+INFO: Servlet SpaceUsage is currently unavailable
+20 Feb, 2012 10:52:27 PM org.apache.catalina.core.StandardWrapperValve invoke
+INFO: Servlet SpaceUsage is currently unavailable
+20 Feb, 2012 10:52:42 PM org.apache.catalina.core.StandardWrapperValve invoke
+INFO: Servlet SpaceUsage is currently unavailable
+20 Feb, 2012 10:52:52 PM org.apache.catalina.core.StandardWrapperValve invoke
+INFO: Servlet SpaceUsage is currently unavailable
+20 Feb, 2012 10:53:19 PM org.apache.catalina.core.ApplicationContext log
+INFO: Marking servlet SpaceUsage as unavailable
+20 Feb, 2012 10:53:19 PM org.apache.catalina.core.StandardWrapperValve invoke
+SEVERE: Allocate exception for servlet SpaceUsage
+java.lang.VerifyError: (class: com/yaid/administrator/SpaceUsage, method: <init> signature: ()V) Constructor must call super() or this()
+	at java.lang.Class.getDeclaredConstructors0(Native Method)
+	at java.lang.Class.privateGetDeclaredConstructors(Class.java:2389)
+	at java.lang.Class.getConstructor0(Class.java:2699)
+	at java.lang.Class.newInstance0(Class.java:326)
+	at java.lang.Class.newInstance(Class.java:308)
+	at org.apache.catalina.core.StandardWrapper.loadServlet(StandardWrapper.java:1149)
+	at org.apache.catalina.core.StandardWrapper.allocate(StandardWrapper.java:827)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:129)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:191)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:127)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:102)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:109)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:293)
+	at org.apache.coyote.http11.Http11AprProcessor.process(Http11AprProcessor.java:877)
+	at org.apache.coyote.http11.Http11AprProtocol$Http11ConnectionHandler.process(Http11AprProtocol.java:594)
+	at org.apache.tomcat.util.net.AprEndpoint$Worker.run(AprEndpoint.java:1675)
+	at java.lang.Thread.run(Thread.java:619)
+20 Feb, 2012 11:05:08 PM org.apache.catalina.core.ApplicationContext log
+INFO: Marking servlet SpaceUsage as unavailable
+20 Feb, 2012 11:05:08 PM org.apache.catalina.core.StandardWrapperValve invoke
+SEVERE: Allocate exception for servlet SpaceUsage
+java.lang.VerifyError: (class: com/yaid/administrator/SpaceUsage, method: <init> signature: ()V) Constructor must call super() or this()
+	at java.lang.Class.getDeclaredConstructors0(Native Method)
+	at java.lang.Class.privateGetDeclaredConstructors(Class.java:2389)
+	at java.lang.Class.getConstructor0(Class.java:2699)
+	at java.lang.Class.newInstance0(Class.java:326)
+	at java.lang.Class.newInstance(Class.java:308)
+	at org.apache.catalina.core.StandardWrapper.loadServlet(StandardWrapper.java:1149)
+	at org.apache.catalina.core.StandardWrapper.allocate(StandardWrapper.java:827)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:129)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:191)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:127)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:102)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:109)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:293)
+	at org.apache.coyote.http11.Http11AprProcessor.process(Http11AprProcessor.java:877)
+	at org.apache.coyote.http11.Http11AprProtocol$Http11ConnectionHandler.process(Http11AprProtocol.java:594)
+	at org.apache.tomcat.util.net.AprEndpoint$Worker.run(AprEndpoint.java:1675)
+	at java.lang.Thread.run(Thread.java:619)
+20 Feb, 2012 11:05:13 PM org.apache.catalina.core.StandardWrapperValve invoke
+INFO: Servlet SpaceUsage is currently unavailable
+20 Feb, 2012 11:05:17 PM org.apache.catalina.core.StandardWrapperValve invoke
+INFO: Servlet SpaceUsage is currently unavailable
+20 Feb, 2012 11:27:24 PM org.apache.catalina.core.ApplicationDispatcher invoke
+SEVERE: Servlet.service() for servlet jsp threw exception
+javax.servlet.ServletException: File &quot;/administratorPanel.jsp&quot; not found
+	at org.apache.jasper.servlet.JspServlet.handleMissingResource(JspServlet.java:335)
+	at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:301)
+	at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:260)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:717)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:290)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+	at org.apache.catalina.core.ApplicationDispatcher.invoke(ApplicationDispatcher.java:646)
+	at org.apache.catalina.core.ApplicationDispatcher.doInclude(ApplicationDispatcher.java:551)
+	at org.apache.catalina.core.ApplicationDispatcher.include(ApplicationDispatcher.java:488)
+	at org.apache.jasper.runtime.JspRuntimeLibrary.include(JspRuntimeLibrary.java:968)
+	at org.apache.jsp.administratorSpaceUsage_jsp._jspService(administratorSpaceUsage_jsp.java:103)
+	at org.apache.jasper.runtime.HttpJspBase.service(HttpJspBase.java:70)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:717)
+	at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:388)
+	at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:313)
+	at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:260)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:717)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:290)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:233)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:191)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:127)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:102)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:109)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:293)
+	at org.apache.coyote.http11.Http11AprProcessor.process(Http11AprProcessor.java:877)
+	at org.apache.coyote.http11.Http11AprProtocol$Http11ConnectionHandler.process(Http11AprProtocol.java:594)
+	at org.apache.tomcat.util.net.AprEndpoint$Worker.run(AprEndpoint.java:1675)
+	at java.lang.Thread.run(Thread.java:619)
+20 Feb, 2012 11:27:24 PM org.apache.catalina.core.StandardWrapperValve invoke
+SEVERE: Servlet.service() for servlet jsp threw exception
+javax.servlet.ServletException: File &quot;/administratorPanel.jsp&quot; not found
+	at org.apache.jasper.servlet.JspServlet.handleMissingResource(JspServlet.java:335)
+	at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:301)
+	at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:260)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:717)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:290)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+	at org.apache.catalina.core.ApplicationDispatcher.invoke(ApplicationDispatcher.java:646)
+	at org.apache.catalina.core.ApplicationDispatcher.doInclude(ApplicationDispatcher.java:551)
+	at org.apache.catalina.core.ApplicationDispatcher.include(ApplicationDispatcher.java:488)
+	at org.apache.jasper.runtime.JspRuntimeLibrary.include(JspRuntimeLibrary.java:968)
+	at org.apache.jsp.administratorSpaceUsage_jsp._jspService(administratorSpaceUsage_jsp.java:103)
+	at org.apache.jasper.runtime.HttpJspBase.service(HttpJspBase.java:70)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:717)
+	at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:388)
+	at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:313)
+	at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:260)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:717)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:290)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:233)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:191)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:127)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:102)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:109)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:293)
+	at org.apache.coyote.http11.Http11AprProcessor.process(Http11AprProcessor.java:877)
+	at org.apache.coyote.http11.Http11AprProtocol$Http11ConnectionHandler.process(Http11AprProtocol.java:594)
+	at org.apache.tomcat.util.net.AprEndpoint$Worker.run(AprEndpoint.java:1675)
+	at java.lang.Thread.run(Thread.java:619)
+20 Feb, 2012 11:27:25 PM org.apache.catalina.core.ApplicationDispatcher invoke
+SEVERE: Servlet.service() for servlet jsp threw exception
+javax.servlet.ServletException: File &quot;/administratorPanel.jsp&quot; not found
+	at org.apache.jasper.servlet.JspServlet.handleMissingResource(JspServlet.java:335)
+	at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:301)
+	at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:260)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:717)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:290)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+	at org.apache.catalina.core.ApplicationDispatcher.invoke(ApplicationDispatcher.java:646)
+	at org.apache.catalina.core.ApplicationDispatcher.doInclude(ApplicationDispatcher.java:551)
+	at org.apache.catalina.core.ApplicationDispatcher.include(ApplicationDispatcher.java:488)
+	at org.apache.jasper.runtime.JspRuntimeLibrary.include(JspRuntimeLibrary.java:968)
+	at org.apache.jsp.administratorSpaceUsage_jsp._jspService(administratorSpaceUsage_jsp.java:103)
+	at org.apache.jasper.runtime.HttpJspBase.service(HttpJspBase.java:70)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:717)
+	at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:388)
+	at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:313)
+	at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:260)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:717)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:290)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:233)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:191)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:127)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:102)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:109)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:293)
+	at org.apache.coyote.http11.Http11AprProcessor.process(Http11AprProcessor.java:877)
+	at org.apache.coyote.http11.Http11AprProtocol$Http11ConnectionHandler.process(Http11AprProtocol.java:594)
+	at org.apache.tomcat.util.net.AprEndpoint$Worker.run(AprEndpoint.java:1675)
+	at java.lang.Thread.run(Thread.java:619)
+20 Feb, 2012 11:27:25 PM org.apache.catalina.core.StandardWrapperValve invoke
+SEVERE: Servlet.service() for servlet jsp threw exception
+javax.servlet.ServletException: File &quot;/administratorPanel.jsp&quot; not found
+	at org.apache.jasper.servlet.JspServlet.handleMissingResource(JspServlet.java:335)
+	at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:301)
+	at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:260)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:717)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:290)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+	at org.apache.catalina.core.ApplicationDispatcher.invoke(ApplicationDispatcher.java:646)
+	at org.apache.catalina.core.ApplicationDispatcher.doInclude(ApplicationDispatcher.java:551)
+	at org.apache.catalina.core.ApplicationDispatcher.include(ApplicationDispatcher.java:488)
+	at org.apache.jasper.runtime.JspRuntimeLibrary.include(JspRuntimeLibrary.java:968)
+	at org.apache.jsp.administratorSpaceUsage_jsp._jspService(administratorSpaceUsage_jsp.java:103)
+	at org.apache.jasper.runtime.HttpJspBase.service(HttpJspBase.java:70)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:717)
+	at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:388)
+	at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:313)
+	at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:260)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:717)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:290)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:233)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:191)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:127)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:102)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:109)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:293)
+	at org.apache.coyote.http11.Http11AprProcessor.process(Http11AprProcessor.java:877)
+	at org.apache.coyote.http11.Http11AprProtocol$Http11ConnectionHandler.process(Http11AprProtocol.java:594)
+	at org.apache.tomcat.util.net.AprEndpoint$Worker.run(AprEndpoint.java:1675)
+	at java.lang.Thread.run(Thread.java:619)
+20 Feb, 2012 11:27:35 PM org.apache.catalina.core.ApplicationDispatcher invoke
+SEVERE: Servlet.service() for servlet jsp threw exception
+javax.servlet.ServletException: File &quot;/administratorPanel.jsp&quot; not found
+	at org.apache.jasper.servlet.JspServlet.handleMissingResource(JspServlet.java:335)
+	at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:301)
+	at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:260)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:717)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:290)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+	at org.apache.catalina.core.ApplicationDispatcher.invoke(ApplicationDispatcher.java:646)
+	at org.apache.catalina.core.ApplicationDispatcher.doInclude(ApplicationDispatcher.java:551)
+	at org.apache.catalina.core.ApplicationDispatcher.include(ApplicationDispatcher.java:488)
+	at org.apache.jasper.runtime.JspRuntimeLibrary.include(JspRuntimeLibrary.java:968)
+	at org.apache.jsp.administratorSpaceUsage_jsp._jspService(administratorSpaceUsage_jsp.java:103)
+	at org.apache.jasper.runtime.HttpJspBase.service(HttpJspBase.java:70)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:717)
+	at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:388)
+	at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:313)
+	at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:260)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:717)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:290)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:233)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:191)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:127)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:102)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:109)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:293)
+	at org.apache.coyote.http11.Http11AprProcessor.process(Http11AprProcessor.java:877)
+	at org.apache.coyote.http11.Http11AprProtocol$Http11ConnectionHandler.process(Http11AprProtocol.java:594)
+	at org.apache.tomcat.util.net.AprEndpoint$Worker.run(AprEndpoint.java:1675)
+	at java.lang.Thread.run(Thread.java:619)
+20 Feb, 2012 11:27:35 PM org.apache.catalina.core.StandardWrapperValve invoke
+SEVERE: Servlet.service() for servlet jsp threw exception
+javax.servlet.ServletException: File &quot;/administratorPanel.jsp&quot; not found
+	at org.apache.jasper.servlet.JspServlet.handleMissingResource(JspServlet.java:335)
+	at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:301)
+	at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:260)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:717)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:290)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+	at org.apache.catalina.core.ApplicationDispatcher.invoke(ApplicationDispatcher.java:646)
+	at org.apache.catalina.core.ApplicationDispatcher.doInclude(ApplicationDispatcher.java:551)
+	at org.apache.catalina.core.ApplicationDispatcher.include(ApplicationDispatcher.java:488)
+	at org.apache.jasper.runtime.JspRuntimeLibrary.include(JspRuntimeLibrary.java:968)
+	at org.apache.jsp.administratorSpaceUsage_jsp._jspService(administratorSpaceUsage_jsp.java:103)
+	at org.apache.jasper.runtime.HttpJspBase.service(HttpJspBase.java:70)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:717)
+	at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:388)
+	at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:313)
+	at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:260)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:717)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:290)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:233)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:191)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:127)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:102)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:109)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:293)
+	at org.apache.coyote.http11.Http11AprProcessor.process(Http11AprProcessor.java:877)
+	at org.apache.coyote.http11.Http11AprProtocol$Http11ConnectionHandler.process(Http11AprProtocol.java:594)
+	at org.apache.tomcat.util.net.AprEndpoint$Worker.run(AprEndpoint.java:1675)
+	at java.lang.Thread.run(Thread.java:619)
+20 Feb, 2012 11:27:36 PM org.apache.catalina.core.ApplicationDispatcher invoke
+SEVERE: Servlet.service() for servlet jsp threw exception
+javax.servlet.ServletException: File &quot;/administratorPanel.jsp&quot; not found
+	at org.apache.jasper.servlet.JspServlet.handleMissingResource(JspServlet.java:335)
+	at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:301)
+	at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:260)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:717)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:290)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+	at org.apache.catalina.core.ApplicationDispatcher.invoke(ApplicationDispatcher.java:646)
+	at org.apache.catalina.core.ApplicationDispatcher.doInclude(ApplicationDispatcher.java:551)
+	at org.apache.catalina.core.ApplicationDispatcher.include(ApplicationDispatcher.java:488)
+	at org.apache.jasper.runtime.JspRuntimeLibrary.include(JspRuntimeLibrary.java:968)
+	at org.apache.jsp.administratorSpaceUsage_jsp._jspService(administratorSpaceUsage_jsp.java:103)
+	at org.apache.jasper.runtime.HttpJspBase.service(HttpJspBase.java:70)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:717)
+	at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:388)
+	at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:313)
+	at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:260)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:717)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:290)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:233)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:191)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:127)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:102)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:109)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:293)
+	at org.apache.coyote.http11.Http11AprProcessor.process(Http11AprProcessor.java:877)
+	at org.apache.coyote.http11.Http11AprProtocol$Http11ConnectionHandler.process(Http11AprProtocol.java:594)
+	at org.apache.tomcat.util.net.AprEndpoint$Worker.run(AprEndpoint.java:1675)
+	at java.lang.Thread.run(Thread.java:619)
+20 Feb, 2012 11:27:36 PM org.apache.catalina.core.StandardWrapperValve invoke
+SEVERE: Servlet.service() for servlet jsp threw exception
+javax.servlet.ServletException: File &quot;/administratorPanel.jsp&quot; not found
+	at org.apache.jasper.servlet.JspServlet.handleMissingResource(JspServlet.java:335)
+	at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:301)
+	at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:260)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:717)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:290)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+	at org.apache.catalina.core.ApplicationDispatcher.invoke(ApplicationDispatcher.java:646)
+	at org.apache.catalina.core.ApplicationDispatcher.doInclude(ApplicationDispatcher.java:551)
+	at org.apache.catalina.core.ApplicationDispatcher.include(ApplicationDispatcher.java:488)
+	at org.apache.jasper.runtime.JspRuntimeLibrary.include(JspRuntimeLibrary.java:968)
+	at org.apache.jsp.administratorSpaceUsage_jsp._jspService(administratorSpaceUsage_jsp.java:103)
+	at org.apache.jasper.runtime.HttpJspBase.service(HttpJspBase.java:70)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:717)
+	at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:388)
+	at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:313)
+	at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:260)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:717)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:290)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:233)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:191)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:127)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:102)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:109)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:293)
+	at org.apache.coyote.http11.Http11AprProcessor.process(Http11AprProcessor.java:877)
+	at org.apache.coyote.http11.Http11AprProtocol$Http11ConnectionHandler.process(Http11AprProtocol.java:594)
+	at org.apache.tomcat.util.net.AprEndpoint$Worker.run(AprEndpoint.java:1675)
+	at java.lang.Thread.run(Thread.java:619)
+20 Feb, 2012 11:57:18 PM org.apache.catalina.core.ApplicationContext log
+INFO: Marking servlet SpaceUsage as unavailable
+20 Feb, 2012 11:57:18 PM org.apache.catalina.core.StandardWrapperValve invoke
+SEVERE: Allocate exception for servlet SpaceUsage
+java.lang.VerifyError: (class: com/yaid/administrator/SpaceUsage, method: <init> signature: ()V) Constructor must call super() or this()
+	at java.lang.Class.getDeclaredConstructors0(Native Method)
+	at java.lang.Class.privateGetDeclaredConstructors(Class.java:2389)
+	at java.lang.Class.getConstructor0(Class.java:2699)
+	at java.lang.Class.newInstance0(Class.java:326)
+	at java.lang.Class.newInstance(Class.java:308)
+	at org.apache.catalina.core.StandardWrapper.loadServlet(StandardWrapper.java:1149)
+	at org.apache.catalina.core.StandardWrapper.allocate(StandardWrapper.java:827)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:129)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:191)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:127)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:102)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:109)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:293)
+	at org.apache.coyote.http11.Http11AprProcessor.process(Http11AprProcessor.java:877)
+	at org.apache.coyote.http11.Http11AprProtocol$Http11ConnectionHandler.process(Http11AprProtocol.java:594)
+	at org.apache.tomcat.util.net.AprEndpoint$Worker.run(AprEndpoint.java:1675)
+	at java.lang.Thread.run(Thread.java:619)
+20 Feb, 2012 11:57:21 PM org.apache.catalina.core.StandardWrapperValve invoke
+INFO: Servlet SpaceUsage is currently unavailable
+20 Feb, 2012 11:57:40 PM org.apache.catalina.core.ApplicationContext log
+INFO: Marking servlet SpaceUsage as unavailable
+20 Feb, 2012 11:57:40 PM org.apache.catalina.core.StandardWrapperValve invoke
+SEVERE: Allocate exception for servlet SpaceUsage
+java.lang.VerifyError: (class: com/yaid/administrator/SpaceUsage, method: <init> signature: ()V) Constructor must call super() or this()
+	at java.lang.Class.getDeclaredConstructors0(Native Method)
+	at java.lang.Class.privateGetDeclaredConstructors(Class.java:2389)
+	at java.lang.Class.getConstructor0(Class.java:2699)
+	at java.lang.Class.newInstance0(Class.java:326)
+	at java.lang.Class.newInstance(Class.java:308)
+	at org.apache.catalina.core.StandardWrapper.loadServlet(StandardWrapper.java:1149)
+	at org.apache.catalina.core.StandardWrapper.allocate(StandardWrapper.java:827)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:129)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:191)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:127)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:102)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:109)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:293)
+	at org.apache.coyote.http11.Http11AprProcessor.process(Http11AprProcessor.java:877)
+	at org.apache.coyote.http11.Http11AprProtocol$Http11ConnectionHandler.process(Http11AprProtocol.java:594)
+	at org.apache.tomcat.util.net.AprEndpoint$Worker.run(AprEndpoint.java:1675)
+	at java.lang.Thread.run(Thread.java:619)
+20 Feb, 2012 11:58:20 PM org.apache.catalina.core.StandardWrapperValve invoke
+INFO: Servlet SpaceUsage is currently unavailable
+20 Feb, 2012 11:58:24 PM org.apache.catalina.core.StandardWrapperValve invoke
+INFO: Servlet SpaceUsage is currently unavailable

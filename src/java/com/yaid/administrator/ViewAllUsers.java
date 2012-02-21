@@ -76,8 +76,8 @@ public class ViewAllUsers extends HttpServlet {
             System.out.println("qwert");
             String operation = request.getParameter("operation");
             String userid = request.getParameter("userid");
-             System.out.println("Operation : " + operation);
-             System.out.println("UserID : " + userid);
+            System.out.println("Operation : " + operation);
+            System.out.println("UserID : " + userid);
             if (operation.equals("showSingleUser")) {
                 System.out.println("qwerty");
                 selectSingleUser(userid);
@@ -104,13 +104,11 @@ public class ViewAllUsers extends HttpServlet {
      * @return a String containing servlet description
      */
     public void selectSingleUser(String userid) {
-       
-ResultSet resultSet = null;
-
+        ResultSet resultSet = null;
         PreparedStatement preparedStatement = null;
         Connection connect = null;
-         System.out.println("UserID2 : " + Integer.parseInt(userid));
-        try { 
+        System.out.println("UserID2 : " + Integer.parseInt(userid));
+        try {
             connect = DbConnection.getDbConnection();
             preparedStatement = connect.prepareStatement("select * from yaid.users where userid=?");
             preparedStatement.setInt(1, Integer.parseInt(userid));
@@ -120,13 +118,12 @@ ResultSet resultSet = null;
         } catch (Exception e) {
             System.out.println("View Single User Error : " + e);
         } finally {
-            
         }
     }
 
     public void showUserDetails(ResultSet user) {
         try {
-           
+
             PrintWriter pw = null;
             pw.println("<div>");
             pw.println("<label> User ID : </label>" + user.getInt("userid"));

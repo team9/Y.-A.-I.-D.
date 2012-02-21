@@ -60,17 +60,18 @@ $.ui.dialog.prototype._init = function() {
         dialog_element.close();
         $('#' + dialog_id + '_minimized').show();
     });
-    $("a.ui-dialog-titlebar-close").click(function(event){
-        console.log(event);
-        event.preventDefault();
-        //$("#"+$(this).attr("id") + "_minimized").hide();
-        this.close();        
-    });
+    //    $("#"+dialog_id).find("a.ui-dialog-titlebar-close").click(function(event){
+    //        console.log(event);
+    //        event.preventDefault();
+    //        $("#"+dialog_id + "_minimized").hide();
+    //        //this.close();        
+    //    });
     //create another click event that maximizes our minimized window
     $('#' + dialog_id + '_minimized').click(function() {
         //$(this).hide();
         if(dialog_element.isOpen()){
             dialog_element.close();
+            $('#' + dialog_id + '_minimized').show();
         }else{
             dialog_element.open();
         }
@@ -104,12 +105,19 @@ function Window(arg){
         }
 						 
         //initialize our new dial
-        var dialog = $('#' + div_id).dialog(arg['option']);/*{
+        var dialog = $('#' + div_id).dialog(arg['option']).bind( "dialogclose", function(event, ui) {
+            console.log(this,ui);
+            $("#"+div_id + "_minimized").hide();
+        }).bind( "dialogopen", function(event, ui) {
+            $('#' + div_id + '_minimized').show();
+        });
+        /*{
 						   width: 'auto',
 						   height: 'auto',
 						   title : div_title
 
 						});*/
+        console.log(dialog);
         return dialog;
 
     }
@@ -117,3 +125,4 @@ function Window(arg){
         console.log(e);
     }
 }
+Window.actualDia=null;

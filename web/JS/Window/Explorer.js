@@ -5,7 +5,15 @@
 
 function Explorer(path){
     //$(document).ready(function() {
-    var window1=Window({'option':{'title':'Explorer Test',height:300,width:750},'content':"","ajax":false});
+    var window1=Window({
+        'option':{
+            'title':'Explorer Test',
+            height:300,
+            width:750
+        },
+        'content':"",
+        "ajax":false
+    });
     this.div_id=$(window1).attr("id");
     this.window=$('#windowe_content'+ this.div_id);
     
@@ -18,7 +26,8 @@ function Explorer(path){
     "<div>"+
     "<span class=\"ui-widget-header ui-corner-all toolbar\" id=\"toolBar"+ this.div_id +"\">"+
     "<button id=\"home"+ this.div_id +"\">Home</button>"+
-    "<input type=\"text\" class=\"path_text\" id=\"path_text"+ this.div_id +"\" />"+
+    "<form class=\"path_form\" id='path_form"+ this.div_id +"' autocomplete=\"off\"><input type=\"text\" class=\"path_text\" id=\"path_text"+
+    this.div_id +"\" /></form>"+
     "<button id=\"back"+ this.div_id +"\">Back</button>"+
     "<button id=\"new_file"+ this.div_id +"\">New File</button>"+
     "<button id=\"new_folder"+ this.div_id +"\">New Folder</button>"+
@@ -82,6 +91,12 @@ function Explorer(path){
         });
         //console.log($("#toolBar"+ div_id));
         $("#path_text"+ explore.div_id).button();
+        $("#path_form"+ explore.div_id).submit(function(){
+            path=$("#path_text"+ explore.div_id).val()
+            console.log(path);
+            explore.makeFolderElm(path);
+            return false;
+        })
         $( "#home" + explore.div_id).button({
             text: false,
             icons: {
@@ -130,6 +145,12 @@ function Explorer(path){
             icons: {
                 primary: "ui-icon-trash"
             }
+        }).click(function(){
+            $.each(explore.selected,function(index,value){
+                //console.log($(value).attr("id").replace(explore.div_id+"file_",""));
+                explore.removeFile($(value).attr("id").replace(explore.div_id+"file_",""));
+            });
+            
         });
         $( "#cut" + explore.div_id).button({
             text: false,
@@ -162,6 +183,27 @@ function Explorer(path){
 Explorer.explorerData={};
 //(/^He/).test('Hello world')
 
+Explorer.prototype.removeFile = function(path){
+    var explore=this;
+    $.ajax({
+        type: 'GET',
+        url: "FileOperationHandler",								 
+        data: {
+            "operation":"delete_files",
+            "id": encodeURI(path)
+        },//"operation=get_files&id=" +  encodeURI(path),
+        success: function (htmldir){
+            if(htmldir!="faild"){
+                parnt=explore.recursivelyRem(path);
+                explore.makeFolderElm(parnt);
+            }
+        },
+        error: function(jqXHR, textStatus, errorThrown){
+            console.log(jqXHR, textStatus, errorThrown)
+        }
+    });
+}
+
 Explorer.prototype.recursivelyRem = function(path){
     //name=$(path).children( "div" ).children( "div" ).html();
     //console.log(path.substring(0,path.lastIndexOf("/")))
@@ -179,13 +221,17 @@ Explorer.prototype.recursivelyRem = function(path){
     }
     return parnt;
 
-}
+};
+
 Explorer.prototype.makeFolderElm = function(path){
     str='';
     if(this.path!=path){
         parrent=this.path;
     }else{
         parrent=path.substring(0,path.lastIndexOf("/"));
+        if(parrent==""){
+            parrent='/';
+        }
     }
     
     //console.log(path);
@@ -200,17 +246,19 @@ Explorer.prototype.makeFolderElm = function(path){
                 "id": encodeURI(path)
             },//"operation=get_files&id=" +  encodeURI(path),
             success: function (htmldir){
-                explore.loadFolderElm(htmldir,path);
-                Explorer.explorerData[path]={
-                    "contents":htmldir,
-                    "parrentfolder":parrent
-                };
-                        
+                if(htmldir!="faild"){
+                    explore.loadFolderElm(htmldir,path);
+                    Explorer.explorerData[path]={
+                        "contents":htmldir,
+                        "parrentfolder":parrent
+                    };
+                }
             }
         });
     }else if(path!=""){
         explore.loadFolderElm(Explorer.explorerData[path]["contents"],path);
     }
+    return true;
 };
 
 Explorer.prototype.loadFolderElm=function(htmldir,path){
