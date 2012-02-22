@@ -1,10 +1,16 @@
 @CHARSET "ISO-8859-1";
 
 
+#maindiv {
+    position: relative;
+   padding-top: 20px;
+    
+}
+
 #tabs {
         
     
-	border-bottom: .5em solid #0033CC;
+    border-bottom: .5em solid #9999ff;
 
 	margin: 0;
 
@@ -37,6 +43,7 @@
 #tabs li  a:hover
 { 
 background-color:yellow;
+border-radius: 10px 10px 10px 10px ;
 }
 
 #tabs li a:select
@@ -64,11 +71,17 @@ background-color:yellow;
 
 
 #logout {
-     float: right;
      color: #0033ff;
-     
+     top:0px;
+     right: 20px;
+     position: absolute;
 }
-#logout {
-    float: right;
-    
+
+.submit {
+     background:  url("../../images/icons/logoff.png") no-repeat top;
+      width: 35px;
+      height: 35px;
+      opacity:1;
+    filter:alpha(opacity=0);
+      
 }

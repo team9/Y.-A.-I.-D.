@@ -3,18 +3,21 @@ body  a.style{
     font-family:sans-serif;
     font-size:13px;
     text-decoration:none;
+
 }
 
 .wrapper{
     font-family:Arial, Helvetica, sans-serif;
     margin-top:0px;
     margin-left:0px;
-    height: 250px;
+    height: 280px;
     bottom: 35px;
     background-image: url("../../images/startMenu/silver.jpg");
     opacity:0.8;
     filter:alpha(opacity=40);
     position: relative;
+            border-radius: 10px 10px 10px 10px ;
+
 }
 
 .wrapper h1{
@@ -107,9 +110,9 @@ span.btn:hover{
 }
 #My_Start_Menu_Base {
 
-    bottom: 20px;
-    left: 20px;
-  position: absolute;
+    top: 80px;
+    right: 110px;
+  position: relative;
 
 
 }
@@ -125,4 +128,26 @@ span.btn:hover{
     left: 90px;
     width: 50px;
     float: left;
+}
+
+#startMenuHeader {
+    height: 30px;
+    width: 300px;
+    background-color: #ff9900;
+    color: #ffffff;
+    font-size: 16pt;
+    text-align: center;
+            border-radius: 10px 10px 0px 0px ;
+            font-family: cursive;
+opacity:0.9;
+    filter:alpha(opacity=0);
+}
+
+.submit {
+     background:  url("../../images/icons/logoff.png") no-repeat top;
+      width: 35px;
+      height: 35px;
+      opacity:1;
+    filter:alpha(opacity=0);
+      
 }

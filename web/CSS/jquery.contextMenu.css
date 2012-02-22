@@ -87,6 +87,14 @@
 .context-menu-item.icon-close { background-image: url(../images/clock/icon/close.png); }
 .context-menu-item.icon-widget { background-image: url(../images/icons/widgets.png); }
 .context-menu-item.icon-wallpaper { background-image: url(../images/icons/wallpaper.png); }
+.context-menu-item.icon-copy { background-image: url(../images/icons/copy.png); }
+.context-menu-item.icon-cut { background-image: url(../images/icons/cut.png); }
+.context-menu-item.icon-paste { background-image: url(../images/icons/paste.png); }
+.context-menu-item.icon-delete { background-image: url(../images/icons/delete.png); }
+.context-menu-item.icon-download { background-image: url(../images/icons/download-cloud.png); }
+.context-menu-item.icon-rename { background-image: url(../images/icons/rename.png); }
+.context-menu-item.icon-document { background-image: url(../images/icons/document1.png); }
+.context-menu-item.icon-folder { background-image: url(../images/icons/folder1.png); }
 
 /* vertically align inside labels */
 .context-menu-input > label > * { vertical-align: top; }

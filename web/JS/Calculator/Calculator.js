@@ -6,14 +6,14 @@ $(document).ready(function () {
 
     // ANIMATE THE HEADER
     $("div.inf").fadeTo(1000, 0.25,
-    function () { $("div.inf").fadeTo(500, 1.00); });
+    function () {$("div.inf").fadeTo(500, 1.00);});
 
     // TOGGLE ARTICLE
     $("div.panel").slideToggle("slow");
 
     // TOGGLE INSTRUCTION PANEL
     $("div.inf").click(function ()
-    { $("div.panel").slideToggle("slow"); });
+    {$("div.panel").slideToggle("slow");});
 
     // APPEND THE NUM INTO BUFFER TEXTBOX
     $("div#keyPad button.keyPad_btnNormal").click(function () {
@@ -67,22 +67,22 @@ $(document).ready(function () {
         var retVal = "ERROR! CHECK INPUT";
 
         // VALIDATE INPUT USING SPLIT FUNCTION AND REGULAR EXPRESSION
-        arrVal = inputBox.val().split(/[+-\/*]+/);
-        if (arrVal.length > 2) { inputBox.val(retVal); return; }
+        arrVal = inputBox.val().split(/[+-\/*%]+/);
+        if (arrVal.length > 2) {inputBox.val(retVal);return;}
 
         // parse to get 2 operands
         x1 = parseFloat(arrVal[0]);
         x2 = parseFloat(arrVal[1]);
 
         // "+"
-        if (inputBox.val().indexOf('+') >= 0) { retVal = x1 + x2; }
+        if (inputBox.val().indexOf('+') >= 0) {retVal = x1 + x2;}
         // "-"
-        else if (inputBox.val().indexOf('-') >= 0) { retVal = x1 - x2; }
+        else if (inputBox.val().indexOf('-') >= 0) {retVal = x1 - x2;}
         // "*"
-        else if (inputBox.val().indexOf('*') >= 0) { retVal = x1 * x2; }
+        else if (inputBox.val().indexOf('*') >= 0) {retVal = x1 * x2;}
         // "/"
-        else if (inputBox.val().indexOf('/') >= 0) { retVal = x1 / x2; }
-        else { }
+        else if (inputBox.val().indexOf('/') >= 0) {retVal = x1 / x2;}
+        else if (inputBox.val().indexOf('%') >= 0) {retVal = x1 % x2; }
 
         inputBox.val(retVal);
         inputBox.focus();
@@ -95,19 +95,19 @@ $(document).ready(function () {
         var retVal = "ERROR";
 
         switch (this.id) {
-            case 'keyPad_btnInverseSign': retVal = -x; break;       // +/-
-            case 'keyPad_btnInverse': retVal = 1 / x; break;        // 1/X
-            case 'keyPad_btnSquare': retVal = x * x; break;         // X^2
-            case 'keyPad_btnSquareRoot': retVal = Math.sqrt(x); break;  // SQRT(X)
-            case 'keyPad_btnCube': retVal = x * x * x; break;       // X^3
-            case 'keyPad_btnCubeRoot': var tmp = 1 / 3; retVal = Math.pow(x, tmp); break; // POW (X, 1/3)
-            case 'keyPad_btnLog': retVal = Math.log(x); break;      // LOG (N) - NATURAL
-            case 'keyPad_btnExp': retVal = Math.exp(x); break;      // E^(X)
-            case 'keyPad_btnSin': retVal = Math.sin(x); break;      // SIN(X)
-            case 'keyPad_btnCosin': retVal = Math.cos(x); break;    // COS(X) 
-            case 'keyPad_btnTg': retVal = Math.tan(x); break;       // TAN(X)
-            case 'keyPad_btnCtg': retVal = 1 / Math.tan(x); break;  // CTG(X)
-            default: break;
+            case 'keyPad_btnInverseSign':retVal = -x;break;       // +/-
+            case 'keyPad_btnInverse':retVal = 1 / x;break;        // 1/X
+            case 'keyPad_btnSquare':retVal = x * x;break;         // X^2
+            case 'keyPad_btnSquareRoot':retVal = Math.sqrt(x);break;  // SQRT(X)
+            case 'keyPad_btnCube':retVal = x * x * x;break;       // X^3
+            case 'keyPad_btnCubeRoot':var tmp = 1 / 3;retVal = Math.pow(x, tmp);break; // POW (X, 1/3)
+            case 'keyPad_btnLog':retVal = Math.log(x);break;      // LOG (N) - NATURAL
+            case 'keyPad_btnExp':retVal = Math.exp(x);break;      // E^(X)
+            case 'keyPad_btnSin':retVal = Math.sin(x);break;      // SIN(X)
+            case 'keyPad_btnCosin':retVal = Math.cos(x);break;    // COS(X) 
+            case 'keyPad_btnTg':retVal = Math.tan(x);break;       // TAN(X)
+            //case 'keyPad_btnCtg':retVal = Math.round(Math.random());break;//retVal = 1 / Math.tan(x); break;  // COT(X)
+            default:break;
         }
         inputBox.val(retVal);
         inputBox.focus();

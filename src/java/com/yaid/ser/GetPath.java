@@ -27,6 +27,8 @@ public class GetPath extends HttpServlet {
      */
     public String wallpaper_path;
     public String key;
+    public String clock_set;
+    public String calender_set;
 
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
@@ -35,13 +37,28 @@ public class GetPath extends HttpServlet {
         HttpSession session = request.getSession(true);
         try {
             wallpaper_path = request.getParameter("value");
+            clock_set = request.getParameter("value");
+            calender_set = request.getParameter("value");
             key = request.getParameter("key");
             if (key.equals("wallpaper")) {
                 out.println("SUCCESS: path = " + wallpaper_path + " and key = " + key);
                 String uid = (String) session.getAttribute("userID");
-                System.out.println("The Session user in Getpath Servlet is : " + uid);
                 User u = DeserializeUser.deserialize(uid);
                 u.wallpaper_path = wallpaper_path;
+                SerializeUser.serialize(u, uid);
+            }
+            if (key.equals("clockset")) {
+                out.println("SUCCESS: path = " + clock_set + " and key = " + key);
+                String uid = (String) session.getAttribute("userID");
+                User u = DeserializeUser.deserialize(uid);
+                u.clock_set = clock_set;
+                SerializeUser.serialize(u, uid);
+            }
+            if (key.equals("calenderset")) {
+                out.println("SUCCESS: path = " + calender_set + " and key = " + key);
+                String uid = (String) session.getAttribute("userID");
+                User u = DeserializeUser.deserialize(uid);
+                u.calender_set = calender_set;
                 SerializeUser.serialize(u, uid);
             }
         } finally {

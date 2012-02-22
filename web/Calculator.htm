@@ -1,90 +1,78 @@
-<html>
-    <head>
+<script src="JS/Calculator/Calculator.js" type="text/javascript"></script>
+<div class="centerColumn">
 
-        <title>SCIENTIFIC CALCULATOR</title>
-        <link href="CSS/Calculator/Calculator.css" rel="stylesheet" type="text/css" />
-        <script src="JQUERY/jquery.js" type="text/javascript"></script>
-        <script src="JS/Calculator/Calculator.js" type="text/javascript"></script>
 
-    </head>
+    <div class = "main">
 
-    <body>
-        <div class="centerColumn">
-            
 
-            <div class = "main">
-                <header>
-                    <h1>CALCULATOR</h1>
-                </header>
-               
+        <div id="keyPad">
 
-                <div id="keyPad">
-
-                    <!--USER INPUT-->
-                    <div class="keys_ToRight">
-                    </div>
-                    <input type="text" id="keyPad_UserInput" readonly /></input>
-                    <div class="clear"></div>
-
-                    <!--1st ROW-->
-                    <div class="keys_ToRight">
-                        <button id="keyPad_btnPlus" class="keyPad_btnNormal">+</button>
-                        <button id="keyPad_btnMinus" class="keyPad_btnNormal">-</button>
-                        <button id="keyPad_btnMult" class="keyPad_btnNormal">*</button>
-                        <button id="keyPad_btnDiv" class="keyPad_btnNormal">/</button>
-                    </div>
-
-                    <button id="keyPad_btn1" class="keyPad_btnNormal">1</button>
-                    <button id="keyPad_btn2" class="keyPad_btnNormal">2</button>
-                    <button id="keyPad_btn3" class="keyPad_btnNormal">3</button>
-                    <div class="clear"></div>
-
-                    <!--2nd ROW-->
-                    <div class="keys_ToRight">
-                        <button id="keyPad_btnInverseSign" class="keyPad_btnCommand">+/-</button>
-                        <button id="keyPad_btnInverse" class="keyPad_btnCommand">1/x</button>
-                        <button id="keyPad_btnSquare" class="keyPad_btnCommand">x<sup>2</sup></button>
-                        <button id="keyPad_btnSquareRoot" class="keyPad_btnCommand">&#8730</button>
-                    </div>
-                    <button id="keyPad_btn4" class="keyPad_btnNormal">4</button>
-                    <button id="keyPad_btn5" class="keyPad_btnNormal">5</button>
-                    <button id="keyPad_btn6" class="keyPad_btnNormal">6</button>
-                    <div class="clear"></div>
-
-                    <!--3rd ROW-->
-                    <div class="keys_ToRight">
-                        <button id="keyPad_btnCube" class="keyPad_btnCommand">x<sup>3</sup></button>
-                        <button id="keyPad_btnCubeRoot" class="keyPad_btnCommand">&#8731</button>
-                        <button id="keyPad_btnLog" class="keyPad_btnCommand">Log</button>
-                        <button id="keyPad_btnExp" class="keyPad_btnCommand">e<sup>x</sup></button>
-                    </div>
-                    <button id="keyPad_btn7" class="keyPad_btnNormal">7</button>
-                    <button id="keyPad_btn8" class="keyPad_btnNormal">8</button>
-                    <button id="keyPad_btn9" class="keyPad_btnNormal">9</button>
-                    <div class="clear"></div>
-
-                    <!--4th ROW-->
-                    <div class="keys_ToRight">
-                        <button id="keyPad_btnSin" class="keyPad_btnCommand">sin</button>
-                        <button id="keyPad_btnCosin" class="keyPad_btnCommand">cos</button>
-                        <button id="keyPad_btnTg" class="keyPad_btnCommand">tan</button>
-                        <button id="keyPad_btnCtg" class="keyPad_btnCommand">ctg</button>
-                    </div>
-                    <button id="keyPad_btnDot" class="keyPad_btnNormal">.</button>
-                    <button id="keyPad_btn0" class="keyPad_btnNormal">0</button>
-                    <button id="keyPad_btnSpace" class="keyPad_btnSpace">SPC</button>
-                    <div class="clear"></div>
-
-                    <!--5th ROW-->
-                    <div class="keys_ToRight">
-                        <button id="keyPad_btnEnter" class="keyPad_btnEnter">=</button>
-                    </div>
-                    <button id="keyPad_btnBack" class="keyPad_btnBack">&#8678</button>
-                    <button id="keyPad_btnClr" class="keyPad_btnClr">CLR</button>
-                    <div class="clear"></div>
-                </div>
-                <div class="clear"></div>
+            <!--USER INPUT-->
+            <div class="keys_ToRight">
             </div>
+            <input type="text" id="keyPad_UserInput" readonly /></input>
+            <div class="clear"></div>
+
+            <!--1st ROW-->
+            <div class="keys_ToRight">
+                <button id="keyPad_btnPlus" class="keyPad_btnNormal">+</button>
+                <button id="keyPad_btnMinus" class="keyPad_btnNormal">-</button>
+                <button id="keyPad_btnMult" class="keyPad_btnNormal">*</button>
+                <button id="keyPad_btnDiv" class="keyPad_btnNormal">/</button>
+            </div>
+
+            <button id="keyPad_btn1" class="keyPad_btnNormal">1</button>
+            <button id="keyPad_btn2" class="keyPad_btnNormal">2</button>
+            <button id="keyPad_btn3" class="keyPad_btnNormal">3</button>
+            <div class="clear"></div>
+
+            <!--2nd ROW-->
+            <div class="keys_ToRight">
+                <button id="keyPad_btnInverseSign" class="keyPad_btnCommand">+/-</button>
+                <button id="keyPad_btnInverse" class="keyPad_btnCommand">1/x</button>
+                <button id="keyPad_btnSquare" class="keyPad_btnCommand">x<sup>2</sup></button>
+                <button id="keyPad_btnSquareRoot" class="keyPad_btnCommand">&#8730</button>
+            </div>
+            <button id="keyPad_btn4" class="keyPad_btnNormal">4</button>
+            <button id="keyPad_btn5" class="keyPad_btnNormal">5</button>
+            <button id="keyPad_btn6" class="keyPad_btnNormal">6</button>
+            <div class="clear"></div>
+
+            <!--3rd ROW-->
+            <div class="keys_ToRight">
+                <button id="keyPad_btnCube" class="keyPad_btnCommand">x<sup>3</sup></button>
+                <button id="keyPad_btnCubeRoot" class="keyPad_btnCommand">&#8731</button>
+                <button id="keyPad_btnLog" class="keyPad_btnCommand">log</button>
+                <button id="keyPad_btnExp" class="keyPad_btnCommand">e<sup>x</sup></button>
+            </div>
+            <button id="keyPad_btn7" class="keyPad_btnNormal">7</button>
+            <button id="keyPad_btn8" class="keyPad_btnNormal">8</button>
+            <button id="keyPad_btn9" class="keyPad_btnNormal">9</button>
+            <div class="clear"></div>
+
+            <!--4th ROW-->
+            <div class="keys_ToRight">
+                <button id="keyPad_btnSin" class="keyPad_btnCommand">sin</button>
+                <button id="keyPad_btnCosin" class="keyPad_btnCommand">cos</button>
+                <button id="keyPad_btnTg" class="keyPad_btnCommand">tan</button>
+                <button id="keyPad_btnCtg" class="keyPad_btnNormal">%</button>
+            </div>
+            <!--button id="keyPad_btnDot" class="keyPad_btnNormal">.</button-->
+            <button id="keyPad_btnToMem">&#8681</button>
+            <button id="keyPad_btn0" class="keyPad_btnNormal">0</button>
+            <button id="keyPad_btnFromMem">&#8679</button>
+            <!--button id="keyPad_btnSpace" class="keyPad_btnSpace">SPC</button-->
+            <div class="clear"></div>
+
+            <!--5th ROW-->
+            <div class="keys_ToRight">
+                <button id="keyPad_btnEnter" class="keyPad_btnEnter">=</button>
+            </div>
+            <button id="keyPad_btnBack" class="keyPad_btnBack">&#8678</button>
+            <button id="keyPad_btnClr" class="keyPad_btnClr">CLR</button>
+            <div class="clear"></div>
+            <input type="text" id="keyPad_Mem" readonly /></input>
         </div>
-    </body>
-</html>
+        <div class="clear"></div>
+    </div>
+</div>

@@ -35,3 +35,11 @@
 #WidgetView { position: absolute;list-style-type: none; margin: 0; padding: 0; left: 12px; top: 12px; }
 #WidgetView li { margin: 5px 5px 5px 0; padding: 1px; float: left; width: 200px; height: 90px; font-size: 12px; text-align: center; }
 #WidgetView img {height: 150px; width: 150px;}
+
+
+.image_viewer img{
+    max-height: 500px;
+    min-height: 300px;
+    max-width: 700px;
+    min-width: 500px;
+}

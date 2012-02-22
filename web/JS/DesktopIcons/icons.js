@@ -5,10 +5,24 @@ function onselectIcon(obj){
         new Explorer("/");
     }
     if( $(obj).attr('id') == "calculator" ) {
-        alert('Calculatro');
-    }
-    
+        if(onselectIcon.calc==null) {
+            onselectIcon.calc=Window({
+                'option':{
+                    'title':'Calculator',
+                     resizable: false,
+                    height:410,
+                    width:390
+                },
+                'content':'Calculator.htm',
+                "ajax":true
+            });
+           
+        } else{
+            onselectIcon.calc.dialog( "open" )
+        }
+    } 
 }
+onselectIcon.calc=null;
 
 function makeIcon(){
     str='';

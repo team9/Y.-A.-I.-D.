@@ -68,12 +68,8 @@ public class Registration extends HttpServlet {
             while (resultSet.next()) {
                 if (resultSet.getString("email").equals(email)) {
                     System.out.println("\t email in DB : " + resultSet.getString("email"));
-                    response.setContentType("text/html");
-                    pw.println("<script type=\"text/javascript\">");
-                    pw.println("alert('Another user with same user ID exists... Please redo registration with another ID!!!');");
-                    pw.println("</script>");
-                    response.sendRedirect("index.jsp");
                     accountExists = true;
+                    pw.print("UserAlreadyExists");
                     break;
                 }
 
@@ -89,15 +85,12 @@ public class Registration extends HttpServlet {
                 System.out.println("Hello : " + uid);
                 initializeDirectory(uid);
                 initialSerialization(uid);
-
                 response.setContentType("text/html");
-                pw.println("<script type=\"text/javascript\">");
-                pw.println("alert('Registratoin successful... You may login now...');");
-                //pw.println("window.location='index.jsp';");
-                pw.println("</script>");
-                response.sendRedirect("index.jsp");
+                pw.print("SuccessfulRegistration");
+
 
             }
+
         } catch (Exception e) {
             e.printStackTrace();
         } finally {
@@ -116,7 +109,9 @@ public class Registration extends HttpServlet {
     public void initialSerialization(String uid) {
         System.out.println("The user id is: " + uid);
         User u = new User();
-        u.wallpaper_path = "ImageBytes?id=/vig/My Files/WallPaper/feathers.jpg";
+        u.wallpaper_path = "ImageBytes?id=/Home/WallPaper/feathers.jpg";
+        u.clock_set = "hide";
+        u.calender_set = "hide";
         SerializeUser.serialize(u, uid);
     }
 
@@ -126,10 +121,19 @@ public class Registration extends HttpServlet {
             boolean success1 = (new File(strDirectoy)).mkdirs();
             strDirectoy = "UserData/" + userid + "/Home";
             boolean success2 = (new File(strDirectoy)).mkdirs();
-            strDirectoy = "UserData/" + userid + "/Desktop";
+            strDirectoy = "UserData/" + userid + "/Home" + "/WallPaper";
             boolean success3 = (new File(strDirectoy)).mkdirs();
             strDirectoy = "UserData/" + userid + "/Settings";
             boolean success4 = (new File(strDirectoy)).mkdirs();
+            strDirectoy = "UserData/" + userid + "/Home" + "/Data";
+            boolean success5 = (new File(strDirectoy)).mkdirs();
+            strDirectoy = "UserData/" + userid + "/Home" + "/Samples";
+            boolean success6 = (new File(strDirectoy)).mkdirs();
+
+            String src = "UserData/Default Wallpaper";
+            String dest = "UserData/" + userid + "/Home" + "/WallPaper";
+            CopyFiles.copyFiles(src, dest);
+
         } catch (Exception e) {//Catch exception if any
             System.err.println("Error: " + e.getMessage());
         }

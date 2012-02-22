@@ -107,6 +107,7 @@ public class SpaceUsage extends HttpServlet {
             mail = mail.substring(0, mail.indexOf("@")); //cropping of adress part after '@' symbol
             userDirectory = "./UserData/" + mail;
             System.out.println("Target ID : " + mail);
+            System.out.println("User dir : " + userDirectory);
             displaySizeOfDir(userDirectory);
             
             //response.sendRedirect("administratorSpaceUsage.jsp");
@@ -171,6 +172,7 @@ public class SpaceUsage extends HttpServlet {
 //                }
                 //fileCount++;
             }
+            System.out.println("Size : " + totalsize);
             return (totalsize);
         }
         // The directory is now empty so delete it

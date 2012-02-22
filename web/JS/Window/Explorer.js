@@ -7,7 +7,7 @@ function Explorer(path){
     //$(document).ready(function() {
     var window1=Window({
         'option':{
-            'title':'Explorer Test',
+            'title':'Explorer',
             height:300,
             width:750
         },
@@ -128,8 +128,8 @@ function Explorer(path){
                 primary: "ui-icon-folder-open"
             }
         }).click(function(){
-            //
-            explore.createNewFile(explore.path,"NewDirectory","","make_dir");
+            FolderName=explore.selectName("NewDirectory","");
+            explore.createNewFile(explore.path,FolderName,"","make_dir");
         });
         $( "#copy" + explore.div_id).button({
             text: false,
@@ -209,30 +209,32 @@ Explorer.prototype.recursivelyRem = function(path){
     //console.log(path.substring(0,path.lastIndexOf("/")))
     //console.log(path.lastIndexOf("/"),path);
     parnt=path.substring(0,path.lastIndexOf("/"));
+    if(parnt==""){
+        parnt='/';
+    }
     //delete
     dat=Explorer.explorerData[parnt]["contents"];
-    console.log("file_"+path);
+    //console.log("file_"+path);
     for(i=0;i<dat.length;i++){
-        console.log(dat[i]["attr"]["id"]);
+        //console.log(dat[i]["attr"]["id"]);
         if(dat[i]["attr"]["id"]=="file_"+path){
             dat.splice(i,1);
             break;
         }        
     }
+    console.log(parnt)
     return parnt;
 
 };
 
 Explorer.prototype.makeFolderElm = function(path){
     str='';
-    if(this.path!=path){
-        parrent=this.path;
-    }else{
-        parrent=path.substring(0,path.lastIndexOf("/"));
-        if(parrent==""){
-            parrent='/';
-        }
+
+    parrent=path.substring(0,path.lastIndexOf("/"));
+    if(parrent==""){
+        parrent='/';
     }
+  
     
     //console.log(path);
     var explore=this;
@@ -350,7 +352,8 @@ Explorer.prototype.fileRename = function (oldFile){
                         id.html(newName);
                         parnt=explore.recursivelyRem(path);
                         Explorer.explorerData[parnt]["contents"].push(htmldir);
-                        
+                        explore.loadFolderElm(Explorer.explorerData[parnt]["contents"],parnt);
+                    //console.log(Explorer.explorerData[parnt]["contents"]);
                     }else {
                         id.html(val);
                     }

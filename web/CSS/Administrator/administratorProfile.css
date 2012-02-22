@@ -17,12 +17,20 @@ body {
 
 #page {
     position: absolute;
-    background-color:  #e0d5b7;
-width: 500px;
+    width: 400px;
     opacity:0.8;
     filter:alpha(opacity=40);
     margin-left:   400px;
     margin-top: 100px;
+    
+}
+
+
+#header {
+    background-image: url('../../images/administrator/administratorProfileFormHeader.jpg'); 
+    height: 50px;
+    vertical-align: middle;
+    border-radius: 10px 10px 0px 0px ;
 }
 
 h2 {
@@ -31,10 +39,22 @@ h2 {
     color: white;
 }
 
+
 #passwordChangeDetails {
     position: relative;
-    
     background-image: url('../../images/administrator/administratorProfileForm.jpg'); 
     background-repeat: repeat;
-    top: 10px;
+    top: 0px;
+    border-radius: 0px 0px 10px 10px ;
+    padding-left: 15px;
+}
+
+#descrption {
+    color: #3366ff;
+}
+
+#submitButton {
+     width: 400px; 
+     height: 50px; 
+    padding-left: 135px;
 }

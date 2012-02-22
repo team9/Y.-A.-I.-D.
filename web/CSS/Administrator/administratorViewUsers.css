@@ -12,50 +12,79 @@
 */
 body {
     background-image: url('../../images/administrator/ball1.jpg'); 
+    background-repeat: no-repeat;
 
 
 }
 #viewUsersLeft {
     float: left;
-    height: 600px;
+    height: 700px;
+
 
 }
 #viewList {
     float: left;
-    height: 450px;
+    height: 420px;
     background-color: #fdfefc;
-
-    opacity:0.4;
+    margin-top: 30px;
+    opacity:0.9;
     filter:alpha(opacity=40);
-
+    border-radius: 10px 10px 10px 10px ;
+    left: 10px;
+    right: 10px;
+   border: gray double;
 
 }
 
 #headings {
-    padding: 20px;
+
+    padding: 10px;
+    background-color: #000;
+    color: white;
+    height: 20px;
+    font-weight: bolder;
+    border-radius: 10px 10px 0px 0px ;
+
 }
 
 #headingSerial {
     width: 100px;
     position: relative;
     float: left;
+    border-width: 1px;
+    border-left:1px solid white;
+    padding-left: 10px;
 }
 
 #headingEmail {
     width: 300px;
     position: relative;
     float: left;
+    border-width: 1px;
+    border-left:1px solid white;
+    padding-left: 10px;
+
 }
 #headingPassword {
     width: 200px;
     position: relative;
     float: left;
+    border-width: 1px;
+    border-left:1px solid white;
+    border-right:1px solid white;
+    padding-left: 10px;
 }
 
 #usersdetails {
     position: relative;
-    height: 20px;
-    padding: 20px;
+    height: 25px;
+    padding: px;
+    margin-bottom: 30px;
+    border-width: 1px;
+    border-left:1px solid white;
+    padding-left: 10px;
+    
+    background-repeat: no-repeat;
 
 
 }
@@ -64,29 +93,40 @@ body {
     width: 100px;
     position: relative;
     float: left;
+    border-width: 1px;
+    border-left:1px solid gray;
+    padding-left: 10px;
 }
 
 #userEmail { 
     width: 300px;
     position: relative;
     float: left;
+    border-left:1px solid gray;
+    padding-left: 10px;
 }
 
 #userPassword { 
     width: 200px;
     position: relative;
     float: left;
+    border-left:1px solid gray;
+    border-right:1px solid gray;
+    padding-left: 10px;
+
 }
 
 #pageNavigation {
     left: 150px;
     position: absolute;
     padding: 20px;
-    bottom: 50px;
+    bottom: 10px;
     height: 20px;
     background-color:#f4b925;
     opacity:0.9;
     filter:alpha(opacity=40);
+    border-radius: 10px 10px 10px 10px ;
+     border: gray double;
 
 }
 
@@ -98,6 +138,7 @@ body {
     background-repeat: repeat-x;
     width:2px;
     height: 550px;
+    left: 20px;
 }
 
 #banUser {
@@ -112,12 +153,13 @@ body {
 #allDetails {
     position: relative;
     vertical-align: middle;
-    height: 200px;
+   
     width: 500px;
-
-    background-color: #9999ff;
-    opacity:0.8;
-    filter:alpha(opacity=40);
+    margin-left: 50px;
+    margin-top: 30px;
+     border: gray double;
+     height: 140px;
+    border-radius: 10px 10px 10px 10px ;
 }
 
 #horizontalSeperator {
@@ -127,4 +169,27 @@ body {
     bottom: 0px;
     height: 2px;
     top: 550px;
+}
+
+#readUserHeader {
+    padding: 10px;
+    background-color: #000;
+    color: white;
+    height: 20px;
+    font-weight: bolder;
+    border-radius: 10px 10px 0px 0px ;
+}
+
+
+#readUserForm {
+    height: 100px;
+     background-color: white;
+    opacity:0.8;
+    filter:alpha(opacity=40);
+     border-radius: 0px 0px 10px 10px ;
+}
+
+#deleteUser {
+    margin-left: 110px;
+        
 }

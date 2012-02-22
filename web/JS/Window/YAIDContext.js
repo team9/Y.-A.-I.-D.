@@ -16,59 +16,43 @@ YAIDContext.forFileElm=function(explore){
                 explore.fileRename(this);
             } else if(key == "download") {
                 explore.downloadFile($(this).attr("id").replace(explore.div_id+"file_",""));
-            } else if(key == "widget") {
-                Window({
-                    'option':{
-                        'title':'Widgets',
-                        height:250, 
-                        width:430
-                    },
-                    'content':'widget_manager.html',
-                    "ajax":true
-                });
-            }
-            else if(key == "wallpaper") {
-                Window({
-                    'option':{
-                        'title':'Wallpapers',
-                        height:320, 
-                        width:450
-                    },
-                    'content':'wallpaper_manager.html',
-                    "ajax":true
+            } else if(key == "copy") {
+                explore.editFiles("copy");
+            } else if(key == "cut") {
+                explore.editFiles("cut");
+            }else if(key == "delete") {
+                $.each(explore.selected,function(index,value){
+                    //console.log($(value).attr("id").replace(explore.div_id+"file_",""));
+                    explore.removeFile($(value).attr("id").replace(explore.div_id+"file_",""));
                 });
             }
                         
         },
         items: {
             "download" : {
-                "name" : "download", 
-                "icon" : "widget"
-            },
+                "name" : "Download", 
+                "icon" : "download"
+            },"sep1": "---------",
             "rename" : {
                 "name" : "Rename", 
-                "icon" : "widget"
+                "icon" : "rename"
             },
             "copy" : {
                 "name" : "Copy", 
-                "icon" : "widget"
+                "icon" : "copy"
             },
             "cut": {
                 "name": "Cut", 
-                "icon": "wallpaper"
-            },
+                "icon": "cut"
+            },"sep2": "---------",
             "delete" : {
                 "name" : "Delete", 
-                "icon" : "widget"
-            },
-            "paste" : {
-                "name" : "Paste", 
-                "icon" : "widget"
-            },
+                "icon" : "delete"
+            }/*,
             "properties" : {
                 "name" : "Properties", 
                 "icon" : "widget"
-            }
+            }*/
         }
     });
         
@@ -81,53 +65,32 @@ YAIDContext.forFileView=function(explore){
         callback: function(key, options) {
             //explore.selectFile(this,null);
             console.log(key,options,this);
-            if(key == "rename") {
-                explore.fileRename(this);
+            if(key == "folder") {
+                FolderName=explore.selectName("NewDirectory","");
+                explore.createNewFile(explore.path,FolderName,"","make_dir");
+            } else if(key == "document") {
+                FileName=explore.selectName("NewDocument",".txt");        
+            explore.createNewFile(explore.path,FileName,"","make_files");
+                
+            } else if(key == "paste") {
+                explore.pasteFiles(explore.path);
             }
-            else if(key == "widget") {
-                Window({
-                    'option':{
-                        'title':'Widgets',
-                        height:250, 
-                        width:430
-                    },
-                    'content':'widget_manager.html',
-                    "ajax":true
-                });
-            }
-            else if(key == "wallpaper") {
-                Window({
-                    'option':{
-                        'title':'Wallpapers',
-                        height:320, 
-                        width:450
-                    },
-                    'content':'wallpaper_manager.html',
-                    "ajax":true
-                });
-            }
-                        
+        //
         },
         items: {
-            "create": {
-                "name": "Create", 
-                "icon": "theme",
-                "items": {
-                    "folder": {
-                        "name": "Folder"
-                    },
-                    "document": {
-                        "name": "Document"
-                    }
-                }
+           
+            "folder": {
+                "name": "Folder",
+                "icon" : "folder"
             },
+            "document": {
+                "name": "Document",
+                "icon" : "document"
+            },
+            "sep1": "---------",
             "paste" : {
                 "name" : "Paste", 
-                "icon" : "widget"
-            },
-            "properties" : {
-                "name" : "Properties", 
-                "icon" : "widget"
+                "icon" : "paste"
             }
         }
     });

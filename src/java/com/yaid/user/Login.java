@@ -70,8 +70,9 @@ public class Login extends HttpServlet {
         HttpSession session = request.getSession(true);
         Connection connect = null;
         PrintWriter pw = null;
-        response.setContentType("text/html;charset=UTF-8");
+       
         pw = response.getWriter();
+         
         response.setContentType("text/html");
         try {
             String email = request.getParameter("emailid");
@@ -83,7 +84,7 @@ public class Login extends HttpServlet {
             System.out.println("user id : " + userid);
 
             connect = DbConnection.getDbConnection();
-            preparedStatement = connect.prepareStatement("select password,email from yaid.users where email=?");
+            preparedStatement = connect.prepareStatement("select userid,password,email from yaid.users where email=?");
             preparedStatement.setString(1, email);
             preparedStatement.setString(1, request.getParameter("emailid"));
             resultSet = preparedStatement.executeQuery();
@@ -93,18 +94,21 @@ public class Login extends HttpServlet {
                 if (resultSet.getString("password").equals(psw)) {
                     //setting up session
                     session.setAttribute("userID", userid);
+                    //session.setAttribute("userSerial", resultSet.getInt("userid"));
                     String temp = (String) session.getAttribute("userID");
                     System.out.println("session : " + temp);
                     if (temp.equals("admin")) {
-                        response.sendRedirect("administratorViewUsers.jsp");
+                        //response.sendRedirect("administratorViewUsers.jsp");
+                        pw.print("admin");
                     } else {
-                        response.sendRedirect("desktop.jsp");
+                        //pw.println("Valid user ID and password !!!");
+                        //response.sendRedirect("desktop.jsp");
+                        pw.print("ordinaryUser");
                     }
                 } else {
-                    pw.println("<script type=\"text/javascript\">");
-                    pw.println("alert('Invalid user ID and password !!!');");
-                    pw.println("window.location='index.jsp';");
-                    pw.println("</script>");
+                   
+                    pw.print("invalidUser");
+                  
                 }
                 break;
             }

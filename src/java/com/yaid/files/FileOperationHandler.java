@@ -4,6 +4,7 @@
  */
 package com.yaid.files;
 
+import com.yaid.administrator.SpaceUsage;
 import java.io.*;
 import java.util.Iterator;
 import java.util.Map;
@@ -24,6 +25,33 @@ public class FileOperationHandler extends HttpServlet {
     private String startPath = "./UserData";
     private String uid = null;
 
+     public String findParentFolder(String fileName){
+         String prnt=null;
+         int lastInt=fileName.lastIndexOf("/");
+         prnt = fileName.substring(0, lastInt);
+         System.out.println("parent is: "+prnt);
+         return prnt;
+     }
+
+    
+    public String findTypeOfFile(String path,File file){
+        String type=null;
+        if (file.isDirectory()) {
+                type = "\"rel\":\"folder\",\"img\":\"images/icons/gnome-fs-directory.png\"";
+            } else if (file.getName().endsWith(".jpg") || file.getName().endsWith(".png")) {
+                type = "\"rel\":\"image\",\"img\":\"ImageBytes?id=" + path + file.getName() + "\"";
+            } else if (file.getName().endsWith(".txt") || file.getName().endsWith(".rtf")) {
+                type = "\"rel\":\"doc\",\"img\":\"images/icons/ascii.png\"";
+            } else if (file.getName().endsWith(".ogg") || file.getName().endsWith(".wmv")
+                    || file.getName().endsWith(".avi") || file.getName().endsWith(".mov")
+                    || file.getName().endsWith(".flv")|| file.getName().endsWith(".mp3")
+                    || file.getName().endsWith(".mp4")) {
+                type = "\"rel\":\"vedio\",\"img\":\"images/icons/video.png\"";
+            } else {
+                type = "\"rel\":\"file\",\"img\":\"images/icons/ascii.png\"";
+            }
+        return type;
+    }
     public String getFolders(String path) {
 
         String jsondata = null;//"[{\"attr\":{\"id\":\"node_395\",\"rel\":\"folder\"},\"data\":\"New node\",\"state\":\"\"},{\"attr\":{\"id\":\"node_397\",\"rel\":\"folder\"},\"data\":\"New node\",\"state\":\"closed\"},{\"attr\":{\"id\":\"node_399\",\"rel\":\"default\"},\"data\":\"New node\",\"state\":\"\"},{\"attr\":{\"id\":\"node_398\",\"rel\":\"default\"},\"data\":\"New node\",\"state\":\"\"}]";
@@ -57,17 +85,8 @@ public class FileOperationHandler extends HttpServlet {
         File newfile = new File(startPath + uid + newName);
         String type;
         if (dir.renameTo(newfile)) {
-            if (newfile.isDirectory()) {
-                type = "\"rel\":\"folder\",\"img\":\"images/icons/gnome-fs-directory.png\"";
-            } else if (newfile.getName().endsWith(".jpg") || newfile.getName().endsWith(".png")) {
-                type = "\"rel\":\"image\",\"img\":\"ImageBytes?id=" + path + newfile.getName() + "\"";
-            } else if (newfile.getName().endsWith(".ogg") || newfile.getName().endsWith(".wmv")
-                    || newfile.getName().endsWith(".avi") || newfile.getName().endsWith(".mov")) {
-                type = "\"rel\":\"vedio\",\"img\":\"images/icons/video.png\"";
-            } else {
-                type = "\"rel\":\"file\",\"img\":\"images/icons/ascii.png\"";
-            }
-            jsondata = "{\"attr\":{\"id\":\"file_" + path + newfile.getName() + "\"," + type + "},\"data\":\"" + newfile.getName() + "\",\"state\":\"" + state + "\"}";
+            type=findTypeOfFile(findParentFolder(path), newfile);
+            jsondata = "{\"attr\":{\"id\":\"file_" + findParentFolder(path) +"/"+ newfile.getName() + "\"," + type + "},\"data\":\"" + newfile.getName() + "\",\"state\":\"" + state + "\"}";
             //chld[i].isDirectory();
         }
         System.out.println(jsondata + " " + dir + " " + newfile);
@@ -76,24 +95,24 @@ public class FileOperationHandler extends HttpServlet {
 
     public String makeFile(String path, String newName) {
         String jsondata = null;
+        SpaceUsage su = new SpaceUsage();
         try {
-            String state = null;
-            String type = null;
-            path = (path.endsWith("/")) ? path : path + "/";
-            File dir = new File(startPath + uid + path + newName);//createNewFile() 
-            //[] chld = dir.listFiles();
-            jsondata = "{";
-            System.out.println("helo " + startPath + uid + path + newName);
-            if (dir.createNewFile() == true) {
-                type = "\"rel\":\"file\",\"img\":\"images/icons/ascii.png\"";
-
-
-                jsondata += "\"attr\":{\"id\":\"file_" + path + newName + "\"," + type + "},\"data\":\""
-                        + newName + "\",\"state\":\"" + state + "\"";
-                jsondata += "}";
-            }
-            System.out.println(jsondata);
-
+            //if (SpaceUsage.sizeOfDir(new File(startPath + uid)) <= 2 * 1024 * 1024 * 1024) {
+                String state = null;
+                String type = null;
+                path = (path.endsWith("/")) ? path : path + "/";
+                File dir = new File(startPath + uid + path + newName);//createNewFile() 
+                //[] chld = dir.listFiles();
+                jsondata = "{";
+                System.out.println("helo " + startPath + uid + path + newName);
+                if (dir.createNewFile() == true) {
+                    type = findTypeOfFile(path, dir);
+                    jsondata += "\"attr\":{\"id\":\"file_" + path + newName + "\"," + type + "},\"data\":\""
+                            + newName + "\",\"state\":\"" + state + "\"";
+                    jsondata += "}";
+                }
+                System.out.println(jsondata);
+           // }
         } catch (IOException ex) {
             Logger.getLogger(FileOperationHandler.class.getName()).log(Level.SEVERE, null, ex);
         } finally {
@@ -141,18 +160,7 @@ public class FileOperationHandler extends HttpServlet {
         System.out.println("helo " + startPath + uid + path);
         path = (path.endsWith("/")) ? path : path + "/";
         for (int i = 0; i < chld.length; i++) {
-            if (chld[i].isDirectory()) {
-                type = "\"rel\":\"folder\",\"img\":\"images/icons/gnome-fs-directory.png\"";
-            } else if (chld[i].getName().endsWith(".jpg") || chld[i].getName().endsWith(".png")) {
-                type = "\"rel\":\"image\",\"img\":\"ImageBytes?id=" + path + chld[i].getName() + "\"";
-            } else if (chld[i].getName().endsWith(".txt") || chld[i].getName().endsWith(".rtf")) {
-                type = "\"rel\":\"doc\",\"img\":\"images/icons/ascii.png\"";
-            } else if (chld[i].getName().endsWith(".ogg") || chld[i].getName().endsWith(".wmv")
-                    || chld[i].getName().endsWith(".avi") || chld[i].getName().endsWith(".mov")) {
-                type = "\"rel\":\"vedio\",\"img\":\"images/icons/video.png\"";
-            } else {
-                type = "\"rel\":\"file\",\"img\":\"images/icons/ascii.png\"";
-            }
+            type=findTypeOfFile(path,chld[i]);
             jsondata += (jsondata.length() > 5) ? "," : "";
             jsondata += "{\"attr\":{\"id\":\"file_" + path + chld[i].getName() + "\"," + type + "},\"data\":\"" + chld[i].getName() + "\",\"state\":\"" + state + "\"}";
             //chld[i].isDirectory();
@@ -291,7 +299,7 @@ public class FileOperationHandler extends HttpServlet {
                     String value = ((String[]) params.get(key))[ 0];
                     System.out.println("Key: " + key + " Value: " + value);
                 }
-                System.out.println(operation + " " + uid+ filePath +" "+uid+ fileName);
+                System.out.println(operation + " " + uid + filePath + " " + uid + fileName);
                 if (operation.equals("get_folder")) {
                     out.println(getFolders(filePath));
                 } else if (operation.equals("get_files")) {

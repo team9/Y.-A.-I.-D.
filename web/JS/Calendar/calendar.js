@@ -17,8 +17,20 @@ $(function(){
                 $( "#datepicker" ).draggable({
                     disabled: false
                 });
-            else if(key == "close")
+            else if(key == "close") {
                 $( "#datepicker" ).hide();
+                var dataCalender= "value=hide&key=calenderset";
+                $.ajax({
+                    type:'POST',
+                    url:"GetPath", //calling servlet
+                    cache:false,
+                    data:dataCalender,
+                    success:function(htmldat){},
+                    error:function(xhr,ajaxOptions){
+                        alert(xhr.status + " :: " + xhr.statusText);
+                    }
+                });
+            }
         },
         items: {
             "lock": {

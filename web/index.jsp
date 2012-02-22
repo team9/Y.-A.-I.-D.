@@ -8,71 +8,143 @@
         <script type="text/javascript"  src="JQUERY/jquery.js"></script>
         <script>
       
-//            $(document).ready(function (){
-//              
-//                $.ajax({
-//                    type:'POST',
-//                    url:"Logout", //calling servlet
-//                    cache:false,
-//                    
-//                    success:function(htmldat){
-//                        alert("logged off");
-//                        console.log(htmldat);
-//                        
-//                    },
-//                    error:function(xhr,ajaxOptions){
-//                        alert(xhr.status + " :: " + xhr.statusText);
-//                    }
-//                });
-//    
-//            
-//            });
-            
-           
-     
-
-    
-            function validateLogin(address) {
-                validateEmailID(address);
-                if(document.LoginDetails.password.value == "") {
-                    alert("Please enter your password !!!");
-                    return false;
-                }
-                return true;
-            }
+         
             
             function validateEmailID(address) {
  
                 var reg = /^([A-Za-z0-9_\-\.])+\@([A-Za-z0-9_\-\.])+\.([A-Za-z]{2,4})$/;
                 //var address = document.forms[form_id].elements[email].value;
                 if(reg.test(address) == false) {
-                    alert("Please enter a valid email ID !!!");
+                    //alert("Please enter a valid email ID !!!");
+                    $("#warnings").show();
+                    $("#warnings").html("Please enter a valid email ID !!!");
                     return false;
                 }
                 return true;
             }
+    
+            $(document).ready(function (){
+                $('#LoginDetails').submit(function () {
+                    var address = document.getElementById("emailid").value;
+                    var password = document.getElementById("password").value;
+                    
+                    if(validateEmailID(address)== true) {
+                        if(document.LoginDetails.password.value == "") {
+                            $("#warnings").show();
+                            // $("warnings").style.backgroundColor="white";
+                            $("#warnings").html("Please enter your password !!!");
+                            return false;
+                        
+                        }
+                        else  {
+                            var parameters= {
+                                "emailid":address,
+                                "password" :password
+                            };
+                           
+                            $.ajax({
+                                type:'POST',
+                                url:"Login", //calling servlet
+                                data: parameters,
+                                cache:false,
+                                success:function(htmldat){
+                                    //alert("Response : " + htmldat );
+                                    if(htmldat == "invalidUser")
+                                    {   $("#warnings").show();
+                                        $("#warnings").html("Invalid user ID and password !!!");
+                                    }
+                                    else if(htmldat == "ordinaryUser")  
+                                        window.location ="desktop.jsp" ;
+                                    else if(htmldat == "admin") 
+                                        window.location ='administratorViewUsers.jsp' ;
+                                    
+                                },
+                                error:function(xhr,ajaxOptions){
+                                    alert(xhr.status + " :: " + xhr.statusText);
+                                }
+                            }); 
+                        
+                        }
+                    } 
+                   
+                    return  false;
+                });
+                
+                
+                 
+          
+          
+           
+          
+            
 
-            function validateRegistration() {
-                validateEmailID(document.RegistrationDetails.regEmailid.value);
-                if(document.RegistrationDetails.regPassword.value != document.RegistrationDetails.confirmPassword.value) {
-                    alert("The values in password and confirm password fields doesn't match !!!");
+                $('#RegistrationDetails').submit(function () {
+                    var regaddress = document.getElementById("regEmailid").value;
+                    var regpassword = document.getElementById("regPassword").value;
+                    var regconfirmpassword = document.getElementById("confirmPassword").value;
+            
+                    //alert("hai :" + regaddress + regpassword + regconfirmpassword);
+                    //validateEmailID(document.RegistrationDetails.regEmailid.value);
+                    // alert("hello");
+                    if(validateEmailID(regaddress)== true) {
+                        if(regpassword != regconfirmpassword) {
+                            $("#warnings").show();
+                   
+                            $("#warnings").html("The values in password and confirm password fields doesn't match !!!");
+                       
+                            //alert("hello2222");
+                            return false;
+                        }
+                        else if(regaddress=="" || regpassword=="" || regconfirmpassword=="") {
+                            $("#warnings").show();
+                   
+                            $("#warnings").html("None of the fields can be empty !!!");
+                        
+                            return false;
+                        }
+                        else {
+                            var parameters= {
+                                "regEmailid":document.RegistrationDetails.regEmailid.value,
+                                "regPassword" :document.RegistrationDetails.regPassword.value
+                            };
+                            $.ajax({
+                                type:'POST',
+                                url:"Registration", //calling servlet
+                                data: parameters,
+                                cache:false,
+                                success:function(htmldat){
+                                    //alert("Response : " + htmldat );
+                                    if(htmldat == "UserAlreadyExists")
+                                    {   $("#warnings").show();
+                                        $("#warnings").html("The same user ID already exists... Retry registration with another user ID !!!");
+                                        
+                                        return false;
+                                    }
+                                    else if(htmldat == "SuccessfulRegistration") {
+                                        alert("Registration successful... You may login now...");
+                                        window.location ='index.jsp';
+                                    }
+                            
+                           
+                                    
+                                },
+                                error:function(xhr,ajaxOptions){
+                                    alert(xhr.status + " :: " + xhr.statusText);
+                                }
+                            }); return false;
+                        }
+                    }
                     return false;
-                }
-                if(document.RegistrationDetails.regEmailid.value=="" || document.RegistrationDetails.regPassword.value=="" || document.RegistrationDetails.confirmPassword.value=="") {
-                    alert("None of the fields can be empty !!!");
-                    return false;
-                }
-               
-                return true;
-            }
- 
+                });
+            });
             function loadRegistrationForm() {
                 //document.RegistrationDetails.style.display='block';
                 //document.LoginDetails.style.display='none';
-                
+                $("#warnings").hide();
                 $("#LoginDetails").hide();
                 $("#RegistrationDetails").show();
             }
+            
         </script>
         <style>
             #RegistrationDetails {
@@ -89,7 +161,7 @@
             <div id="menu">
                 <ul>
                     <li><a href="#" class="active">Home</a></li>
-                    <li><a href="#">About US</a></li>
+<!--                    <li><a href="#">About US</a></li>-->
                 </ul>
             </div>
             <div id="header">&nbsp;</div>
@@ -105,25 +177,30 @@
                 <div id="sidebar">
                     <h3>Unlock Your Webtop . . . </h3>
                     <br />
-                    <form name="LoginDetails" id="LoginDetails" action="Login" method="post" onsubmit="return validateLogin(emailid.value)">
-                        <label>Email ID  : </label><input type="text" id="emailid" name="emailid" class="more" size="60" />
-                        <label>Password  : </label><input type="password" id="password" name="password" class="more"/>
-                        <br />
-                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  
-                        <input type="submit" value="Login" class="submit" size="70px;"/> 
-                        <p><a href="#" class="button" onclick="return loadRegistrationForm()">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Register</a> </p>
+                    <div id="warnings">
+                    </div>
+                    <div style="padding-left: 20px;">
+                        <form name="LoginDetails" id="LoginDetails"  >
+                            <label>Email ID  : </label><input type="text" id="emailid" name="emailid" class="more" size="60" />
+                            <label>Password  : </label><input type="password" id="password" name="password" class="more"/>
+                            <br />
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  
+                            <input type="submit" value="Login" class="submit" size="70px;"/> 
+                            <p><a href="#" class="button" onclick="return loadRegistrationForm()">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Register</a> </p>
 
-                    </form>
-                    <form name="RegistrationDetails" id="RegistrationDetails" action="Registration" method="post" onsubmit="return validateRegistration()">
-                        <label>Email ID  : </label><input type="text" id="regEmailid" name="regEmailid" class="more" size="60" />
-                        <label>Password  : </label><input type="password" id="regPassword" name="regPassword" class="more"/>
-                        <label>Confirm Password  : </label><input type="password" id="confirmPassword" name="confirmPassword" class="more"/>
-                        <br />
-                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
-                        <input type="submit" value="Register" class="submit" size="70px;"/> 
-                        <input type="button" value="Cancel" class="submit" size="70px;" onclick="window.location.href='index.jsp';"/> 
-                    </form>
-
+                        </form>
+                    </div>
+                    <div style="padding-left: 20px;">
+                        <form name="RegistrationDetails" id="RegistrationDetails" action="Registration" method="post">
+                            <label>Email ID  : </label><input type="text" id="regEmailid" name="regEmailid" class="more" size="60" />
+                            <label>Password  : </label><input type="password" id="regPassword" name="regPassword" class="more"/>
+                            <label>Confirm Password  : </label><input type="password" id="confirmPassword" name="confirmPassword" class="more"/>
+                            <br />
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+                            <input type="submit" value="Register" class="submit" size="70px;"/> 
+                            <input type="button" value="Cancel" class="submit" size="70px;" onclick="window.location.href='index.jsp';"/> 
+                        </form>
+                    </div>
                 </div>
                 <div style="clear: both;">&nbsp;</div>
             </div>

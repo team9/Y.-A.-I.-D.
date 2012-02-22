@@ -1,0 +1,82 @@
+/* 
+    Document   : administratorSpaceUsage
+    Created on : 20 Feb, 2012, 11:32:35 PM
+    Author     : TTT
+    Description:
+        Purpose of the stylesheet follows.
+*/
+
+/* 
+   TODO customize this sample style
+   Syntax recommendation http://www.w3.org/TR/REC-CSS2/
+*/
+
+body {
+    background-image: url('../../images/administrator/administratorSpaceUsage.jpg');
+}
+
+#page {
+
+ background-color: whitesmoke;
+    width: 300px;
+    height: 500px;
+    margin-left: 400px;
+    margin-top: 50px;
+    opacity:0.8;
+    filter:alpha(opacity=40);
+    border-radius: 10px 10px 10px 10px ;
+
+}
+
+#header {
+    padding: 10px;
+    background-color: #000;
+    color: white;
+    height: 20px;
+    font-weight: bolder;
+    border-radius: 10px 10px 0px 0px ;
+
+
+}
+
+
+#personalSpaceUsage {
+    padding-left:100px;
+    padding-top: 50px;
+    height: 200px;
+    width: 200px;
+    widows: 200px;
+    margin: 10px;
+    background-color: #87d4d3;
+    border-radius: 10px 10px 10px 10px ;
+}
+
+#personalSpaceUsageLabel{
+    width:170px; 
+    float: left;
+    padding-left: 25px;
+}
+
+#personalSpaceUsageValue {
+    height: 30px;
+
+}
+#personalSpaceUsageGraph {
+    height: 10px;
+    width:250px;
+    margin-left: 30px;
+}
+
+.row {
+    width: 500px;
+    height: 30px;
+    
+}
+
+.data {
+     width: 100px;
+    height: 30px;
+    position: relative;
+    float: left;
+}
+

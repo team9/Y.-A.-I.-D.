@@ -12,6 +12,6 @@ public class User implements java.io.Serializable {
 
     static final long serialVersionUID = 1L;
     public String wallpaper_path;
-    //public int clock;
-    //public int calendar;
+    public String clock_set;
+    public String calender_set;
 }

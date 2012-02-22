@@ -13,6 +13,7 @@ import javax.servlet.ServletOutputStream;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
 /**
  *
@@ -36,15 +37,19 @@ public class DownloadFile extends HttpServlet {
         /*
          * TODO output your page here. You may use following sample code.
          */
-        String filename = "./UserData" + request.getParameter("id");
-        File f = new File(filename);
+        HttpSession session = request.getSession(true);
+        String uid = "/" + (String) session.getAttribute("userID");
+        if (uid != null) {
+            String filename = "./UserData"+ uid+ request.getParameter("id");
+            File f = new File(filename);
 
-        if (f.isDirectory()) {
-            f = zipFile(f);
-            downloadFile(f, request, response);
-            f.delete();
-        } else {
-            downloadFile(f, request, response);
+            if (f.isDirectory()) {
+                f = zipFile(f);
+                downloadFile(f, request, response);
+                f.delete();
+            } else {
+                downloadFile(f, request, response);
+            }
         }
     }
 

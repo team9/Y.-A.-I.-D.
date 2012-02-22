@@ -9,15 +9,16 @@ function YAIDNotepad(path){
     this.notepad=Window({
         'option':{
             'title':'Notepad',
-            height:410,
-            width:570
+            resizable: false,
+            height:500,
+            width:645
         },
         'content':'helo',
         "ajax":false
     });
     this.note_id= $(this.notepad).attr("id");
     $('#windowe_content'+this.note_id).html("<textarea name=\"area\" id=\""+this.note_id+
-        "mytxtarea\" cols=\"88\" rows=\"16\"></textarea>");
+        "mytxtarea\" cols=\"120\" rows=\"22\"></textarea>");
     edit=this;
     new nicEditor({
         fullPanel : true, 

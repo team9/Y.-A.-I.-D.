@@ -32,7 +32,7 @@ public class ImageBytes extends HttpServlet {
         HttpSession session = request.getSession(true);
         String uid = "/" + (String) session.getAttribute("userID");
         if (uid != null) {
-            String path = "./UserData" +uid+ request.getParameter("id");
+            String path = "./UserData" + uid + request.getParameter("id");
             if (path.endsWith(".jpg")) {
                 response.setContentType("image/jpeg");
             } else if (path.endsWith(".wmv")) {
@@ -44,11 +44,18 @@ public class ImageBytes extends HttpServlet {
             } else if (path.endsWith(".mov")) {
                 response.setContentType("video/quicktime");
                 System.out.println("video/x-ms-wmv");
+            } else if (path.endsWith(".flv")) {
+                response.setContentType("video/x-flv");
+                System.out.println("video/x-ms-wmv");
             } else if (path.endsWith(".avi")) {
                 response.setContentType("video/avi");
                 System.out.println("video/x-ms-wmv");
             } else if (path.endsWith(".ogg")) {
                 response.setContentType("application/ogg");
+            } else if (path.endsWith(".mp3")) {
+                response.setContentType("audio/mpeg3");
+            } else if (path.endsWith(".mp4")) {
+                response.setContentType("video/mp4");
             } else {
                 response.setContentType("image/jpeg");
             }

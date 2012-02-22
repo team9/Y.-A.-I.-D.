@@ -13,7 +13,7 @@
         <script>
             var serverCapacity = 2*1024;
             $(document).ready(function (){
-                $("#personalSpaceUsageValue").html("Please choose a user from the above drop-downlist");
+                $("#personalSpaceUsageValue").html("<br/>(Please choose a user from the above drop-downlist)");
                 //----------- Display Personal Space usage on request ------------ //
             
                 $('#spaceUsageForm').submit(function (data) {
@@ -89,49 +89,58 @@
             psPagination = conn.prepareStatement("SELECT * FROM YAID.USERS");
             rsPagination = psPagination.executeQuery();
         %>
-        <div id="chooseUser" >
-            <div style="width: 100px; float: left;">Select a user</div>
-            <div style="float: left">
-                <form action="SpaceUsage" method="post" id="spaceUsageForm"  name="spaceUsageForm" >
-                    <select name="targetid" id="targetid">
-                        <option selected="selected" value="0">Please pick a user</option>
-                        <% while (rsPagination.next()) {%>
-                        <option value="<%=rsPagination.getInt("userid")%>"><%=rsPagination.getInt("userid")%>) <%=rsPagination.getString("email")%></option>
-                        <%
-                            }
-                        %>
-                    </select>
-                    <input type="submit" value="Calculate Space Usage" />
-                </form>
+        <div id="page">
+            <div id="header">
+                <strong>Space Usage Details</strong>
             </div>
-        </div>
-        <div id="seperator1">
-        </div>
-        <div id="personalSpaceUsage">
-            <div id="personalSpaceUsageDetails" >
-                <div style="width:170px; float: left;">   Personal Space Usage : 
-                </div>
-                <div id="personalSpaceUsageValue">
+            <div id="chooseUser" >
+                <div style="width: 100px; float: left;">Select a user</div>
+                <div style="float: left">
+                    <center>
+                        <form action="SpaceUsage" method="post" id="spaceUsageForm"  name="spaceUsageForm" >
+
+                            <select name="targetid" id="targetid">
+
+                                <option selected="selected" value="0">Please pick a user</option>
+                                <% while (rsPagination.next()) {%>
+                                <option value="<%=rsPagination.getInt("userid")%>"><%=rsPagination.getInt("userid")%>) <%=rsPagination.getString("email")%></option>
+                                <%
+                                    }
+                                %>
+                            </select>
+                            <input type="submit" value="Calculate Space Usage" />
+
+                        </form>
+                    </center>
                 </div>
             </div>
-            <div id="personalSpaceUsageGraph" >
+            <div id="seperator1">
             </div>
-        </div>
-        <div id="seperator2">
-        </div>
-        <div id="serverSpaceUsage">
-            <div id="serverSpaceUsageDetails" >
-                <div style="width:170px; float: left;">   Server Space Usage : 
+            <div id="personalSpaceUsage">
+                <div id="personalSpaceUsageDetails" >
+                    <div id="personalSpaceUsageLabel">   Personal Space Usage : 
+                    </div>
+                    <div id="personalSpaceUsageValue">
+                    </div>
                 </div>
-                <div id="serverSpaceUsageValue">
+                <div id="personalSpaceUsageGraph" >
+                </div>
+            </div>
+            <div id="seperator2">
+            </div>
+            <div id="serverSpaceUsage">
+                <div id="serverSpaceUsageDetails" >
+                    <div id="serverSpaceUsageLabel">   Server Space Usage : 
+                    </div>
+                    <div id="serverSpaceUsageValue">
+                    </div>
+                </div>
+
+                <div id="serverSpaceUsageGraph" >
+
                 </div>
             </div>
 
-            <div id="serverSpaceUsageGraph" >
-
-            </div>
         </div>
-
-
     </body>
 </html>

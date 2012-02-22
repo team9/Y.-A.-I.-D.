@@ -12,7 +12,7 @@
     <body>
   
         <div id="maindiv">
-<div id="logout"><form action="Logout" method="post"><input type="submit" value="Log Off"/></form></div>
+            <div id="logout"><form action="Logout" method="post"><input type="submit" class="submit" value=""/></form></div>
             <div id="tabs">
                 
                 <ul id="tabs">

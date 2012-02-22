@@ -10,6 +10,7 @@ import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
 /**
  *
@@ -17,8 +18,11 @@ import javax.servlet.http.HttpServletResponse;
  */
 public class FileServlet extends HttpServlet {
 
-    /** 
-     * Processes requests for both HTTP <code>GET</code> and <code>POST</code> methods.
+    /**
+     * Processes requests for both HTTP
+     * <code>GET</code> and
+     * <code>POST</code> methods.
+     *
      * @param request servlet request
      * @param response servlet response
      * @throws ServletException if a servlet-specific error occurs
@@ -31,25 +35,30 @@ public class FileServlet extends HttpServlet {
         String readdata = "";
         ReadFile rf = new ReadFile();
         WriteFile wf = new WriteFile();
-        String startPath="./UserData";
-
-        try {
-            if (request.getParameter("operation").equals("open")) {
-                readdata = rf.read(startPath+request.getParameter("path"));
-                out.println(readdata);
+        String startPath = "./UserData";
+        HttpSession session = request.getSession(true);
+        String uid = "/" + (String) session.getAttribute("userID");
+        if (uid != null) {
+            try {
+                if (request.getParameter("operation").equals("open")) {
+                    readdata = rf.read(startPath + uid + request.getParameter("path"));
+                    out.println(readdata);
+                }
+                if (request.getParameter("operation").equals("save")) {
+                    wf.write(startPath + uid + request.getParameter("path"), request.getParameter("data"));
+                    out.println("Success");
+                }
+            } finally {
+                out.close();
             }
-            if (request.getParameter("operation").equals("save")) {
-                wf.write(startPath+request.getParameter("path"), request.getParameter("data"));
-                out.println("Success");
-            }
-        } finally {
-            out.close();
         }
     }
 
     // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">
-    /** 
-     * Handles the HTTP <code>GET</code> method.
+    /**
+     * Handles the HTTP
+     * <code>GET</code> method.
+     *
      * @param request servlet request
      * @param response servlet response
      * @throws ServletException if a servlet-specific error occurs
@@ -61,8 +70,10 @@ public class FileServlet extends HttpServlet {
         processRequest(request, response);
     }
 
-    /** 
-     * Handles the HTTP <code>POST</code> method.
+    /**
+     * Handles the HTTP
+     * <code>POST</code> method.
+     *
      * @param request servlet request
      * @param response servlet response
      * @throws ServletException if a servlet-specific error occurs
@@ -74,8 +85,9 @@ public class FileServlet extends HttpServlet {
         processRequest(request, response);
     }
 
-    /** 
+    /**
      * Returns a short description of the servlet.
+     *
      * @return a String containing servlet description
      */
     @Override

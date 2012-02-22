@@ -14,10 +14,34 @@ function WidgetMan(){
         $('#WidgetView').html(str);
         $('#WidgetView li').dblclick(function(){
             console.log("work");
-            if( $(this).attr('id') == "clock" ) 
+            if( $(this).attr('id') == "clock" ) {
                 $('#analog-clock').show();
-            if( $(this).attr('id') == "calendar" )
+                var dataClock = "value=show&key=clockset";
+                $.ajax({
+                    type:'POST',
+                    url:"GetPath", //calling servlet
+                    cache:false,
+                    data:dataClock,
+                    success:function(htmldat){},
+                    error:function(xhr,ajaxOptions){
+                        alert(xhr.status + " :: " + xhr.statusText);
+                    }
+                });
+            }
+            if( $(this).attr('id') == "calendar" ) {
                 $('#datepicker').show();
+                var dataCalender= "value=show&key=calenderset";
+                $.ajax({
+                    type:'POST',
+                    url:"GetPath", //calling servlet
+                    cache:false,
+                    data:dataCalender,
+                    success:function(htmldat){},
+                    error:function(xhr,ajaxOptions){
+                        alert(xhr.status + " :: " + xhr.statusText);
+                    }
+                });
+            }
         })
     }
     var dirStr=[

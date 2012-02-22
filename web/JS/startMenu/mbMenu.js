@@ -79,6 +79,8 @@
               if ($(this).metadata().menu) $(this).attr("menu",$(this).metadata().menu);
               if ($(this).metadata().disabled) $(this).attr("isDisable",$(this).metadata().disabled);
             });
+            
+           
           }
 
           thisMenu.menuvoice=$(this).find("[menu]").add($(this).filter("[menu]"));

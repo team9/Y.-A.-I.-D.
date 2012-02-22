@@ -30,8 +30,6 @@ public class DeserializeUser {
         }
         System.out.println("Deserialized User...");
         System.out.println("Wallpaper path: " + uu.wallpaper_path);
-        //System.out.println("Clock: " + u.clock);
-        //System.out.println("Calendar: " + u.calendar);
         return uu;
     }
 }

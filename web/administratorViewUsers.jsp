@@ -121,9 +121,9 @@
             <input type="hidden" name="iShowRows" value="<%=iShowRows%>">
             <div width="100%" cellpadding="0" cellspacing="0" border="0" >
                 <div  id="headings">
-                    <div id="headingSerial">Serial</div>
-                    <div id="headingEmail">Email</div>
-                    <div id="headingPassword">Password</div>
+                    <div id="headingSerial">SERIAL</div>
+                    <div id="headingEmail">EMAIL ID</div>
+                    <div id="headingPassword">PASSWORD</div>
                 </div>
                 <%
                     while (rsPagination.next()) {
@@ -216,10 +216,17 @@
     <div id="banUser">
     
             <div id="allDetails">
+                <div id="readUserHeader">
+                    
                 Select a user
+                </div>
+                <div id="readUserForm">
+                     
                 <%  psPagination = conn.prepareStatement("SELECT * FROM YAID.USERS");
                     rsPagination = psPagination.executeQuery();
                 %>
+                <br/>
+                <br/>
                 <form action="DeleteUser" method="post" id="deleteUser"  onsubmit="return validateTarget()">
                     <select name="targetid" id="targetid">
                         <option selected="selected" value="0">Please pick a user</option>
@@ -235,7 +242,7 @@
 
 
 
-
+                </div>
             </div>
        
     </div>

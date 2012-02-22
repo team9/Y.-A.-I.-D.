@@ -35,7 +35,7 @@ function YAIDUpload(toLoc,explore){
         $('#windowe_content'+ YAIDUpload.upload_wind.attr("id")).append(htmlcont);
         this.initFileUpload(1);
     }else{
-        // $(YAIDUpload.upload_wind).open();
+        YAIDUpload.upload_wind.dialog( "open" );
         
         $("#upload-loc").html(toLoc);
         $("#upload-loc-hid").attr("value",toLoc);
@@ -92,7 +92,12 @@ YAIDUpload.prototype.updateFolder = function (file) {
         rel = "image";
         img="ImageBytes?id=" +this.toLoc +  "/"+ file.name ;
     } else if (file.name.match(/.wmv$/)||file.name.match(/.flv$/) 
-        ||file.name.match(/.avi$/)||file.name.match(/.mov$/)) {
+        ||file.name.match(/.avi$/)||file.name.match(/.mov$/)
+        ||file.name.match(/.ogg$/)||file.name.match(/.mp4$/)
+        ||file.name.match(/.mp3$/)) {
+        rel="vedio";
+        img="images/icons/video.png";
+    } else if (file.name.match(/.txt$/)) {
         rel="vedio";
         img="images/icons/video.png";
     } else {

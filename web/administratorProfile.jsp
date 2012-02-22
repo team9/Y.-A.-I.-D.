@@ -34,36 +34,38 @@
     <body>
         <div><jsp:include page="administratorPanel.jsp" /></div>
         <div id="page">
-        <h2>Administrator Profile</h2>
-        <div id="header"></div>
-        <div id="descrption" style="height:  50px;">
-            Kindly enter your password details
-        </div>
-        <div id="passwordChangeDetails" >
-            <form id="newPasswordDetails" name="newPasswordDetails" action="ChangeAdministratorProfile" method="post">
-                <div style="width: 400px;">
-                    <div style="width: 200px; float: left; ">Old Password :</div>
-                    <div style="width: 200px; float: left;"><input type="password" name="oldPassword" id="oldPassword" /></div>
+            <div id="topblock">
+                <div id="header" >
+                    <h2>Administrator Profile</h2>
                 </div>
-                <div style="width: 400px;">
-                    <div style="width: 200px; float: left;">New Password : </div>
-                    <div style="width: 200px; float: left;"><input type="password"  name="newPassword" id="newPassword" /></div>
+            </div>
+            <div id="passwordChangeDetails" >
+                <div id="descrption" style="height:  50px;">
+                    <br/>
+                    Please enter your password details
                 </div>
-                <div style="width: 400px;">
-                    <div style="width: 200px; float: left;">Confirm Password :</div>
-                    <div style="width: 200px; float: left; "><input type="password"  name="confirmPassword" id="confirmPassword" /></div>
-                </div>
-                <div style="width: 400px; height: 120px;">
+                <form id="newPasswordDetails" name="newPasswordDetails" action="ChangeAdministratorProfile" method="post">
+                    <div style="width: 400px;">
+                        <div style="width: 200px; float: left; ">Old Password :</div>
+                        <div style="width: 200px; float: left;"><input type="password" name="oldPassword" id="oldPassword" /></div>
+                    </div>
+                    <div style="width: 400px;">
+                        <div style="width: 200px; float: left;">New Password : </div>
+                        <div style="width: 200px; float: left;"><input type="password"  name="newPassword" id="newPassword" /></div>
+                    </div>
+                    <div style="width: 400px;">
+                        <div style="width: 200px; float: left;">Confirm Password :</div>
+                        <div style="width: 200px; float: left; "><input type="password"  name="confirmPassword" id="confirmPassword" /></div>
+                    </div>
+                    <div style="width: 400px; height: 120px;">
 
-                </div>
-                <div style="width: 400px; height: 50px; vertical-align: middle;">
-                    <center>
+                    </div>
+                    <div id="submitButton">
                         <input type="submit" value="Save Changes" />
-                    </center>
-                </div>
-            </form>
-        </div>
-        <div id="footer"></div>
+                    </div>
+                </form>
+            </div>
+            <div id="footer"></div>
         </div>
     </body>
 </html>

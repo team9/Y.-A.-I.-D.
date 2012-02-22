@@ -9,19 +9,19 @@
 
 /* CENTER COLUMN */
 div.centerColumn {
-    width: 480px;
-	height:100px;
+    width: 370px;
+    height:100px;
     padding: 0px 0px 0px 0px;
     margin: 0px auto;
-	text-align: left;
+    text-align: left;
 }
 
 /* COMPATIBILITY W/OLD IE<9 */
 #ie { background-color: #303030; }
- 
+
 /* new tags in HTML 5 */
 header, footer, nav { display:block }
- 
+
 /* INFO BUTTON CONTROL TO OPEN INSTRUCTION */
 div.inf  {
     float:right;
@@ -40,16 +40,16 @@ div.inf  {
 
 /* MAIN DIV CONTAINING ALL CONTENTS EXCEPT FOR NAV BUTTONS */
 div.main {
- 	padding:10px;
-       	
+    padding:10px;
+
     /* add shadows */
     -moz-box-shadow: 5px 5px 10px rgba(0,0,0,0.3);
     -webkit-box-shadow: 5px 5px 10px rgba(0,0,0,0.3);
     box-shadow: 5px 5px 10px rgba(0,0,0,0.3);
-     	
+
     /* add gradient */
     /* WebKit */
-    background: -webkit-gradient(linear, left top, left bottom, from(#404040), to(#707070));
+    background: -webkit-gradient(linear, left top, left bottom, from(dimgray), to(dimgray));
     /* Mozilla/Gecko */
     background: -moz-linear-gradient(top, #404040, #707070);
 }
@@ -78,59 +78,47 @@ div#keyPad { width: 100%; }
 /* CLEAR BOTH */
 .clear {clear:both;}
 
-h1 {
-    margin:0px 0px 7px 3px; 
-    font-size: 12pt;
-    font-weight:bold;
-    color: #dadada;
-}
-h2  {
-    margin-top:5px;     
-    text-align:center;
-    font-size: 10pt;
-    color: #606060;
-}
 
 /******** CONTROLS: KEYS, INPUT/MEM TEXT BOXES *********/
-input, button {
+.centerColumn input,.centerColumn button {
     margin: 0px;
     margin-bottom: 2px;
     padding: 10px;
-    border: 3px solid olive;
+    border: 2px solid #505050;
     font-family: Arial;
     -moz-border-radius: 10px;
     -webkit-border-radius: 10px;
     border-radius: 10px;
-	height: 60px;
+    height: 45px;
 }
-button {
+.centerColumn button {
     cursor: pointer;
     cursor: hand;
     color: #dadada;
-    font-size: 20px;
+    font-size: 15px;
     font-weight:bold;
-	line-height:100%;
-     
+    line-height:100%;
+
     /* add gradient using stop-color property: not working in IE<9 */
     background:#404040;
     background: -moz-linear-gradient(top, #dadada, #505050 28px, #303030 28px, #202020);
     background: -webkit-gradient(linear, left top, left bottom, from(#dadada),
-    color-stop(0.5, #505050), color-stop(0.5, #303030), to(#202020));
+        color-stop(0.5, #505050), color-stop(0.5, #303030), to(#202020));
 }
-button:hover {	border-color: #707070; }
-button:active 
+.centerColumn button:hover {	border-color: #707070; }
+.centerColumn button:active
 {
     background: #454545;
     background: -moz-linear-gradient(top, #505050, #202020 28px, #303030 28px, #909090);
-    background: -webkit-gradient(linear, left top, left bottom, from(##505050),
-    color-stop(0.5, #202020), color-stop(0.5, #303030), to(##909090));
+    background: -webkit-gradient(linear, left top, left bottom, from(#505050),
+        color-stop(0.5, #202020), color-stop(0.5, #303030), to(#909090));
 }
-nav button { width:237px;}
+.centerColumn nav button { width:237px;}
 
 /* INPUT/MEM TEXT BOXES*/
-input {
-    font-size: 26px;
-    color: #ababab;
+.centerColumn input {
+    font-size: 20px;
+    color: black;
     /* add gradient */
     /* WebKit */
     background: -webkit-gradient(linear, left top, right top from(#ffffcc), to(#ffffff));
@@ -138,16 +126,16 @@ input {
     background: -moz-linear-gradient(left top, #ffffcc, #ffffff);
 }
 div#keyPad input#keyPad_UserInput,
-div#keyPad input#keyPad_Mem { width: 425px;}
+div#keyPad input#keyPad_Mem { width: 350px; height: 50px;}
 
 /* NORMAL KEYS: WIDTH APPLY TO: 1...9, "." AND OPERATION KEYS */
-div#keyPad button { width: 60px; }
-	
+div#keyPad button { width: 45px; }
+
 /* SPECIAL KEYS */
-	    
+
 /* ENTER */
-div#keyPad button#keyPad_btnEnter { width:254px; font-size: 28px;}
-	
+div#keyPad button#keyPad_btnEnter { width:192px; font-size: 28px;}
+
 /* INPUT/MEM KEYS*/
 div#keyPad button#keyPad_btnToMem, 
 div#keyPad button#keyPad_btnFromMem  {  font-size: 24px;  }
@@ -156,12 +144,12 @@ div#keyPad button#keyPad_btnFromMem  {  font-size: 24px;  }
 div#keyPad button#keyPad_btnBack,
 div#keyPad button#keyPad_btnClr
 {
-	border-color:red;
-	color:red;
-	width:92px;
+    border-color:#505050;
+    color:#dadada;
+    width:69px;
 }
 div#keyPad button#keyPad_btnBack { font-size: 20px; }
-	
+
 /* X^2, X^3 KEYS*/
 div#keyPad button#keyPad_btnSquare,
 div#keyPad button#keyPad_btnCube,
@@ -178,7 +166,7 @@ article p, article a, article li, article ol  {
     font-family: Times New Roman;
 }
 
-ul {
+.centerColumn ul {
     margin:0px;
     margin-top:10px;
     margin-bottom:10px;

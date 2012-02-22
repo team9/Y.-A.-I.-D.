@@ -26,8 +26,20 @@ $(function(){
                 $( "#analog-clock" ).draggable({
                     disabled: false
                 });
-            else if(key == "close")
+            else if(key == "close") {
                 $( "#analog-clock" ).hide();
+                var dataClock = "value=hide&key=clockset";
+                $.ajax({
+                    type:'POST',
+                    url:"GetPath", //calling servlet
+                    cache:false,
+                    data:dataClock,
+                    success:function(htmldat){},
+                    error:function(xhr,ajaxOptions){
+                        alert(xhr.status + " :: " + xhr.statusText);
+                    }
+                });
+            }
         },
         items: {
             "lock": {
