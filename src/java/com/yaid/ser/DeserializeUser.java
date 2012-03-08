@@ -15,7 +15,10 @@ public class DeserializeUser {
     public static User deserialize(String uid) {
         User uu = null;
         try {
+            System.out.print(new File("./").getAbsolutePath());
             FileInputStream fileIn = new FileInputStream("./UserData/" + uid + "/Settings/" + uid + ".ser");
+            
+            
             ObjectInputStream in = new ObjectInputStream(fileIn);
             uu = (User) in.readObject();
             in.close();

@@ -70,9 +70,9 @@ public class Login extends HttpServlet {
         HttpSession session = request.getSession(true);
         Connection connect = null;
         PrintWriter pw = null;
-       
+
         pw = response.getWriter();
-         
+
         response.setContentType("text/html");
         try {
             String email = request.getParameter("emailid");
@@ -89,14 +89,18 @@ public class Login extends HttpServlet {
             preparedStatement.setString(1, request.getParameter("emailid"));
             resultSet = preparedStatement.executeQuery();
             System.out.println("\t Query : " + preparedStatement);
-            while (resultSet.next()) {
+            if (resultSet.next()) {
                 System.out.println("\t DB : " + resultSet.getString("password") + "\t Entered : " + psw);
                 if (resultSet.getString("password").equals(psw)) {
                     //setting up session
+                    int si = resultSet.getInt("userid");
                     session.setAttribute("userID", userid);
-                    //session.setAttribute("userSerial", resultSet.getInt("userid"));
+                    session.setAttribute("userSerial", Integer.toString(si));
                     String temp = (String) session.getAttribute("userID");
+
+                    String ser = (String) session.getAttribute("userSerial");
                     System.out.println("session : " + temp);
+                    System.out.println("serial : " + ser);
                     if (temp.equals("admin")) {
                         //response.sendRedirect("administratorViewUsers.jsp");
                         pw.print("admin");
@@ -106,11 +110,15 @@ public class Login extends HttpServlet {
                         pw.print("ordinaryUser");
                     }
                 } else {
-                   
+
                     pw.print("invalidUser");
-                  
+
                 }
-                break;
+
+            } else {
+
+                pw.print("invalidUser");
+
             }
         } catch (Exception e) {
             e.printStackTrace();

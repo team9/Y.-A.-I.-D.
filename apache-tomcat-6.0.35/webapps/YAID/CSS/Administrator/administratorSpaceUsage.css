@@ -1,0 +1,109 @@
+/* 
+    Document   : administratorSpaceUsage
+    Created on : 20 Feb, 2012, 11:32:35 PM
+    Author     : TTT
+    Description:
+        Purpose of the stylesheet follows.
+*/
+
+/* 
+   TODO customize this sample style
+   Syntax recommendation http://www.w3.org/TR/REC-CSS2/
+*/
+
+body {
+    background-image: url('../../images/administrator/administratorSpaceUsage.jpg');
+}
+
+#page {
+
+ background-color: whitesmoke;
+    width: 500px;
+    height: 500px;
+    margin-left: 400px;
+    margin-top: 50px;
+    opacity:0.8;
+    filter:alpha(opacity=40);
+    border-radius: 10px 10px 10px 10px ;
+
+}
+
+#header {
+    padding: 10px;
+    background-color: #000;
+    color: white;
+    height: 20px;
+    font-weight: bolder;
+    border-radius: 10px 10px 0px 0px ;
+
+
+}
+#chooseUser {
+    padding-top: 30px;
+    padding-left: 25px;
+    height: 50px;
+    margin: 10px;
+    background-color: #8ad487;
+     border-radius: 10px 10px 10px 10px ;
+}
+
+#personalSpaceUsage {
+    padding-left:100px;
+    height: 60px;
+    margin: 10px;
+    background-color: #87d4d3;
+    border-radius: 10px 10px 10px 10px ;
+}
+
+#personalSpaceUsageLabel{
+    width:170px; 
+    float: left;
+    padding-left: 25px;
+}
+
+#personalSpaceUsageValue {
+    height: 30px;
+
+}
+#personalSpaceUsageGraph {
+    height: 10px;
+    width:250px;
+}
+#serverSpaceUsage {
+    padding-left: 100px;
+    margin:  10px;
+    margin: 10px;
+    height: 60px;
+    background-color: #ddb557;
+    border-radius: 10px 10px 10px 10px ;
+}
+
+#serverSpaceUsageLabel {
+    width:170px; 
+    float: left;
+    padding-left: 25px;
+}
+
+#serverSpaceUsageValue {
+    padding-left: 20px;
+    height: 30px;
+
+
+}
+#serverSpaceUsageGraph {
+    height: 10px;
+
+    width: 250px;
+
+}
+
+#seperator1 {
+    height: 70px;
+
+
+}
+
+#seperator2 {
+    height: 100px;
+
+}

@@ -15,6 +15,7 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import javax.servlet.ServletException;
+import javax.servlet.http.HttpSession;
 
 /**
  *
@@ -86,38 +87,42 @@ public class SpaceUsage extends HttpServlet {
         String userDirectory = null;
         String serverSpace = null;
         PrintWriter pw = null;
+        HttpSession session = request.getSession(true);
+        targetID = (String) session.getAttribute("userSerial");
         response.setContentType("text/html;charset=UTF-8");
         pw = response.getWriter();
         try {
             connect = DbConnection.getDbConnection();
             operation = request.getParameter("operation");
-            if(operation.equals("getUsersSpaceUsage")) {
-            targetID = request.getParameter("targetid");
-            //System.out.println(">>>>>>>>>>>>>>>>>>>>>>>>>>>>> Target ID : " + mail);
-            preparedStatement = connect.prepareStatement("select * from yaid.users where userid=?");
-            preparedStatement.setInt(1, Integer.parseInt(targetID));
-            System.out.println("Statement : " + preparedStatement);
+            if (operation.equals("getUsersSpaceUsage")) {
+                if (request.getParameter("targetid") != null) {
+                    targetID =(String) request.getParameter("targetid");
+                }
+                //System.out.println(">>>>>>>>>>>>>>>>>>>>>>>>>>>>> Target ID : " + mail);
+                preparedStatement = connect.prepareStatement("select * from yaid.users where userid=?");
+                preparedStatement.setInt(1, Integer.parseInt(targetID));
+                System.out.println("Statement : " + preparedStatement);
 
-            resultSet = preparedStatement.executeQuery();
-            if (resultSet.next()) {
-                mail = resultSet.getString("email");
-            }
+                resultSet = preparedStatement.executeQuery();
+                if (resultSet.next()) {
+                    mail = resultSet.getString("email");
+                }
 //             String uid = email.substring(0, email.indexOf("@"));
-            // mail = "ert";
-            mail = mail.substring(0, mail.indexOf("@")); //cropping of adress part after '@' symbol
-            userDirectory = "./UserData/" + mail;
-            System.out.println("Target ID : " + mail);
-            System.out.println("User dir : " + userDirectory);
-            displaySizeOfDir(userDirectory);
-            
-            //response.sendRedirect("administratorSpaceUsage.jsp");
-          
-            pw.print(sizeOfDir(new File(userDirectory)));
+                // mail = "ert";
+                mail = mail.substring(0, mail.indexOf("@")); //cropping of adress part after '@' symbol
+                userDirectory = "./UserData/" + mail;
+                System.out.println("Target ID : " + mail);
+                System.out.println("User dir : " + userDirectory);
+                displaySizeOfDir(userDirectory);
+
+                //response.sendRedirect("administratorSpaceUsage.jsp");
+
+                pw.print(sizeOfDir(new File(userDirectory)));
 //            response.sendRedirect("administratorSpaceUsage.jsp");
 //            response.setContentType("text/html");
 //            pw.print("<<<<<<<<<<<<<<<<<<<<<<hai>>>>>>>>>>>>>>>>>>>>");
 
-            } else if(operation.equals("getServerSpaceUsage")) {
+            } else if (operation.equals("getServerSpaceUsage")) {
                 serverSpace = "./UserData";
                 displaySizeOfDir(serverSpace);
                 pw.print(sizeOfDir(new File(serverSpace)));

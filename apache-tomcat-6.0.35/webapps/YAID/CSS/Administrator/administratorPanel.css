@@ -1,0 +1,87 @@
+@CHARSET "ISO-8859-1";
+
+
+#maindiv {
+    position: relative;
+   padding-top: 20px;
+    
+}
+
+#tabs {
+        
+    
+    border-bottom: .5em solid #9999ff;
+
+	margin: 0;
+
+	padding: 0;
+
+}
+
+#tabs li { 
+
+	display:inline; 
+
+	border-top: .1em solid #03c;
+
+	border-left: .1em solid #03c;
+
+	border-right: .1em solid #03c;
+
+}
+
+#tabs li a {
+
+	text-decoration: none;
+
+	padding: 0.25em 1em;
+
+	color: #000;
+
+}
+
+#tabs li  a:hover
+{ 
+background-color:yellow;
+border-radius: 10px 10px 10px 10px ;
+}
+
+#tabs li a:select
+{ 
+    background-color:#0033ff;
+}
+
+#page1 #tabs li#tab1 a, #page2 #tabs li#tab2 a, #page3 #tabs li#tab3 a, #page4 #tabs li#tab4 a {
+
+	padding: 0.25em 1em;
+
+	background-color: #03c;
+
+	color: #fff;
+
+}
+
+.edit_avail{
+	visibility: visible;
+}
+
+.edit_not_avail{
+	visibility: hidden;
+}
+
+
+#logout {
+     color: #0033ff;
+     top:0px;
+     right: 20px;
+     position: absolute;
+}
+
+.submit {
+     background:  url("../../images/icons/logoff.png") no-repeat top;
+      width: 35px;
+      height: 35px;
+      opacity:1;
+    filter:alpha(opacity=0);
+      
+}

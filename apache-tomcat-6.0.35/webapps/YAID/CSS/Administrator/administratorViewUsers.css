@@ -1,0 +1,195 @@
+/* 
+    Document   : administratorViewUsers
+    Created on : 17 Feb, 2012, 11:59:16 PM
+    Author     : TTT
+    Description:
+        Purpose of the stylesheet follows.
+*/
+
+/* 
+   TODO customize this sample style
+   Syntax recommendation http://www.w3.org/TR/REC-CSS2/
+*/
+body {
+    background-image: url('../../images/administrator/ball1.jpg'); 
+    background-repeat: no-repeat;
+
+
+}
+#viewUsersLeft {
+    float: left;
+    height: 700px;
+
+
+}
+#viewList {
+    float: left;
+    height: 420px;
+    background-color: #fdfefc;
+    margin-top: 30px;
+    opacity:0.9;
+    filter:alpha(opacity=40);
+    border-radius: 10px 10px 10px 10px ;
+    left: 10px;
+    right: 10px;
+   border: gray double;
+
+}
+
+#headings {
+
+    padding: 10px;
+    background-color: #000;
+    color: white;
+    height: 20px;
+    font-weight: bolder;
+    border-radius: 10px 10px 0px 0px ;
+
+}
+
+#headingSerial {
+    width: 100px;
+    position: relative;
+    float: left;
+    border-width: 1px;
+    border-left:1px solid white;
+    padding-left: 10px;
+}
+
+#headingEmail {
+    width: 300px;
+    position: relative;
+    float: left;
+    border-width: 1px;
+    border-left:1px solid white;
+    padding-left: 10px;
+
+}
+#headingPassword {
+    width: 200px;
+    position: relative;
+    float: left;
+    border-width: 1px;
+    border-left:1px solid white;
+    border-right:1px solid white;
+    padding-left: 10px;
+}
+
+#usersdetails {
+    position: relative;
+    height: 25px;
+    padding: px;
+    margin-bottom: 30px;
+    border-width: 1px;
+    border-left:1px solid white;
+    padding-left: 10px;
+    
+    background-repeat: no-repeat;
+
+
+}
+
+#userSerial { 
+    width: 100px;
+    position: relative;
+    float: left;
+    border-width: 1px;
+    border-left:1px solid gray;
+    padding-left: 10px;
+}
+
+#userEmail { 
+    width: 300px;
+    position: relative;
+    float: left;
+    border-left:1px solid gray;
+    padding-left: 10px;
+}
+
+#userPassword { 
+    width: 200px;
+    position: relative;
+    float: left;
+    border-left:1px solid gray;
+    border-right:1px solid gray;
+    padding-left: 10px;
+
+}
+
+#pageNavigation {
+    left: 150px;
+    position: absolute;
+    padding: 20px;
+    bottom: 10px;
+    height: 20px;
+    background-color:#f4b925;
+    opacity:0.9;
+    filter:alpha(opacity=40);
+    border-radius: 10px 10px 10px 10px ;
+     border: gray double;
+
+}
+
+#verticalSeperator {
+    position: relative;
+    float: left;
+    background: #999999;
+    background-repeat: repeat-y;
+    background-repeat: repeat-x;
+    width:2px;
+    height: 550px;
+    left: 20px;
+}
+
+#banUser {
+
+    position: relative;
+    vertical-align: middle;
+    float: left;
+    height: 600px;
+
+}
+
+#allDetails {
+    position: relative;
+    vertical-align: middle;
+   
+    width: 500px;
+    margin-left: 50px;
+    margin-top: 30px;
+     border: gray double;
+     height: 140px;
+    border-radius: 10px 10px 10px 10px ;
+}
+
+#horizontalSeperator {
+    position: relative;
+    background: #999999;
+    background-repeat: repeat-x;
+    bottom: 0px;
+    height: 2px;
+    top: 550px;
+}
+
+#readUserHeader {
+    padding: 10px;
+    background-color: #000;
+    color: white;
+    height: 20px;
+    font-weight: bolder;
+    border-radius: 10px 10px 0px 0px ;
+}
+
+
+#readUserForm {
+    height: 100px;
+     background-color: white;
+    opacity:0.8;
+    filter:alpha(opacity=40);
+     border-radius: 0px 0px 10px 10px ;
+}
+
+#deleteUser {
+    margin-left: 110px;
+        
+}

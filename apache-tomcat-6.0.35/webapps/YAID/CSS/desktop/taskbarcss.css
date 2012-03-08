@@ -1,0 +1,58 @@
+#datetime {
+   float: left; 
+   position: absolute;
+}
+
+
+#minimizedtasks {
+   float: left; 
+   position: absolute;
+  
+}
+
+
+
+#notifications {
+   float: left; 
+   position: absolute;
+}
+
+#startbuttondiv {
+   position: absolute;
+}
+
+
+
+#minimizedtasks {
+    position: absolute;
+    float: left;
+    
+}
+
+#spaceUsage {
+     position: relative;
+     float: left;
+     
+     width: 300px;
+     height: 50px;
+     background-color: #0033ff;
+  
+}
+#spaceUsageGraph {
+     width: 300px;
+     height: 50px;
+}
+
+#notifications {
+    position: absolute;
+    float: left;
+}
+#datetime {
+    position: absolute;
+    float: left;
+}
+
+
+#dialog_window_minimized_container {
+    width: 300px;
+}

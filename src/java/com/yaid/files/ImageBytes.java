@@ -80,6 +80,7 @@ public class ImageBytes extends HttpServlet {
                 e.getMessage();
             } finally {
                 out.close();
+                dis.close();
             }
         }
     }
